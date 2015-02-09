@@ -1,0 +1,106 @@
+<div class="contentContainer">
+  <div class="wrapper1">
+    <div class="contentArea">
+      <div class="content">
+        <p class="zillsAdminHeaders">-Account-<br />
+          <?php echo $this->firstName?> <?php echo $this->lastName?></p>
+        <table class="zillsAdminSingleSoSaTable1">
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">Acount ID:</td>
+            <td class="zillsAdminSingleSoSaTableRight"><?php echo $this->id ?></td>
+          </tr>
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">First Name:</td>
+            <td class="zillsAdminSingleSoSaTableRight"><?php echo $this->firstName?></td>
+          </tr>
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">Last Name:</td>
+            <td class="zillsAdminSingleSoSaTableRight"><?php echo $this->lastName?></td>
+          </tr>
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">Email:</td>
+            <td class="zillsAdminSingleSoSaTableRight"><?php echo $this->email?></td>
+          </tr>
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">Date joined:</td>
+            <td class="zillsAdminSingleSoSaTableRight"><?php echo $this->dateJoined?></td>
+          </tr>
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">Account Type:</td>
+            <td class="zillsAdminSingleSoSaTableRight"><?php echo $this->accountType?></td>
+          </tr>
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">Address:</td>
+            <td class="zillsAdminSingleSoSaTableRight">22 we<br />
+              Petaluma CA, 94954</td>
+          </tr>
+        </table>
+        <img class="zillsAdminAcctPic" src="<?php echo $this->userImage?>" />
+        <div class="fakeClearer"></div>
+        <?php if($this->fanSaleCount>0) { ?>
+        <p class="zillsAdminSubHeader">SoSa Participation (<?php echo $this->fanSaleCount ?>)</p>
+        <table class="zillsAdminSingleSoSaTable4">
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">SoSa ID</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Status</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Time In Sale</td>
+            <td class="zillsAdminSingleSoSaTableLeft">End Date</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Join Price</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Final Price</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Trans Type</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Auth Status</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Capt Status</td>
+          </tr>
+          <?php echo $this->fanSalesRows; ?>
+        </table>
+        <?php } ?>
+        <?php if($this->manager && $this->bandSaleCount>0) { ?>
+        <p class="zillsAdminSubHeader">Managing SoSa (<?php echo $this->bandSaleCount; ?>)</p>
+        <table class="zillsAdminSingleSoSaTable4">
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">Payment Type</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Paypal Email</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Address</td>
+          </tr>
+          <tr>
+            <td class="zillsAdminSingleSoSaTableRight">1</td>
+            <td class="zillsAdminSingleSoSaTableRight"><?php echo $this->paypalEmail?></td>
+            <td class="zillsAdminSingleSoSaTableRight">1</td>
+          </tr>
+        </table>
+        <table class="zillsAdminSingleSoSaTable4">
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">SoSa ID</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Status</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Start Date</td>
+            <td class="zillsAdminSingleSoSaTableLeft">End Date</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Start Price</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Lowest Price</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Current Price</td>
+            <td class="zillsAdminSingleSoSaTableLeft"># Fans</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Payment Status</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Confirm</td>
+          </tr>
+          <tr>
+            <td class="zillsAdminSingleSoSaTableRight"><a href="zillsAdminSingleSocialSale.html">01191</a></td>
+            <td class="zillsAdminSingleSoSaTableRight">Active</td>
+            <td class="zillsAdminSingleSoSaTableRight">04/23/2013</td>
+            <td class="zillsAdminSingleSoSaTableRight">04/23/2013</td>
+            <td class="zillsAdminSingleSoSaTableRight">$3.21</td>
+            <td class="zillsAdminSingleSoSaTableRight">$0.99</td>
+            <td class="zillsAdminSingleSoSaTableRight">$2.03</td>
+            <td class="zillsAdminSingleSoSaTableRight">877</td>
+            <td class="zillsAdminSingleSoSaTableRight">Outstanding</td>
+            <td class="zillsAdminSingleSoSaTableRight">NA</td>
+          </tr>
+        </table>
+        <?php } ?>
+        <div class="fakeClearer"></div>
+      </div>
+      <!-- end content -->
+    </div>
+    <!-- end contentArea -->
+  </div>
+  <!-- end wrapper1 -->
+</div>
+<!-- end contentContainer -->

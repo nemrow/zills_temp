@@ -1,0 +1,1014 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	/*background:#0D0D0D;*/
+	background:#333;
+	margin:0px;
+}
+p, h1, h2, h3, h4, h5, h6, td{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#FFF;
+	margin:0px;
+}
+a{
+	border:none;
+	border-width:0px;
+}
+a:link{
+	text-decoration:none;
+	border:none;
+	color:#FFF;
+}
+a:visted{
+	text-decoration:none;
+	border:none;
+	color:#FFF;
+}
+img{
+	border:none;
+	border-width:0px;
+}
+.hiddenShell{
+	display:none;
+}
+.fakeClearer{
+	position:relative;
+	width:100%;
+	height:0px;
+	clear:both;
+}
+/*************************************** 12/1/2012 CLEANED CSS *****************************/
+#generalTermsAndCond{	
+	width: 600px;
+	height: 500px;
+	overflow-y: scroll;
+	padding: 15px;
+}
+.part1{
+	width:100%;
+	position:relative;
+	margin-bottom:70px;
+}
+.wrapperIntro{
+	width:880px;
+	margin:20px auto;
+	height:525px;
+	border-radius:15px;
+	position:relative;
+}
+.wrapperIntoBack{
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#000;
+	opacity:0.8;
+	z-index:1;
+	height:100%;
+	width:100%;
+	border-radius:15px;
+	moz-box-shadow: 0px 0px 1px 1px #333;
+	-webkit-box-shadow: 0px 0px 1px 1px #333;
+	box-shadow: 0px 0px 2px 2px #333;
+	border-width:1px;
+	border-color:#333;
+	border-style:solid;	
+}
+.wrapper{
+	width:795px;
+	height:auto;
+	margin:0 auto;
+	position:relative;
+}
+p.indexIntroLogin{
+	position:absolute;
+	top:30px;
+	right:0px;
+	z-index:10;
+	padding:5px 8px;
+	background-color:#000;
+	color:#999;
+	border-radius:8px;
+	-moz-box-shadow:    0px 0px 6px 0px #000;
+  	-webkit-box-shadow: 0px 0px 6px 0px #000;
+  	box-shadow:         0px 0px 6px 0px #000;
+	font-size:14px;
+	text-align:center;
+}
+p.indexIntroLogin:hover{
+	color:#FFF;
+}
+img.homeLogo{
+	margin:30px 0 25px 0;
+	position:relative;
+	z-index:3;
+}
+img.justEarInLogo{
+	position:absolute;
+	top:30px;
+	left:205px;
+	z-index:2;
+	height:79px;
+}
+img.homeBetaSymbol{
+	position:absolute;
+	top:40px;
+	left:240px;
+	z-index:4;
+}
+.homeSlideShell{
+	width:290px;
+	height:280px; /* was 235 for old bouncing slideshow */
+	overflow:hidden;
+	position:absolute;
+	z-index:2;
+	top:134px;
+}
+.homeSlideBounceShell{
+	width:700px;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+.homeSlideStandard{
+	width:290px;
+	height:235px;
+	position:relative;
+	margin:0 20px 20px 0;
+	float:left;
+}
+.homeNewSlideSlog1{
+	text-shadow:1px 1px 2px #000;
+	font-size:25px;
+	font-weight:bold;
+	position:relative;
+	font-weight:normal;
+	width:290px;
+	margin:0 0 17px 0;
+	font-family: 'Lato', sans-serif;
+	font-weight:300;
+}
+.homeSlideSlog1NewItalicGreen{
+	font-size:14px;
+	position:relative;
+	width:290px;
+	margin:0 0 12px 0;
+	color:#018f46;
+	font-family: 'Alegreya SC', serif;
+	font-weight:400;
+}
+table.homeNewSlideTable td{
+	padding:6px 0;
+	font-size:14px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+table.homeNewSlideTable td.homeNewSlideTableLeftSide{
+	width:19px;
+	text-align:left;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+.homeNewSlideSaleDemoShell{
+	width:72px;
+	height:25px;
+	position:relative;
+	margin:10px 0px;
+	cursor:pointer;
+}
+.homeNewSlideSaleDemoShell p{
+	font-size:14px;
+	font-family: 'Source Sans Pro', sans-serif;
+	position:absolute;
+	top:3px;
+	left:4px;
+}
+.homeNewSlideSaleDemoBG{
+	width:100%;
+	height:100%;
+	opacity:0.2;
+	background-color:#FFF;
+	border-radius:5px;
+}
+.homeNewLowerTextShell{
+	position:relative;
+	float:right;
+	width:380px;
+	height:50px;
+	margin-right:46px;
+	text-align:center;
+}
+.homeNewLowerTextShell h2{
+	font-size:22px;
+	font-family: 'Lato', sans-serif;
+	margin:10px 0 0 0;
+	font-weight:400;
+}
+.homeNewLowerTextShell h3{
+	font-size:10px;
+	font-family: 'Alegreya SC', serif;
+	font-weight:400;
+	color:#018f46;
+	margin:5px 0 0 0;
+}
+.openHomeIntroVideoPopOutBtn{
+	position:absolute;
+	top:106px;
+	left:195px;
+	width:59px;
+	height:41px;
+	background-image:url(../images/IntroVideoPreviewStillPlayBtn_SPRITE.png);
+	background-position:0px 0px;
+	z-index:2;
+}
+.homeDemo img{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:1
+}
+/******************************* Old bouncing homepage slideshow ***********/
+.homeSlideSlog1{
+	text-shadow:1px 1px 2px #000;
+	font-size:31px;
+	position:relative;
+	width:290px;
+	margin:0 0 17px 0;
+	font-family: 'Lato', sans-serif;
+	font-weight:300;
+}
+.homeSlideSlog2{
+	font-size:17px;
+	position:relative;
+	font-weight:normal;
+	color:#01CB61;
+	margin:17px 0;
+	width:280px;
+	text-shadow:1px 7px 7px #000;
+}
+.homeSlideSlog3{
+	font-size:18px;
+	position:relative;
+	font-weight:normal;
+	color:#01CB61;
+	margin:20px 0;
+	width:280px;
+	text-shadow:1px 7px 7px #000;
+}
+.homeSlideSlog4{
+	font-size: 17px;
+	position: relative;
+	font-weight: normal;
+	margin:0;
+	width:280px;
+	text-shadow:1px 1px 2px #000;
+	font-weight:bold;
+}
+.homeSlideSlog5{
+	font-size:33px;
+	position: relative;
+	font-weight: normal;
+	margin:0;
+	width:280px;
+	text-shadow:1px 1px 2px #000;
+}
+.homeSlideSlog6{
+	font-size: 18px;
+	position: relative;
+	font-weight: normal;
+	color:#01CB61;
+	margin: 13px 0;
+	width:280px;
+	text-shadow:1px 7px 7px #000;
+}
+.homeSlideSlog6 span{
+	font-weight:bold;
+}
+.homeSlideSlog7{
+	font-size: 22px;
+	position: relative;
+	font-weight: normal;
+	color:#01CB61;
+	margin: 8px 0;
+	width:280px;
+	text-shadow:1px 7px 7px #000;
+}
+.homeSlideSlog7 span{
+	font-weight:bold;
+	color:#FFF;
+}
+.homeSlideSlog8{
+	font-size: 14px;
+	position: relative;
+	font-weight: normal;
+	color:#01CB61;
+	margin: 8px 0;
+	width:280px;
+	text-shadow:1px 7px 7px #000;
+}
+.homeSlideSlog9{
+	text-shadow:1px 1px 2px #000;
+	font-size:23px;
+	font-weight:bold;
+	position:relative;
+	font-weight:normal;
+	width:290px;
+	margin:0 0 17px 0;
+}
+.homeSlideSlog10{
+	font-size: 19px;
+	position: relative;
+	font-weight: normal;
+	color:#01CB61;
+	margin: 13px 0;
+	width:280px;
+	text-shadow:1px 7px 7px #000;
+}
+.homeSlideNav{
+	width:315px;
+	height:29px;
+	position:absolute;
+	top:385px;
+	left:88px;
+	z-index:2;
+}
+.homeSlideNavCircle{
+	width:11px;
+	height:11px;
+	background-image:url(../images/homeSlideCircles_SPRITE.fw.png);
+	background-position:0px 0px;
+	float:left;
+	margin:0 8px;
+	position:relative;
+	cursor:pointer;
+}
+.homeSlideNavCircle1{
+	background-position:0px 11px;
+}
+/******************************* End old bouncing homepage slideshow ***********/
+.homeDemoShell{
+	width:486px;
+	height:292px;
+	position:absolute;
+	top:110px;
+	right:0px;
+	background-image:url(../images/homeDemoLong.png);
+	overflow:hidden;
+	background-repeat:no-repeat;
+	z-index:2;
+}
+.homeDemo{
+	position:absolute;
+	top:17px;
+	left:17px;
+	background-color:#000;
+	width:450px;
+	height:253px;
+	overflow:hidden;
+	z-index:1;
+}
+.indexIntroBottomButtonsShell{
+	position:absolute;
+	top:430px;
+	height:75px;
+	width:100%;
+	z-index:2;
+}
+.indexIntroCreateSocialSaleBtn{
+	width:390px;
+	height:66px;
+	border-width:5px;
+	border:solid;
+	border-color:#1f4531;
+	border-radius:10px;
+	background-image:url(../images/indexIntroGrad1_SPRITE.jpg);
+	background-repeat:repeat-x;
+	float:left;
+	margin-left:40px;
+	position:relative;
+}
+.indexIntroCreateSocialSaleBtn p{
+	font-size:35px;
+	text-shadow:2px 2px 10px #000;
+	text-align:center;
+	padding:11px 0 0 0;
+	background-repeat:repeat-x;
+	position:relative;
+	font-family: 'Lato', sans-serif;
+}
+.indexIntroCreateSocialSaleBtn:hover{
+	background-position:0px -67px;
+	text-shadow:1px 1px 6px #000;
+}	
+.indexIntroCreateSocialSaleBtn img{
+	position:absolute;
+	top:-6px;
+	right:-6px;
+}	
+div.indexIntroRollingBtnsShell{
+	width:375px;
+	height:66px;
+	border-width:5px;
+	border:solid;
+	border-color:#1e1e1e;
+	border-radius:10px;
+	background-image:url(../images/indexIntroGrad2.jpg);
+	font-size:35px;
+	text-shadow:2px 2px 10px #000;
+	text-align:center;
+	background-repeat:repeat-x;
+	float:right;
+	margin-right:40px;
+	overflow:hidden;
+	position:relative;
+	cursor:pointer;
+}
+.indexIntroRollingThirdShells{
+	position:relative;
+	float:left;
+	width:33%;
+	height:132px;
+}
+.indexIntroRollingThirdShells img{
+	margin:4px auto 0 auto;
+}
+.indexIntroRollingThirdShells p{
+	font-size:20px;
+}
+p.indexIntroRollingNormalText{
+	margin:23px auto 0 auto;
+}
+p.indexIntroRollingITunesText{
+	font-size:18px;
+	margin:5px auto 0 auto;
+}
+p.indexIntroRollingITunesText span{
+	font-size:13px;
+}
+.indexIntroRollingBreaker{
+	width:2px;
+	height:54px;
+	background-color:#252525;position:absolute;
+	top:6px;
+}
+.indexIntroRollingBreaker1{
+	left:125px;
+}
+.indexIntroRollingBreaker2{
+	left:250px;
+}
+/***********************  HOME FOOTER *******************/
+.introFooter a:link{
+	text-decoration:none;
+	color:#FFF;
+}
+.introFooter a:visited{
+	text-decoration:none;
+	color:#FFF;
+}
+.introFooter{
+	position:fixed;
+	background-color:#0D0D0D;
+	font-size:12px;
+	margin:13px 0 0 0;
+	height:36px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	z-index:2;
+}
+.introFooterLeft{
+	float:left;
+	top:11px;
+	position:relative;
+	color:#999;
+}
+.introFooterRight{
+	float:right;
+	position:relative;
+	top:0px;
+}
+.introFooterRight p{
+	float:left;
+	top:11px;
+	position:relative;
+	color:#999;
+}
+.introFooterRight a:link{
+	color:#999;
+}
+.introFooterRight a:visited{
+	color:#999;
+}
+.introFooterRight a:hover{
+	color:#FFF;
+}
+.socialMediaFooterIcons{
+	position:relative;
+	margin:0 8px 0 2px;
+	top:7px;
+	cursor:pointer;
+	float:right;
+	background-image:url(../images/faceBookTwitterIconHover_SPRITE.png);
+	width:24px;
+	height:23px;
+}
+.footerFacebookIcon{
+	background-position:0px 0px;
+}
+.footerFacebookIcon:hover{
+	background-position:0px 23px;
+}
+.footerTwitterIcon{
+	background-position:24px 0px;
+}
+.footerTwitterIcon:hover{
+	background-position:24px 23px;
+}
+/********************  PRICING BOX **********************/
+.indexIntroPricingShell{
+	width:338px;
+	padding:15px;
+}
+.indexIntroPricingShell h1{
+	font-size:20px;
+	text-align:center;
+	font-weight:normal;
+	margin:5px auto 10px auto;
+}
+.indexIntroPricingShell h2{
+	font-size:16px;
+	text-align:center;
+	font-weight:normal;
+	margin:10px auto 0 auto;
+}
+.indexIntroPricingShell h2 span{
+	color:#aaaaaa;
+}
+.indexIntroPricingShell h3{
+	color:#018f46;
+	font-size:11px;
+	margin:0 auto;
+	text-align:center;
+}
+.indexIntroPricingShell a{
+	color:#fff;
+	text-decoration:underline;
+}
+.indexIntroPricingShell a:link{
+	color:#fff;
+	text-decoration:underline;
+}
+.indexIntroPricingShell a:visited{
+	color:#fff;
+	text-decoration:underline;
+}
+.indexIntroPricingShell a:hover{
+	color:#018f46;
+}
+/**************************** itunes vs social sale fancybox ************/
+table.compChartTable{
+	width:526px;
+	height:500px;
+	background-color:#000;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#FFF;
+	border:none;
+	margin:0px;
+	border-spacing:0px;
+}
+.compChartText1{
+	font-size:26px;
+	text-shadow:2px 2px #000;
+	font-weight:bold;
+	text-align:center;
+	width:165px;
+	background-color:#be161d;
+}
+.compChartTop1{
+	font-size:10px;
+	font-weight:bold;
+	text-align:center;
+	background-color:#ed1c24;
+}
+.compChartTop1 img{
+	padding:5px;
+}
+.compChartText2{
+	font-size:20px;
+	padding-left:4px;
+	background-color:#005e82;
+}
+.compChartText3{
+	font-size:20px;
+	padding-left:4px;
+	background-color:#be161d;
+}
+.compChartText4{
+	font-size:20px;
+	padding-left:4px;
+	background-color:#337e9b;
+}
+.compChart5{
+	font-size:20px;
+	text-align:center;
+	font-weight:bold;
+	background-color:#0076a3;
+}
+.compChart6{
+	font-size:20px;
+	text-align:center;
+	font-weight:bold;
+	background-color:#ed1c24;
+}
+.compChart7{
+	background-color:#3391b5;
+	font-size:20px;
+	text-align:center;
+	font-weight:bold;
+	text-shadow:1px 1px 2px #000;
+}
+a .compChartWhyDataBtn{
+	width:152px;
+	height:69px;
+	background-image:url(../images/whyDataBtn_SPRITE.png);
+	background-position:0px 0px;
+	margin:0 auto;
+	position:relative;
+	
+}
+a .compChartWhyDataBtn:hover{
+	background-position:0px 69px;
+}
+a .compChartWhyDataBtn p{
+	position:absolute;
+	text-align:center;
+	top:10px;
+	left:12px;
+	margin:0px;
+	color:#fff;
+	text-decoration:none;
+}
+a .compChartWhyDataBtn p:visited{
+	color:#fff;
+	text-decoration:none;
+}
+a .compChartWhyDataBtn p:hover{
+	text-decoration:none;
+}
+.compChartBorderBottom1 td{
+	border-bottom:2px;
+	border-bottom-color:#1E1E1E;
+	border-bottom-style:solid;
+}
+/**************************** why data box ************************************/
+.whyDataChartShell{
+	background-color:#1E1E1E;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#FFF;
+	border:none;
+	margin:0px;
+}
+.whyDataChartHeader{
+	height:57px;
+	position:relative;
+	margin:0px;
+	width:100%;
+	background-color:#be161d;
+	text-shadow:1px 1px 3px #000;
+}
+a.whyDataBackBtn{
+	position:absolute;
+	top:12px;
+	left:7px;
+	width:72px;
+	height:33px;
+	cursor:pointer;
+	background-image:url(../images/whyDataBackBtn_SPRITE.png);
+	background-position:0px 0px;
+}
+a.whyDataBackBtn:hover{
+	background-position:0px 33px;
+}
+.whyDataBackBtn p{
+	position:relative;
+	text-align:center;
+	top:2px;
+	font-size:11px;
+	font-style:italic;
+	margin:0px;
+	left:2px;
+}
+.whyDataChartHeader h1{
+	font-size:26px;
+	text-align:center;
+	position:relative;
+	padding-top:12px;
+	margin:0px;
+}
+.whyDataFakeHR{
+	position:relative;
+	width:100%;
+	height:2px;
+	background-color:##1E1E1E;
+	margin:0px;
+}
+.whyDataHeaders{
+	position:relative;
+	width:100%;
+	height:32px;
+}
+.whyDataHeaders h2{
+	font-size:19px;
+	font-weight:normal;
+	text-shadow:1px 1px 4px #000;
+	text-align:center;
+	margin:0px;
+	padding-top:4px;
+}
+.whyDataContent{
+	height:101px;
+	width:100%;
+	position:relative;
+}
+p.whyDataContentP{
+	width:328px;
+	height:auto;
+	font-size:17px;
+	font-weight:bold;
+	text-shadow:1px 1px 2px #000;
+	text-align:center;
+	margin:10px 20px 0 20px;
+}
+p.whyDataContentPFloat1{float:right;}
+p.whyDataContentPFloat2{float:left;}
+img.whyDataContentImg1{
+	position:relative;
+	margin:16px 0 0 34px;
+	float:left;
+}
+img.whyDataContentImg2{
+	position:relative;
+	margin:20px 39px 0 0;
+	float:right;
+}
+img.whyDataContentImg3{
+	position:relative;
+	margin:20px 0 0 47px;
+	float:left;
+}
+.whyDataFooters{
+	height:13px;
+	width:100%;
+	position:relative;
+}
+.whyDataColor1{background-color:#0076a3;}
+.whyDataColor2{background-color:#3391b5;}
+.whyDataColor3{background-color:#ed1c24;}
+.whyDataColor4{background-color:#f14950;}
+/*************************** not ready, email box ***************************/
+.noCreateSsYetThanks{
+	text-align:center;
+	width:550px;
+}
+.noCreateSsYetThanks h1{
+	font-size:22px;
+	text-align:center;
+	margin:20px auto 10px auto;
+}
+.noCreateSsYetThanks h2{
+	font-size:12px;
+	text-align:center;
+	margin:20px auto 20px auto;
+}
+input.createSsNotReadyEmailInput{
+	width:450px;
+	height:41px;
+	border-radius:10px;
+	background-color:#FFF;
+	padding-left:15px;
+	font-size:14px;
+	color:#222222;
+	border:none;
+	outline:none;
+}
+p.createSsNotReadyEmailSubmit{
+	font-size:20px;
+	text-align:center;
+	width:170px;
+	padding:10px 0;
+	background-color:#018f46;
+	margin:20px auto;
+	border-radius:10px;
+	cursor:pointer;
+}
+p.createSsNotReadyEmailSubmit:hover{
+	background-color:#000;;
+	color:#fff;
+}
+.noCreateSsYetThanksSubmittedBox{
+	width:200px;
+	height:200px;
+	text-align:center;
+}
+.noCreateSsYetThanksSubmittedBox h1{
+	font-size:22px;
+	padding-top:20px
+}
+.noCreateSsYetThanksSubmittedBox img{
+	margin:30px auto 0 auto;
+}
+/**************************** COOL SALES CSS (add when sales begin) ***************************/
+.indexIntroCoolSalesShell{
+	width:812px;
+	height:320px;
+	position:relative;
+	margin:40px auto;
+}
+.indexIntroCoolSalesTopBar{
+	position:relative;
+	height:57px;
+	width:100%;
+	-moz-box-shadow:    0px 0px 6px 0px #000;
+  	-webkit-box-shadow: 0px 0px 6px 0px #000;
+  	box-shadow:         0px 0px 6px 0px #000;
+}
+.indexIntroCoolSalesTopBarTransBack{
+	width:100%;
+	height:100%;
+	background-color:#018f46;
+	opacity:0.7;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:1;
+}
+p.indexIntroCoolSalesTopBarTitle{
+	font-size:30px;
+	margin:11px;
+	text-shadow:2px 2px 5px #000;
+	position:absolute;
+	z-index:2;
+}
+img.indexIntroCoolSalesTopBarEar{
+	position:absolute;
+	right:0px;
+	margin:6px;
+	z-index:2;
+}
+.indexIntroCoolSalesSaleShell{
+	position:relative;
+	width:250px;
+	height:250px;
+	background-color:#000;
+	float:left;
+	margin:25px 0 0 0;
+	border:solid;
+	border-color:#000;
+	border-width:1px;
+}
+.indexIntroCoolSalesSaleShellFirstTwo{
+	margin:25px 26px 0 0;
+}
+img.indexIntroCoolSaleArt{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:1;
+}
+.indexIntroCoolSaleArtTransCover{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color:#000;
+	opacity:0.8;
+	z-index:2;
+}
+.indexIntroCoolSalesSaleShell h2{
+	position:relative;
+	width:100%;
+	top:100px;
+	text-align:center;
+	z-index:3;
+	font-size:24px;
+	font-weight:normal;
+}
+.indexIntroCoolSalesSaleShell h3{
+	position:relative;
+	width:100%;
+	top:110px;
+	text-align:center;
+	z-index:3;
+	font-size:14px;
+	font-weight:normal;
+}
+.indexIntroCoolSaleHoverShell{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:2;
+	width:100%;
+	height:100%;
+	display:none;
+}
+/********************************* iTunes *************************/
+img.iTunesVsSosaImage, img.whyDataImportant{
+	position:relative;
+}
+a.openiTunesVsSosa2{
+	position:absolute;
+	top:9px;
+	left:5px;
+	width:80px;
+	height:40px;
+	z-index:2;
+	cursor:pointer;
+}
+a.iTunesVsSosaWhyData{
+	position:absolute;
+	top:409px;
+	left:5px;
+	width:150px;
+	height:65px;
+	z-index:2;
+	cursor:pointer;
+}
+/********************************** contact us *********************/
+#contactUs{
+	width:434px;
+}
+.contactUsShell{
+	width:353px;
+	position:relative;
+	margin:10px auto;
+}
+#contactUs h3{
+	font-size:16px;
+	margin:15px 0;
+}
+#contactUsSentBox{
+	width:300px;
+	height:165px;
+}
+#contactUsNewError{
+	width:180px;
+	text-align:center;
+	margin:0 auto 0 auto;
+}
+.contactUsSent{
+	text-align:center;
+	position:relative;
+	font-size:20px;
+	margin:20px;	
+}
+.contactUsSent span{
+	color:#018f46;
+	font-size:16px;
+}
+input.contactUsEmail{
+	width:338px;
+	height:45px;
+	border:none;
+	border-radius:8px;
+	margin:10px 0;
+	color:#333;
+	padding-left:15px;
+	font-size:16px;
+}
+input.contactUsSubject{
+	width:338px;
+	height:45px;
+	border:none;
+	border-radius:8px;
+	margin:10px 0;
+	color:#333;
+	padding-left:15px;
+	font-size:16px;
+}
+textarea.contactUsMessage{
+	width:323px;
+	height:196px;
+	border-radius:8px;
+	margin:10px 0;
+	color:#333;
+	padding:15px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+}
+p.contactUsSend{
+	margin:10px 0;
+	width:100px;
+	background-color:#018F46;
+	padding:5px 0;
+	text-align:center;
+	border-radius:6px;
+	cursor:pointer;
+}
+p.contactUsSend:hover{
+	background-color:#FFF;
+	color:#018F46;
+}
+#emailSuccess{
+	text-align:center;
+}

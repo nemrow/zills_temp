@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><?php echo $this->artistName ?> - <?php echo $this->productTitle ?> | Social Sale</title>
+<meta name="description" content="Get your hands on <?php echo $this->artistName ?>'s release of '<?php echo $this->productTitle ?>' for as low as <?php echo $this->lowPrice ?>! The more people that join in on the Social Sale, the lower the price becomes!" />
+<link rel="shortcut icon" href="http://www.zillionears.com/images/smallEar.png" />
+<meta property="og:description" content="Get your hands on <?php echo $this->artistName ?>'s release of '<?php echo $this->productTitle ?>' for as low as <?php echo $this->lowPrice ?>! The more people that join in on the Social Sale, the lower the price becomes!" />
+<meta property="og:title" content="<?php echo $this->artistName ?> is having a Social Sale!"  />
+<meta property="og:url" content="http://www.zillionears.com/socialsale&id=<?php echo $this->saleID ?>" />
+<?php if($this->currentPage=='checkout') { ?>
+<meta http-equiv="refresh" content="600" />
+<?php } ?>
+<meta property="og:image" content="http://www.zillionears.com/<?php echo $this->productImg ?>" />
+<link rel="image_src" href="http://www.zillionears.com/<?php echo $this->productImg ?>" />
+<meta name="keywords" content="<?php echo $this->artistName ?>, <?php echo $this->productTitle ?>, Zillionears, Social Sale">
+<link href="css/stylePopout.css" rel="stylesheet" />
+<link href="css/socialSaleStyle.css" rel="stylesheet" />
+<link href="css/jquery.fancybox-1.3.4.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/feedbackStyle.css" />
+<!--<link rel="stylesheet" type="text/css" href="css/universalLoginSignUp.css" />-->
+<link rel="stylesheet" type="text/css" href="css/loginStyle.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox-1.3.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.countdown.pack.js"></script>
+<script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
+<script type="text/javascript" src="js/jquery.tinyscrollbar.min.js"></script>
+<!--<script type="text/javascript" src="js/universalLogin_Script.js"></script>-->
+<script type="text/javascript" src="js/facebookConnect.js"></script>
+<script type="text/javascript" src="js/socialSalePopout_Script.js"></script>
+<script type="text/javascript" src="js/socialSale_Script.js"></script>
+<script type="text/javascript" src="js/login_Script.js"></script>
+<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20200573-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+<body>

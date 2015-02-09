@@ -1,0 +1,81 @@
+<div class="subHeader">
+  <div class="wrapper1">
+    <p class="secHeadTitle">Login</p>
+  </div>
+  <!-- end wrapper1 --> 
+</div>
+<!-- end subHeader -->
+<div class="contentContainer">
+<div class="wrapper1">
+  <div class="contentArea">
+    <div class="content">
+      <div class="wrapper743">
+        <h1 class="aboutUsHead">Login</h1>
+          <p class="boringLoginMessage"><?php echo $this->message; ?></p>
+          <div class="boringLoginErrorFace"> <?php echo $this->errorMessage; ?> </div>
+          <!-- end boringLoginErrorFace -->
+        <div id="register">
+          <div class="contactUsShell">
+            <form class="registerForm" action="login<?php echo $this->actionData; ?>" method="post">
+              <div class="loginEmailShell">
+                  <input type="text" class="boringLoginEmail" id="boringLoginEmail" value="Email" name="email" />
+                </div>
+                <div class="loginEmailShell">
+                  <input type="password" class="boringLoginPass" id="boringLoginPass1" name="password" />
+                  <p class="loginPassLab">Password</p>
+                  <p class="boringLoginForgotPass"><a href="#newLoginBox" id="openNewLoginBoxForgotPass">forgot password</a></p>
+                </div>
+                <div class="boringLoginBottomShell">
+              <input type="submit" value="Sign In" class="loginSub" />
+              <p class="loginOr">Or</p>
+              <p class="loginForgotPass"><a href="register<?php echo $this->actionData; ?>">Register</a></p>
+              </div> <!-- end boringLoginBottomShell -->
+              <div class="boringLoginKeepMeloggedInShell">
+            <input type="checkbox" class="boringLoginKeepLog" name="keepLoggedIn" id="keepLoggedIn" />
+            <label for="keepLoggedIn" class="loginKeepLogP">Keep me logged in</label>
+            </div> <!-- end boringLoginKeepMeloggedInShell -->
+            </form>
+            <div class="fakeClearer"></div>
+          </div>
+          <!-- end contactUsShell --> 
+          
+          <!--
+          <p class="tester">send</p>
+          <script>
+		  	$('.tester').click(function(){
+				var form_data = {
+					email: 'dat@kc.co',
+					requestType: 'CreateEmailList',				// /\/\/\/\/\ To test request handlers
+					is_ajax: 1									// /\/\/\/\/\  when needed!
+				}; // end form_data
+				$.ajax({
+					type: "POST",
+					url: 'request.php',
+					data: form_data,
+					success: function(response) {
+						alert(response);
+					} // end success
+			});  
+			});
+		  </script> 
+          -->
+          
+        </div>
+        <!-- end wrapper743 -->
+      </div>
+      <!-- end content --> 
+    </div>
+    <!-- end contentArea --> 
+  </div>
+  <!-- end wrapper1 --> 
+</div>
+<!-- end contentContainer --> 
+<script>
+$(document).ready(function(e) {
+    $('#openNewLoginBoxForgotPass').fancybox();
+	$('#openNewLoginBoxForgotPass').click(function(){
+		$('.loggsSlidingFrame').css('left',-1090);	
+	});
+	
+});
+</script>

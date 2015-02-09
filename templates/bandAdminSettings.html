@@ -1,0 +1,55 @@
+<div class="contentContainer">
+<div class="wrapper1">
+<div class="contentArea">
+<div class="content">
+<form class="crSSForm1" action="bandAdminSettings" method="post">
+<div class="adminHeader">
+<p class="adminHeaderTitle">Settings</p>
+<input class="fanAdminSettingSave1" type="submit" value="Save Changes" />
+</div> <!-- end adminHeader -->
+<div class="crSSStep1">
+<div class="filler1"></div>
+
+
+<div class="error"><?php echo $this->errorMessage; ?></div>
+<table class="createsSInputs1">
+<tr>
+	<td class="crSSLabels">Artist / Band Name:</td><td class="crSSInputs required"><input type="text" class="crSSInput outBandName grabBandName" name="artistName" value="<?php echo $this->artistName; ?>" /></td>
+</tr>
+<tr>
+	<td class="crSSLabels">Email:</td><td class="crSSInputs"><input type="text" class="crSSInput outEmail grabEmail" name="email" value="<?php echo $this->email; ?>" /><br />
+	<label class="crSSInputUnderMessage">Please provide the email of the contact who will be managing the sale.</label></td>
+</tr>
+<tr>
+	<td class="crSSLabels">Password:</td><td class="crSSInputs"><input type="password" class="crSSInput crSSConfPass" name="password" value = "" /><br />
+	<label class="crSSInputUnderMessage">Use this password and email to check on the status of your social sale and fill orders.</label></td>
+</tr>
+<tr>
+	<td class="crSSLabels">Confirm Password:</td><td class="crSSInputs"><input type="password" class="crSSInput" name="confirm_password" value = ""  /></td>
+</tr>
+<tr>
+	<td class="crSSLabels">First Name:</td><td class="crSSInputs required"><input type="text" class="crSSInput" name="firstName" value = "<?php echo $this->firstName; ?>" /></td>
+</tr>
+<tr>
+	<td class="crSSLabels">Last Name:</td><td class="crSSInputs required"><input type="text" class="crSSInput" name="lastName" value = "<?php echo $this->lastName; ?>"  /></td>
+</tr>
+<tr>
+	<td class="crSSLabels">Paypal Email:</td><td class="crSSInputs"><input type="text" class="crSSInput paypalEmailIn<?php if ($this->eCheck==1) { echo ' sendCheckGrey'; }?>" name="paypalEmail" value = "<?php echo $this->paypalEmail; ?>" <?php if ($this->eCheck==1) { echo 'disabled="disabled"'; } ?> /><br />
+	<label class="crSSInputUnderMessage">This is how we pay you or click <a class="linkNoDecor" href="#sendCheckBox" id="openSendCheckBox"><span class="ECheckGreen">here</span></a> for other payment arrangements.</label></td>
+</tr>
+</table>
+<input class="bandAdminBasicUpdateBtn2" type="submit" value="Save Changes" />
+<div class="hiddenElement">
+<div id="sendCheckBox">
+<p class="sendCheckText">If you prefer not to use paypal we can send you an e-check to your email. There is an <span>additional fee of $3</span> to send an e-check. Select the check box below to recieve payment with an e-check:</p>
+<input type="checkbox" name="eCheck" class="sendCheckSelected" <?php if ($this->eCheck) { echo 'checked="checked"'; }   ?> value = "1" />
+<p class="sendCheckSelectorText">Send me an E-check for a $3 fee</p>
+</div> <!-- end sendCheckBox -->
+</div> <!-- end hiddenElement -->
+</form>
+</div> <!-- end crSSStep1 -->
+</div> <!-- end content -->
+</div> <!-- end contentArea -->
+</div>
+</div>
+

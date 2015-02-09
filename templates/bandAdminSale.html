@@ -1,0 +1,197 @@
+<div class="userAdminChunkShell"> 
+	<a href="<?php echo $saleURL; ?>" class="userAdminImageHoverShell userAdminImageHoverShell<?php echo $i;?>">
+    <img class="userAdminChunkImage userAdminChunkImage<?php echo $i ?>"  src="<?php echo $img ?>" />
+    <p class="imageSaleRoloverViewSaleText imageSaleRoloverViewSaleText<?php echo $i;?>">View Sale</p>
+    </a> 
+    <a href="#userAdminBandShareSale<?php echo $i; ?>" id="openUserAdminBandShareSale<?php echo $i; ?>" class="userAdminChunkBtns userAdminChunkPromoteBtn">Promote Sale</a><p class="expiredSaleDLFanListText" id="expiredSaleDLFanListText<?php echo $i ;?>">View / download full<br />fan email list below</p>><a href="#fInSDigShell<?php echo $i; ?>" id="openfInSDigShell<?php echo $i; ?>" class="userAdminChunkBtns userAdminChunkFansInSaleBtn">Fans In Sale</a>
+    <p id="fanDashPendingText<?php echo $i; ?>" class="fanDashPendingText">Pending</p>
+    <?php if (1==1) { ?><!-- if sale is pending and no recipient tokenID is there --><a href="javascript:" class="openBandDashPendingRecipientReg" id="openBandDashPendingRecipientReg<?php echo $i; ?>">Register with Amazon</a><?php } else { ?><p class="openBandDashPendingWaitingApprove" id="openBandDashPendingWaitingApprove<?php echo $i; ?>">Waiting for approval</p><?php } ?>
+  <div class="userAdminChunkStatsBox">
+    <div class="userAdminChunkTitleContainer">
+      <p class="userAdminChunkTitle"><?php echo $saleTitle; ?></p>
+    </div>
+    <!-- end userAdminChunkTitleContainer -->
+    <p class="userAdminChunkViewsPurch"><span class="userAdminChunkViews"><a href="#refShell<?php echo $i; ?>" id="openRefShell<?php echo $i; ?>"><?php echo $views; ?> Views</span></a> &nbsp;<?php echo $purchases ?> Participants</p>
+    <p class="userAdminChunkFanGrowthText">Fan Growth Goal</p>
+    <div class="userAdminChunkGraphShell"> <img class="userAdminGraphWhiteBorder" src="images/userAdminGraphWhiteBorder.png" /> <img class="userAdminGraphGreenBar" id="userAdminGraphGreenBar<?php echo $i; ?>" src="images/userAdminGraphGreenBar.png" /> </div>
+    <!-- end userAdminChunkGraphShell -->
+    <p class="userAdminChunkPercent" id="bandAdminChartPercentage<?php echo $i; ?>"></p>
+    <p class="userAdminChunkFanNum" id="userAdminChunkFanNum<?php echo $i ?>"></p>
+  </div>
+  <!-- end userAdminChunkStatsBox -->
+  <table class="userAdminChunkFactsTable">
+    <tr>
+      <td><?php if($saleCompleted) { echo "Final price: $$currentPrice" ;} else { echo "Current price: $$currentPrice" ;}  ?></td>
+      <td>Starting price: $<?php echo $startPrice; ?></td>
+      <td rowspan="2"><p class="userAdminClock" id="bandAdminSaleCountdown<?php echo $i; ?>"></p></td>
+    </tr>
+    <tr>
+      <td>Per fan drop: $<?php echo $decStructure; ?></td>
+      <td>Lowest price: $<?php echo $basePrice; ?></td>
+    </tr>
+  </table>
+</div>
+<!-- end userAdminChunkShell -->
+
+<div class="hiddenElement">
+  <div id="fInSDigShell<?php echo $i; ?>"">
+    <div class="finsDigListShell"> <?php echo $fanTable; ?> </div>
+    <!-- end finsDigListShell --->
+    <div class="finsDigBtnsShell">
+      <p class="finsDigBtnLeft"><a href="request.php?requestType=Excel&amp;id=<?php echo $saleId; ?>">Download Fan Data</a></p>
+      
+    </div>
+    <!-- end finsDigBtnsShell --->
+  </div>
+  <!-- end fInSDigShell -->
+  
+  <div id="refShell<?php echo $i; ?>">
+    <div class="refHeader">
+      <p>Referrals</p>
+    </div>
+    <!-- end refHeader -->
+    <div class="refListShell"> <?php echo $refTable; ?> </div>
+    <!-- end refListShell --> 
+  </div>
+  <!-- end refShell -->
+  
+  <div class="userAdminBandShareSale" id="userAdminBandShareSale<?php echo $i; ?>">
+    <h2>Share Sale</h2>
+    <h3>Share this sale with your fans to get the most out of your <span>Social Sale!</span></h3>
+    <div class="userAdminShareMediaBtnHolders"> <a onclick='postToFeed(
+    
+    "https://www.zillionears.com/autoClose.html",
+    "https://www.<?php echo $fullURL; ?>",
+    "https://zillionears.com/<?php echo $img;?>",
+    "<?php echo $this->artistName; ?> is having a Social Sale!",
+    "zillionears.com",
+    "Our latest release titled <?php echo $saleTitle; ?> is on a Social Sale right now! The more fans that participate the lower the price gets for everyone! It can get as low as $<?php echo $basePrice;?>!"
+      
+    ); return false;'> <img src="images/shareFB.jpg" class="" /></a> <a href="https://twitter.com/share" class="twitter-share-button" 
+    data-lang="en" 
+    data-count="none" 
+    data-url="http://www.<?php echo $fullURL; ?>" 
+    data-size="large" 
+    data-text="Our latest release titled <?php echo $saleTitle; ?> is on a Social Sale right now! It can get as low as $<?php echo $basePrice;?>!"> </a> </div>
+    
+    <!-- end userAdminShareMediaBtnHolders -->
+    
+    
+    <p class="userAdminBandURL">Sale URL: &nbsp; <span class="userAdminBandGranURL"><?php echo $fullURL; ?></span> 
+  </div>
+  <!-- end userAdminBandShareSale --> 
+  
+  <script> 
+      FB.init({appId: "521484751209611", status: true, cookie: true});
+
+      function postToFeed(redirector,linkposter,pic,title,cap,desc) {
+        // calling the API ...
+        var obj = {
+          method: 'feed',
+          redirect_uri: redirector,
+          link: linkposter,
+          picture: pic,
+          name: title,
+          caption: cap,
+          description: desc
+        };
+
+        function callback(response) {
+          document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
+        }
+
+        FB.ui(obj, callback);
+      }
+    
+    </script>
+  
+</div>
+<!-- end hiddenElement --> 
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#bandAdminSaleCountdown<?php echo $i; ?>').countdown({until:$.countdown.UTCDate(<?php echo $saleEnds; ?>), format: 'DHMS', layout: //(timeZone, year, month-1{ignore the 1}, date)
+  '<div id="SSPtimer">' +
+  '<div id="timer_days" class="SSPtimer_numbers">{dnn}</div>'+'<div class="SSPtimer_Label">d</div>'+
+  '<div id="timer_hours" class="SSPtimer_numbers">{hnn}</div>'+'<div class="SSPtimer_Label">h </div>'+
+  '<div id="timer_mins" class="SSPtimer_numbers">{mnn}</div>'+'<div class="SSPtimer_Label">m </div>'+
+  '<div id="timer_seconds" class="SSPtimer_numbers">{snn}</div>'+'<div class="SSPtimer_Label">s</div>'+'&nbsp;'+
+	'</div>'
+    });// end countdown
+	function fanAdminStatsBuilder3(){
+		var fanAdminStartP = <?php echo $startPrice?>;
+		var fanAdminEndP = <?php echo $basePrice?>;
+		var fanAdminCurrentP = <?php echo $currentPrice?>;
+		var fanAdminBarLength = fanAdminStartP-fanAdminEndP;
+		var fanAdminDroppedAmount = fanAdminStartP-fanAdminCurrentP;
+		var preFanAdminDroppedPerc = (fanAdminDroppedAmount/fanAdminBarLength)*100;
+		fanAdminDroppedPerc = 100-preFanAdminDroppedPerc;
+		fanAdminDroppedPercSwitch= 100-fanAdminDroppedPerc;
+		var barShiftAmount = (-101) + fanAdminDroppedPercSwitch;
+		decrementNumberNow = <?php echo $decStructure; ?>;
+		fansNeededToReachGoal = parseInt(fanAdminBarLength/decrementNumberNow);
+		$('#userAdminGraphGreenBar<?php echo $i; ?>').css('left',barShiftAmount+'%');
+		$('#bandAdminChartPercentage<?php echo $i; ?>').text((parseInt(preFanAdminDroppedPerc)+'% Of Goal'));
+		$('#userAdminChunkFanNum<?php echo $i ?>').text(fansNeededToReachGoal+' Fans');
+	};
+	fanAdminStatsBuilder3();
+	<?php if($saleCompleted) { echo "
+		$('#openUserAdminBandShareSale{$i}').hide();
+		$('.userAdminChunkImage{$i}').css('opacity','0.2');
+		$('.imageSaleRoloverViewSaleText{$i}').show().text('Sale Ended').css('left','29px');
+		$('.userAdminImageHoverShell{$i}').hover(
+			function(){
+				$('.imageSaleRoloverViewSaleText{$i}').text('View Sale').css('left','33px');
+			},
+			function(){
+				$('.imageSaleRoloverViewSaleText{$i}').text('Sale Ended').css('left','29px');
+			}
+		);
+	"; } else{ echo "
+		$('#expiredSaleDLFanListText{$i}').hide();
+		$('.userAdminImageHoverShell{$i}').hover(
+		function(){
+			$('.userAdminChunkImage{$i}').css('opacity','0.2');
+			$('.imageSaleRoloverViewSaleText{$i}').show();
+		},
+		function(){
+			$('.userAdminChunkImage{$i}').css('opacity','1');
+			$('.imageSaleRoloverViewSaleText{$i}').hide();
+		}
+	);
+	";} if (1==2) {?> /* if the sale is pending */
+	$('#openUserAdminBandShareSale<?php echo $i; ?>').remove();
+	$('#expiredSaleDLFanListText<?php echo $i; ?>').remove();
+	$('#openfInSDigShell<?php echo $i; ?>').remove();
+	<?php } else{ ?>
+	$('#fanDashPendingText<?php echo $i; ?>').remove();
+	$('#openBandDashPendingRecipientReg<?php echo $i; ?>').remove();
+	$('#openBandDashPendingWaitingApprove<?php echo $i; ?>').remove();
+	<?php } ?>	
+
+	//$('.finsDigMessage<?php echo $i; ?>').addClass('addWhiteBack').removeAttr("readonly","readonly").focus();
+	function charNumLeft2(className,max,classToReturn){
+		numOfCharsNows = $('.'+className).val().length;
+		numAllowedLeft = max - numOfCharsNows;
+		$('.'+classToReturn).text(numAllowedLeft);
+		};
+		$('.finsDigMessage<?php echo $i; ?>').keyup(function(){
+			charNumLeft2('finsDigMessage<?php echo $i; ?>', 139, 'messageToFansCharNum<?php echo $i; ?>');
+		});
+		
+		$('.finsEditMessBtn<?php echo $i; ?>').live('click',function(){
+			if($('.messageToFansClickedOrNot<?php echo $i; ?>').val()=='1'){
+				$(this).text('Save Message');
+				$('.finsDigMessage<?php echo $i; ?>').addClass('addWhiteBack').removeAttr("readonly","readonly").focus();
+				$('.messageToFansClickedOrNot<?php echo $i; ?>').val('2');
+			} else {
+				$(this).text('Edit Personal Message');
+				$('.finsDigMessage<?php echo $i; ?>').removeClass('addWhiteBack').attr("readonly","readonly");
+				$('.messageToFansClickedOrNot<?php echo $i; ?>').val('1');
+			};
+		}); // end click
+		
+	$('#openfInSDigShell<?php echo $i; ?>').fancybox(); 
+   	$('#openRefShell<?php echo $i; ?>').fancybox();
+	$('#openUserAdminBandShareSale<?php echo $i; ?>').fancybox();
+});
+</script> 

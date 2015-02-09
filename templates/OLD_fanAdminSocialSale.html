@@ -1,0 +1,45 @@
+<div class="adminSaleShell">
+<div class="adminSaleHead">
+<p class="adminSaleHeadTitle"><?php echo $type; ?></p>
+<p class="fanAdminSaleBoxHeads">Share this sale now and save yourself money!<br /><span>The more people who get in this sale the lower the final price will be</span></p>
+</div> <!-- end adminSaleHead -->
+<div class="adminSaleImgShell">
+    <img class="adminSaleImg" src="<?php echo $img ?>" />
+<!----> <div class="adminSaleImgBottomShell1"></div>
+<div class="adminSaleImgBottomShell2">
+<p class="adminSaleImgInfo1">Current Price:</p>
+<p class="adminSaleImgInfo2">$<?php echo $currentPrice; ?></p>
+<p class="adminSaleImgInfo3">Sale Ends:</p>
+<p class="adminSaleEnds" id="fanAdminSaleCountdown<?php echo $i; ?>"></p>
+<!--<p class="<?php if($saleCompleted) { echo 'adminSaleSaleOverBtn'; } else { echo 'adminSaleViewSaleBtn'; }?>"><a href="<?php echo $saleURL;?>" target="_blank">View Sale</a></p>-->
+<a href="<?php echo $saleURL;?>" target="_blank"><p class="<?php if($saleCompleted) { echo 'adminSaleSaleOverBtn'; } else { echo 'adminSaleViewSaleBtn'; }?>">View Sale</p></a>
+</div> <!-- end adminSaleImgBottomShell2 -->
+</div> <!-- end adminSaleImgShell -->
+<table class="adminSaleTable">
+<tr>
+	<td colspan="2"><span class="adminSaleShareP">Share Sale:</span><img class="adminSaleShare" src="images/shareFB.jpg" /><img class="adminSaleShare" src="images/shareTW.jpg" /></td>
+</tr>
+<tr>
+	<td colspan="2"><p class="fanAdminLinkPlace">URL</p> <div class="fanAdminSaleHeadLinkShell"><input class="fanAminSaleHeadLinkP" value="<?php echo $fullURL;?>" readonly></div> <!-- end adminSaleHeadLinkShell --></td>
+</tr>
+<tr>
+	<td class="fanAdminTabCent" colspan="2"><span class="fanAdminChange1">Got into sale @</span> <span class="fanAdminChange2">$<?php echo $buyinPrice;?></span></td>
+</tr>
+<tr>
+	<td class="fanAdminTabCent" colspan="2"><span class="fanAdminChange1">Price dropped</span> <span class="fanAdminChange3">$<?php echo number_format($buyinPrice-$currentPrice,2); ?></span> <span class="tempStartingPrice"><?php echo $openingprice;?></span> <span class="tempLowestPossiblePrice"><?php echo $lowestprice;?></span> <span class="tempNumberOfParticipantsInSale"><?php echo $numbuyins;?></span></td>
+</tr>
+</table>
+<p class="fanAdminNoOrderRec"><a href="mailto:support@zillionears.com?subject=Order%20ID%20<?php echo $orderId?>">Did not receive order?</a></p>
+</div> <!-- end adminSaleShell -->
+<script type="text/javascript">
+$(document).ready(function(){
+$('#fanAdminSaleCountdown<?php echo $i; ?>').countdown({until:$.countdown.UTCDate(<?php echo $saleEnds; ?>), format: 'DHMS', layout: //(timeZone, year, month-1{ignore the 1}, date)
+  '<div id="SSPtimer">' +
+  '<div id="timer_days" class="SSPtimer_numbers">{dnn}</div>'+'<div class="SSPtimer_Label">d</div>'+
+  '<div id="timer_hours" class="SSPtimer_numbers">{hnn}</div>'+'<div class="SSPtimer_Label">h </div>'+ 
+  '<div id="timer_mins" class="SSPtimer_numbers">{mnn}</div>'+'<div class="SSPtimer_Label">m </div>'+
+  '<div id="timer_seconds" class="SSPtimer_numbers">{snn}</div>'+'<div class="SSPtimer_Label">s</div>'+'&nbsp;'+							
+	'</div>'					  
+});// end countdown
+});
+</script>

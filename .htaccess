@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteCond $1 ^(about|checkout|completesale|createss|error|fanadminsettings|fanadminsocialsales|login|logout|pricing|register|socialsale|terms|bandadminsettings|bandadminsales|capturesales|adminaccounts|adminbilling|adminsingleaccount|adminsinglesocialsale|admintotal|adminsocialsales|shopsales) [NC] 
+RewriteRule ^(.*)$ /index.php?page=$1 [L] 

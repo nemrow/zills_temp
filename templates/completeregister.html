@@ -1,0 +1,109 @@
+<body>
+<div class="recipRegFrame">
+  <div class="recipRegFrameTransBack"></div>
+  <div class="recipRegShell">
+    <h1>Congrats! Sale is active!</h1>
+    <h2>Make sure your sale is a huge success by sharing with your fans!</h2>
+    
+    
+    <table class="recipRegShareBtnShell"> 
+    	<tr>
+			<td>
+    <a onclick='postToFeed(
+    
+    "https://www.zillionears.com/fanadminsocialsales",
+    "<?php echo $this->URL; ?>",
+    "https://zillionears.com/<?php echo $this->productImg;?>",
+    "<?php echo $this->artistName; ?> is having a Social Sale!",
+    "zillionears.com",
+    "Our latest release titled <?php echo $this->productTitle; ?> is on a Social Sale right now! The more fans that participate the lower the price gets for everyone! It can get as low as $<?php echo $this->lowPrice;?>!"      
+    ); return false;'> <img src="images/shareFB.jpg" class="" /></a> 
+    		</td>
+        	<td>
+    <a href="https://twitter.com/share" class="twitter-share-button" 
+    data-lang="en" 
+    data-count="none" 
+    data-url="<?php echo $this->URL; ?>" 
+    data-size="large" 
+    data-text="Our latest release titled <?php echo $this->productTitle; ?> is on a Social Sale right now! It can get as low as $<?php echo $this->lowPrice;?>!"> </a> 
+    		</td>
+     	</tr>
+    </table>
+    <!-- end userAdminShareMediaBtnHolders -->
+    <p class="recipRegBandURL">Sale URL: &nbsp; <span class="recipRegBandGranURL"><?php echo $this->URL; ?></span> </p>
+    <h3>Sharing Tips</h3>
+    <table class="recipRegTipsTable">
+    	<tr>
+        	<td><img src="images/recipRegLandArrowBullet.png"></td>
+            <td>Encourage your fans to check out your sale but don’t be too pushy</td>
+        </tr>
+        <tr>
+        	<td><img src="images/recipRegLandArrowBullet.png"></td>
+            <td>Maximum of 3 posts promoting the sale beginning, middle, end</td>
+        </tr>
+        <tr>
+        	<td><img src="images/recipRegLandArrowBullet.png"></td>
+            <td>Post during the week, instead of on the weekend, when possible</td>
+        </tr>
+    </table>
+    <table class="recipRegGoToTable">
+    	<tr>
+        	<td class="recipRegGoTo1">Go To:</td>
+            <td class="recipRegGoTo2"><a href="<?php echo $this->URL; ?>">Sale Page</a></td>
+            <td class="recipRegGoTo2"><a href="bandAdminSales">Artist Admin</a></td>
+        </tr>
+    </table>
+    <script type="text/javascript"> 
+      FB.init({appId: "521484751209611", status: true, cookie: true});
+
+      function postToFeed(redirector,linkposter,pic,title,cap,desc) {
+        // calling the API ...
+        var obj = {
+          method: 'feed',
+          redirect_uri: redirector,
+          link: linkposter,
+          picture: pic,
+          name: title,
+          caption: cap,
+          description: desc
+        };
+
+        function callback(response) {
+          document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
+        }
+
+        FB.ui(obj, callback);
+      }
+    
+    </script>
+    
+    
+  </div>
+  <!--end recipRegShell --> 
+</div>
+<!-- end recipRegFrame --> 
+
+<script>
+$(document).ready(function(){
+$('#openFanTermsAndCond').fancybox();
+	$('.checkoutCrownFullBar, .checkoutCrowdDropBar').fadeIn(2000);
+		function placeSosaFrame(shellFrameHeight){
+		currentWindowHeight = $(window).height();
+		currentFrameMargin = ((currentWindowHeight - shellFrameHeight)/2);
+		if(currentFrameMargin<0){
+			currentFrameMargin = 0;
+		};
+		$('.recipRegFrame').css('margin-top',currentFrameMargin);
+	};
+	placeSosaFrame(455);
+	$(window).resize(function(){
+		placeSosaFrame(455);
+	});
+	$('.checkoutPageAmznBtn').css('background-color','<?php echo $this->accentColor; ?>');
+
+	$('.checkoutPageAmznBtn').css('background-color','<?php echo $this->accentColor; ?>')
+	$.backstretch("<?php echo $this->backgroundImg; ?>", {speed: 150, centeredY: false});
+});
+</script>
+</div>
+<!-- end socialSalePageShell --> 

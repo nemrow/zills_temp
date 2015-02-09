@@ -1,0 +1,114 @@
+@charset "utf-8";
+/* HEADER / FOOTER CSS Document */
+
+/****************************************************************************************   footer  ******************/
+#header{
+	position:relative;
+	width:100%;
+	background-color:#1E1E1E;
+	height:50px;
+	z-index:3;
+}
+.logoInHeader {
+	position: absolute;
+	left: 0px;
+	margin: 5px 0;
+}
+.subHeader{
+	position: relative;
+	width: 100%;
+	background-color: #515151;
+	height: 70px;
+	z-index:2;
+}
+.contentContainer{
+	position:relative;
+	width:100%;
+	background-color:#333;
+	height:auto;
+	padding:20px 0 10px 0;
+}
+.contentArea{
+	width:100%;
+	background-color:#2E2E2E;
+	height:auto;
+	position:relative;
+	border-radius:15px;
+	-moz-box-shadow: 0px 0px 5px 5px #2E2E2E;
+	-webkit-box-shadow: 0px 0px 5px 5px #2E2E2E;
+	box-shadow: 0px 0px 5px 5px #2E2E2E;
+}
+.content{
+	padding:20px;
+}
+#footer{
+	position:relative;
+	font-size:12px;
+	margin:12px 5px;
+}
+.footerL{
+	text-align:left;
+	float:left;
+}
+.footerR{
+	text-align:right;
+	float:right;
+}
+.headerNav{
+	position:absolute;
+	right:0px;
+}
+p.inHeaderName{
+	position:relative;
+	float:left;
+	font-size:12px;
+	padding:17px 0 0 0;
+	margin:0 10px 0 0;
+	color:#999;
+}
+p.inHeaderName:hover, .loggedInHeaderSlider p:hover{
+	color:#FFF;
+}
+.inHeaderLoggedInShell{
+	position:relative;
+	float:right;
+	cursor:pointer;
+}
+img.inHeaderLoggedInPhoto{
+	position:relative;
+	width:34px;
+	height:34px;
+	float:right;
+	margin-top:8px;
+	z-index:2;
+}
+.loggedInHeaderSlider{
+	position:absolute;
+	width:100px;
+	right:0px;
+	background-color:#1E1E1E;
+	border-radius:10px;
+	top:40px;
+	padding-bottom:2px;
+	z-index:1;
+	display:none;
+}
+.loggedInHeaderSlider p{
+	position:relative;
+	margin:8px;
+	right:0px;
+	font-size:14px;
+	text-align:center;
+	color:#999;
+}
+p.inHeaderNotLoggedIn{
+	position:relative;
+	font-size:12px;
+	padding:17px 0 0 0;
+	color:#999;
+	cursor:pointer;
+}
+p.inHeaderNotLoggedIn:hover{
+	color:#FFF;
+}
+

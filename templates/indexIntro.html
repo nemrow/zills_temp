@@ -1,0 +1,136 @@
+<div class="part1">
+  <div class="wrapperIntro">
+    <div class="wrapperIntoBack"> </div>
+    <!-- end wrapperIntroBack -->
+    <div class="wrapper">
+      <?php if($this->currentPage != 'error') { if(parent::loggedIn()) { ?>
+      <a href="fanAdminSocialSales">
+      <p class="indexIntroLogin"><?php echo parent::userName(); ?></p>
+      </a>
+      <?php } else { ?>
+      <a href="#newLoginBox" id="openLoginBox">
+      <p class="indexIntroLogin">Login / Signup</p>
+      </a>
+      <?php } } ?>
+      <img class="homeLogo" src="images/logoHomeNoEar.png" /> <img class="justEarInLogo" src="images/justEar.png" /> <img class="homeBetaSymbol" src="images/betaSymbol.png" /> </a> <!-- end fullPageSalePreview -->
+      <div class="homeSlideShell">
+        <p class="homeSlideSlog1">Excite & Engage your fans with Social Sales</p>
+        <p class="homeSlideSlog1NewItalicGreen">A pre-sale for digital releases with a twist</p>
+        <table class="homeNewSlideTable">
+        	<tr><td class="homeNewSlideTableLeftSide"><img src="images/greenBulletPoint.png" /></td><td>Build excitment around your next release</td></tr>
+            <tr><td class="homeNewSlideTableLeftSide"><img src="images/greenBulletPoint.png" /></td><td>Collect fan names, emails, and zips</td></tr>
+            <tr><td class="homeNewSlideTableLeftSide"><img src="images/greenBulletPoint.png" /></td><td>Oh and its FREE!</td></tr>
+        </table>
+        <a href="https://zillionears.com/sampleSale1Dom.html" target="_blank">
+            <div class="homeNewSlideSaleDemoShell">
+                <div class="homeNewSlideSaleDemoBG"></div>
+                <p>Sale Demo</p>
+            </div> 
+            <!-- end homeNewSlideSaleDemoShell -->
+      	</a>
+      </div>
+      <!-- end homeSlideShell -->
+      <div class="homeDemoShell">
+        <div class="homeDemo">
+          <a href="https://www.youtube.com/watch?v=Ra020bZF-s0&amp;autoplay=1" id="openHomeIntroVideoPopOut"><img src="images/IntroVideoPreviewStill.jpg" /><div class="openHomeIntroVideoPopOutBtn"></div></a>
+        </div>
+        <!-- end homeDemo ---> 
+      </div>
+      <!-- end homeDemoShell --> 
+    </div>
+    <div class="indexIntroBottomButtonsShell">
+      <a href="createss">
+        <div class="indexIntroCreateSocialSaleBtn">
+          <p>Create Sale</p>
+          <img src="images/freeRibbonRed.png" />
+        </div>
+        <!-- end indexIntroCreateSocialSaleBtn -->
+      </a>
+      	<div class="homeNewLowerTextShell">
+        	<h2>Sell your next Single, EP, or Album</h2>
+            <h3>amazon takes credit card processing fees: 5% of sales + $.05 per transaction</h3>
+        </div>
+        <!-- end homeNewLowerTextShell -->
+    </div>
+    <!-- end indexIntroBottomButtonsShell --> 
+    <!-- end wrapper --> 
+  </div>
+  <!-- end wrapperIntro --> 
+  </a> </div>
+<!-- end indexIntroCoolSalesShell -->
+</div>
+<!-- end part1 -->
+<div class="introFooter">
+<div class="wrapper">
+  <p class="introFooterLeft">Zillionears LLC 2012</p>
+  <div class="introFooterRight">
+    <p><a href="about">About</a> &nbsp;&nbsp; | &nbsp;&nbsp; <a href="#contactUs" id="openContactUsIntro">Contact</a> &nbsp;&nbsp; | &nbsp;&nbsp;<a href="#generalTermsAndCond" id="openGeneralTermsAndCond">Terms of Service</a>&nbsp;&nbsp; | &nbsp;&nbsp;</p>
+    <a href="https://www.facebook.com/Zillionears" target="_blank">
+    <div class="socialMediaFooterIcons footerFacebookIcon"></div>
+    </a><a href="https://twitter.com/ZillionEars" target="_blank">
+    <div class="socialMediaFooterIcons footerTwitterIcon"></div>
+    </a> </div>
+  <!-- end wrapper --> 
+</div>
+<!-- end introFooter -->
+<div class="hiddenShell">
+  <div id="noCreateSsYetThanks" class="noCreateSsYetThanks">
+  	<h1>Thanks for checkin’ us out!</h1>
+    <h2>We are currently making some updates to the software<br />Enter your email below, and we will let you know as soon as its ready!</h2>
+    <input class="createSsNotReadyEmailInput" value="Email" />
+    <p class="createSsNotReadyEmailSubmit">Submit</p>
+  </div> <!-- end noCreateSsYetThanks --> 
+  <div id="noCreateSsYetThanksSubmittedBox" class="noCreateSsYetThanksSubmittedBox">
+  	<h1>Email Submitted</h1>
+    <img src="images/checkMarkGreen.png" />
+  </div><!-- end noCreateSsYetThanksSubmittedBox -->
+</div>
+<!-- end hiddenShell -->
+<a href="#noCreateSsYetThanksSubmittedBox" id="openNoCreateSsYetThanksSubmittedBox" class="openNoCreateSsYetThanksSubmittedBox"></a>
+<script>
+$(document).ready(function() {
+	$('.footer').css('display','none');
+	$('body').css('background','none');
+	$('body').css('background-color','none');
+	$('.indexIntroLogin').click(function(){
+		$('#signInForm').attr('action','login&action=bandadminsales');
+		$('#registerForm').attr('action','register&action=bandadminsales');	
+	});
+	$('#openGeneralTermsAndCond').fancybox();
+	$('#openTTunesVsSosa').fancybox();
+	$('#openWhyData').fancybox();
+	$('#openiTunesVsSosa2').fancybox();
+	$('#openNoCreateSsYetThanks').fancybox();
+	$('#openNoCreateSsYetThanksSubmittedBox').fancybox();
+	$('#openHomeIntroVideoPopOut').fancybox();
+	$.backstretch("images/rockOnBG.jpg", {speed: 100, centeredY: false});
+	$('.createSsNotReadyEmailInput').focus(function(){
+		if($(this).val()=='Email'){
+			$(this).val('');
+		};
+	});
+	$('.createSsNotReadyEmailInput').blur(function(){
+		if($(this).val()==''){
+			$(this).val('Email');
+		};
+	});
+	$('.homeNewSlideSaleDemoShell').hover(
+		function(){$('.homeNewSlideSaleDemoBG').css({'background-color':'#018f46', 'opacity':0.5 });},
+		function(){$('.homeNewSlideSaleDemoBG').css({'background-color':'#fff', 'opacity':0.2 });}
+	)
+	$('.homeDemo').hover(
+		function(){$('.openHomeIntroVideoPopOutBtn').css('background-position','0px 41px');},
+		function(){$('.openHomeIntroVideoPopOutBtn').css('background-position','0px 0px');}
+	)
+	$("#openHomeIntroVideoPopOut").click(function(e) {
+		$.fancybox({
+				'type' : 'swf',
+				'width'         		: 640,
+				'height'        		: 360,
+				'href' : this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
+				'swf' : { 'wmode' : 'transparent', 'allowfullscreen' : 'true' }
+			});
+		e.preventDefault();
+	});
+});
+</script> 

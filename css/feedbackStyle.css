@@ -1,0 +1,196 @@
+.feedbackButtonShell{
+	position:absolute;
+	left:403px;
+	top:167px;
+	height:31px;
+	width:125px;
+	background-image:url(../images/feedbackBtnGrad_SPRITE.jpg);
+	background-repeat:repeat;
+	background-position:0px 0px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg); /* IE 9 */
+	-moz-transform:rotate(90deg); /* Firefox */
+	-webkit-transform:rotate(90deg); /* Safari and Chrome */
+	-o-transform:rotate(90deg); /* Opera */
+	cursor:pointer;
+}
+.feedbackButtonShell:hover{
+	background-position:0px 33px;
+}
+.feedbackButtonShell p{
+	position:absolute;
+	top:3px;
+	left:8px;
+	font-size:18px;
+	text-shadow:2px 2px 3px #000;
+	margin:0px;
+}
+.feedbackSpeakerIcon{
+	position:absolute;
+	top:6px;
+	right:7px;
+	margin:0px;
+	width:21px;
+	height:16px;
+	background-image:url(../images/feedback_SPRITE.png);
+	background-position:0 -33px;
+}
+.feedbackFormShell{
+	position:fixed;
+	width:450px;
+	height:460px;
+	background-color:#1e1e1e;
+	text-align:center;
+	left:-450px;
+	bottom:36px;
+	z-index:9999;
+}
+input.feedbackInput1{
+	width:320px;
+	height:50px;
+	border-radius:10px;
+	position:absolute;
+	top:20px;
+	left:50px;
+	border:none;
+	outline:none;
+	padding:0 15px 0 15px;
+	font-size:16px;
+}
+.feedbackDropDownContainer{
+	width:350px;
+	height:50px; /*50px;*/
+	border-radius:10px;
+	margin:15px auto;
+	position:absolute;
+	overflow:hidden;
+	top:79px;
+	left:50px;
+}
+.feedbackDropDownShell{
+	width:350px;
+	height:50px;
+	border-radius:10px;
+	background-color:#FFF;
+}
+.feedbackDropDownSelectionShell{
+	width:350px;
+	height:140px;
+	background-color:#fff;
+	position:absolute;
+	top:-140px;
+	border-radius:10px;
+}
+.feedbackDropDownBtn{
+	position:absolute;
+	top:18px;
+	right:18px;
+	width:16px;
+	height:15px;
+	background-image:url(../images/feedback_SPRITE.png);
+	background-position:0px -15px;
+	cursor:pointer;
+}
+.feedbackDropDownBtn:hover{
+	background-position:0px 0px;
+}
+.feedbackHR1{
+	position:absolute;
+	top:10px;
+	right:46px;
+	height:31px;
+	width:1px;
+	background-color:#d2d2d2;
+}
+p.feedbackDropDownCurrentText{
+	position:absolute;
+	top:16px;
+	left:16px;
+	font-size:16px;
+	font-weight:bold;
+	color:#000;
+}
+.feedbackDropDownSelectionShell p{
+	font-size:16px;
+	text-align:left;
+	color:#000;
+	font-weight:bold;
+	margin:13px 0px 13px 21px;
+	cursor:pointer;
+}
+.feedbackDropDownSelectionShell p:hover{
+	color:#b92d28;
+}
+.feedbackHR2{
+	position:relative;
+	margin:0px auto;
+	width:320px;
+	height:1px;
+	background-color:#d2d2d2;
+}
+.feedbackSelectedArrow{
+	position:absolute;
+	top:18px;
+	right:18px;
+	width:16px;
+	height:15px;
+	background-image:url(../images/feedback_SPRITE.png);
+	background-position:0px 0px;
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg); /* IE 9 */
+	-moz-transform:rotate(90deg); /* Firefox */
+	-webkit-transform:rotate(90deg); /* Safari and Chrome */
+	-o-transform:rotate(90deg); /* Opera */
+}
+textarea.feedbackTextArea{
+	width:320px;
+	position:absolute;
+	height:183px;
+	border-radius:10px;
+	bottom:75px;
+	left:50px;
+	background-color:#FFF;
+	outline:none;
+	border:none;
+	font-size:16px;
+	padding:15px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.feedbackSubmitBtn{
+	height:31px;
+	width:125px;
+	border-radius:10px;
+	background-image:url(../images/feedbackBtnGrad_SPRITE.jpg);
+	position:absolute;
+	background-position:0px 0px;
+	bottom:20px;
+	left:50px;
+	cursor:pointer;
+	font-size:16px;
+	font-weight:bold;
+}
+.feedbackSubmitBtn:hover{
+	background-position:0px 33px;
+}
+.feedbackSubmitBtn p{
+	position:relative;
+	text-align:center;
+	margin:0px;
+	top:6px;
+}
+.feedbackDisapearArrow{
+	position:absolute;
+	top: -21px;
+	left: 54px;
+	width: 15px;
+	height: 73px;
+	background-image:url(../images/feedback_SPRITE.png);
+	background-position:0px -50px;
+	transform:rotate(270deg);
+	-ms-transform:rotate(270deg); /* IE 9 */
+	-moz-transform:rotate(270deg); /* Firefox */
+	-webkit-transform:rotate(270deg); /* Safari and Chrome */
+	-o-transform:rotate(270deg); /* Opera */
+}

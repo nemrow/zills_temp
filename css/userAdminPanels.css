@@ -1,0 +1,724 @@
+@charset "utf-8";
+/* CSS Document */
+/************************************* Fan Admin Social Sale *****************/
+.fadminSaleShell{
+	width:686px;
+	height:122px;
+	position:relative;
+	background-image:url(../images/fanAdminBG1.png);
+	margin:30px auto;
+}
+.fadminSaleLeftShell{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:130px;
+	height:100%;
+	text-align:center;
+}
+.fadminSaleRightShell{
+	position:absolute;
+	right:0px;
+	top:0px;
+	width:556px;
+	height:100%;
+}
+.fadminSaleLeftShell h1{
+	font-size:16px;
+	margin:17px auto 12px auto;
+	width:90%;
+}
+.fadminSaleLeftShell h2{
+	font-size:12px;
+	font-weight:normal;
+	margin:10px auto 19px auto;
+	width:90%;
+}
+a.fadminShareAndSaveBtn{
+	padding:5px 0;
+	width:120px;
+	text-align:center;
+	background-color:#018f46;
+	font-size:16px;
+	font-weight:bold;
+	margin:0 auto;
+	left:5px;
+	border-radius:10px;
+	bottom:7px;
+	position:absolute;
+}
+.fadminSaleOverBar img{
+	position:absolute;
+	left:13px;
+	top:13px;
+}
+p.fadminSaleOverDLText{
+	position:absolute;
+	width:200px;
+	font-size:16px;
+	text-align:center;
+	font-weight:bold;
+	left:63px;
+	top:9px;
+}
+p.fadminSaleOverSaleOver{
+	font-size:22px;
+	font-weight:bold;
+	position:absolute;
+	top:11px;
+	right:13px;
+}
+p.fadminSaleOverDLText span{
+	font-size:10px;
+	font-weight:normal;
+	opacity:0.7;
+	cursor:pointer;
+}
+p.fadminSaleOverDLText span:hover{
+	opacity:1;
+}
+a.fadminShareAndSaveBtn:hover{
+	color:#000;
+	background-color:#fff;
+}
+.fadminDividerLine{
+	position:absolute;
+	top:0px;
+	left:130px;
+	width:1px;
+	height:100%;
+	background-color:#757574;
+	opacity:0.6;
+}
+.fadminSaleOverBar{
+	height:48px;
+	width:555px;
+	background-color:#000;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+}
+td.finsDigListHeaders{
+	font-weight:bold;
+	padding-top:20px !important;
+	padding-bottom:20px !important;
+	font-size:16px
+}
+/************************************ random ****************************/
+.recipientRegAdminBtn{
+	position:relative;
+	float:right;
+	width:389px;
+	height:47px;
+	background-color:#ff9604;
+	margin:11px 0px 0 0;
+	border-radius:10px;
+	cursor:pointer;
+}
+.recipientRegAdminBtn:hover{
+	background-image:url(../images/recipientRegAdminBtn.jpg);
+	background-repeat:repeat;
+}
+p.recipientRegText{
+	position:absolute;
+	font-size:14px;
+	top:16px;
+	text-shadow:1px 1px 5px #000; 
+}
+p.recipientRegText1{
+	right:10px;
+}
+p.recipientRegText2{
+	left:10px;
+}
+.recipientRegAdminBtn img{
+	position:absolute;
+	top:12px;
+	left:136px;
+}
+/************************************ pricing chart taken from social sale css  ***********/
+.sosaTimeHow{
+	position:absolute;
+	top:15px;
+	left:7px;
+	width:540px;
+	height:25px;
+}
+.sosaTimeHowTransBack{
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#FFF;
+	opacity:0.1;
+	width:100%;
+	height:100%;
+	border-radius:10px;
+}
+.timeCounter{
+	position:relative;
+	margin:5px 7px;
+}
+.timeCounter p{
+	font-size:14px;
+	font-weight:bold;
+}
+p.sosaHow{
+	position:absolute;
+	right:0px;
+	top:0px;
+	margin:5px 7px;
+	font-size:14px;
+	font-weight:bold;
+	cursor:pointer;
+	color:#fff;
+}
+#howItWorks{
+	text-align:center;
+}
+#howItWorks h1{
+	font-size:30px;
+	padding:20px 0 10px 0;
+}
+#howItWorks p{
+	font-size:20px;
+	width:430px;
+	padding:20px;
+}
+a.sosaHow:visited{
+	text-decoration:none;
+	color:#fff;
+}
+.sosaPricingShell{
+	width:542px;
+	height:60px;
+	position:absolute;
+	left:7px;
+}
+.sosaPricingShellActive{
+	bottom:7px;
+}
+.sosaPricingShellOver{
+	top:7px;
+}
+.sosaHighLowPriceBoxes{
+	width:87px;
+	height:47px;
+	position:absolute;
+}
+.sosaHighPriceBox{
+	left:0px;
+	top:7px;
+}
+.sosaLowPriceBox{
+	right:0px;
+	top:7px;
+}
+.sosaHighLowPriceBoxTransBacks{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	border-radius:10px;
+	background-color:#fff;
+	opacity:0.2;
+	z-index:1;
+}
+p.sosaHighLowPriceText{
+	position:relative;
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+	padding-top:5px;
+}
+p.sosaHighLowPriceText span{
+	font-size:20px;
+}
+.sosaCurrentPriceSliderShell{
+	position:absolute;
+	width:368px;
+	height:100%;
+	left:87px;
+}
+.sosaCurrentPriceBox{
+	width:100px;
+	height:60px;
+	border-radius:10px;
+	position:absolute;
+	top:0px;
+	left:10px;
+	z-index:2;
+	background-color:#018f46;
+}
+p.sosaCurrentPriceText{
+	position:relative;
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+	padding-top:7px;
+}
+p.sosaCurrentPriceText span{
+	font-size:30px;
+}
+.sosaSliderBar{
+	width:100%;
+	height:10px;
+	position:absolute;
+	top:25px;
+	z-index:1;
+}
+.sosaSliderBarCompPart{
+	position:absolute;
+	top:0px;
+	height:100%;
+	z-index:2;
+	opacity:0.8;
+	background-color:#018f46;
+}
+.sosaSliderBarNotCompPart{
+	position:absolute;
+	top:0px;
+	height:100%;
+	width:100%;
+	z-index:1;
+	background-image:url(../images/saleGraphBarArrows.png);
+	background-repeat:repeat;
+}
+.userAdminFanBillingProblem{
+	width:400px;
+	text-align:center;
+}
+.userAdminFanBillingProblem h1{
+	text-align:center;
+	margin:20px auto;
+}
+.userAdminFanBillingProblem p{
+	text-align:center;
+	margin:20px;
+}
+.userAdminFanBillingProblem img{
+	position:relative;
+}
+.userAdminFanBillingProblem a{
+	font-size:20px;
+	font-weight:bold;
+	color:#018f46;
+}
+/************************************* footer shit **********************/
+p.footerL{
+	position:absolute;
+	left:0px;
+	top:11px;
+	color:#999;
+}
+p.footerR{
+	position:absolute;
+	right:0px;
+}
+p.footerR a:link{
+	color:#FFF;
+	text-decoration:none;
+}
+p.footerR a:visited{
+	color:#FFF;
+	text-decoration:none;
+}
+.footer{
+	width:100%;
+	position:relative;
+	height:41px;
+	font-size:12px;
+}
+/************************************* Older code ************************/
+.userAdminChunkShell{
+	width:683px;
+	height:220px;
+	position:relative;
+	margin:30px auto;
+	background-color:#000;
+}
+img.userAdminChunkImage{
+	position:absolute;
+	top:5px;
+	left:5px;
+	width:135px;
+	height:135px;
+	cursor:pointer;
+}
+a.userAdminChunkBtns{
+	width:135px;
+	padding:5px 0;
+	background-color:#018f46;
+	text-align:center;
+	border-radius:10px;
+	text-shadow:1px 1px 4px #000;
+	color:#fff;
+	font-size:20px;
+	position:absolute;
+}
+a.userAdminChunkBtns:hover{
+	color:#018f46;
+	background-color:#fff;
+	text-shadow:none;
+}
+a.userAdminChunkPromoteBtn{
+	bottom:42px;
+	left:5px;
+}
+p.expiredSaleDLFanListText{
+	bottom:43px;
+	left:0px;
+	width:150px;
+	position:absolute;
+	font-size:12px;
+	text-align:center;
+}
+a.userAdminChunkFansInSaleBtn{
+	bottom:5px;
+	left:5px;
+}
+p.fanDashPendingText{
+	bottom:39px;
+	left:16px;
+	font-size:30px;
+	position:absolute;
+}
+a.openBandDashPendingRecipientReg{
+	position:absolute;
+	bottom:11px;
+	left:5px;
+	font-size:13px;
+	padding:4px 6px;
+	background-color:#018f46;
+	color:#FFF;
+	text-align:center;
+	border-radius:8px;
+}
+p.openBandDashPendingWaitingApprove{
+	position:absolute;
+	bottom:17px;
+	left:15px;
+	font-size:13px;
+}
+a.openBandDashPendingRecipientReg:hover{
+	color:#018f46;
+	background-color:#fff;
+}
+.userAdminChunkStatsBox{
+	width:532px;
+	height:136px;
+	background-color:#fff;
+	position:absolute;
+	top:5px;
+	right:5px;
+}
+table.userAdminChunkFactsTable{
+	position:absolute;
+	bottom:5px;
+	right:5px;
+	width:532px;
+}
+table.userAdminChunkFactsTable td{
+	color:#fff;
+	font-size:14px;
+	font-weight:bold;
+	padding:7px 4px;
+}
+.userAdminChunkTitleContainer{
+	position:absolute;
+	width:100%;
+}
+p.userAdminChunkTitle{
+	position:relative;
+	text-align:center;
+	font-size:16px;
+	color:#000;
+	font-weight:bold;
+	margin-top:13px;
+}
+p.userAdminChunkTitleFan{
+	position:relative;
+	text-align:center;
+	font-size:14px;
+	color:#000;
+	font-weight:bold;
+	margin-top:4px;
+	z-index:2;
+}
+p.userAdminChunkArtistNameFan{
+	position:relative;
+	text-align:center;
+	font-size:12px;
+	color:#018f46;
+	font-weight:normal;
+	margin:0px auto;
+	z-index:2;
+}
+p.userAdminChunkViewsPurch{
+	position:absolute;
+	top:43px;
+	left:15px;
+	color:#000;
+	font-size:14px;
+	padding:4px 4px;
+	font-weight:bold;
+}
+span.userAdminChunkViews{
+	color:#fff;
+	font-size:14px;
+	background-color:#018f46;
+	text-shadow:1px 1px 3px #000;
+	padding:4px 12px;
+	border-radius:12px;
+	cursor:pointer;
+	font-weight:normal;
+}
+span.userAdminChunkViews a:link, span.userAdminChunkViews a:visited{
+	color:#fff;
+}
+span.userAdminChunkViews:hover{
+	background-color:#000;
+}
+p.userAdminChunkFanGrowthText{
+	position:absolute;
+	top:47px;
+	right:15px;
+	color:#000;
+	font-size:14px;
+}
+.userAdminChunkGraphShell{
+	position:absolute;
+	top:69px;
+	height:37px;
+	width:511px;
+	left:10px;
+	overflow:hidden;
+	background-color:#dedede;
+}
+img.userAdminGraphWhiteBorder{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:2;
+}
+img.userAdminGraphGreenBar{
+	position:absolute;
+	top:0px;
+	left:-200px;
+	z-index:1;
+}
+.userAdminChunkPercent{
+	position:absolute;
+	bottom:10px;
+	left:15px;
+	color:#018f46;
+	font-size:14px;
+	font-weight:bold;
+}
+.userAdminChunkFanNum{
+	position:absolute;
+	bottom:10px;
+	right:15px;
+	color:#018f46;
+	font-size:14px;
+	font-weight:bold;
+}
+p.userAdminClock{
+	width:165px;
+	height:24px;
+	background-image:url(../images/userAdminClockBG.png);
+	font-size:20px;
+	padding:6px 5px;
+	background-repeat:no-repeat;
+	margin:-19px -20px -27px 0px;
+}
+.userAdminBandShareSale{
+	width:550px;
+}
+.userAdminBandShareSale h2{
+	text-align:center;
+	font-weight:normal;
+	font-size:22px;
+	margin:15px auto;
+}
+.userAdminBandShareSale h3{
+	font-weight:bold;
+	text-align:center;
+	font-size:12px;
+	margin:30px auto;
+}
+.userAdminBandShareSale h3 span{
+	color:#018f46;
+}
+p.userAdminBandURL{
+	position:relative;
+	margin:30px auto;
+	text-align:center;
+	font-size:14px;
+}
+p.userAdminBandURL span{
+	color:#018f46;
+	background-color:#fff;
+	padding:4px 12px;
+	border-radius:10px;
+}
+p.userAdminWhyShareText{
+	position:absolute;
+	bottom:7px;
+	left:6px;
+	font-size:12px;
+	color:#018f46;
+	text-align:center;
+	width:130px;
+}
+.fanCrowdGraphShell{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:532px;
+	height:116px;
+	z-index:1;
+	overflow:hidden;
+}
+img.fanCrowdGraphFanSil{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:3;
+}
+img.fanCrowdGrapgGreenBar{
+	position:absolute;
+	bottom:0px;
+	left:-104%;
+	z-index:2;
+}
+.fanCrowdGraphRedBar{
+	background-color:#990000;
+	height:90px;
+	width:100%;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	z-index:1;
+}
+p.userAdminFanGraphCurrent{
+	position:absolute;
+	left:3px;
+	text-align:left;
+	bottom:0px;
+	z-index:3;
+	font-size:14px;
+	text-shadow:1px 1px 3px #000;
+}
+p.userAdminFanGraphCurrent span{
+	font-size:16px;
+	font-weight:bold;
+}
+p.userAdminFanGraphCanGetTo{
+	position:absolute;
+	right:3px;
+	text-align:right;
+	bottom:0px;
+	z-index:3;
+	font-size:14px;
+}
+p.userAdminFanGraphCanGetTo span{
+	font-size:16px;
+	font-weight:bold;
+}
+.userAdminFanGraphPercentShell{
+	width:100%;
+	z-index:3;
+	position:absolute;
+	bottom:0px;
+}
+p.userAdminFanGraphPercent{
+	position:relative;
+	bottom:0px;
+	text-align:center;
+	width:100%;
+}
+.billyMadisonPix{
+	position:relative;
+	margin:0 auto;
+	width:100%;
+	text-align:center;
+}
+.billyMadisonPix img{
+	position:relative;
+	margin:0 auto;
+}
+.confirmPasswordHidden{
+	display:none;
+}
+p.profileChangePasswordText{
+	position:relativel;
+	margin:15px 0 0 0;
+	color:#018f46;
+	font-weight:bold;
+	cursor:pointer;
+}
+p.imageSaleRoloverViewSaleText{
+	position:absolute;
+	font-size:18px;
+	color:#fff;
+	text-shadow:1px 1px 3px #000;
+	top:65px;
+	left:33px;
+	display:none;
+}
+.userAdminChunkStatsBoxExpiredShell{
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index:10;
+}
+.userAdminChunkStatsBoxExpiredShellOverLay{
+	width:100%;
+	height:100%;
+	background-color:#000;
+	opacity:0.8;
+	position:absolute;
+}
+p.userAdminChunkStatsBoxExpiredShellYouPaid{
+	position:relative;
+	text-align:center;
+	top:45px;
+	color:#018f46;
+	font-size:22px;
+	text-shadow:2px 2px 2px #000;
+	font-weight:bold;
+}
+p.userAdminChunkStatsBoxExpiredShellYouPaid span{
+	color:#fff;
+}
+p.userAdminChunkTitleFanExpired{
+	position:relative;
+	text-align:center;
+	font-size:14px;
+	color:#fff;
+	font-weight:bold;
+	margin-top:4px;
+	z-index:2;
+}
+p.userAdminChunkArtistNameFanExpired{
+	position:relative;
+	text-align:center;
+	font-size:12px;
+	color:#018f46;
+	font-weight:normal;
+	margin:0px auto;
+	z-index:2;
+}
+span.expiredSaleThatsSmart{
+	font-size:16px;
+	font-weight:normal;
+	position:relative;
+	top:14px;
+}
+#generalTermsAndCond{
+	width:600px;
+	height:500px;
+	overflow-y:scroll;
+	padding:15px;	
+}

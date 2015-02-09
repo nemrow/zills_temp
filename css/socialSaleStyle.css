@@ -1,0 +1,591 @@
+@charset "utf-8";
+/* CSS Document */
+.sosaFrame{
+	width:771px;
+	height:428px;
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:25px;
+	border-radius:15px;
+}
+.sosaFrameTransBack{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color:#000;
+	opacity:0.8;
+	z-index:0;
+	border-radius:15px;
+	-moz-box-shadow:    0px 0px 1px 1px #333;
+  	-webkit-box-shadow: 0px 0px 1px 1px #333;
+ 	box-shadow:         0px 0px 1px 1px #333;
+}
+.sosaFrameShell{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	border-radius:15px;
+	z-index:2;
+}
+.sosaArtShell{
+	width:284px;
+	height:291px;
+	position:absolute;
+	overflow:hidden;
+	background-color:#036;
+	top:15px;
+	left:15px;
+	text-align:center;
+	border-radius:10px;
+}
+img.sosaArt{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+.sosaInfoShell{
+	position:absolute;
+	right:2px;
+	top:15px;
+	width:450px;
+	height:296px;
+}
+h2.sosaTitle{
+	font-size:40px;
+	font-weight:bold;
+	margin:0;
+}
+h1.sosaArtistName{
+	font-size:20px;
+	font-weight:bold;
+	margin:5px 0 21px 0;
+}
+.sosaTrackList{
+	position:relative;
+	width:420px;
+}
+.sosaTrack{
+	position:relative;
+	width:100%;
+	height:29px;
+}
+.sosaTrack p{
+	position:relative;
+	z-index:2;
+	padding:5px 5px 0 5px;
+	float:left;
+}
+.sosaTrack div.jPLayerSpan{
+	position:relative;
+	display:inline;
+	z-index:999;
+	float:left;
+	top:7px;
+	left:5px;
+}
+.sosaTrack div.backgoundFiller{
+	width:100%;
+	height:100%;
+	z-index:1;
+	background-color:#fff;
+	opacity:0.1;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+.sosaTimeHow{
+	position:absolute;
+	top:318px;
+	left:15px;
+	width:540px;
+	height:25px;
+}
+.sosaTimeHowTransBack{
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#FFF;
+	opacity:0.1;
+	width:100%;
+	height:100%;
+	border-radius:10px;
+}
+.timeCounter{
+	position:relative;
+	margin:5px 7px;
+}
+.timeCounter p{
+	font-size:14px;
+	font-weight:bold;
+}
+a.sosaHow{
+	position:absolute;
+	right:0px;
+	top:0px;
+	margin:5px 7px;
+	font-size:14px;
+	font-weight:bold;
+	cursor:pointer;
+	color:#fff;
+}
+#howItWorks{
+	text-align:center;
+}
+#howItWorks h1{
+	font-size:30px;
+	padding:20px 0 10px 0;
+}
+#howItWorks p{
+	font-size:20px;
+	width:430px;
+	padding:20px;
+}
+a.sosaHow:visited{
+	text-decoration:none;
+	color:#fff;
+}
+.sosaPricingShell{
+	width:542px;
+	height:60px;
+	position:absolute;
+	bottom:15px;
+	left:15px;
+}
+.sosaHighLowPriceBoxes{
+	width:87px;
+	height:47px;
+	position:absolute;
+}
+.sosaHighPriceBox{
+	left:0px;
+	top:7px;
+}
+.sosaLowPriceBox{
+	right:0px;
+	top:7px;
+}
+.sosaHighLowPriceBoxTransBacks{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	border-radius:10px;
+	background-color:#fff;
+	opacity:0.2;
+	z-index:1;
+}
+p.sosaHighLowPriceText{
+	position:relative;
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+	padding-top:5px;
+}
+p.sosaHighLowPriceText span{
+	font-size:20px;
+}
+.sosaCurrentPriceSliderShell{
+	position:absolute;
+	width:368px;
+	height:100%;
+	left:87px;
+}
+.sosaCurrentPriceBox{
+	width:100px;
+	height:60px;
+	border-radius:10px;
+	position:absolute;
+	top:0px;
+	left:10px;
+	z-index:2;
+}
+p.sosaCurrentPriceText{
+	position:relative;
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+	padding-top:7px;
+}
+p.sosaCurrentPriceText span{
+	font-size:30px;
+}
+.sosaSliderBar{
+	width:100%;
+	height:10px;
+	position:absolute;
+	top:25px;
+	z-index:1;
+}
+.sosaSliderBarCompPart{
+	position:absolute;
+	top:0px;
+	height:100%;
+	z-index:2;
+	opacity:0.8;
+}
+.sosaSliderBarNotCompPart{
+	position:absolute;
+	top:0px;
+	height:100%;
+	width:100%;
+	z-index:1;
+	background-image:url(../images/saleGraphBarArrows.png);
+	background-repeat:repeat;
+}
+.sosaFansInShell{
+	position:absolute;
+	top:318px;
+	right:15px;
+	width:170px;
+	height:25px;
+}
+.sosaFansInTransBack{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color:#fff;
+	opacity:0.1;
+	border-radius:10px;
+}
+.sosaFansInShell p{
+	font-size:14px;
+	font-weight:bold;
+}
+p.sosaFansInText{
+	position:relative;
+	float:left;
+	margin:5px 0 0 7px;
+}
+p.sosaFansInNum{
+	position:relative;
+	float:right;
+	margin:5px 7px 0 0;
+}
+p.sosaIWantInBtn{
+	position:absolute;
+	bottom:15px;
+	right:15px;
+	width:170px;
+	height:47px;
+	border-radius:10px;
+	font-size:30px;
+	text-align:center;
+	padding-top:13px;
+	font-weight:bold;
+}
+p.sosaIWantInBtn:hover{
+	color:#000 !important;
+	background-color:#fff !important;
+}
+p.checkoutAlreadyBoughtHeader{
+	font-size:21px;
+	margin:40px auto 25px;
+}
+p.checkoutAlreadyBoughtSubtext{
+	font-size:12px;
+	font-style:italic;
+	margin:0 auto 40px auto;
+}
+p.checkoutAlreadyBoughtSubtext span{
+	color:#018f46;
+}
+a.checkoutAlreadyBoughtShareBtn{
+	position:relative;
+	margin:0 15px 15px 15px;
+	display:inline;
+	height:33px;
+}
+p.checkoutAlreadyBoughtURL{
+	position:relative;
+	font-size:14px;
+	margin:40px auto 15px auto;
+}
+span.checkoutAlreadyBoughtURLSpan1{
+	background-color:#fff;
+	color:#018f46;
+	border-radius:5px;
+	padding:3px 6px;
+}
+a.checkoutAlreadyBoughtBackToSale{
+	font-size:12px;
+	margin:30px auto 0 auto;
+	display:block;
+	color:#fff;
+}
+a.checkoutAlreadyBoughtBackToSale:hover{
+	color:#018f46;
+}
+/*********************************************  jPlayer ************************/
+.jp-interface {
+	position: relative;
+}
+ul.jp-controls {
+	list-style-type:none;
+	margin:0;
+	padding: 0;
+	overflow:hidden;
+}
+ul.jp-controls li {
+	display:inline;
+	float: left;
+}
+ul.jp-controls a {
+	display:block;
+	overflow:hidden;
+	text-indent:-9999px;
+}
+a.jp-play,
+a.jp-pause {
+	width:14px;
+	height:14px;
+}
+
+a.jp-play {
+	background: url("../images/playPause_SPRITE.png") 0 0 no-repeat;
+	outline:none;
+}
+a.jp-play:hover {
+	background: url("../images/playPause_SPRITE.png") 0 -14px no-repeat;
+}
+a.jp-pause {
+	background: url("../images/playPause_SPRITE.png") -14px 0px no-repeat;
+	display: none;
+	outline:none;
+}
+a.jp-pause:hover {
+	background: url("../images/playPause_SPRITE.png") -14px -14px no-repeat;
+}
+/********************************************** checkout *************************************/
+.checkoutFrame{
+	width:510px;
+	height:324px;
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:25px;
+	border-radius:15px;
+}
+.checkoutFrameTransBack{
+	width:100%;
+	height:100%;
+	background-color:#000;
+	border-radius:15px;
+	opacity:0.8;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:0;
+	-moz-box-shadow:    0px 0px 1px 1px #333;
+  	-webkit-box-shadow: 0px 0px 1px 1px #333;
+ 	box-shadow:         0px 0px 1px 1px #333;
+}
+.checkoutShell{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:2;
+	text-align:center;
+}
+.checkoutShell h2{
+	position:relative;
+	margin:15px auto 0 auto;
+	font-size:40px;
+}
+.checkoutShell h1{
+	position:relative;
+	margin:0 auto 40px auto;
+	font-size:20px;
+}
+a{
+	text-decoration:none;
+}
+a:link{
+	text-decoration:none;
+}
+a:visited{
+	text-decoration:none;
+}
+a.checkoutPageAmznBtn{
+	font-size:30px;
+	color:#fff;
+	margin:0 auto 15px auto;
+	position:relative;
+	border-radius:8px;
+	padding:10px 14px;
+	background-color:#018f46;
+}
+a.checkoutPageAmznBtn:hover{
+	color:#000;
+	background-color:#fff !important;
+}
+.preAmznCheckoutFAQ1{
+	position:absolute;
+	top:205px;
+	width:250px;
+	left:137px;
+}
+.preAmznCheckoutFAQ1 h1{
+	text-align:center;
+	font-size:20px;
+}
+.preAmznCheckoutFAQ1 p{
+	margin:2px 0 0 0;
+	font-size:14px;
+	text-align:center;
+}
+span.inSaleFAQOpen{
+	cursor:pointer;
+	color:#999;
+}
+span.inSaleFAQOpen:hover{
+	color:#FFF;
+}
+p.preAmznCheckoutFAQ2{
+	width:247px;
+	font-size:14px;
+	position:absolute;
+	top:206px;
+	text-align:center;
+	left:245px;
+	display:none;
+}
+p.preAmznCheckoutFAQ2 span{
+	font-weight:bold;
+	color:#018f46 !important;
+}
+/******************************************************* Recipient Reg ******************************/
+.recipRegFrame {
+	width: 510px;
+	height: 455px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 25px;
+	border-radius: 15px;
+}
+.recipRegFrameTransBack {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	border-radius: 15px;
+	opacity: 0.8;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 0;
+	-moz-box-shadow: 0px 0px 1px 1px #333;
+	-webkit-box-shadow: 0px 0px 1px 1px #333;
+	box-shadow: 0px 0px 1px 1px #333;
+}
+.recipRegShell{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 2;
+	text-align: center;
+}
+.recipRegShell h1{
+	font-size:30px;
+	font-weight:boldl;
+	margin:25px auto;
+}
+.recipRegShell h2{
+	font-size:14px;
+	font-weight:boldl;
+	margin:20px auto;
+}
+.recipRegShareBtnShell{
+	position:relative;
+	margin:20px auto;
+	width:285px;
+}
+.recipRegShareBtnShell a{
+	cursor:pointer;
+}
+p.recipRegBandURL {
+	position: relative;
+	margin: 30px auto;
+	text-align: center;
+	font-size: 14px;
+}
+span.recipRegBandGranURL{
+	color: #018F46;
+	background-color: white;
+	padding: 4px 12px;
+	border-radius: 10px;
+}
+.recipRegShell h3{
+	font-size:20px;
+	font-weight:boldl;
+	margin:10px auto;
+}
+table.recipRegTipsTable{
+	text-align:left;
+	width:80%;
+	margin:10px auto;
+}
+table.recipRegTipsTable td{
+	font-size:12px;
+}
+table.recipRegTipsTable td img{
+	padding:9px;
+}
+table.recipRegGoToTable{
+	width:80%;
+	margin:30px auto;
+	text-align:center;
+}
+td.recipRegGoTo1{
+	width:20%;
+	font-size:14px;
+	font-weight:bold;
+	font-style:italic;
+}
+td.recipRegGoTo2{
+	width:40%;	
+}
+td.recipRegGoTo2 a{
+	width:130px;
+	background-color:#018f46;
+	padding:5px 30px;
+	border-radius:10px;
+	font-size:14px;
+	font-weight:bold;
+	cursor:pointer;
+	text-decoration:none;
+	color:#fff;
+}
+td.recipRegGoTo2 a:visited{
+	color:#fff;
+	text-decoration:none;
+}
+td.recipRegGoTo2 a:hover{
+	color:#018f46;
+	background-color:#fff;
+}
+/***************************************************************************** tiny scroll ************************/
+#tinyScroller {
+	width: 440px;
+	margin: auto;
+	position:relative;
+}
+#tinyScroller .viewport { width: 420px; height: 192px; overflow: hidden; position: relative; }
+#tinyScroller .overview { list-style: none; position: absolute; left: 0; top:0 ; padding:0 0 5px 0; margin: 0; }
+#tinyScroller .scrollbar{ position: relative; background-position: 0 0; float: right; width: 15px; z-index:5; border-radius:5px; }
+#tinyScroller .track { height: 100%; width:13px; position: relative; padding: 0 1px; border-radius:5px; }
+#tinyScroller .thumb { background: transparent url(../images/bg-scrollbar-thumb-y-2.png) no-repeat 50% 100%; height: 20px; width: 25px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left: -5px; border-radius:5px; }
+#tinyScroller .thumb .end { background: transparent url(../images/bg-scrollbar-thumb-y.png) no-repeat 50% 0; overflow: hidden; height: 5px; width: 25px; border-radius:5px; }
+#tinyScroller .disable { display: none; }
+

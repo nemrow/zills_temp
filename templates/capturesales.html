@@ -1,0 +1,27 @@
+
+<div class="contentContainer">
+  <div class="wrapper1">
+    <div class="contentArea">
+      <div class="content">
+          <?php echo $this->errorMessage; ?>
+
+          <p class="zillsAdminHeaders">Completed Sales</p>
+          <?php echo $this->completedSales; ?>
+
+          <p class="zillsAdminHeaders">Uncaptured Orders - <a href="capturesales&capture=all">Capture All</a> - <a href="capturesales&capture=todays">Capture Todays</a></p>
+          <?php echo $this->uncapturedOrders; ?>
+
+          <p class="zillsAdminHeaders">Pending Status Orders - <a href="capturesales&update=all">Update All</a></p>
+          <?php echo $this->pendingStatusOrders; ?>
+
+          <p class="zillsAdminHeaders">Completed Payment Orders</p>
+          <?php echo $this->completedOrders; ?>
+
+      </div>
+      <!-- end content -->
+    </div>
+    <!-- end contentArea -->
+  </div>
+  <!-- end wrapper1 -->
+</div>
+<!-- end contentContainer -->

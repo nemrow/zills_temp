@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<div class="adminSaleShell">
+<div class="adminSaleHead">
+<p class="adminSaleHeadTitle"><?php echo $saleTitle; ?></p>
+<div class="fanAdminHeadSocialMediaBtns">
+        <img src="images/socialMediaSqaureBtnFacebook.png" />
+        <img src="images/socialMediaSqaureBtnTwitter.png" />
+        <img src="images/socialMediaSqaureBtnInstagram.png" />
+    </div>
+    <!-- end fanAdminHeadSocialMediaBtns -->
+</div> <!-- end adminSaleHead -->
+<div class="adminSaleImgShell">
+<img class="adminSaleImg" src="<?php echo $img ?>" />
+<!----> <div class="adminSaleImgBottomShell1"></div>
+<div class="adminSaleImgBottomShell2">
+<p class="adminSaleImgInfo1">Current Price:</p>
+<p class="adminSaleImgInfo2">$<?php echo $currentPrice ?></p>
+<p class="adminSaleImgInfo3">Sale Ends:</p>
+<!--<p class="adminSaleEnds" id="bandAdminSaleCountdown<?php echo $i; ?>"></p>-->
+<a href="<?php echo $saleURL; ?>"><p class="<?php if($saleCompleted) { echo 'adminSaleSaleOverBtn'; } else { echo 'adminSaleViewSaleBtn'; }?>">View This Sale</p></a>
+</div> <!-- end adminSaleImgBottomShell2 -->
+</div> <!-- end adminSaleImgShell -->
+<table class="adminSaleTable">
+<tr>
+	<td colspan="2" class="bandAdminTableRowNoMargin">
+    	<table class="bandAdminChartTable">
+        	<tr>
+            	<td colspan="3"><p class="bandAdminChartCurrentPrice" id="bandAdminChartCurrentPrice<?php echo $i?>"><span>Currently</span><br />$<?php echo $currentPrice ?></p></td>
+            </tr>
+            <tr>
+            	<td colspan="3">
+                	<div class="bandAdminChartFullBar">
+                    <div class="bandAdminChartDroppedBar" id="bandAdminChartDroppedBar<?php echo $i; ?>"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+            	<td><p class="bandAdminChartStartPrice">$<?php echo $startPrice?></p></td>
+                <td><p class="bandAdminChartPercentage"><span id="bandAdminChartPercentage<?php echo $i?>"></span></p></td>
+                <td><p class="bandAdminChartLowestPrice"><?php echo $basePrice?></p></td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<tr>
+	<td><span class="adminSaleTableLeft">Purchases:</span><span class="adminSaleTableRight"><?php echo $purchases ?></span></td><td><span class="adminSaleTableLeft">Views:</span><span class="adminSaleTableRight"><?php echo $views; ?></span></td>
+</tr>
+<tr>
+	<td><span class="adminSaleTableLeft">Start Price:</span><span class="adminSaleTableRight">$<?php echo $startPrice; ?></span></td><td><span class="adminSaleTableLeft">Base Price:</span><span class="adminSaleTableRight">$<?php echo $basePrice; ?></span></td>
+</tr>
+<tr>
+	<td class="adminEmailRefBtns"><a href="#fInSDigShell<?php echo $i; ?>" id="openfInSDigShell<?php echo $i; ?>"><p class="adminEmailRefBtns">Fans In Sale</p></a></td><td class="adminEmailRefBtns"><a href="#refShell<?php echo $i; ?>"" id="openRefShell<?php echo $i; ?>"><p class="adminEmailRefBtns">Referral Links</p></a></td>
+</tr>
+</table>
+<!-- <p class="bandAdminFulfilStatement">Once sale has completed your order fulfilment manager will appear below</p> -->
+<!-- the bandAdminFulfilStatement will exist until the sale has completed. Then that will disapear and the actual orders manager will appear -->
+
+</body>
+</html>

@@ -1,0 +1,1291 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	/*background:#0D0D0D;*/
+	background:#333;
+	margin:0px;
+}
+p, h1, h2, h3, h4, h5, h6, td{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#FFF;
+	margin:0px;
+}
+a{
+	border:none;
+	border-width:0px;
+}
+a:link{
+	text-decoration:none;
+	border:none;
+	color:#FFF;
+}
+a:visted{
+	text-decoration:none;
+	border:none;
+	color:#FFF;
+}
+img{
+	border:none;
+	border-width:0px;
+}
+.hiddenShell{
+	display:none;
+}
+.fakeClearer{
+	position:relative;
+	width:100%;
+	height:0px;
+	clear:both;
+}
+/*************************************** 11/2012 new code *****************************/
+#generalTermsAndCond{	
+	width: 600px;
+	height: 500px;
+	overflow-y: scroll;
+	padding: 15px;
+}
+.part1{
+	width:100%;
+	position:relative;
+	margin-bottom:70px;
+}
+.wrapperIntro{
+	width:880px;
+	margin:20px auto;
+	height:525px;
+	border-radius:15px;
+	position:relative;
+}
+.wrapperIntoBack{
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#000;
+	opacity:0.8;
+	z-index:1;
+	height:100%;
+	width:100%;
+	border-radius:15px;
+	moz-box-shadow: 0px 0px 1px 1px #333;
+	-webkit-box-shadow: 0px 0px 1px 1px #333;
+	box-shadow: 0px 0px 2px 2px #333;
+	border-width:1px;
+	border-color:#333;
+	border-style:solid;	
+}
+.wrapper{
+	width:795px;
+	height:auto;
+	margin:0 auto;
+	position:relative;
+}
+p.indexIntroLogin{
+	position:absolute;
+	top:30px;
+	right:0px;
+	z-index:10;
+	padding:5px 8px;
+	background-color:#000;
+	color:#999;
+	border-radius:8px;
+	-moz-box-shadow:    0px 0px 6px 0px #000;
+  	-webkit-box-shadow: 0px 0px 6px 0px #000;
+  	box-shadow:         0px 0px 6px 0px #000;
+	font-size:14px;
+	text-align:center;
+}
+p.indexIntroLogin:hover{
+	color:#FFF;
+}
+img.homeLogo{
+	margin:30px 0 25px 0;
+	position:relative;
+	z-index:3;
+}
+img.homeBetaSymbol{
+	position:absolute;
+	top:40px;
+	left:240px;
+	z-index:4;
+}
+.homeSlideShell{
+	width:290px;
+	height:235px;
+	overflow:hidden;
+	position:absolute;
+	z-index:2;
+}
+.homeSlideBounceShell{
+	width:700px;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+.homeSlideStandard{
+	width:290px;
+	height:235px;
+	position:relative;
+	margin:0 20px 20px 0;
+	float:left;
+}
+.homeSlideSlog1{
+	text-shadow:1px 1px 2px #000;
+	font-size:25px;
+	font-weight:bold;
+	position:relative;
+	font-weight:normal;
+	width:290px;
+	margin:0 0 17px 0;
+}
+.homeSlideSlog2{
+	font-size:17px;
+	position:relative;
+	font-weight:normal;
+	color:#01CB61;
+	margin:17px 0;
+	width:280px;
+	text-shadow:1px 7px 7px #000;
+}
+.homeSlideSlog3{
+	font-size:18px;
+	position:relative;
+	font-weight:normal;
+	color:#01CB61;
+	margin:20px 0;
+	width:280px;
+	text-shadow:1px 7px 7px #000;
+}
+.homeSlideSlog4{
+	font-size: 17px;
+	position: relative;
+	font-weight: normal;
+	margin:0;
+	width:280px;
+	text-shadow:1px 1px 2px #000;
+	font-weight:bold;
+}
+.homeSlideSlog5{
+	font-size:33px;
+	position: relative;
+	font-weight: normal;
+	margin:0;
+	width:280px;
+	text-shadow:1px 1px 2px #000;
+}
+.homeSlideSlog6{
+	font-size: 18px;
+	position: relative;
+	font-weight: normal;
+	color:#01CB61;
+	margin: 13px 0;
+	width:280px;
+	text-shadow:1px 7px 7px #000;
+}
+.homeSlideSlog6 span{
+	font-weight:bold;
+}
+.homeSlideSlog7{
+	font-size: 22px;
+	position: relative;
+	font-weight: normal;
+	color:#01CB61;
+	margin: 8px 0;
+	width:280px;
+	text-shadow:1px 7px 7px #000;
+}
+.homeSlideSlog7 span{
+	font-weight:bold;
+	color:#FFF;
+}
+.homeSlideSlog8{
+	font-size: 14px;
+	position: relative;
+	font-weight: normal;
+	color:#01CB61;
+	margin: 8px 0;
+	width:280px;
+	text-shadow:1px 7px 7px #000;
+}
+.homeSlideSlog9{
+	text-shadow:1px 1px 2px #000;
+	font-size:23px;
+	font-weight:bold;
+	position:relative;
+	font-weight:normal;
+	width:290px;
+	margin:0 0 17px 0;
+}
+.homeSlideSlog10{
+	font-size: 19px;
+	position: relative;
+	font-weight: normal;
+	color:#01CB61;
+	margin: 13px 0;
+	width:280px;
+	text-shadow:1px 7px 7px #000;
+}
+.homeSlideNav{
+	width:315px;
+	height:29px;
+	position:absolute;
+	top:385px;
+	left:88px;
+	z-index:2;
+}
+.homeSlideNavCircle{
+	width:11px;
+	height:11px;
+	background-image:url(../images/homeSlideCircles_SPRITE.fw.png);
+	background-position:0px 0px;
+	float:left;
+	margin:0 8px;
+	position:relative;
+	cursor:pointer;
+}
+.homeSlideNavCircle1{
+	background-position:0px 11px;
+}
+.homeDemoShell{
+	width:486px;
+	height:292px;
+	position:absolute;
+	top:110px;
+	right:0px;
+	background-image:url(../images/homeDemoLong.png);
+	overflow:hidden;
+	background-repeat:no-repeat;
+	z-index:2;
+}
+.homeDemo{
+	position:absolute;
+	top:17px;
+	left:17px;
+	background-color:#000;
+	width:450px;
+	height:253px;
+	overflow:hidden;
+	z-index:1;
+}
+.indexIntroBottomButtonsShell{
+	position:absolute;
+	top:430px;
+	height:75px;
+	width:100%;
+	z-index:2;
+}
+p.indexIntroCreateSocialSaleBtn{
+	width:373px;
+	height:53px;
+	border-width:5px;
+	border:solid;
+	border-color:#1f4531;
+	border-radius:10px;
+	background-image:url(../images/indexIntroGrad1_SPRITE.jpg);
+	font-size:35px;
+	text-shadow:2px 2px 10px #000;
+	text-align:center;
+	padding:13px 0 0 0;
+	background-repeat:repeat-x;
+	float:left;
+	margin-left:40px;
+	position:relative;
+}
+p.indexIntroCreateSocialSaleBtn:hover{
+	background-position:0px -67px;
+	text-shadow:1px 1px 6px #000;
+}	
+div.indexIntroPricingBtn{
+	width:190px;
+	height:66px;
+	border-width:5px;
+	border:solid;
+	border-color:#1e1e1e;
+	border-radius:10px;
+	background-image:url(../images/indexIntroGrad2.jpg);
+	font-size:35px;
+	text-shadow:2px 2px 10px #000;
+	text-align:center;
+	background-repeat:repeat-x;
+	float:right;
+	margin-right:40px;
+	overflow:hidden;
+	position:relative;
+	cursor:pointer;
+}
+div.indexIntroSampleBtn{
+	width:190px;
+	height:66px;
+	border-width:5px;
+	border:solid;
+	border-color:#1e1e1e;
+	border-radius:10px;
+	background-image:url(../images/indexIntroGrad2.jpg);
+	font-size:35px;
+	text-shadow:2px 2px 10px #000;
+	text-align:center;
+	background-repeat:repeat-x;
+	float:right;
+	margin-right:13px;
+	overflow:hidden;
+	position:relative;
+	cursor:pointer;
+}
+img.indexIntroPricingMoneySign{
+	position:absolute;
+	top:5px;
+	left:78px;
+}
+p.indexIntroPricingText{
+	position:absolute;
+	top:83px;
+	left:43px;
+	font-size:35px;
+	text-shadow:4px 4px 10px #000;
+}
+img.indexIntroSampleSign{
+	position:absolute;
+	top:5px;
+	left:69px;
+}
+p.indexIntroSampleText{
+	position:absolute;
+	top:83px;
+	left:14px;
+	font-size:33px;
+	text-shadow:4px 4px 10px #000;
+}
+.introFooter a:link{
+	text-decoration:none;
+	color:#FFF;
+}
+.introFooter a:visited{
+	text-decoration:none;
+	color:#FFF;
+}
+.introFooter{
+	position:fixed;
+	background-color:#0D0D0D;
+	font-size:12px;
+	margin:13px 0 0 0;
+	height:36px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	z-index:2;
+}
+.introFooterLeft{
+	float:left;
+	top:11px;
+	position:relative;
+	color:#999;
+}
+.introFooterRight{
+	float:right;
+	position:relative;
+	top:0px;
+}
+.introFooterRight p{
+	float:left;
+	top:11px;
+	position:relative;
+	color:#999;
+}
+.introFooterRight a:link{
+	color:#999;
+}
+.introFooterRight a:visited{
+	color:#999;
+}
+.introFooterRight a:hover{
+	color:#FFF;
+}
+.socialMediaFooterIcons{
+	position:relative;
+	margin:0 8px 0 2px;
+	top:7px;
+	cursor:pointer;
+	float:right;
+	background-image:url(../images/faceBookTwitterIconHover_SPRITE.png);
+	width:24px;
+	height:23px;
+}
+.footerFacebookIcon{
+	background-position:0px 0px;
+}
+.footerFacebookIcon:hover{
+	background-position:0px 23px;
+}
+.footerTwitterIcon{
+	background-position:24px 0px;
+}
+.footerTwitterIcon:hover{
+	background-position:24px 23px;
+}
+.indexIntroPricingShell{
+	width:338px;
+	padding:15px;
+}
+.indexIntroPricingShell h1{
+	font-size:14px;
+	text-align:center;
+	font-weight:normal;
+	margin:5px auto 20px auto;
+}
+.indexIntroPricingShell h2{
+	font-size:18px;
+	text-align:center;
+	font-weight:normal;
+	margin:20px auto;
+}
+.indexIntroFreeSetupPriceCut{
+	width:49px;
+	position:relative;
+	margin:20px auto 10px auto;
+}
+.indexIntroFreeSetupPriceCut img{
+	position:absolute;
+	top:3px;
+	left:0px;
+}
+.indexIntroFreeSetupBetaBox{
+	width:73px;
+	height:35px;
+	border:solid;
+	border-width:2px;
+	border-color:#018f46;
+	position:absolute;
+	top:125px;
+	right:67px;
+}
+.indexIntroFreeSetupBetaBox p{
+	font-size:10px;
+	color:#018f46;
+	text-align:center;
+}
+.indexIntroFreeSetupBetaBox span{
+	font-size:18px;
+	color:#fff !important;
+}
+.indexIntroPricingShell h4{
+	margin:20px auto 5px auto;
+	font-size:12px;
+	text-align:center;
+	width:300px;
+}
+.indexIntroPricingShell a{
+	color:#fff;
+	text-decoration:underline;
+}
+.indexIntroPricingShell a:link{
+	color:#fff;
+	text-decoration:underline;
+}
+.indexIntroPricingShell a:visited{
+	color:#fff;
+	text-decoration:underline;
+}
+.indexIntroPricingShell a:hover{
+	color:#018f46;
+}
+/************************************************************************************ header *********************************/
+.header{
+	background:#0D0D0D;
+	height:50px;
+	width:100%;
+}
+
+.part2{
+	width:100%;
+	position:relative;
+	background-color:#FFF;
+	height:570px;
+}
+.footer{
+	width:100%;
+	position:relative;
+	height:41px;
+	font-size:12px;
+}
+.headLine{
+	width:1px;
+	height:15px;
+	background-color:#00C400;
+	margin:17px 10px 0 10px;
+	float:left;
+}
+/************************************************************************************ part 1 *********************************/
+.homeDemoReplayCover{
+	width:450px;
+	height:241px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:2;
+}
+.homeDemoReplayCoverInnerTrans{
+	width:450px;
+	height:241px;
+	background-color:#000;
+	opacity:0.8;
+	display:none;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+p.checkOutDemoText{
+	position:relative;
+	text-align:center;
+	font-size:43px;
+	margin:95px 0 0 0;
+	text-shadow:0px 0px 4px #000;
+	display:none;
+	cursor:pointer;
+}
+.homeDemoReplayCoverBtn{
+	position:absolute;
+	top:62px;
+	left:185px;
+	z-index:3;
+	cursor:pointer;
+	display:none;
+}
+.fullPageSalePreview{
+	position:absolute;
+	top:98px;
+	left:641px;
+	cursor:pointer;
+	z-index:10;
+	width:166px;
+	height:160px;
+	background-image:url(../images/saleRibbon_SPRITE.fw.png);
+	background-position:0px 0px;
+}
+.fullPageSalePreview:hover{
+	background-position:0px 160px;
+}
+span.homePageFunSpan{
+	font-style:italic;
+}
+img.homeFunBigSmall{
+	position:absolute;
+	top:429px;
+	left:556px;
+	width:0px;
+	height:0px;
+	z-index:6;
+}
+img.justEarInLogo{
+	position:absolute;
+	top:30px;
+	left:205px;
+	z-index:2;
+	height:79px;
+}
+.homeFunDollaBill{
+	position:absolute;
+	top:279px;
+	left:240px;
+	z-index:3;
+	width:1px;
+	height:1px;
+	display:none;
+}
+.homeFunCash{
+	cursor:url(../images/justHead.png);
+}
+.homeDemoWeb{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:6;
+	display:none;
+}
+img.hDScreenShot{
+	width:101%;
+	position:absolute;
+	left:-3px;
+}
+img.hDScreenShot2{
+	width:101%;
+	position:absolute;
+	left:-3px;
+	display:none;
+}
+.demoDiss1{
+	display:block;
+};
+.featureSaleShell{
+	width:100%;
+	height:94px;
+	border-radius:10px;
+	position:relative;
+	background-image:url(../images/grad4.jpg);
+	-moz-box-shadow:    0px 0px 6px 0px #000;
+  	-webkit-box-shadow: 0px 0px 6px 0px #000;
+  	box-shadow:         0px 0px 6px 0px #000;
+}
+.feSaImgShell{
+	width:170px;
+	height:75px;
+	float:left;
+	position:relative;
+	margin:10px 0 0 14px;
+}
+.feSaImgShell img{
+	position:absolute;
+	z-index:1;
+	top:0px;
+	left:0px;
+	width:170px;
+	height:75px;
+	border-radius:8px;
+}
+.feSaImgTrans{
+	width:100%;
+	position:absolute;
+	height:20px;
+	width:170px;
+	background-image:url(../images/feSaBotTrans.png);
+	opacity:0.7;
+	bottom:0px;
+	left:0px;
+	z-index:2;
+}
+p.feSaImgInfo{
+	position:absolute;
+	bottom:1px;
+	left:5px;
+	font-size:14px;
+	z-index:3;
+}
+p.createSaleBtn{
+	width:210px;
+	padding:18px 0 17px 0;
+	border-radius:10px;
+	border:solid;
+	border-width:2px;
+	border-color:#666;
+	background-image:url(../images/grad5.jpg);
+	float:left;
+	text-align:center;
+	font-size:33px;
+	margin:8px 0 0 14px;
+	text-shadow:1px 1px 8px #000;
+	-moz-box-shadow:    0px 0px 6px 0px #000;
+  	-webkit-box-shadow: 0px 0px 6px 0px #000;
+  	box-shadow:         0px 0px 6px 0px #000;
+}
+.feSaUnderLabels{
+	position:absolute;
+	top:97px;
+}
+.feSaLabsLine{
+	position:relative;
+	width:217px;
+	height:1px;
+	background-color:#666;
+	float:left;
+	margin:8px 10px 0 10px;
+}
+.feSaLabsP{
+	position:relative;
+	color:#ccc;
+	float:left;
+	font-size:14px;
+}
+.highlightShell{
+	width:775px;
+	height:156px;
+	padding:20px 0 0 0;
+	position:relative;
+	margin:0 auto;
+}
+.highBox{
+	width:248px;
+	height:156px;
+	background-color:#eee;
+	position:relative;
+	float:left;
+	margin:0 5px;
+	border-radius:10px;
+}
+.highBox p{
+	text-align:left;
+	font-size:25px;
+	color:#666;
+	padding:17px 17px;
+	font-weight:bold;
+}
+.highBox p span{
+	color:#00CC00;
+}
+.worksShell{
+	width:765px;
+	position:relative;
+	margin:20px auto 0 auto;
+	background-color:#eee;
+	border-radius:10px;
+	padding-bottom:1px;
+}
+p.worksTitle{
+	text-align:center;
+	color:#333;
+	font-size:20px;
+	padding:20px 0;
+	color:#00CC00;
+}
+p.worksInstMain{
+	text-align:center;
+	color:#333;
+	font-size:12px;
+	font-weight:bold;
+	padding:0 0 20px 0;
+}
+.workBoxesShell{
+	width:760px;
+	height:243px;
+	position:relative;
+	margin:0 auto;
+	padding-bottom:10px;
+}
+.worksBoxes{
+	width:229px;
+	height:235px;
+	background-color:#FFF;
+	border-radius:10px;
+	margin:0 0 0 18px;
+	float:left;
+	text-align:center;
+}
+.worksBoxes img{
+	width:205px;
+	height:159px;
+	border-radius:8px;
+	position:relative;
+	margin:13px auto 7px auto;
+}
+.worksBoxes p{
+	font-size:14px;
+	color:#333;
+	padding:0 20px;
+}
+p.footerL{
+	position:absolute;
+	left:0px;
+	top:11px;
+	color:#999;
+}
+p.footerR{
+	position:absolute;
+	right:0px;
+}
+p.footerR a:link{
+	color:#FFF;
+	text-decoration:none;
+}
+p.footerR a:visited{
+	color:#FFF;
+	text-decoration:none;
+}
+
+img.homeFanInfoSlide{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:2;
+	display:none;
+}
+.demoArrow1{
+	position:absolute;
+	top:59px;
+	left:98px;
+	z-index:3;
+	display:none;
+}
+.demoArro1Fluff{
+	z-index:2;
+	display:none;
+}
+.demoArrow2First{
+	position:absolute;
+	left:71px;
+	top:51px;
+	z-index:3;
+	display:none;
+}
+.demoArrow2Second{
+	position:absolute;
+	left:242px;
+	top:51px;
+	z-index:3;
+	display:none;
+}
+.demoArrow2Fluff{
+	display:none;
+	z-index:2;
+}
+.demoArrow3{
+	position:absolute;
+	left:191px;
+	top:37px;
+	z-index:3;
+	display:none;
+}
+.demoArrow3Fluff{
+	display:none;
+	z-index:2;
+}
+/**************************** COOL SALES CSS (add when sales begin) ***************************/
+.indexIntroCoolSalesShell{
+	width:812px;
+	height:320px;
+	position:relative;
+	margin:40px auto;
+}
+.indexIntroCoolSalesTopBar{
+	position:relative;
+	height:57px;
+	width:100%;
+	-moz-box-shadow:    0px 0px 6px 0px #000;
+  	-webkit-box-shadow: 0px 0px 6px 0px #000;
+  	box-shadow:         0px 0px 6px 0px #000;
+}
+.indexIntroCoolSalesTopBarTransBack{
+	width:100%;
+	height:100%;
+	background-color:#018f46;
+	opacity:0.7;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:1;
+}
+p.indexIntroCoolSalesTopBarTitle{
+	font-size:30px;
+	margin:11px;
+	text-shadow:2px 2px 5px #000;
+	position:absolute;
+	z-index:2;
+}
+img.indexIntroCoolSalesTopBarEar{
+	position:absolute;
+	right:0px;
+	margin:6px;
+	z-index:2;
+}
+.indexIntroCoolSalesSaleShell{
+	position:relative;
+	width:250px;
+	height:250px;
+	background-color:#000;
+	float:left;
+	margin:25px 0 0 0;
+	border:solid;
+	border-color:#000;
+	border-width:1px;
+}
+.indexIntroCoolSalesSaleShellFirstTwo{
+	margin:25px 26px 0 0;
+}
+img.indexIntroCoolSaleArt{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:1;
+}
+.indexIntroCoolSaleArtTransCover{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color:#000;
+	opacity:0.8;
+	z-index:2;
+}
+.indexIntroCoolSalesSaleShell h2{
+	position:relative;
+	width:100%;
+	top:100px;
+	text-align:center;
+	z-index:3;
+	font-size:24px;
+	font-weight:normal;
+}
+.indexIntroCoolSalesSaleShell h3{
+	position:relative;
+	width:100%;
+	top:110px;
+	text-align:center;
+	z-index:3;
+	font-size:14px;
+	font-weight:normal;
+}
+.indexIntroCoolSaleHoverShell{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:2;
+	width:100%;
+	height:100%;
+	display:none;
+}
+/********************************** contact us *********************/
+#contactUs{
+	width:434px;
+}
+.contactUsShell{
+	width:353px;
+	position:relative;
+	margin:10px auto;
+}
+#contactUs h3{
+	font-size:16px;
+	margin:15px 0;
+}
+#contactUsSentBox{
+	width:300px;
+	height:165px;
+}
+#contactUsNewError{
+	width:180px;
+	text-align:center;
+	margin:0 auto 0 auto;
+}
+.contactUsSent{
+	text-align:center;
+	position:relative;
+	font-size:20px;
+	margin:20px;	
+}
+.contactUsSent span{
+	color:#018f46;
+	font-size:16px;
+}
+input.contactUsEmail{
+	width:338px;
+	height:45px;
+	border:none;
+	border-radius:8px;
+	margin:10px 0;
+	color:#333;
+	padding-left:15px;
+	font-size:16px;
+}
+input.contactUsSubject{
+	width:338px;
+	height:45px;
+	border:none;
+	border-radius:8px;
+	margin:10px 0;
+	color:#333;
+	padding-left:15px;
+	font-size:16px;
+}
+textarea.contactUsMessage{
+	width:323px;
+	height:196px;
+	border-radius:8px;
+	margin:10px 0;
+	color:#333;
+	padding:15px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+}
+p.contactUsSend{
+	margin:10px 0;
+	width:100px;
+	background-color:#018F46;
+	padding:5px 0;
+	text-align:center;
+	border-radius:6px;
+	cursor:pointer;
+}
+p.contactUsSend:hover{
+	background-color:#FFF;
+	color:#018F46;
+}
+#emailSuccess{
+	text-align:center;
+}
+/**************************************** login ***********************/
+#login{
+	width:434px;
+	height:273px;
+	background-color:#1E1E1;
+	padding-top:10px;
+	position:relative;
+}
+
+#register{
+	width:434px;
+	background-color:#1E1E1;
+	padding-top:10px;
+}
+.loginEmailShell{
+	width:338px;
+	height:50px;
+	margin:15px 0;
+	position:relative;
+}
+input.boringLoginEmail{
+	width:338px;
+	height:45px;
+	border:none;
+	border-radius:8px;
+	padding-left:15px;
+	color:#333;
+	font-size:16px;
+}
+input.boringLoginPass{
+	width:338px;
+	height:45px;
+	border:none;
+	border-radius:8px;
+	padding-left:15px;
+	color:#333;
+	font-size:16px;
+	background-color:transparent;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:2;
+}
+p.loginPassLab{
+	width:338px;
+	height:34px;
+	border:none;
+	border-radius:8px;
+	padding:13px 0 0 15px;
+	color:#333;
+	font-size:16px;
+	background-color:#FFF;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:1;
+}
+input.loginSub{
+	width:157px;
+	background-color:#018f46;
+	padding:4px 0;
+	border-radius:6px;
+	text-shadow:1px 1px 2px #000;
+	float:left;
+	font-size:14px;
+	text-align:center;
+	margin:10px 0 15px 0;
+	color:#FFF;
+	border:none;
+	position:relative;
+	float:left;
+	cursor:pointer;
+}
+input.loginSub:hover{
+	color:#000;
+	background-color:#fff;
+	text-shadow:none;
+}
+img.boringLoginErrorArrow{
+	position:absolute;
+	top:18px;
+	left:-24px;
+	display:none;
+}
+p.boringErrorMessage{
+	position:relative;
+	font-size:14px;
+	color:#F00;
+	height:0px;
+	top:-13px;
+}
+p.loginOr{
+	float:left;
+	margin:14px 10px 0 10px;
+	font-size:12px;
+	position:relative;
+}
+p.loginForgotPass{
+	float:left;
+	text-decoration:underline;
+	color:#00cc00;
+	margin:13px 10px 10px 2px;
+	font-size:12px;
+}
+p.boringLoginForgotPass{
+	float:right;
+	text-decoration:underline;
+	color:#00cc00;
+	bottom:-14px;
+	right:0px;
+	font-size:12px;
+	position:absolute;
+}
+.boringLoginKeepMeloggedInShell{
+	position:relative;
+	width:200px;
+}
+.loginForgotPass a:visited {
+    color:#018f46;
+}
+.loginForgotPass a:link {
+    color:#018f46;
+}
+input.boringLoginKeepLog{
+	position:relative;
+	float:left;
+}
+label.loginKeepLogP{
+	font-size:12px;
+	margin:0 0 15px 7px;
+	top:2px;
+	position:relative;
+	color:#fff;
+}
+.loginFBShell{
+	width:100%;
+	background-color:#000;
+	height:45px;
+	border-radius:8px;
+	position:relative;
+}
+.loginFBShell p{
+	position:absolute;
+	top:0px;
+	left:0px;
+	padding:13px;
+	font-size:16px;
+}
+.loginFBShell img{
+	position:absolute;
+	top:0px;
+	right:0px;
+	padding:12px;
+}
+.boringLoginErrorFace{
+	position:relative;
+}
+.boringLoginErrorFaceHolder{
+	min-height:95px;
+}
+img.boringLoginErrorFaceImg{
+	position:absolute;
+	top:10px;
+	left:28px;
+}
+p.boringLoginErrorTextBox{
+	background-color:#F00;
+	padding:6px;
+	border-radius:15px;
+	width:236px;
+	position:relative;
+	left:131px;
+	top:10px;
+}
+p.boringLoginMessage{
+	position:relative;
+	width:330px;
+	left:38px;
+}
+.boringLoginBottomShell{
+	position:relative;
+	height:52px;
+}
+/************************************   validation  ******************/
+.loginForm .indent label.error {
+  margin-left: 0;
+}
+.loginForm label.error {
+  font-size: 0.8em;
+  color: #F00;
+  font-weight: bold;
+  display: block;
+}
+.loginForm  input.error, #signup select.error  {
+  background: #FFA9B8;
+  border: 2px solid red;
+}
+/**************************************************************************************** Intro Index Stuff ***********/
+.introEmailBar{
+	width:808px;
+	height:61px;
+	background-image:url(../images/chillGrad8.jpg);
+	margin:20px auto 0 auto;
+	position:absolute;
+	top:410px;
+	border-radius:10px;
+	float:left;
+	-moz-box-shadow:    0px 0px 10px 1px #000;
+  	-webkit-box-shadow: 0px 0px 10px 1px #000;
+ 	box-shadow:         0px 0px 10px 1px #000;
+	z-index:2;
+}
+.introBarEmailIn{
+	width:555px;
+	height:43px;
+	border-radius:10px;
+	margin:8px;
+	border:none;
+	outline:none;
+	padding-left:15px;
+}
+.introTryFreeBtn{
+	position:relative;
+	float:right;
+	width:209px;
+	height:45px;
+	border-radius:10px;
+	margin:8px 8px 0 0;
+	background-image:url(../images/btn1WithHover.fw.png);
+	cursor:pointer;
+}
+.introTryFreeBtn:hover{
+	background-position:0 45px;
+}
+.introTryFreeBtn p{
+	position:relative;
+	text-align:center;
+	top:7px;
+	font-size:25px;
+	text-shadow:1px 1px 1px #000;
+}
+p.introEmailExplain{
+	font-size:10px;
+	position:absolute;
+	top:497px;
+	left:8px;
+	height:42px;
+	z-index:2;
+}
+
+.indexIntroBottomBooster{
+	position:relative;
+	width:100%;
+	height:100px
+}
+#haircutPop{
+	width:306px;
+}
+.haircutJordan{
+	position:relative;
+	width:188px;
+	height:188px;
+	margin:30px auto;
+}
+p.haircutJordanP1{
+	position:relative;
+	margin:30px auto;
+	text-align:center;
+	font-size:16px;
+	width:206px;
+}
+p.haircutJordanP2{
+	position:relative;
+	margin:10px auto;
+	text-align:center;
+	color:#018F46;
+	font-size:12px;
+	width:206px;
+}

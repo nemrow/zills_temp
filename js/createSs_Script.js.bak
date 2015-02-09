@@ -1,0 +1,663 @@
+// JavaScript Document
+$(document).ready(function(){
+//**************************************************************************      begin code        ***********************************
+//**************************************************************************      code        ***********************************
+var typeOfSale = 'undefined';
+$('.typeClickedDigMus').click(function(){
+	$('.crSSStyleDropDigMus').slideDown(600);
+	$('.crSSStyleDropPhysMus, .crSSStyleDropPhysMerch, .crSSStyleDropPhysMus2, .crSSStyleDropPhysMerch2').slideUp(600);
+	typeOfSale = 'digital';
+}); // end click
+$('.typeClickedPhysMus').click(function(){
+	$('.crSSStyleDropPhysMus').slideDown(600);
+	$('.crSSStyleDropDigMus, .crSSStyleDropPhysMerch, .crSSStyleDropDigMus2, .crSSStyleDropPhysMerch2').slideUp(600);
+	typeOfSale = 'physical';
+}); // end click
+$('.typeClickedMerch').click(function(){
+	$('.crSSStyleDropPhysMerch, .crSSStyleDropPhysMerch2').slideDown(600);
+	$('.crSSStyleDropDigMus, .crSSStyleDropPhysMus, .crSSStyleDropDigMus2, .crSSStyleDropPhysMus2').slideUp(600);
+	typeOfSale = 'merch';
+}); // end click
+$('.unlPurch1').click(function(){
+	if($(this).attr('checked')){
+		$('.takeDigPurchUnl').attr('checked', 'checked');
+		$('.unlPurchSelector1').attr('disabled','disabled');
+		$('.unlPurchSelector1').val('');
+	}else{
+		$('.unlPurchSelector1').removeAttr('disabled');
+	}// end if
+}); // end click
+$('.unlPurch2').click(function(){
+	if($(this).attr('checked')){
+		$('.takePhysPurchUnl').attr('checked', 'checked');
+		$('.unlPurchSelector2').attr('disabled','disabled');
+		$('.unlPurchSelector2').val('');
+	}else{
+		$('.unlPurchSelector2').removeAttr('disabled');
+	}// end if
+}); // end click
+$('.chooseStockBGDrop').click(function(){
+	if($(this).attr('checked')){
+	$('.chooseStockBGShell').slideDown(600);
+	}else{
+		$('.chooseStockBGShell').slideUp(600);
+	};
+}); // end click
+$('.chooseStockBGImg').click(function(){
+	$('.chooseStockBGImg').removeClass('chooseStockBGSelected');
+	$(this).addClass('chooseStockBGSelected');
+});
+//**************************************************************************      Phys Merch Sizes        ***********************************
+var sizeSelected = undefined;
+var sizeXS = sizeS = sizeM = sizeL = sizeXL = size2XL = size3XL = sizeNA = 1;
+$('.physUnlMerch').click(function(){
+	if($('.physUnlMerch').attr('checked')){
+		$('.physMerchQuantRow').addClass('physMerchQuantRowGone');
+	} else {
+		$('.physMerchQuantRow').removeClass('physMerchQuantRowGone');
+	};
+}); // end click
+$('.SizeXS').click(function(){
+	if(sizeNA != 2){
+		if(sizeXS == 1){
+			sizeSelected = 'XS';
+			sizeXS = 2;
+			$('.SizeXS').addClass('sAndQBoxSelected');
+			$('.sizeOutXS').addClass('sAndQBoxSelectedWhite').removeAttr('disabled','disabled').focus();
+		}else{
+			sizeXS = 1;
+			$('.SizeXS').removeClass('sAndQBoxSelected');
+			$('.sizeOutXS').removeClass('sAndQBoxSelectedWhite').attr('disabled','disabled').val('');
+		};
+	}else{ // end if sizeNA != 2
+		return false;
+};
+}); // end click
+$('.SizeS').click(function(){
+	if(sizeNA != 2){
+		if(sizeS == 1){
+			sizeSelected = 'S';
+			sizeS = 2;
+			$('.SizeS').addClass('sAndQBoxSelected');
+			$('.sizeOutS').addClass('sAndQBoxSelectedWhite').removeAttr('disabled','disabled').focus();
+		}else{
+			sizeS = 1;
+			$('.SizeS').removeClass('sAndQBoxSelected');
+			$('.sizeOutS').removeClass('sAndQBoxSelectedWhite').attr('disabled','disabled').val('');
+		};
+	}else{
+		return false;
+	};
+}); // end click
+$('.SizeM').click(function(){
+	if(sizeNA != 2){
+		if(sizeM == 1){
+			sizeSelected = 'M';
+			sizeM = 2;
+			$('.SizeM').addClass('sAndQBoxSelected');
+			$('.sizeOutM').addClass('sAndQBoxSelectedWhite').removeAttr('disabled','disabled').focus();
+		}else{
+			sizeM = 1;
+			$('.SizeM').removeClass('sAndQBoxSelected');
+			$('.sizeOutM').removeClass('sAndQBoxSelectedWhite').attr('disabled','disabled').val('');
+		};
+	}else{
+		return false;
+	};
+}); // end click
+$('.SizeL').click(function(){
+	if(sizeNA != 2){
+		if(sizeL == 1){
+			sizeSelected = 'L';
+			sizeL = 2;
+			$('.SizeL').addClass('sAndQBoxSelected');
+			$('.sizeOutL').addClass('sAndQBoxSelectedWhite').removeAttr('disabled','disabled').focus();
+		}else{
+			sizeL = 1;
+			$('.SizeL').removeClass('sAndQBoxSelected');
+			$('.sizeOutL').removeClass('sAndQBoxSelectedWhite').attr('disabled','disabled').val('');
+		};
+	}else{
+		return false;
+	};
+}); // end click
+$('.SizeXL').click(function(){
+	if(sizeNA != 2){
+		if(sizeXL == 1){
+			sizeSelected = 'XL';
+			sizeXL = 2;
+			$('.SizeXL').addClass('sAndQBoxSelected');
+			$('.sizeOutXL').addClass('sAndQBoxSelectedWhite').removeAttr('disabled','disabled').focus();
+		}else{
+			sizeXL = 1;
+			$('.SizeXL').removeClass('sAndQBoxSelected');
+			$('.sizeOutXL').removeClass('sAndQBoxSelectedWhite').attr('disabled','disabled').val('');
+		};
+	}else{
+		return false;
+	};
+}); // end click
+$('.Size2XL').click(function(){
+	if(sizeNA != 2){
+		if(size2XL == 1){
+			sizeSelected = '2XL';
+			size2XL = 2;
+			$('.Size2XL').addClass('sAndQBoxSelected');
+			$('.sizeOut2XL').addClass('sAndQBoxSelectedWhite').removeAttr('disabled','disabled').focus();
+		}else{
+			size2XL = 1;
+			$('.Size2XL').removeClass('sAndQBoxSelected');
+			$('.sizeOut2XL').removeClass('sAndQBoxSelectedWhite').attr('disabled','disabled').val('');
+		};
+	}else{
+		return false;
+	};
+}); // end click
+$('.Size3XL').click(function(){
+	if(sizeNA != 2){
+		if(size3XL == 1){
+			sizeSelected = '3XL';
+			size3XL = 2;
+			$('.Size3XL').addClass('sAndQBoxSelected');
+			$('.sizeOut3XL').addClass('sAndQBoxSelectedWhite').removeAttr('disabled','disabled').focus();
+		}else{
+			size3XL = 1;
+			$('.Size3XL').removeClass('sAndQBoxSelected');
+			$('.sizeOut3XL').removeClass('sAndQBoxSelectedWhite').attr('disabled','disabled').val('');
+		};
+	}else{
+		return false;
+	};
+}); // end click
+$('.SizeNA').click(function(){
+	if(sizeNA == 1){
+		sizeSelected = 'NA';
+		sizeNA = 2;
+		$('.SizeNA').addClass('sAndQBoxSelected');
+		$('.sizeOutNA').addClass('sAndQBoxSelectedWhite').removeAttr('disabled','disabled').focus();
+		$('.SizeXS, .SizeS, .SizeM, .SizeL, .SizeXL, .Size2XL, .Size3XL').removeClass('sAndQBoxSelected');
+		$('.sizeOutXS, .sizeOutS, .sizeOutM, .sizeOutL, .sizeOutXL, .sizeOut2XL, .sizeOut3XL').removeClass('sAndQBoxSelectedWhite').attr('disabled','disabled').val('');
+		sizeXS = sizeS = sizeM = sizeL = sizeXL = size2XL = size3XL = 1;
+	}else{
+		sizeNA = 1;
+		$('.SizeNA').removeClass('sAndQBoxSelected');
+		$('.sizeOutNA').removeClass('sAndQBoxSelectedWhite').attr('disabled','disabled').val('');
+	};
+}); // end click
+//**************************************************************************      Validstion        ***********************************
+ $('.crSSForm1').validate({
+   rules: {
+     email: {
+        required: true,
+        email: true
+     },
+	 artistBandName: {
+        required: true
+     },
+	 firstName: {
+        required: true
+     },
+	 lastName: {
+        required: true
+     },
+	 emailPayal: {
+        required: true,
+        email: true
+     },
+     password: {
+        required: true,
+        rangelength:[8,16]
+     },
+     confirm_password: {equalTo:'.crSSConfPass'},
+     spam: "required"
+   }, //end rules
+   messages: {
+      email: {
+         required: "Please supply an e-mail address.",
+         email: "This is not a valid email address."
+       },
+      password: {
+        required: 'Please type a password',
+        rangelength: 'Password must be between 8 and 16 characters long.'
+      },
+      confirm_password: {
+        equalTo: 'The two passwords do not match.'
+      }
+   },
+
+   errorPlacement: function(error, element) {
+       if ( element.is(":radio") || element.is(":checkbox")) {
+          error.appendTo( element.parent());
+        } else {
+          error.insertAfter(element);
+        }
+    },
+	onsubmit: false
+  }); // end validate
+
+  $('.crSSForm2').validate({
+
+   rules: {
+     productName: {
+        required: true
+     },
+   }, //end rules
+
+   errorPlacement: function(error, element) {
+       if ( element.is(":radio") || element.is(":checkbox")) {
+          error.appendTo( element.parent());
+        } else {
+          error.insertAfter(element);
+        }
+    }
+
+  }); // end validate
+  $('.crSSForm3').validate({
+
+   rules: {
+     startDate: {
+        required: true
+     },
+	 endDate: {
+        required: true
+     },
+   }, //end rules
+
+   errorPlacement: function(error, element) {
+       if ( element.is(":radio") || element.is(":checkbox")) {
+          error.appendTo( element.parent());
+        } else {
+          error.insertAfter(element);
+        }
+    }
+
+  }); // end validate
+//**************************************************************************     login        ***********************************
+$('.loginEmailIn').focus(function(){
+	if($(this).val() == ('Email')){
+	$(this).val('');
+	} else {
+	return false;
+	};
+}); // end focus
+$('.loginEmailIn').blur(function(){
+	if($(this).val() == ('')){
+	$(this).val('Email');
+	} else {
+	return false;
+	};
+}); // end blur
+$('.loginBPassLab').click(function(){
+	$(this).addClass('hiddenElement');
+	$('.loginPassIn').focus();
+}); // end click
+$('.loginPassIn').focus(function(){
+	$('.loginBPassLab').addClass('hiddenElement');
+}); // end focus
+$('.loginPassIn').blur(function(){
+	if($(this).val() == ''){
+	$('.loginBPassLab').removeClass('hiddenElement');
+	} else {
+	return false;
+	};
+}); // end blur
+//**************************************************************************     send check        ***********************************
+$('.sendCheckSelected').click(function(){
+	if($(this).attr('checked')){
+		$('.paypalEmailIn').addClass('sendCheckGrey').attr('disabled','disabled').val('E-Check');
+	}else{
+		$('.paypalEmailIn').removeClass('sendCheckGrey').removeAttr('disabled','disabled').val('');
+	}
+}); // end click
+//**************************************************************************     create pricing        ***********************************
+
+var bottomHitNum = 0;
+$('.crCustomCalc').click(function(){
+	bottomHitNum = (parseFloat((($('.crCDStart').val()) - ($('.crCDEnd').val())) / ($('.crCDDec').val())).toFixed(0));
+	$('.crCustomInsP').text(bottomHitNum);
+	$('.salePriceStPri').text($('.crCDStart').val());
+}); // end click
+$('.crCustomSave').click(function(){
+	$('.salePriceStPri').text('$'+(parseFloat($('.crCDStart').val()).toFixed(2)));
+	$('.salePriceStLoPri').text('$'+(parseFloat($('.crCDEnd').val()).toFixed(2)));
+	$('.saleaPriceStDec').text('$'+(parseFloat($('.crCDDec').val()).toFixed(2)));
+	$('.salePriceStToReach').text(parseFloat(bottomHitNum).toFixed(0));
+	$('#fancybox-close').trigger('click');
+	$('.salePriceStatement').slideDown(300);
+}); // end click
+$('.prefBSSCalcBtn').click(function(){
+	var ceilingP = $('.prefBSSCieling').val();
+	var floorP = (ceilingP * .20);
+	var pastSale = $('.prefBSSPastSale').val();
+	var decStruc = ((ceilingP - floorP)/(pastSale * 1.3));
+	var toGetTo = ((ceilingP - floorP)/decStruc);
+	$('.salePriceStPri').text('$'+(parseFloat(ceilingP).toFixed(2)));
+	var startPriceGrab = parseFloat(ceilingP).toFixed(2);
+	var lowPriceGrab = parseFloat(floorP).toFixed(2);
+	var decPriceGrab = parseFloat(decStruc).toFixed(3);
+	var getToGrab = parseFloat(toGetTo).toFixed(0);
+	$('.salePriceStLoPri').text('$'+(parseFloat(floorP).toFixed(2)));
+	$('.saleaPriceStDec').text('$'+(parseFloat(decStruc).toFixed(3)));
+	$('.salePriceStToReach').text(parseFloat(toGetTo).toFixed(0));
+	$(this).text('Recalculate').css('background-color','#367436');
+	$('.salePriceStatement, p.prefBSSSuggestBtn, p.prefBSSOr, p.prefBSSGoCustomBtn').slideDown(300);
+	$('.crCDStart').val(startPriceGrab);
+	$('.crCDEnd').val(lowPriceGrab);
+	$('.crCDDec').val(decPriceGrab);
+	$('.crCustomInsP').text(getToGrab);
+}); // end click
+$('.prefBSSSuggestBtn').click(function(){
+	$('#fancybox-close').trigger('click');
+}); // end click
+$('.prefBSSGoCustomBtn').click(function(){
+	$('#fancybox-close, .customPricingBtn').trigger('click')
+}); // end click
+//**************************************************************************      track list        ***********************************
+$('.digTrackTitleIn, .physTrackTitleIn').focus(function(){
+	if($(this).val() == ('Track Title')){
+		$(this).val	('');
+	} else {
+		return false;
+	};
+}); // end focus
+$('.digTrackTitleIn, .physTrackTitleIn').blur(function(){
+	if($(this).val() == ('')){
+		$(this).val	('Track Title');
+	} else {
+		return false;
+	};
+}); // end focus
+$('.physTrackLengthIn').focus(function(){
+	if($(this).val() == ('Length')){
+		$(this).val	('');
+	} else {
+		return false;
+	};
+}); // end focus
+$('.physTrackLengthIn').blur(function(){
+	if($(this).val() == ('')){
+		$(this).val	('Length');
+	} else {
+		return false;
+	};
+}); // end focus
+/*********** Adding Physial Tracks ***********/
+$('#enterTracksPhysicalAddTrackBtn').click(function(){
+	if($('#newPhysicalTrackTitle').val()=="Track Title" || $('#newPhysicalTrackTitle').val()=="") {
+		alert("No Title");
+		return;
+	}
+	if($('#newPhysicalTrackLength').val()=="Length" || $('#newPhysicalTrackLength').val()=="") {
+		alert("No length");
+		return;
+	}
+	var trackCount = parseInt($('#physicalTrackCount').val());
+	$('#physicalTrackCount').val(trackCount+1);
+	var newRow = '<tr id="enterTrack"'+trackCount+'" class="enterTrackRow';
+	if(trackCount%2==0) {
+		newRow += 'E';
+	} else {
+		newRow += 'O'
+	}
+	newRow += '"><td class="enterTrackPhysNum">';
+	newRow += trackCount+1;
+	newRow += '.</td><td>'
+	newRow += $('#newPhysicalTrackTitle').val() + ' - ' + $('#newPhysicalTrackLength').val();
+	newRow += '<td class="dashboardProductsProductEditUpDown"><div class="upDownArrowShell">';
+	newRow += '<img class="dashboardProductMoveUp" src="images/productEditArrowUp.png" onclick="updownarrowclick(this)" /><img class="dashboardProductMoveDown" src="images/productEditArrowDown.png" onclick="updownarrowclick(this)" /></div></td>    <td class="enterTrackX">X</td></tr>';
+	$('#enterPhysicalTrackTable').append(newRow);
+	$('<input>').attr({type: 'hidden', id: 'TrackTitle'+trackCount, name: 'TrackTitle'+trackCount, value: $('#newPhysicalTrackTitle').val()}).appendTo('.crSSForm2');
+	$('<input>').attr({type: 'hidden', id: 'TrackLength'+trackCount, name: 'TrackLength'+trackCount, value: $('#newPhysicalTrackLength').val()}).appendTo('.crSSForm2');
+	upOrDownArrows();
+}); // end click
+/*************** Adding Digital Tracks ***********/
+var digitalTrackTitleFocus = function(){
+	$('.digitalTrackTitleIn').focus(function(){
+	if($(this).val()==("Enter track title here")){
+		$(this).val("");
+	};
+}); // end focus
+}; // end function
+var digitalTrackTitleBlur = function(){
+	$('.digitalTrackTitleIn').blur(function(){
+	if($(this).val()==("")){
+		$(this).val("Enter track title here");
+	};
+}); // end focus
+}; // end function
+digitalTrackTitleFocus();
+digitalTrackTitleBlur();
+$('#file-uploader-demo1').click(function(){
+	var trackCount = parseInt($('#digitalTrackCount').val());
+	$('#digitalTrackCount').val(trackCount+1);
+	var newRow = '<tr id="enterTrack"'+trackCount+'" class="enterTrackRow';
+	if(trackCount%2==0) {
+		newRow += 'E';
+	} else {
+		newRow += 'O'
+	}
+	newRow += '"><td>1.</td><td><input type="text" class="digitalTrackTitleIn" value="Enter track title here"/><br /><p class="digitalTrackFileName">the_file_on_comp.mp3 <img class="uploadingGif" src="images/ajax-loader.gif" /><span>(uploading)</span></p></td><td>.mp3</td><td class="dashboardProductsProductEditUpDown"><div class="upDownArrowShell"><img class="dashboardProductMoveUp" src="images/productEditArrowUp.png" /><img class="dashboardProductMoveDown" src="images/productEditArrowDown.png" /></div></td><td class="enterTrackX">X</td></tr>';
+	$('#enterDigitalTrackTable').append(newRow);
+	digitalTrackTitleFocus();
+	digitalTrackTitleBlur();
+	upOrDownArrows();
+}); // end click
+//**************************************************************************      random        ***********************************
+$('#openTrackListCreatePop').fancybox();
+$('#openTrackListPhysPop').fancybox();
+$('#openTrackListCreatePop2').fancybox();
+$('#openTrackListPhysPop2').fancybox();
+$('#openCrCustomSS').fancybox();
+$('#openCrCustomSS2').fancybox();
+$('#openCrPrefSS').fancybox();
+$('#openCrPrefSS2').fancybox();
+$('#openLoginBox').fancybox();
+$('#openSendCheckBox').fancybox()
+$('#openMockBrowser').fancybox({
+		'height' : '100%',
+		'width': '100%'
+});
+$("#datepicker").datepicker({ minDate: 0, defaultDate: +10 });
+$("#datepicker3").datepicker({ minDate: 0 });
+
+var upOrDownArrows = function(){
+	$(".dashboardProductMoveUp,.dashboardProductMoveDown").click(function(){
+	updownarrowclick(this);
+}); // end click
+}; // end function
+upOrDownArrows();
+function updownarrowclick(myArrow) {
+        var row = $(myArrow).parents("tr:first");
+        if ($(myArrow).is(".dashboardProductMoveUp")) {
+            row.insertBefore(row.prev());
+        } else {
+            row.insertAfter(row.next());
+        }
+};
+$('.PrevSaleBtn').click(function(){
+	$('.redOrGreenLight').removeClass('redLight').addClass('greenLight');
+	$('.redGreenLightP').text('You are ready to create your social sale!');
+}); // end click
+$('.qq-upload-button').click(function(){
+alert("this works");
+});
+//**************************************************************************      icon navigations        ***********************************
+var stepAuth = 0;
+$('.step1Done').click(function(){
+	$('.crSSStep1').slideUp(800);
+	$('.crSSStep2').delay(800).slideDown(600);
+	$('.crSSTopIcon1').addClass('crSSIconNotActive');
+	$('.crSSTopIcon2').addClass('crSSIconClickable');
+	$('.crSSTopIcon2').removeClass('crSSIconNotActive');
+	$('.loginToSkipS1').fadeOut(300);
+	stepAuth++;
+}); // end click
+$('.step2Done').click(function(){
+	$('.crSSStep2').slideUp(600);
+	$('.crSSStep3').delay(600).slideDown(600);
+	$('.crSSTopIcon2').addClass('crSSIconNotActive');
+	$('.crSSTopIcon3').addClass('crSSIconClickable');
+	$('.crSSTopIcon3').removeClass('crSSIconNotActive');
+	stepAuth++;
+}); // end click
+$('.step2Back').click(function(){
+	$('.crSSStep2').slideUp(600);
+	$('.crSSStep1').delay(600).slideDown(600);
+	$('.crSSTopIcon2').addClass('crSSIconNotActive');
+	$('.crSSTopIcon1').removeClass('crSSIconNotActive');
+}); // end click
+$('.step3Done').click(function(){
+	$('.crSSStep3').slideUp(600);
+	$('.crSSStep4').delay(600).slideDown(900);
+	$('.crSSTopIcon3').addClass('crSSIconNotActive');
+	$('.crSSTopIcon4').addClass('crSSIconClickable');
+	$('.crSSTopIcon4').removeClass('crSSIconNotActive');
+	stepAuth++;
+}); // end click
+$('.step3Back').click(function(){
+	$('.crSSStep3').slideUp(600);
+	$('.crSSStep2').delay(600).slideDown(600);
+	$('.crSSTopIcon3').addClass('crSSIconNotActive');
+	$('.crSSTopIcon2').removeClass('crSSIconNotActive');
+}); // end click
+$('.step4Back').click(function(){
+	$('.crSSStep4').slideUp(900);
+	$('.crSSStep3').delay(900).slideDown(600);
+	$('.crSSTopIcon4').addClass('crSSIconNotActive');
+	$('.crSSTopIcon3').removeClass('crSSIconNotActive');
+}); // end click
+$('.crSSTopIcon1').click(function(){
+	$('.crSSStep2, .crSSStep3, .crSSStep4').slideUp(600);
+	$('.crSSStep1').delay(600).slideDown(600);
+	$('.crSSTopIcon2, .crSSTopIcon3, .crSSTopIcon4').addClass('crSSIconNotActive');
+	$('.crSSTopIcon1').removeClass('crSSIconNotActive');
+}); // end click
+$('.crSSTopIcon2').click(function(){
+	if(stepAuth > 0){
+	$('.crSSStep1, .crSSStep3, .crSSStep4').slideUp(600);
+	$('.crSSStep2').delay(600).slideDown(600);
+	$('.crSSTopIcon1, .crSSTopIcon3, .crSSTopIcon4').addClass('crSSIconNotActive');
+	$('.crSSTopIcon2').removeClass('crSSIconNotActive');
+	}; // end if
+}); // end click
+$('.crSSTopIcon3').click(function(){
+	if(stepAuth > 1){
+	$('.crSSStep1, .crSSStep2, .crSSStep4').slideUp(600);
+	$('.crSSStep3').delay(600).slideDown(600);
+	$('.crSSTopIcon1, .crSSTopIcon2, .crSSTopIcon4').addClass('crSSIconNotActive');
+	$('.crSSTopIcon3').removeClass('crSSIconNotActive');
+	}; // end if
+}); // end click
+$('.crSSTopIcon4').click(function(){
+	if(stepAuth > 2){
+	$('.crSSStep1, .crSSStep2, .crSSStep3').slideUp(600);
+	$('.crSSStep4').delay(600).slideDown(900);
+	$('.crSSTopIcon1, .crSSTopIcon2, .crSSTopIcon3').addClass('crSSIconNotActive');
+	$('.crSSTopIcon4').removeClass('crSSIconNotActive');
+	}; // end if
+}); // end click
+
+
+$('.enterTrackListSaveBtn').click(function(){
+	$('#fancybox-close').trigger('click');
+}); // end click
+$('.step1Done').click(function(){
+	$('.takeBandName').val($('.grabBandName').val());
+	$('.takeEmail').val($('.grabEmail').val());
+}); // end click
+$('.step2Done').click(function(){
+	$('.takeProdName').val($('.grabProdName').val());
+	$('.takeDesc').val($('.grabDesc').val());
+	$('.grabSaleTypeText').text($("input[@name=productType]:checked").val());
+	if($('.typeClickedDigMus').attr('checked')){
+		$('.crSSStyleDropDigMus2').slideDown(300);
+		$('.crSSStyleDropPhysMus2, .crSSStyleDropPhysMerch2').slideUp(300);
+		$('.takeDigPurchLim').val($('.grabDigPurchLim').val());
+	} if($('.typeClickedPhysMus').attr('checked')){
+		$('.crSSStyleDropPhysMus2').slideDown(300);
+		$('.crSSStyleDropDigMus2, .crSSStyleDropPhysMerch2').slideUp(300);
+		$('.takePhysPurchLim1').val($('.grabPhysPurchLim1').val());
+		$('.grabFlatShip').val($('.takeFlatShip').val());
+	} if($('.typeClickedMerch').attr('checked')){
+		$('.crSSStyleDropPhysMerch2').slideDown(300);
+		$('.crSSStyleDropDigMus2, .crSSStyleDropPhysMus2').slideUp(300);
+		$('.takePhysMerchXS').val($('.grabPhysMerchXS').val());
+		$('.takePhysMerchS').val($('.grabPhysMerchS').val());
+		$('.takePhysMerchM').val($('.grabPhysMerchM').val());
+		$('.takePhysMerchL').val($('.grabPhysMerchL').val());
+		$('.takePhysMerchXL').val($('.grabPhysMerchXL').val());
+		$('.takePhysMerch2XL').val($('.grabPhysMerch2XL').val());
+		$('.takePhysMerch3XL').val($('.grabPhysMerch3XL').val());
+		$('.takePhysMerchNA').val($('.grabPhysMerchNA').val());
+		$('.takePhysMerchFlatShip').val($('.grabPhysMerchFlatShip').val())
+	} if($('.physUnlMerch').attr('checked')){
+		$('.physMerchUnlPerchCheck').removeClass('hiddenElement');
+	};
+
+}); // end click
+$('.step3Done').click(function(){
+	$('#datepicker3').val($('#datepicker').val());
+	$('#datepicker4').val($('#datepicker2').val());
+}); // end click
+//**************************************************************************      create social sale submit        ***********************************
+$('.createSSFinalBtn').click(function() {
+var form_data = {
+artistName: $('.grabBandName').val(),
+password: $('.crSSConfPass').val(),
+firstName: $('.grabFirstName').val(),
+lastName: $('.grabLastName').val(),
+website: $('.grabBandURL').val(),
+paypal: $('.paypalEmailIn').val(),
+email: $(".takeEmail").val(),
+productName: $(".takeProdName").val(),
+productDescription: $(".takeDesc").val(),
+productImageId: 2, // dummy value for now
+productType: $("input[@name=productType]:checked").val(),
+prodPhysMusShip: $('.grabFlatShip').val(),
+prodPhysMusPurchLim: $('.takePhysPurchLim1').val(),
+prodPhysMusUnlPurch: $('.takePhysPurchUnl').is(':checked'), // will return a true or false
+prodPhysMerchShip: $('.takePhysMerchFlatShip').val(),
+prodPhysMerchSizeXS: $('.takePhysMerchXS').val(),
+prodPhysMerchSizeS: $('.takePhysMerchS').val(),
+prodPhysMerchSizeM: $('.takePhysMerchM').val(),
+prodPhysMerchSizeL: $('.takePhysMerchL').val(),
+prodPhysMerchSizeXL: $('.takePhysMerchXL').val(),
+prodPhysMerchSize2XL: $('.takePhysMerch2XL').val(),
+prodPhysMerchSize3XS: $('.takePhysMerch3XL').val(),
+prodPhysMerchSizeNA: $('.takePhysMerchNA').val(),
+prodPhysMerchUnlPurch: $('physUnlMerch').is(':checked'), // will return true or false
+prodPhysMerchUnlSizeXS: sizeXS, // if variable is 1 is is not checked, if 2 if it checked (same for all sizes).
+prodPhysMerchUnlSizeS: sizeS,
+prodPhysMerchUnlSizeM: sizeM,
+prodPhysMerchUnlSizeL: sizeL,
+prodPhysMerchUnlSizeXL: sizeXL,
+prodPhysMerchUnlSize2XL: size2XL,
+prodPhysMerchUnlSize3XL: size3XL,
+prodPhysMerchUnlSizeNA: sizeNA,
+decrement: $('.saleaPriceStDecGrab').text(),
+lowPrice: $('.salePriceStLoPriGrab').text(),
+startPrice: $('.salePriceStPriGrab').text(),
+saleEnd: $("#datepicker3").val(),
+backgroundId: 2, //dummy value for now
+logoId: 2, //dummy value for now
+requestType: 'CreateAccountArtistProductSale', //need this value to work
+// logoId: $(".IMAGEFILE_DONT_KNOW").val(),
+// backgroundId: $(".IMAGEFILE_DONT_KNOW").val(),
+is_ajax: 1
+}; // end form_data
+$.ajax({
+type: "POST",
+url: 'http://localhost/jameslive/Zillionears30/request.php',
+data: form_data,
+success: function(response){
+if(response == 'success')
+$("#newError").html("<p>You are super chill!</p>");
+else
+$("#newError").html("<p>"+response+"</p>");
+}
+}); // end success
+alert("boom mo fiya")
+return false;
+});
+//**************************************************************************      end code        ***********************************
+});

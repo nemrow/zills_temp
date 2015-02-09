@@ -1,0 +1,264 @@
+<!----------------------------------------------------------------------- HIDDEN SHELL-->
+<div class="hiddenShell">
+<!----------------------------------------------------------------------- CONTACT US-->
+  <div id="contactUs">
+    <div class="contactUsShell">
+      <h3>Any questions? Contact us here</h3>
+      <input type="text" class="contactUsEmail" value="Your Email" />
+      <input type="text" class="contactUsSubject" value="Subject" />
+      <textarea class="contactUsMessage">Message</textarea>
+      <p class="contactUsSend">Send</p>
+      <p class="contactUsSent">Message Sent!</p>
+    </div>
+    <!-- end contactUsShell --> 
+  </div>
+  <!-- end contactUs -->
+<!----------------------------------------------------------------------- LOGIN --> 
+  <div id="login">
+    <div class="contactUsShell">
+      <form class="loginForm">
+        <div class="loginEmailShell">
+          <input type="text" class="loginEmail required" value="Email" name="email" />
+        </div>
+        <div class="loginEmailShell">
+          <input type="password" class="loginPass" name="password" />
+          <p class="loginPassLab">Password</p>
+        </div>
+        <input type="submit" value="Sign In" class="loginSub" />
+      </form>
+      <p class="loginOr">Or</p>
+      <p class="loginForgotPass">forgot password</p>
+      <!---->
+      <div class="fakeClearer"></div>
+      <input type="checkbox" class="loginKeepLog" />
+      <p class="loginKeepLogP">Keep me logged in</p>
+      <div class="loginFBShell">
+        <p>Facebook</p>
+        <img src="images/facebookBtn1.jpg" /> </div>
+      <!-- end contactUsShell --> 
+    </div>
+    <!-- end loginFBShell --> 
+    
+  </div>
+  <!-- end login --> 
+<!----------------------------------------------------------------------- DIGITAL TRACK LIST INPUT -->   
+ <div id="trackListCreatePop">
+    <h1 class="enterTrackListTitle">Tracklist</h1>
+    <p class="enterTrackListSaveBtn">Save</p>
+    <div class="fakeClearer"></div>
+    <div class="enterTrackAddTrack2">
+    <!-- _js/valums-file-uploader/server/php.php -->
+
+	<div id="file-uploader-demo1">
+		<noscript>
+		<p>Please enable JavaScript to use file uploader.</p>
+		<!-- or put a simple form for upload here -->
+		</noscript>
+	</div>
+
+
+      <script>        
+        function createUploader(){            
+            var uploader = new qq.FileUploader({
+            	element: document.getElementById('file-uploader-demo1'),
+		name: 'DigitalTrack',
+                action: 'request.php',
+                params: {requestType: 'CreateAttachment', key:'qqfile'},
+                debug: false,
+				onComplete: function(id, fileName, response){
+				
+				//This is where you will set some hidden input value to the imageID based on responseJSON
+				//document.getElementById('imageid').value = 30;
+				alert(response);
+				
+				}
+            });           
+        }
+        
+        // in your app create uploader as soon as the DOM is ready
+        // don't wait for the window to load  
+        window.onload = createUploader;     
+    </script>
+    <input type="hidden" id="digitalHiddenTrackCount" value="0" />
+      <p class="enterTracksFilesSupported">File types supported: wmv, mp3, Flac. Click here for help.</p>
+    </div>
+    <!-- end enterTrackAddTrack -->
+  </div>
+  <!-- end trackListCreatePop -->
+<!----------------------------------------------------------------------- PHYSICAL TRACK LIST INPUT -->   
+  <div id="trackListPhysicalCreatePop">
+    <h1 class="enterTrackListTitle">Tracklist</h1>
+    <p class="enterTrackListSaveBtn">Save</p>
+    <div class="fakeClearer"></div>
+    <div class="enterTrackTableShell" >
+      <table class="enterTrackTable" id="enterPhysicalTrackTable">
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <!-- end enterTrackTableShell -->
+    <div class="enterTrackAddTrack2">
+      <input class="crSSInput5 physTrackTitleIn" type="text" id="newPhysicalTrackTitle" value="Track Title" />
+      <input class="crSSInput6 physTrackLengthIn" type="text" id="newPhysicalTrackLength" value="Length" />
+      <p class="enterTracksAddTrackBtn" id="enterTracksPhysicalAddTrackBtn">+ Add Track</p>
+    </div>
+    <!-- end enterTrackAddTrack -->
+  </div>
+  <!-- end trackListCreatePop --> 
+<!----------------------------------------------------------------------- CREATE CUSTOM SALE STRUCTURE --> 
+  <div id="crCustomSS">
+    <h1>Custom Sale Structure</h1>
+    <table class="crCustomSaleTable">
+      <tr>
+        <td><div class="crCustomInsSh">
+            <input type="text" class="crCustomInput crCDStart" />
+            <p class="crCustomInpLab">$</p>
+          </div></td>
+        <td>Start Price</td>
+        <td><div class="crCustomInsSh">
+            <input type="text" class="crCustomInput crCDEnd" />
+            <p class="crCustomInpLab">$</p>
+          </div></td>
+        <td>Lowest Price</td>
+      </tr>
+      <tr>
+        <td><div class="crCustomInsSh">
+            <input type="text" class="crCustomInput crCDDec" />
+            <p class="crCustomInpLab">$</p>
+          </div></td>
+        <td>Deducted Per Purchase</td>
+        <td><p class="crCustomInsP">0</p></td>
+        <td>Purcases To Reach Lowest Price</td>
+      </tr>
+    </table>
+    <p class="crCustomSave">Save</p>
+    <p class="crCustomCalc">Calculate</p>
+  </div>
+  <!-- end crCustomSS -->
+<!----------------------------------------------------------------------- CREATE PREF BASED SALE STRUCTURE --> 
+  <div id="crPrefSS">
+    <h1>Preference Based Sale Structure</h1>
+    <p class="prefBSSTits">What is the average number of units you sell per release?</p>
+    <input type="text" class="prefBSSPastSale" />
+    <p class="prefBSSTits">Select retail value (starting price) for this sale:</p>
+    <div class="prefBSSCielingShell">
+      <input type="text" class="prefBSSCieling" />
+      <p class="prefBSSCielingMoney">$</p>
+    </div>
+    <!-- end prefBSSCielingShell -->
+    <p class="prefBSSCalcBtn">Calculate</p>
+    <div class="salePriceStatement">
+      <table class="salePriceStatementTable">
+        <tr>
+          <td class="salePriceStateL">Start price <span class="salePriceStPri"></span></td>
+          <td>Declines <span class="saleaPriceStDec"></span> per purchase</td>
+        </tr>
+        <tr>
+          <td>Lowest price <span class="salePriceStLoPri"></span></td>
+          <td><span class="salePriceStToReach"></span> purchases to reach <span class="salePriceStLoPri"></span></td>
+        </tr>
+      </table>
+    </div>
+    <!-- end salePriceStatement -->
+    <!---->
+    <div class="fakeClearer"></div>
+    <p class="prefBSSSuggestBtn">Use Structure</p>
+    <p class="prefBSSOr">Or</p>
+    <p class="prefBSSGoCustomBtn">Customize Structure</p>
+  </div> 
+<!----------------------------------------------------------------------- SEND A CHECK -->   
+  <div id="sendCheckBox">
+    <p class="sendCheckText">If you prefer not to use paypal we can send you an e-check to your email. There is an <span>additional fee of $3</span> to send an e-check. Select the check box below to recieve payment with an e-check:</p>
+    <input type="checkbox" class="sendCheckSelected" />
+    <p class="sendCheckSelectorText">Send me an E-check for a $3 fee</p>
+  </div>
+<!----------------------------------------------------------------------- BAND ADMIN - FANS IN SALE (DIGITAL, WITH EMAIL MESSAGE) -->   
+  <div id="fInSDigShell">
+	<div class="finsDigListShell">
+		<table class="finsDigList">
+			<tr>
+				<td class="finsDigListName">Dan Polaske</td><td class="finsDigListEmail">Dan@yahoo.com</td><td class="finsDigListPrice">$5.00</td>
+			</tr>
+			<tr>
+				<td class="finsDigListName">Jordan Nemrow</td><td class="finsDigListEmail">Jordan@Gmail.com</td><td class="finsDigListPrice">$4.99</td>
+			</tr>
+		</table>
+	</div> <!-- end finsDigListShell --->
+	<div class="finsDigBtnsShell">
+		<p class="finsDigBtnLeft">Download Email List</p>
+		<p class="finsDigBtnRight finsEditMessBtn">Edit Digital Delivery Message</p>
+	</div> <!-- end finsDigBtnsShell --->
+	<div class="finsDigMessageShell">
+		<div class="finsDigMessageHead">
+			<p class="finsDigMessageHeadp">This is the email your fans will recieve with the link to their digital download</p>
+		</div> <!-- end finsDigMessageHead -->
+		<textarea class="finsDigMessage" readonly="readonly">
+			Hi Fan!
+
+			Here is the dope track you orderd from us whadup!
+
+			Blah Blah Blah ya know the deal
+			Oh and here is the link whadup <link>
+
+			From,
+			Chizz
+      	</textarea>
+	</div> <!--- end finsDigMessageShell -->
+  </div> <!-- end fInSDigShell -->
+<!----------------------------------------------------------------------- BAND ADMIN - FANS IN SALE (PHYSICAL, NO EMAIL MESSAGE) -->  
+  <div id="fInSPhysShell">
+	<div class="finsDigListShell">
+		<table class="finsDigList">
+			<tr>
+				<td class="finsDigListName">Dan Polaske</td><td class="finsDigListEmail">Dan@yahoo.com</td><td class="finsDigListPrice">$5.00</td>
+			</tr>
+			<tr>
+				<td class="finsDigListName">Jordan Nemrow</td><td class="finsDigListEmail">Jordan@Gmail.com</td><td class="finsDigListPrice">$4.99</td>
+			</tr>
+		</table>
+	</div> <!-- end finsDigListShell --->
+	<div class="finsDigBtnsShell">
+		<p class="finsDigBtnLeft">Download Email List</p>
+		<a href="bandAdminOrders.html"><p class="finsDigBtnRight">Fill Physical Orders</p></a>
+	</div> <!-- end finsDigBtnsShell --->
+  </div> <!-- end fInSPhysShell -->
+<!----------------------------------------------------------------------- BAND ADMIN - REFFERALS -->  
+  <div id="refShell">
+	<div class="refHeader">
+		<p>Referrals</p>
+	</div> <!-- end refHeader -->
+	<div class="refListShell">
+		<table class="refTable">
+			<tr>
+				<td class="refL">www.booyah.com</td><td class="refR">2333</td>
+			</tr>
+			<tr>
+				<td class="refL">www.facebook.com/nemrow</td><td class="refR">887</td>
+			</tr>
+		</table>
+	</div> <!-- end refListShell -->
+  </div> <!-- end refShell -->
+<!----------------------------------------------------------------------- BAND ADMIN - PHYSICAL ORDERS -->  
+  <div id="orderShell">
+	<div class="orderBoxNum">
+		<p class="orderBoxNumP">#10001</p>
+	</div> <!-- end orderBoxNum --->
+	<div class="orderBoxTitleOptShell">
+		<p class="orderBoxTitleOpt">Graphic T</p>
+		<p class="orderBoxTitleOptR">Medium</p>
+	</div> <!-- end orderBoxTitleOptShell -->
+	<div class="orderBoxNum">
+		<p class="orderBoxNumP">Shipping Info</p>
+	</div> <!-- end orderBoxNum --->
+		<p class="orderBoxShipP">
+			Dan Polaske<br />
+			2342 Chumly Ct<br />
+			Rocklin, California 95765
+		</p>
+		<p class="orderBoxCompBtn">Complete</p>
+		<p class="orderBoxNotCompBtn">Not Complete</p>
+		<p class="orderBoxCancelP">or Cancel Order</p>
+  </div> <!-- end orderShell -->
+<!----------------------------------------------------------------------- END HIDDEN SHELL-->
+</div>
+<!-- end hiddenShell -->>>>>>>>>>>>>

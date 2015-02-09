@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><?php echo $this->pageTitle ?></title>
+<meta name="description" content="A simple social direct-to-fan platform for musicians to release music and merch." />
+<link rel="shortcut icon" href="https://www.zillionears.com/images/smallEar.png" />
+<meta property="og:description" content="A simple social direct-to-fan platform for musicians to release music and merch." />
+<meta property="og:title" content="Zillionears | Fan Engagement Through Dynamic Pricing"  />
+<meta property="og:url" content="https://www.zillionears.com/index.php" />
+<meta property="og:image" content="https://www.zillionears.com/images/square-logo-7.jpg" />
+<link rel="image_src" href="https://www.zillionears.com/images/square-logo-7.jpg" />
+<link rel="stylesheet" type="text/css" href="css/styleCreateSs.css" />
+<link href="css/jquery.fancybox-1.3.4.css" rel="stylesheet" />
+<link href="css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/homePageStyle.css" />
+<link rel="stylesheet" type="text/css" href="js/valums-file-uploader/client/fileuploader.css" />
+<link rel="stylesheet" type="text/css" href="css/feedbackStyle.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox-1.3.4.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.countdown.pack.js"></script>
+<script type="text/javascript" src="js/bandAdmin_Script.js"></script>
+<script type="text/javascript" src="js/homePage_Script.js"></script>
+<script type="text/javascript" src="js/createSs_Script.js"></script>
+<script type="text/javascript" src="js/fileuploader.js"></script>
+<script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20200573-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<style>
+body{
+	background-color:#0D0D0D !important;
+}
+.footer{
+	display:none !important;
+}
+#header{
+	height:0px !important;
+}
+</style>
+</head>
+<body>
+
+<div id="header">
+<div class="wrapper1">
+<div class="headerNav">
+</div> <!-- end headerNav -->
+</div> <!-- end wrapper1 -->
+</div> <!-- end header -->
+
+<?php if($this->currentPage=='fanadminsettings' || $this->currentPage=='fanadminsocialsales') { ?>
+<div class="subHeader">
+  <div class="wrapper1">
+    <div class="adminNav">
+      <p><a href="fanAdminSocialSales">Sales</a>&nbsp; | &nbsp;<a href="fanAdminSettings">Profile</a></p>
+    </div>
+    <!-- end adminNav -->
+  </div>
+  <!-- end wrapper1 -->
+</div>
+<!-- end subHeader -->
+<?php } //Jordan put the other subheaders here ?>
+

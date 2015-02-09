@@ -1,0 +1,69 @@
+<div class="subHeader">
+  <div class="wrapper1">
+    <p class="secHeadTitle">Register</p>
+  </div>
+  <!-- end wrapper1 --> 
+</div>
+<!-- end subHeader -->
+
+<div class="contentContainer">
+  <div class="wrapper1">
+    <div class="contentArea">
+      <div class="content">
+        <div class="wrapper743">
+          <h1 class="aboutUsHead">Register</h1>
+          <p class="boringLoginMessage"><?php echo $this->message; ?></p>
+          <div class="boringLoginErrorFace"> <?php echo $this->errorMessage; ?> </div>
+          <!-- end boringLoginErrorFace -->
+          <div id="register">
+            <div class="contactUsShell">
+              <form class="registerForm" action="register<?php echo $this->actionData; ?>" method="post">
+                <div class="loginEmailShell">
+                  <input type="text" class="boringLoginEmail" id="boringLoginEmail" value="Email" name="email" />
+                  <img class="boringLoginErrorArrow" id="boringLoginErrorArrowEmail" src="images/errorArrow.png" />
+                </div>
+                <p class="boringErrorMessage boringErrorMessageEmail"></p>
+                <div class="loginEmailShell">
+                  <input type="password" class="boringLoginPass registerPass" id="boringLoginPass1" name="password" />
+                  <p class="loginPassLab">Password</p>
+                  <img class="boringLoginErrorArrow" id="boringLoginErrorArrowPass" src="images/errorArrow.png" />
+                </div>
+                <p class="boringErrorMessage boringErrorMessagePass"></p>
+                <div class="loginEmailShell">
+                  <input type="password" class="boringLoginPass registerPassConfirm" id="boringLoginPass2" name="password2" />
+                  <p class="loginPassLab">Confirm Password</p>
+                  <img class="boringLoginErrorArrow" id="boringLoginErrorArrowPass2" src="images/errorArrow.png" />
+                </div>
+                <p class="boringErrorMessage boringErrorMessagePass2"></p>
+                <div class="loginEmailShell">
+                  <input type="text" class="boringLoginEmail" value="First Name" id="boringLoginFName" name="firstName" />
+                  <img class="boringLoginErrorArrow" id="boringLoginErrorArrowFName" src="images/errorArrow.png" />
+                </div>
+                <p class="boringErrorMessage boringErrorMessageFName"></p>
+                <div class="loginEmailShell">
+                  <input type="text" class="boringLoginEmail" value="Last Name" id="boringLoginLName" name="lastName" />
+                  <img class="boringLoginErrorArrow" id="boringLoginErrorArrowLName" src="images/errorArrow.png" />
+                </div>
+                <p class="boringErrorMessage boringErrorMessageLName"></p>
+                <div class="boringLoginBottomShell">
+                <input type="submit" value="Register" class="loginSub" id="boringLoginSubmit" />
+                <p class="loginOr">Or</p>
+                <p class="loginForgotPass"><a href="login<?php echo $this->actionData; ?>">Login</a></p>
+              </form>
+            </div>
+            <!-- end boringLoginBottomShell -->
+            <div class="fakeClearer"></div>
+          </div>
+          <!-- end contactUsShell --> 
+        </div>
+        <!-- end register --> 
+      </div>
+      <!-- end wrapper743 --> 
+    </div>
+    <!-- end content --> 
+  </div>
+  <!-- end contentArea --> 
+</div>
+<!-- end wrapper1 -->
+</div>
+<!-- end contentContainer --> 

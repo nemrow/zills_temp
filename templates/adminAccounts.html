@@ -1,0 +1,45 @@
+<div class="contentContainer">
+  <div class="wrapper1">
+    <div class="contentArea">
+      <div class="content">
+        <p class="zillsAdminHeaders">Accounts</p>
+        <table class="zillsAdminSingleSoSaTable1">
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">Total Accounts</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Total Fans</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Total Bands</td>
+          </tr>
+          <tr>
+            <td class="zillsAdminSingleSoSaTableRight"><?php echo $this->totalAccounts; ?></td>
+            <td class="zillsAdminSingleSoSaTableRight"><?php echo $this->totalFans; ?></td>
+            <td class="zillsAdminSingleSoSaTableRight"><?php echo $this->totalBands; ?></td>
+          </tr>
+        </table>
+        <table class="zillsAdminSingleSoSaTable4">
+          <tr class="zillsAdminTableRowCentered">
+            <td class="zillsAdminSingleSoSaTableLeft <?php if($this->show=='all') { ?> zillsAdminTableNavSelected <?php } ?>"><a href="adminAccounts">All</a></td>
+            <td class="zillsAdminSingleSoSaTableLeft <?php if($this->show=='fans') { ?> zillsAdminTableNavSelected <?php } ?>"><a href="adminAccounts&show=fans">Fans</a></td>
+            <td class="zillsAdminSingleSoSaTableLeft <?php if($this->show=='bands') { ?> zillsAdminTableNavSelected <?php } ?>"><a href="adminAccounts&show=bands">Bands</a></td>
+          </tr>
+        </table>
+        <table class="zillsAdminSingleSoSaTable4">
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">Account ID</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Email</td>
+            <td class="zillsAdminSingleSoSaTableLeft">First Name</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Last Name</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Date Joined</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Type Of Account</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Participation</td>
+
+          </tr>
+          <?php  echo $this->accountRows; ?>
+        </table>
+      </div>
+      <!-- end content -->
+    </div>
+    <!-- end contentArea -->
+  </div>
+  <!-- end wrapper1 -->
+</div>
+<!-- end contentContainer -->

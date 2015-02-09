@@ -1,0 +1,99 @@
+<div class="socialSalePageShell">
+
+<div class="logoOnSSPageShell2">
+<div class="logoTransBack"></div>
+</div> <!-- end logoOnSSPageShell2 -->
+
+<div class="logoOnSSPageShell">
+<img class="logoOnSSPage" src="<?php echo $this->getLogo();?>" />
+</div> <!-- end logoOnSSPageShell -->
+
+<div class="socialSaleShell">
+<div class="helpBtnShell openHelp">
+<div class="helpBtnOutlineBack">
+</div> <!-- end helpOutlineBack -->
+<div class="helpBtnOutline">
+<img class="helpQMark" src="images/qMark.png">
+<p class="helpP">How it<br />Works</p>
+</div> <!-- end helpBtnOutline -->
+</div> <!-- end helpBtnShell -->
+<div id="socialSalePopout">
+<div class="ssTop">
+<p class="ssTopNum">900</p>
+<div class="ssTopThumbs">
+<?php echo $this->getThumbs(); ?>
+</div> <!-- end ssTopThumbsShell -->
+</div> <!-- end ssTop -->
+<div class="ssMid">
+<div class="ssProdImg">
+<img class="ssProdImg1" src="<?php echo $this->getProductImg(); ?>">
+</div> <!-- end ssProdImg -->
+<div class="ssRightContent">
+<h1 class="ssTitle"><?php echo $this->getProductTitle(); ?> <span>(<?php echo $this->getProductType(); ?>)</span></h1>
+<div id="shatBoard">
+		<div class="scrollbar"><div class="track"><div class="thumb"></div></div></div>
+		<div class="viewport">
+			 <div class="overview">
+<p class="ssRightContentDescTitle">Description</p>
+<p class="ssRightContentDesc">
+<?php echo $this->getProductDescription(); ?>
+</p>
+<?php if($this->showTrackList()) { ?>
+<p class="ssRightContentDescTitle">Tracklist</p>
+<p class="ssRightContentDesc">
+<?php echo $this->getTrackList(); ?>
+</p>
+<?php } ?>
+</div></div></div> <!-- end all 3 tiny scrolls -->
+</div> <!-- end ssRightContent -->
+</div> <!-- end ssMid -->
+<div class="ssBottomTabs">
+<p class="ssBottomTab1">Current Price</p>
+<p class="ssBottomTab2">Deal Ends</p>
+<p class="ssBottomTab3">Start Price &nbsp; - &nbsp; Lowest Possible</p>
+</div> <!-- end ssBottomTabs -->
+<div class="ssBottom">
+<p class="ssBottomCPrice"><?php echo $this->getCurrentPrice(); ?></p>
+<div id="countdown"></div>
+<p class="ssDealTime"><?php echo $this->getStartPrice(); ?> &nbsp; - &nbsp; <?php echo $this->getLowPrice(); ?></p>
+<p class="ssIWantIn">I Want In!</p>
+</div> <!-- end ssBottom -->
+<!-- <p class="ssFooterL">Powered By Zillionears | Terms Of Service</p>
+<p class="ssFooterR">Social Sale Help</p> -->
+</div> <!-- end socialSalePopout -->
+<div class="ssTransBack"></div>
+
+<div class="helpShell">
+<p class="helpX">X</p>
+<img class="helpNextBtn" src="images/arrowNext.png" />
+<div class="hStep1">
+<p><span>Social Sale</span><br />The price of this item will be reduced for every person who buys into the sale. Everyone will pay the same price at the end of the sale period. <span>Are you In?</span></p>
+<p class="hStep1Assist">Click for next tip</p>
+</div> <!-- end hStep1 -->
+<div class="hStep2">
+<img src="images/arrowMain.png" />
+<p>This is the # of people already in the sale</p>
+</div> <!-- end hStep2 -->
+<div class="hStep3">
+<img src="images/arrowMain.png" />
+<p>These are their pretty faces</p>
+</div> <!-- end hStep3 -->
+<div class="hStep4">
+<img src="images/arrowMain2.png" />
+<p>This is the current price of the item. If you buy in now this will be the most you will pay...it will only go lower from here!</p>
+</div> <!-- end hStep3 -->
+<div class="hStep5">
+<img src="images/arrowMain2.png" />
+<p>This is the sale period. The current price at the end of the period is what everyone in the sale will pay.<br /><br />
+<span>Digital downloads are delivered via email immediatly,<br />and physical orders are shipped at the end of the deal period.</span></p>
+</div> <!-- end hStep5 -->
+<div class="hStep6">
+<img src="images/arrowMain.png" />
+<p>Start price is the price the sale started at and the lowest price is the lowest possible price the sale could reach.</p>
+</div> <!-- end hStep6 -->
+<div class="hStep7">
+<p>Well... Do You <span>Want In!?</span></p>
+</div> <!-- end hSte7 -->
+</div> <!-- end helpShell -->
+</div> <!-- end socialSaleShell -->
+</div> <!-- end socialSalePageShell -->

@@ -1,0 +1,39 @@
+
+<div class="subHeader">
+  <div class="wrapper1">
+    <p class="secHeadTitle">Shop Sales!</p>
+  </div>
+  <!-- end wrapper1 --> 
+</div>
+<!-- end subHeader -->
+
+<div class="contentContainer">
+  <div class="wrapper1">
+    <div class="contentArea">
+      <div class="contentForShopSales">
+        <div class="wrapper743ForShopSales">
+        <?php echo $this->salesRows; ?>  
+        <div class="fakeClearer"></div>
+        <p>Last</p>
+        <p>Next</p>  
+        </div>
+        <!-- end wrapper743 --> 
+      </div>
+      <!-- end content --> 
+    </div>
+    <!-- end contentArea --> 
+  </div>
+  <!-- end wrapper1 --> 
+</div>
+<!-- end contentContainer --> 
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.shopSalesSquareShell').hover(function(){
+		$(this).children('.shopSalesSquareWhiteHover').css('display','block');
+		},
+		function(){
+		$(this).children('.shopSalesSquareWhiteHover').css('display','none');
+		}
+	);
+});
+</script>

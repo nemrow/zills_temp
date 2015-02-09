@@ -1,0 +1,67 @@
+<?php
+require_once('../config.php');
+require_once('lang/'.LANGUAGE.'/errors.php');
+require_once('Includes/PageBase.php');
+
+// Request controller
+if(isset($_GET['page'])) {
+    $page = $_GET['page'];
+} else {
+    $page = "index";
+}
+
+
+
+$file = DEFAULTPATH.'Pages/'.$page.'.php';
+
+
+if(file_exists($file)) {
+    require_once($file);
+
+    if(class_exists($page)) {
+        $instance = new $page();
+
+        if(method_exists($instance, 'header')) {
+            try {
+                if(!$instance->header()) {
+                    die(C110_HEADERRETURNFALSE);
+                }
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        } else {
+            die(C111_HEADERNOTSUPPORTED);
+        }
+
+        if(method_exists($instance, 'body')) {
+            try {
+                if(!$instance->body()) {
+                    die(C112_BODYRETURNFALSE);
+                }
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        } else {
+            die(C113_BODYNOTSUPPORTED);
+        }
+
+        if(method_exists($instance, 'footer')) {
+            try {
+                if(!$instance->body()) {
+                    die(C114_FOOTERRETURNFALSE);
+                }
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        } else {
+            die(C115_FOOTERNOTSUPPORTED);
+        }
+
+    } else {
+        die(C105_FOOTERNOTSUPPORTED);
+    }
+} else {
+    die(C106_REQUESTNOTFOUND);
+}
+
+?>

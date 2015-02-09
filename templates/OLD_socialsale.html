@@ -1,0 +1,297 @@
+<div class="socialSalePageShell">
+  <div class="logoOnSSPageShell2">
+    <div class="logoTransBack"></div>
+  </div>
+  <!-- end logoOnSSPageShell2 -->
+  
+  <div class="logoOnSSPageShell"> <img class="logoOnSSPage" src="<?php echo $this->logoImg?>" /> </div>
+  <!-- end logoOnSSPageShell --> 
+  <script>
+	$('.logoOnSSPage').load(function(){
+		var ogPicWidth = <?php echo $this->logoImgWidth; ?>;
+		var ogPicHeight = <?php echo $this->logoImgHeight; ?>;
+		var ogPicRatio = ogPicWidth / ogPicHeight;
+		logoTransW = (ogPicRatio*100)+8;
+		$('.logoTransBack').width(logoTransW);//logoTransW);
+		$('.logoTransBack').delay(100).fadeIn(300);
+	});
+</script>
+  <div class="sociaSaleFloaterShell">
+    <div class="socialSaleShell">
+      <div class="helpBtnShell openHelp">
+        <div class="helpBtnOutlineBack"> </div>
+        <!-- end helpOutlineBack -->
+        <div class="helpBtnOutline"> <img class="helpQMark" src="images/qMark.png">
+          <p class="helpP">How it<br />
+            Works</p>
+        </div>
+        <!-- end helpBtnOutline --> 
+      </div>
+      <!-- end helpBtnShell -->
+      <div id="socialSalePopout">
+        <div class="ssTop">
+          <p class="ssTopNum"><?php echo $this->numBuyins; ?></p>
+          <div class="ssTopThumbs"> <?php echo $this->thumbs; ?> </div>
+          <!-- end ssTopThumbsShell --> 
+        </div>
+        <!-- end ssTop -->
+        <div class="ssMid">
+          <div class="ssProdImg"> <img class="ssProdImg1" src="<?php echo $this->productImg; ?>"> </div>
+          <!-- end ssProdImg -->
+          <div class="ssRightContent">
+            <h1 class="ssTitle"><?php echo $this->productTitle; ?></h1>
+            <div id="shatBoard">
+              <div class="scrollbar">
+                <div class="track">
+                  <div class="thumb"></div>
+                </div>
+              </div>
+              <div class="viewport">
+                <div class="overview">
+                  <?php if($this->productDescription!="") { ?>
+                  <p class="ssRightContentDescTitle">Description</p>
+                  <p class="ssRightContentDesc"> <?php echo $this->productDescription; ?> </p>
+                  <?php } ?>
+                  <?php if($this->trackListEnabled) { ?>
+                  <p class="ssRightContentDescTitle">Tracklist</p>
+                  <p class="ssRightContentDesc"> <?php echo $this->trackList; ?> </p>
+                  <?php } ?>
+                </div>
+              </div>
+            </div>
+            <!-- end all 3 tiny scrolls --> 
+          </div>
+          <!-- end ssRightContent --> 
+        </div>
+        <!-- end ssMid -->
+        <div class="ssBottomTabs">
+          <p class="ssBottomTab1">Current Price</p>
+          <p class="ssBottomTab2">Deal Ends</p>
+          <p class="ssBottomTab3">Start Price &nbsp; - &nbsp; Lowest Possible</p>
+        </div>
+        <!-- end ssBottomTabs -->
+        <div class="ssBottom">
+          <p class="ssBottomCPrice"><?php echo $this->currentPrice; ?></p>
+          <div id="countdown"></div>
+          <p class="ssDealTime"><?php echo $this->startPrice; ?> &nbsp; - &nbsp; <?php echo $this->lowPrice; ?></p>
+          
+          <?php if($this->currentPage=='SocialSaleTest' || $this->saleExpired) {} else if (parent::loggedIn()) { ?>
+          <a href="checkout&id=<?php echo $this->id; ?>">
+          <?php } else { ?>
+          <a onclick="$('#socialSaleCheckoutShell').slideDown(800);">
+          <?php } ?>
+          <?php if ($this->saleExpired) { ?>
+          <p class="ssIWantIn">Expired</p>
+          <?php } else { ?>
+          <p class="ssIWantIn">I Want In!</p>
+          <?php } ?>
+          <?php if($this->currentPage!='SocialSaleTest' && !$this->saleExpired) { ?>
+          </a>
+          <?php } ?>
+        </div>
+        <!-- end ssBottom --> 
+        <!-- <p class="ssFooterL">Powered By Zillionears | Terms Of Service</p>
+<p class="ssFooterR">Social Sale Help</p> --> 
+      </div>
+      <!-- end socialSalePopout -->
+      <div class="ssTransBack"></div>
+      <div class="helpShell">
+        <p class="helpX">X</p>
+        <img class="helpNextBtn" src="images/arrowNext.png" />
+        <div class="hStep1">
+          <p><span>Social Sale</span><br />
+            The price of this item will be reduced for every person who buys into the sale. Everyone will pay the same price at the end of the sale period. <span>Are you In?</span></p>
+          <p class="hStep1Assist">Click for next tip</p>
+        </div>
+        <!-- end hStep1 -->
+        <div class="hStep2"> <img src="images/arrowMain.png" />
+          <p>This is the # of people already in the sale</p>
+        </div>
+        <!-- end hStep2 -->
+        <div class="hStep3"> <img src="images/arrowMain.png" />
+          <p>These are their pretty faces</p>
+        </div>
+        <!-- end hStep3 -->
+        <div class="hStep4"> <img src="images/arrowMain2.png" />
+          <p>This is the current price of the item. If you buy in now this will be the most you will pay...it will only go lower from here!</p>
+        </div>
+        <!-- end hStep3 -->
+        <div class="hStep5"> <img src="images/arrowMain2.png" />
+          <p>This is the sale period. The current price at the end of the period is what everyone in the sale will pay.<br />
+            <br />
+            <span>Digital downloads are available immediately<br />at the end of the deal period.</span></p>
+        </div>
+        <!-- end hStep5 -->
+        <div class="hStep6"> <img src="images/arrowMain.png" />
+          <p>Start price is the price the sale started at and the lowest price is the lowest possible price the sale could reach.</p>
+        </div>
+        <!-- end hStep6 -->
+        <div class="hStep7">
+          <p>Well... Do You <span>Want In!?</span></p>
+        </div>
+        <!-- end hSte7 --> 
+      </div>
+      <!-- end helpShell -->
+      <?php if($this->currentPage!='SocialSaleTest') { ?>
+        <div id="socialSaleCheckoutShell" class="socialSaleCheckoutShell">
+          <p class="inSaleLoginX" id="inSaleLoginX">X</p>
+          <p class="checkOutPoweredShellP" id="checkOutPoweredShellP">Sale powered by</p>
+          <img class="checkOutPoweredShellImg" id="checkOutPoweredShellImg" src="images/logoInHeader.png" />
+          <p class="inSaleTypeOfLoginHead" id="inSaleTypeOfLoginHead"></p>
+          <p class="checkOutOptionText" id="checkOutOptionText">Login to Zillionears with...</p>
+          <a href="<?php echo $this->loginUrl; ?>"><img class="checkOutloginFacebookBtn checkOutloginBtn1" id="checkOutLoginFacebook" src="images/loginWithFacebookBtnRounded.png" /></a> <img class="checkOutLoginMemberBtn checkOutloginBtn2" id="checkOutLoginMember" src="images/loginWithEmailBtnRounded.png" /> <img class="checkOutLoginNewMemberBtn checkOutloginBtn3" id="checkOutLoginNewMember" src="images/loginWithNewMemberBtnRounded.png" />
+          <div id="inSaleMemberLogin" class="inSaleMemberLogin">
+            <form class="login1Form inSaleLoginForm" id="inSaleLoginForm" action="login&amp;action=checkout&amp;id=<?php echo (int) $_GET['id']; ?>" method="post">
+              <div class="inSaleLoginEmailShell">
+                <input type="text" class="inSaleLoginEmail" id="inSaleLoginEmail" value="Email" name="email" />
+                <img class="errorArrow1" id="insSaleErrorArrowEmail" src="images/errorArrow.png" />
+              </div>
+              <div class="inSaleLoginEmailShell">
+                <p class="inSaleLoginPassLab" id="inSaleLoginPassLab">Password</p>
+                <input type="password" class="inSaleLoginPass" id="inSaleLoginPass" name="password" />
+                <img class="errorArrow1" id="insSaleErrorArrowPass" src="images/errorArrow.png" />
+              </div>
+              <input type="submit" value="Login" class="inSaleLoginSubmit" id="inSaleLoginSubmit" />
+            </form>
+            <img class="inSaleLoginErrorFace" id="inSaleLoginErrorFace" src="images/errorFace2.png" />
+            <img class="inSaleLoginErrorFaceBubble" id="inSaleLoginErrorFaceBubble" src="images/errorFaceBubble.png" />
+            <p class="inSaleLoginErrorFaceText" id="inSaleLoginErrorFaceText"></p>
+            <a href="reset">
+            <p class="inSaleLoginForgotPass">forgot password?</p>
+            </a> 
+            <!---->
+            <div class="fakeClearer"></div>
+            <input type="checkbox" class="inSaleLoginKeepLog" />
+            <label class="inSaleLoginKeepLogP">Keep me logged in</label>
+          </div>
+          <!-- end inSaleMemberLogin -->
+          <div id="inSaleLoginNewMember" class="inSaleLoginNewMember">
+            <form class="registerForm" action="register&amp;action=checkout&amp;id=<?php echo (int) $_GET['id']; ?>" method="post">
+              <div class="inSaleLoginNewMemberLeftIns">
+                <div class="inSaleNewMemberInputShells">
+                  <input type="text" class="inSaleSignUpInputs" id="inSaleSignUpEmail" value="Email" name="email" />
+                  <img class="errorArrow1" id="insSaleErrorArrowNewMemEmail" src="images/errorArrow.png" />
+                </div>
+                <!-- end inSaleNewMemberInputShells -->
+                <div class="inSaleNewMemberInputShells">
+                  <p class="inSaleSignUpPassLab inSaleSignUpPassLab1" id="inSaleSignUpPassLab1">Password</p>
+                  <input type="password" class="inSaleSignUpInputs inSaleSignUpInputsPasswords" id="inSaleSignUpPass1" name="password" />
+                  <img class="errorArrow1" id="insSaleErrorArrowNewMemPass" src="images/errorArrow.png" />
+                </div>
+                <!-- end inSaleNewMemberInputShells -->
+                <div class="inSaleNewMemberInputShells">
+                  <p class="inSaleSignUpPassLab inSaleSignUpPassLab2" id="inSaleSignUpPassLab2">Confirm Password</p>
+                  <input type="password" class="inSaleSignUpInputs inSaleSignUpInputsPasswords" id="inSaleSignUpPass2" name="password2" />
+                  <img class="errorArrow1" id="insSaleErrorArrowNewMemConfPass" src="images/errorArrow.png" />
+                </div>
+                <!-- end inSaleNewMemberInputShells --> 
+              </div>
+              <!-- end inSaleLoginNewMemberLeftIns -->
+              <div class="inSaleLoginNewMemberRightIns">
+                <div class="inSaleNewMemberInputShells">
+                  <input type="text" class="inSaleSignUpInputs" id="inSaleSignUpFirstName" value="First Name" name="firstName" />
+                  <img class="errorArrow1" id="insSaleErrorArrowNewMemFirstName" src="images/errorArrow.png" />
+                </div>
+                <!-- end inSaleNewMemberInputShells -->
+                <div class="inSaleNewMemberInputShells">
+                  <input type="text" class="inSaleSignUpInputs" id="inSaleSignUpLastName" value="Last Name" name="lastName" />
+                  <img class="errorArrow1" id="insSaleErrorArrowNewMemLastName" src="images/errorArrow.png" />
+                </div>
+                <!-- end inSaleNewMemberInputShells -->
+                <input type="submit" value="Register" class="inSaleSignUpSubmit" id="inSaleSignUpSubmit" />
+              </div>
+              <!-- end inSaleLoginNewMemberRightIns -->
+            </form>
+            <img class="inSaleLoginErrorFaceNewMember" id="inSaleLoginErrorFaceNewMember" src="images/errorFace2.png" />
+            <img class="inSaleLoginErrorFaceBubbleNewMember" id="inSaleLoginErrorFaceBubbleNewMember" src="images/errorFaceBubble.png" />
+            <p class="inSaleLoginErrorFaceNewMemberText" id="inSaleLoginErrorFaceNewMemberText"></p>
+          </div>
+          <!-- end inSaleLoginNewMember --> 
+        </div>
+        <!-- end socialSaleCheckoutShell -->  
+      
+    </div>
+    <!-- end socialSaleShell -->
+    <?php } ?>
+  </div>
+  <!-- end sociaSaleFloaterShell -->
+  
+<?php if(array_key_exists('newSale', $_GET)) { ?>
+  <div class="zukaFullBack"></div>
+  <div class="zukaShell">
+  	<div class="zukaClose"></div>
+  	<img class="zukaImg" src="images/zuka.png" />
+    <div class="zukaTextShell">
+    	<p class="zukaHeader">Wuduppp Social Sale!<br /><span>Time To Kick Some Ass!</span></p>
+        <p class="zukaContent">Use your dashboard to keep track of your Social Sale and help promote the $h^t out of it!<br />Let us know if you need anything!<br /><br />-Zillionears Team-</p>
+    </div> <!-- end zukaTextShell -->
+  </div> <!-- end zukaShell -->
+  <a href="<?php if(parent::userAccountType()=='manager') { echo 'bandAdminSales'; } else { echo 'fanAdminSocialSales'; } ?>" class="sSLogegedInMyAccountBtn sSLoggedInOpenBtns">
+  <div class="newSocialSaleArrowBubble">
+  	<h2>Manage <span>&amp;</span> Promote</h2>
+    <p>this sale in your dashboard</p>
+  </div> <!-- end newSocialSaleArrowBubble -->
+  </a>
+<?php } if (1==2) { ?> <!-- If the band does not have a recipient tokenID. This will only be displayed if the viewer is the manaer of this specific page as well -->
+<div class="zukaFullBack2"></div>
+<div class="zukaShell">
+  	<img class="zukaImg" src="images/zuka.png" />
+    <div class="zukaTextShell">
+    	<p class="zukaHeader">Get Paid & Activate Sale!</p>
+        <a href="javascript:" class="zukaRecipientRegBtn">Register with Amazon</a>
+        <p class="zukaRecipientRegInfo">We use Amazon for all payments. In order for us to pay you, you must have an Amazon Business account</p>
+    </div> <!-- end zukaTextShell -->
+  </div> <!-- end zukaShell -->
+<?php } if (1==2) { ?> <!-- If the band has a recipient tokenID, but the sale is pending awaiting approval. This will only be displayed if the viewer is the manaer of this specific page as well -->
+<div class="zukaFullBack2"></div>
+<div class="zukaShell">
+  	<img class="zukaImg" src="images/zuka.png" />
+    <div class="zukaTextShell">
+    	<p class="zukaHeader">Congrats! Sale Created!</p>
+        <p class="zukaRecipientMiddleContent">Sale Status: <span>Pending</span></p>
+        <p class="zukaRecipientRegInfo">Your sale will be live in 24 hours pending approval. 
+We will shoot you an email when your sale is live</p>
+    </div> <!-- end zukaTextShell -->
+  </div> <!-- end zukaShell -->
+<?php } if (1==2) { ?> <!-- If the sale is pending, and is being viewed by anyone but the manager of this specific sale -->
+<div class="zukaFullBack2"></div>
+<div class="zukaShell">
+  	<img class="zukaImg" src="images/zuka.png" />
+    <div class="zukaTextShell">
+    	<p class="zukaHeader">Ay Ay Ay, Sorry!</p>
+        <p class="zukaRecipientMiddleContent"><span>Sale is not active yet!</span></p>
+        <p class="zukaRecipientRegInfo">Please check back again soon, as this Social Sale has not been completed yet, or has not yet been approved by me!</p>
+    </div> <!-- end zukaTextShell -->
+  </div> <!-- end zukaShell -->
+<?php } ?>
+  
+  <script>
+$(document).ready(function(){
+$('#countdown').countdown({until:$.countdown.UTCDate(<?php echo $this->saleEndFormated;?>), format: 'DHMS', onExpiry: saleIsExpired, alwaysExpire: true, layout: //(timeZone, year, month-1{ignore the 1}, date)
+  '<div id="timer">' +
+  '<div id="timer_days" class="timer_numbers">{dnn}</div>'+
+  '<div id="timer_hours" class="timer_numbers">{hnn}</div>'+
+  '<div id="timer_mins" class="timer_numbers">{mnn}</div>'+
+  '<div id="timer_seconds" class="timer_numbers">{snn}</div>'+
+	'<div id="timer_labels">'+
+	'<div id="timer_days_label" class="timer_labels">days</div>'+
+	'<div id="timer_hours_label" class="timer_labels">hours</div>'+
+	'<div id="timer_mins_label" class="timer_labels">mins</div>'+
+	'<div id="timer_seconds_label" class="timer_labels">secs</div>'+
+	'</div>'+
+	'</div>'
+});// end countdown
+function saleIsExpired(){
+	$('.sociaSaleFloaterShell').after("<div class='zukaFullBack'></div><div class='zukaShell'><div class='zukaClose'></div><img class='zukaImg' src='images/zuka.png'/><div class='zukaTextShell'><p class='zukaHeader'>The Sale Is Over!<br /><span>Now you have to go pay full price somewhere else! hehehe</span></p><p class='zukaContent'>Make sure you're on time for the next sale or you're fired!<br /><br />-Zillionears Team-</p></div></div>");
+};
+$.backstretch("<?php echo $this->backgroundImg; ?>", {speed: 150, centeredY: false});
+$('.helpBtnOutline').mouseover(function(){
+	$('.helpBtnOutline').addClass('helpBtnOutlineBackHoverClass');
+}); // end hover
+$('.helpBtnOutline').mouseout(function(){
+	$('.helpBtnOutline').removeClass('helpBtnOutlineBackHoverClass');
+}); // end hover
+}); // end ready
+</script> 
+</div>
+<!-- end socialSalePageShell --> 

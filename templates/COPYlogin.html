@@ -1,0 +1,61 @@
+<div class="subHeader">
+  <div class="wrapper1">
+    <p class="secHeadTitle">Login</p>
+  </div>
+  <!-- end wrapper1 --> 
+</div>
+<!-- end subHeader -->
+
+<div class="contentContainer">
+<div class="wrapper1">
+  <div class="contentArea">
+    <div class="content">
+      <div class="wrapper743">
+        <h1 class="aboutUsHead">Login</h1>
+          <p class="boringLoginMessage"><?php echo $this->message; ?></p>
+          <div class="boringLoginErrorFace"> <?php echo $this->errorMessage; ?> </div>
+          <!-- end boringLoginErrorFace -->
+        <div id="register">
+          <div class="contactUsShell">
+           <form class="registerForm" action="register<?php echo $this->actionData; ?>" method="post">
+                <div class="loginEmailShell">
+                  <input type="text" class="boringLoginEmail" id="boringLoginEmail" value="Email" name="email" />
+                </div>
+                <div class="loginEmailShell">
+                  <input type="password" class="boringLoginPass registerPass" id="boringLoginPass1" name="password" />
+                  <p class="loginPassLab">Password</p>
+                </div>
+                <div class="loginEmailShell">
+                  <input type="password" class="boringLoginPass registerPassConfirm" id="boringLoginPass2" name="password2" />
+                  <p class="loginPassLab">Confirm Password</p>
+                </div>
+                <div class="loginEmailShell">
+                  <input type="text" class="boringLoginEmail" value="First Name" id="boringLoginFName" name="firstName" />
+                </div>
+                <div class="loginEmailShell">
+                  <input type="text" class="boringLoginEmail" value="Last Name" id="boringLoginLName" name="lastName" />
+                </div>
+                <input type="submit" value="Register" class="loginSub" />
+              </form>
+            <p class="loginOr">Or</p>
+            <p class="loginForgotPass"><a href="reset">forgot password</a></p>
+            <!---->
+            <div class="fakeClearer"></div>
+            <input type="checkbox" class="loginKeepLog" />
+            <p class="loginKeepLogP">Keep me logged in</p>
+            <!--<div class="loginFBShell">
+<p>Facebook</p><img src="images/facebookBtn1.jpg" />
+</div> <!-- end loginFBShell -->
+            <p class="loginForgotPass"><a href="register<?php echo $this->actionData; ?>">Register</a></p>
+          </div>
+          <!-- end contactUsShell --> 
+        </div>
+        <!-- end wrapper743 --> 
+      </div>
+      <!-- end content --> 
+    </div>
+    <!-- end contentArea --> 
+  </div>
+  <!-- end wrapper1 --> 
+</div>
+<!-- end contentContainer --> 

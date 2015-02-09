@@ -1,0 +1,32 @@
+<div class="contentContainer">
+  <div class="wrapper1">
+    <div class="contentArea">
+      <div class="content">
+      <div class="adminHeader">
+          <p class="adminHeaderTitle">Manage Your Social Sales</p>
+          <a href="createss"><p class="adminHeaderNewSale">+New Sale</p></a>
+          <a href="bandAdminSales"><p class="adminHeaderUpdate">Refresh</p></a>
+        </div>
+        <!-- end adminHeader --> 
+      <?php echo $this->getSales(); ?> </div>
+      <form class="crSSForm1" action="bandAdminSales" method="post">
+        <div class="adminHeader">
+          <p class="adminHeaderTitle">Artist / Band Settings</p>
+          <input class="adminHeaderUpdateBandSettingsSaveBtn" id="bandAdminChangeSettingsBtn" type="submit" value="Save" />
+        </div>
+        <!-- end adminHeader -->
+        <div class="error"><?php echo $this->errorMessage; ?></div>
+          <table class="createsSInputs2 createsSInputs2PaddingBottom">
+            <tr>
+              <td class="crSSLabels">Artist / Band Name:</td>
+              <td class="crSSInputs required"><input type="text" class="crSSInput outBandName grabBandName bandAdminEditSettingsBandName" id="bandAdminBandNameIn" name="artistName" value="<?php echo $this->artistName; ?>" /><p class="bandAdminErrors hiddenErrorLabels" id="bandAdminErrorLabelBandName">Fix Address</p></td>
+            </tr>
+            <tr>
+                <td class="crSSLabels">Website:</td>
+                <td class="crSSInputs"><input type="text" class="crSSInput grabBandURL" id="bandAdminWebsiteIn" name="bandURL" value="<?php echo $this->website; ?>" /><p class="bandAdminErrors hiddenErrorLabels" id="bandAdminErrorLabelWebsite">Fix Address</p></td>
+            </tr>
+          </table>
+        </form>
+    </div>
+  </div>
+</div>

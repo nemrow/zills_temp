@@ -1,0 +1,100 @@
+<div class="contentContainer">
+  <div class="wrapper1">
+    <div class="contentArea">
+      <div class="content">
+        <div class="crSSStep1">
+          <form class="crSSForm1" action="fanadminsettings" method="post">
+            <div class="adminHeader">
+
+              <p class="adminHeaderTitle">Profile</p>
+              <input class="fanAdminSettingSave1" type="submit" value="Save Changes" />
+            </div>
+            <div class="filler1"></div>
+            <div class="error"><?php echo $this->errorMessage; ?></div>
+            <table class="createsSInputs1">
+              <tr>
+                <td class="crSSLabels">First Name:</td>
+                <td class="crSSInputs required"><input type="text" class="crSSInput" name="firstName"  value="<?php echo $this->firstName; ?>"/></td>
+              </tr>
+              <tr>
+                <td class="crSSLabels">Last Name:</td>
+                <td class="crSSInputs required"><input type="text" class="crSSInput" name="lastName" value="<?php echo $this->lastName; ?>" /></td>
+              </tr>
+              <tr>
+                <td class="crSSLabels">Email:</td>
+                <td class="crSSInputs"><input type="text" class="crSSInput outEmail grabEmail profileChangeEmailValidater" name="email" value="<?php echo $this->email; ?>" /></td>
+              </tr>
+              <tr>
+                <td class="crSSLabels" style="width:143px">Password:</td>
+                <td class="crSSInputs"><p class="profileChangePasswordText">Change Password</p><input type="password" class="crSSInput crSSConfPass confirmPasswordHidden" name="password" /></td>
+              </tr>
+              <tr class="confirmPasswordHidden">
+                <td class="crSSLabels">Confirm Password:</td>
+                <td class="crSSInputs"><input type="password" class="crSSInput" name="confirm_password" /></td>
+              </tr>
+              <tr>
+                <td class="crSSLabels">Photo:</td>
+                <td class="crSSInputs required">
+
+
+                    <div id="profileImageUploaders"><input id="profileImageUploader" value="Upload Image" type="button"/></div><br />
+                    <div id="profileImagePreDiv"><img class="prodImgPre" src="<?php echo $this->photo?>" /><img class="profilePicAdminHolder" src="images/earGif.gif" /></div>
+                    <input type="hidden" id="profileImageId" name="profileImageId" />
+                </td>
+              </tr>
+              <tr>
+              	<td></td><td class="crSSInputs"><input class="bandAdminBasicUpdateBtn2" type="submit" value="Save Changes" />
+          </form></td>
+              </tr>
+              <!--<tr>
+                <td class="crSSLabels">Shipping Address:</td>
+                <td class="crSSInputs required"><input type="text" class="crSSInput" name="firstName" />
+                  <br />
+                  <br />
+                  <input type="text" class="crSSInput" name="firstName" /></td>
+              </tr>
+              <tr>
+                <td class="crSSLabels">State:</td>
+                <td class="crSSInputs required"><input type="text" class="crSSInput7" name="lastName" />
+                  <p class="chizz3">Zip</p>
+                  <input type="text" class="crSSInput7" name="lastName" /></td>
+              </tr>-->
+            </table>
+            <script type="text/javascript">
+			//var ProfileImageId =0;
+            function createProfileImageUploader(){
+
+                var ProfileImageUploader = new qq.FileUploaderBasic({
+                    button: document.getElementById('profileImageUploaders'),
+                    allowedExtensions: ['jpg', 'jpeg', 'gif', 'png'],
+                    name: 'LogoImage',
+                    action: 'request.php',
+                    params: {requestType: 'CreateAttachment', key:'qqfile'},
+                    debug: false,
+					onSubmit:function(){
+						$('.profilePicAdminHolder').slideDown();
+					},
+                    onComplete: function(id, fileName, response) {
+                        if(typeof(response)=='number' || !isNaN(response)) {
+                            //LogoImageId = response;
+                            $('#profileImageId').val(response);
+                            $('#profileImagePreDiv').html('<img class="prodImgPre" src="request.php?requestType=ServeAttachment&id='+response+'"/>');
+                        } else {
+                            alert("Could not upload image: "+response);
+                        }
+
+                    }
+                });
+            }
+            addLoadEvent(createProfileImageUploader);
+			</script>
+        </div>
+        <!-- end crSSStep1 -->
+      </div>
+      <!-- end content -->
+    </div>
+    <!-- end contentArea -->
+  </div>
+  <!-- end wrapper1 -->
+</div>
+<!-- end contentContainer -->

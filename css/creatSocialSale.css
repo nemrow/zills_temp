@@ -1,0 +1,1147 @@
+@charset "utf-8";
+/* CREAT SOCIAL SALE CSS Document */
+
+table.crSSIconTable{
+	margin:0 auto;
+	padding:6px 0 0 0;
+}
+img.crSSIconClickable{	
+}
+table.crSSIconTable td{
+	width:70px;
+	text-align:center;
+}
+.crSSIconNotActive{
+	opacity:0.2;
+}
+p.loginToSkipS1{
+	position:absolute;
+	top:17px;
+	right:0px;
+	font-size:12px;
+	color:#009900;
+}
+p.loginToSkipS1 span{
+	width:80px;
+	padding:7px;
+	margin:0 0 0 5px;
+	background-color:#252525;
+	border-radius:8px;
+	border:solid;
+	border-width:1px;
+	border-color:#333;
+	text-align:center;
+	color:#FFF;
+	-moz-box-shadow:    0px 0px 1px 1px #000;
+  	-webkit-box-shadow: 0px 0px 1px 1px #000;
+ 	box-shadow:         0px 0px 1px 1px #000;
+}
+h1.createSsTitle{
+	font-size:23px;
+	text-shadow:1px 1px 2px #000;
+	font-weight:normal;
+	background-color:#353535;
+	width:600px;
+	text-align:center;
+	padding:8px;
+	margin:0 auto 20px auto;
+	border-radius:8px;
+}
+h1.createSsTitleWithBtn{
+	font-size:23px;
+	text-shadow:1px 1px 2px #000;
+	font-weight:normal;
+	text-align:center;
+	padding:8px;
+}
+.titleShellForBtn{
+	background-color:#353535;
+	width:600px;
+	text-align:center;
+	margin:0 auto 20px auto;
+	border-radius:8px;
+	position:relative;
+	height:41px;
+}
+table.createsSInputs1{
+	margin:0 auto 35px auto;
+}
+table.createsSInputs2{
+	margin:30px auto 20px auto;
+	z-index:1;
+}
+td.crSSLabels{
+	vertical-align:text-top;
+	padding:25px 10px 0 0;
+	font-size:16px;
+	text-align:right;
+}
+td.crSSInputs{
+	padding:10px 0;
+}
+input.crSSInput{
+	width:465px;
+	height:40px;
+	border-style:solid;
+	border-width:2px;
+	border-color:#999;
+	padding-left:15px;
+	outline:none;
+}
+input.crSSInput:focus{
+	border-color:#0C0;
+}
+input.crSSInput2{
+	width:85px;
+	height:40px;
+	border-style:solid;
+	border-width:2px;
+	border-color:#999;
+	padding-left:15px;
+	outline:none;
+}
+input.crSSInput2:focus{
+	border-color:#0c0;
+}
+input.crSSInput3{
+	width:285px;
+	height:40px;
+	border-style:solid;
+	border-width:2px;
+	border-color:#999;
+	padding-left:15px;
+	float:left;
+	margin:10px;
+	outline:none;
+}
+input.crSSInput3:focus{
+	border-color:#0C0;
+}
+input.crSSInput4{
+	width:72px;
+	height:40px;
+	border-style:solid;
+	border-width:2px;
+	border-color:#999;
+	padding-left:15px;
+	outline:none;
+}
+input.crSSInput4:focus{
+	border-color:#0C0;
+}
+input.crSSInput5{
+	width:286px;
+	height:40px;
+	border-style:solid;
+	border-width:2px;
+	border-color:#999;
+	padding-left:15px;
+	float:left;
+	margin:10px;
+	outline:none;
+}
+input.crSSInput5:focus{
+	border-color:#0C0;
+}
+input.crSSInput6{
+	width:73px;
+	height:40px;
+	border-style:solid;
+	border-width:2px;
+	border-color:#999;
+	padding-left:15px;
+	float:left;
+	margin:10px;
+	outline:none;
+}
+input.crSSInput6:focus{
+	border-color:#0C0;
+}
+input.crSSInput7{
+	width:111px;
+	height:40px;
+	border-style:solid;
+	border-width:2px;
+	border-color:#999;
+	padding-left:15px;
+	float:left;
+	outline:none;
+}
+input.crSSInput7:focus{
+	border-color:#0C0;
+}
+textarea.crSSInputTextArea{
+	width:450px;
+	height:80px;
+	border-style:solid;
+	border-width:2px;
+	border-color:#999;
+	padding:10px 15px;
+	outline:none;
+	outline:none;
+}
+textarea.crSSInputTextArea:focus{
+	border-color:#0c0;
+}
+input.crSSFileUp{
+	position:relative;
+	top:9px;
+	color:#FFF;
+}
+.chizz5{
+	padding-left:10px;
+}
+.putPlace1{
+	position:relative;
+	top:86px !important;
+	left:5px;
+}
+input.crSSFileUp2{
+	position:relative;
+	top:-7px;
+	color:#FFF;
+}
+td.crSSType{
+	padding:25px 0 0 0;
+}
+input.crSSTypeRadio{
+	margin:0 5px 0 15px;
+}
+label.crSSInputUnderMessage{
+	font-size:11px;
+}
+.crSSNextBackShell{
+	position:relative;
+	margin:0 auto;
+	text-align:center;
+}
+.crSSNextBackShell img{
+	cursor:pointer;
+}
+.PrevSaleBtn{
+	font-size:20px;
+	text-shadow:1px 1px 2px #000;
+	text-align:center;
+	width:162px;
+	background-color:#00CD00;
+	padding:8px;
+	border-radius:8px;
+	border-style:solid;
+	border-color:#4E4E4E;
+	border-width:3px;
+	position:relative;
+	float:left;
+}
+input.termsCheckBox{
+	float:left;
+}
+p.termsCheckP{
+	font-size:12px;
+	margin:2px 0 0 25px;
+}
+
+label.termsCheckP span{
+	color:#0c0;
+	text-decoration:underline;
+}
+.greenLight{
+	background-image:url(../images/greenLight.png);
+}
+.redLight{
+	background-image:url(../images/redLight.png);
+}
+.redOrGreenLight{
+	position:relative;
+	margin:14px 10px 0 15px;
+	float:left;
+	width:22px;
+	height:22px;
+}
+p.redGreenLightP{
+	position:relative;
+	padding:18px 0 0 0;
+	font-size:12px;
+	float:left;
+}
+/********************************************************************************* Sale Type Drop **********************/
+.crSStypeDropShell{
+	width:480px;
+	height:auto;
+	background-color:#4E4E4E;
+	border-radius:10px;
+	margin:10px 0 0 0;
+}
+p.crSSTrackListP{
+	background-color:#367436;
+	font-size:20px;
+	text-shadow:1px 1px 2px #000;
+	text-align:center;
+	width:240px;
+	padding:11px 0;
+	border-radius:8px;
+	float:left;
+	cursor:pointer;
+}
+p.crSSTrackListHint{
+	font-size:12px;
+	width:180px;
+	float:left;
+	padding:9px 0 0 35px;
+	left:200px;
+	top:30px;
+	text-align:center;
+}
+p.crSSDigPurchLimP{
+	float:left;
+	padding:25px 0 0 5px;
+}
+p.crSSDigPurchLimP2{
+	float:left;
+	padding:12px 0 0 5px;
+}
+input.crSSDigPurchLimIn{
+	margin:13px 13px 0 13px;
+	float:left;
+}
+input.crSSDigPurchLimIn2{
+	margin:0px 13px 0 13px;
+	float:left;
+}
+input.crSSDigPurchLimIn3{
+	margin:0px 13px 0 13px;
+}
+input.crSSDigUnlimPurch{
+	float:left;
+	margin:28px 5px 0 10px;
+}
+p.crSSDigUnlimPurchP{
+	font-size:11px;
+	margin:27px 0 0 0;
+}
+input.crSSPhysMusPurchLimIn{
+	margin:13px 13px 0 38px;
+	float:left;
+}
+p.sizeQuantP{
+	margin:10px 0 10px 8px;
+}
+table.sizaQuantShell{
+	width:100%;
+}
+table.sizaQuantShell td{
+	text-align:center;
+}
+p.sAndQBox{
+	position:relative;
+	width:46px;
+	padding:10px 0;
+	text-align:center;
+	font-size:20px;
+	border-radius:5px;
+	background-color:#FFF;
+	color:#000;
+	cursor:pointer;
+	margin:0 auto;
+}
+.sAndQBoxSelected{
+	background-color:#0C0 !important;
+	color:#FFF !important;
+}
+.sAndQBoxSelectedWhite{
+	background-color:#FFF !important;
+	color:#333 !important;
+}
+.sAndQBoxGrey{
+	background-color:#999 !important;
+}
+input.sAndQQuantBox{
+	width:46px;
+	height:30px;
+	background-color:#999;
+	border-radius:5px;
+	border:none;
+	font-size:14px;
+	text-align:center;
+}
+p.checkIfUnlP{
+	font-size:11px;
+	float:left;
+	text-align:left;
+	padding:3px 0 0 0;
+}
+p.crSSDigPurchLimInLab{
+	position:relative;
+	top:10px;
+	left:5px;
+	color:#333;
+}
+.chizz1{
+	width:67px !important;
+}
+.chizz2{
+	float: left;
+	margin:0 0 0 12px;
+}
+.chooseStockBGShell{
+	display:none;
+}
+table.chooseStockBGTable{
+	background-color:#4E4E4E;
+	width:480px;
+	position:relative;
+	border-radius:10px;
+	display:nonne;
+	padding:5px;
+}
+table.chooseStockBGShell td{
+	padding:4px;
+}
+img.chooseStockBGSelected{
+  border-color:#0C0;
+  border-width:3px;
+  border-spacing:0px;
+  z-index:2 !important;
+  border-style:solid;
+  margin:1px !important;
+}
+img.chooseStockBGImg{
+	cursor:pointer;
+	z-index:1;
+	margin:4px;
+}
+input.physUnlMerch{
+	float:left;
+	text-align:left;
+}
+input.physUnlMerch2{
+	float:left;
+	text-align:left;
+}
+.physMerchQuantRowGone{
+	display:none;
+}
+.chooseStockBGDrop{
+	margin:3px 10px 3px 4px !important;
+	width:11px;
+	height:11px;
+}
+.physMerchUnlPerchCheck{
+	position:relative;
+	left:6px;
+	font-size:12px;
+}
+/****************************************************************************************   sale structure  ******************/
+.salePricingShell{
+	width:480px;
+	background-color:#4E4E4E;
+	border-radius:10px;
+	padding:10px 0;
+}
+.pricingTypeBtnsShell{
+	height:70px;
+	width:457px;
+	position:relative;
+	margin:0 auto;
+}
+p.prefBasedPricingBtn{
+	width:210px;
+	text-align:center;
+	float:left;
+	background-color:#367436;
+	padding:10px 0;
+	border-radius:10px;
+	cursor:pointer;
+}
+p.pricingTypeBtnsOr{
+	float:left;
+	padding:21px 5px 0 5px;
+}
+p.customPricingBtn{
+	width:210px;
+	float:left;
+	text-align:center;
+	background-color:#367436;
+	padding:10px 0;
+	border-radius:10px;
+	cursor:pointer;
+}
+p.prefRecom{
+	font-size:11px;
+	font-style:italic;
+	color:#0C0;
+	margin:0 0 0 64px;
+}
+.salePriceStatement{
+	width:460px;
+	height:63px;
+	position:relative;
+	background-color:#121212;
+	margin:10px auto 0 auto;
+	border-radius:10px;
+	display:none;
+}
+table.salePriceStatementTable{
+	margin:0 auto;
+	width:100%;
+}
+table.salePriceStatementTable td{
+	font-size:14px;
+	padding:6px 15px;
+}
+table.salePriceStatementTable td span{
+	font-weight:bold;
+	color:#00cc00;
+}
+td.salePriceStateL{
+	width:175px;
+}
+p.salePeriodTO{
+	float:left;
+	position:relative;
+	padding:10px 10px 0 10px;
+}
+p.salePerdidHint{
+	font-size:11px;
+	margin:10px 0 0 0;
+	text-align:center;
+}
+.chizz6{
+	position:absolute;
+	right:45px;
+	margin:10px 113px 0 0 !important;
+}
+p.salePerdidHint span{
+	color:#009900;
+}
+td.goingRight{
+	text-align:right;
+}
+/****************************************************************************************   track list input  ******************/
+#trackListCreatePop{
+	width:533px;
+	padding-bottom:10px;
+	background-color:#1E1E1E;
+	height:430px;
+}
+#trackListPhysicalCreatePop{
+	width:533px;
+	padding-bottom:10px;
+}
+h1.enterTrackListTitle{
+	font-size:23px;
+	text-shadow:1px 1px 2px #000;
+	padding:8px 0 8px 0;
+	float:left;
+	margin:0 0 0 21px;
+}
+p.enterTrackListSaveBtn{
+	font-size:18px;
+	background-color:#367436;
+	width:126px;
+	text-shadow:1px 1px 2px #000;
+	padding:5px 0;
+	float:right;
+	border-radius:8px;
+	margin:8px 21px 20px 0;
+	text-align:center;
+	cursor:pointer;
+}
+.enterTrackTableShell{
+	width:490px;
+	position:relative;
+	margin:0 auto;
+	height:280px;
+	background-color:#FFF;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+table.enterTrackTable{
+	position:relative;
+	width:100%;
+	border-spacing:0px;
+}
+table.enterTrackTable td{
+	color:#333;
+	font-size:14px;
+}
+.dashboardProductsProductEditUpDown{
+	width:20px;
+}
+
+.dashboardProductMoveDown, .dashboardProductMoveUp{
+	cursor:pointer;
+}
+.enterTrackRowE{
+	background-color:#E0E0E0;
+}
+.enterTrackRowO{
+	background-color:#FFF;
+}
+td.enterTrackX{
+	cursor:pointer;
+	width:20px;
+}
+.enterTrackAddTrack{
+	width:490px;
+	height:120px;
+	background-color:#000;
+	position:relative;
+	margin:0 auto;
+}
+.enterTrackAddTrack2{
+	width:490px;
+	height:70px;
+	background-color:#000;
+	position:relative;
+	margin:0 auto;
+}
+p.enterTracksAddTrackBtn{
+	width:150px;
+	background-color:#367436;
+	text-align:center;
+	padding:11px 0 10px 0;
+	border-radius:8px;
+	float:right;
+	margin:10px 10px 0 0;
+	font-size:20px;
+	text-shadow:1px 1px 2px #000;
+	cursor:pointer;
+}
+input.enterTrackFileSub{
+	color:#FFF;
+	float:left;
+	padding:0 8px;
+	width:300px;
+}
+p.enterTracksFilesSupported{
+	font-size:12px;
+	left:158px;
+	top:28px;
+	position:absolute;
+}
+p.phyMusAddTrackList{
+	width:205px;
+	background-color:#367436;
+	text-align:center;
+	padding:11px 0 10px 0;
+	border-radius:8px;
+	float:right;
+	margin:0 3px 0 0;
+	font-size:20px;
+	text-shadow:1px 1px 2px #000;
+	cursor:pointer;
+}
+img.uploadingGif{
+	position:relative;
+	top:3px;
+}
+
+td.enterTrackPhysNum{
+	width:15px;
+}
+span.digitalTrackFileName{
+	color:#999;
+	font-style:italic;
+	font-size:14px;
+	position:relative;
+	top:-2px;
+}
+input.digitalTrackTitleIn{
+	background:none;
+	width:335px;
+	outline:none;
+	border:none;
+}
+input.digitalTrackTitleIn:focus{
+	border:none;
+}
+img.digitalDelete{
+	position:absolute;
+	cursor:pointer;
+	right:11px;
+	top:16px;
+}
+img.digitalChangeUp{
+	position:absolute;
+	cursor:pointer;
+	right:42px;
+	top:16px;
+}
+img.digitalChangeGoingUp{
+	position:absolute;
+	cursor:pointer;
+	right:71px;
+	top:16px;
+}
+.physEnterTrackContent1{
+	padding:10px !important;
+	font-size:22px !important;
+	font-weight:bold !important;
+	color:#333 !important;
+}
+.physEnterTrackContent2{
+	padding:10px;
+	font-size:18px;
+	color:#333;
+}
+.physEnterTrackContent3{
+	padding:10px;
+	width:20px;
+	cursor:pointer;
+}
+/****************************************************************************************   Custom Sale  ******************/
+#crCustomSS{
+	width:533px;
+	background-color:#1E1E1E;
+}
+#crPrefSS{
+	width:480px;
+	height:439px;
+	background-color:#1E1E1E;
+}
+#crCustomSS h1{
+	font-size:23px;
+	padding:10px;
+	text-shadow:1px 1px 1px #000;
+}
+#crPrefSS h1{
+	font-size:23px;
+	padding:10px;
+	text-shadow:1px 1px 1px #000;
+}
+table.crCustomSaleTable{
+	width:100%;
+}
+table.crCustomSaleTable td{
+	padding:10px;
+}
+input.crCustomInput{
+	width:80px;
+	height:40px;
+	border-style:solid;
+	border-color:#999;
+	border-width:2px;
+	padding-left:20px;
+	outline:none;
+}
+input.crCustomInput:focus{
+	border-color:#0C0;
+}
+.crCustomInpLab{
+	position:absolute;
+	font-size:18px;
+	color:#333;
+	top:12px;
+	left:10px;
+}
+.crCustomInsSh{
+	position:relative;
+	width:100px;
+	height:40px;
+}
+p.crCustomInsP{
+	width:100px;
+	height:30px;
+	font-size:18px;
+	color:#fff;
+	text-align:center;
+	padding-top:10px;
+}
+p.crCustomCalc{
+	width:100px;;
+	background-color:#367436;
+	padding:7px 0;
+	border-radius:8px;
+	text-align:center;
+	font-size:14px;
+	text-shadow:1px 1px 2px #000;
+	margin:5px 0 10px 10px;
+	cursor:pointer;
+	position:relative;
+	float:left;
+}
+p.crCustomSave{
+	width:130px;;
+	background-color:#0c0;
+	padding:9px 0;
+	border-radius:8px;
+	text-align:center;
+	font-size:16px;
+	text-shadow:1px 1px 2px #000;
+	margin:0 0 0 10px;
+	cursor:pointer;
+	position:relative;
+	float:left;
+}
+p.prefBSSTits{
+	padding:10px 0 10px 10px;
+}
+input.prefBSSPastSale{
+	width:70px;
+	height:41px;
+	border:solid;
+	border-color:#999;
+	border-width:2px;
+	margin:10px 0 10px 10px;
+	padding:0 0 0 15px;
+}
+input.prefBSSCieling{
+	width:65px;
+	height:41px;
+	border:solid;
+	border-color:#999;
+	border-width:2px;
+	padding:0 0 0 20px;
+}
+.prefBSSCielingShell{
+	width:65px;
+	height:41px;
+	margin:10px 0 24px 10px;
+	position:relative;
+}
+p.prefBSSCielingMoney{
+	position:absolute;
+	top:12px;
+	left:12px;
+	color:#333;
+	font-size:18px;
+}
+p.prefBSSCalcBtn{
+	position:relative;
+	background-color:#00cc00;
+	padding:8px 10px;
+	text-shadow:1px 1px 2px #000;
+	margin:10px 0 20px 10px;
+	border-radius:8px;
+	cursor:pointer;
+	width:80px;
+	text-align:center;
+}
+p.prefBSSSuggestBtn{
+	position:relative;
+	float:left;
+	background-color:#00cc00;
+	padding:8px 10px;
+	text-shadow:1px 1px 2px #000;
+	margin:20px 10px 10px 10px;
+	border-radius:8px;
+	cursor:pointer;
+	display:none;
+}
+p.prefBSSOr{
+	position:relative;
+	float:left;
+	margin:29px 10px 0 10px;
+	display:none;
+}
+p.prefBSSGoCustomBtn{
+	position:relative;
+	float:left;
+	background-color:#367436;
+	padding:8px 10px;
+	text-shadow:1px 1px 2px #000;
+	margin:20px 10px 10px 10px;
+	border-radius:8px;
+	cursor:pointer;
+	display:none;
+}
+/**************************************************** file uploader ****************/
+#file-uploader-demo1{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+p.digUploadFrontNum{
+	float:left;
+	font-size:22px;
+	color:#333;
+	padding:0 8px 0 0;
+	font-weight:bold;
+}
+.upDownOrDelete{
+	float:right;
+	width:120px;
+}
+/****************************************************************************************   validation  ******************/
+.crSSForm1 .indent label.error {
+  margin-left: 0;
+}
+label.error {
+  font-size: 0.8em;
+  color: #F00;
+  font-weight: bold;
+  display: block;
+}
+.crSSForm1  input.error, #signup select.error  {
+  background: #FFA9B8;
+  border: 2px solid red;
+}
+.crSSForm2 .indent label.error {
+  margin-left: 0;
+}
+.crSSForm2 label.error {
+  font-size: 0.8em;
+  color: #F00;
+  font-weight: bold;
+  display: block;
+}
+.crSSForm2  input.error, #signup select.error, input.error  {
+  background: #FFA9B8;
+  border: 2px solid red;
+}
+.crSSForm3 .indent label.error {
+  margin-left: 0;
+}
+.crSSForm3 label.error {
+  font-size: 0.8em;
+  color: #F00;
+  font-weight: bold;
+  display: block;
+}
+.crSSForm3  input.error, #signup select.error  {
+  background: #FFA9B8;
+  border: 2px solid red;
+}
+#newError{
+	color:#F00;
+	font-size:16px;
+	font-weight:bold;
+	width:500px;
+}
+#newError p{
+	color:#F00;
+	font-size:16px;
+	font-weight:bold;
+	text-shadow:1px 1px 1px #000;
+}
+.specialPriceError{
+	position:relative;
+	margin:12px auto 0 auto !important;
+	font-size:16px !important;
+	text-align:center !important;
+	text-shadow:1px 1px 1px #000;
+}
+.specialDigUploadError{
+	position:relative;
+	padding:5px 0;
+	font-size:16px !important;
+	text-align:center !important;
+	text-shadow:1px 1px 1px #000;
+}
+.errorWithShaddow{
+	text-shadow:1px 1px 1px #000;
+	color:#F00;
+}
+/****************************************************************************************   login box  ******************
+#loginBox{
+	width:435px;
+	height:250px;
+	background-color:#1E1E1E;
+}
+.loginBWrap{
+	width:355px;
+	position:relative;
+	margin:0 auto;
+}
+p.loginBTitle{
+	font-size:14px;
+	padding:15px 0;
+}
+input.loginBIns{
+	position:relative;
+	width:340px;
+	height:45px;
+	background-color:#FFF;
+	padding-left:15px;
+	border-radius:10px;
+	border:none;
+}
+.loginBPassShell{
+	width:355px;
+	height:45px;
+	position:relative;
+	margin:5px 0 20px 0;
+}
+label.loginBPassLab{
+	position:absolute;
+	top:0px;
+	left:0px;
+	color: #333;
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+	padding:13px 0 0 15px
+}
+p.loginBLoginBtn{
+	width:157px;
+	text-align:center;
+	background-color:#0C0;
+	border-radius:5px;
+	padding:3px 0;
+	float:left;
+	margin:0px;
+	text-shadow:1px 1px 2px #000;
+	cursor:pointer;
+}
+input.loginBKeepLoggedCheck{
+	float:left;
+	margin:15px 10px 0 0;
+}
+p.loginBForgotPass{
+	font-size:12px;
+	margin:5px 0 0 12px;
+	float:left;
+}
+p.loginBForgotPass span{
+	text-decoration:underline;
+}
+p.loginBKeepLoggedIn{
+	font-size:12px;
+	margin:13px 0 0 0;
+	float:left;
+}
+/****************************************************************************************   send check  ******************/
+#sendCheckBox{
+	width:435px;
+	height:205px;
+	background-color:#1E1E1E;
+}
+.linkNoDecor{
+	text-decoration:none;
+	color:#FFF;
+}
+.linkNoDecor{
+	text-decoration:none;
+	color:#FFF;
+}
+span.ECheckGreen{
+	color:#0C0;
+}
+p.sendCheckText{
+	width:332px;
+	font-size:18px;
+	margin:0 auto;
+	padding:20px 0;
+	text-align:center;
+}
+p.sendCheckText span{
+	color:#0C0;
+}
+input.sendCheckSelected{
+	float:left;
+	margin:3px 10px 0 87px;
+}
+.sendCheckGrey{
+	background-color:#999 !important;
+}
+/******************************************************* random *****************************/
+.crSSStep1{
+	display:nonse;
+}
+.crSSStep2{
+	display:none;
+}
+.crSSStep3{
+	display:none;
+}
+.crSSStep4{
+	display:none;
+}
+.fakeClearer{
+	position:relative;
+	width:100%;
+	height:0px;
+	clear:both;
+}
+.hiddenShell{
+	display:none;
+}
+.crSSStyleDropDigMus{
+	display:none;
+	padding:10px;
+}
+.crSSStyleDropDigMus2{
+	padding:10px;
+	display:hidden;
+}
+.crSSStyleDropPhysMus{
+	display:none;
+	padding:10px;
+}
+.crSSStyleDropPhysMus2{
+	padding:10px;
+	display:none;
+}
+.crSSStyleDropPhysMerch{
+	display:none;
+	padding:10px;
+}
+.crSSStyleDropPhysMerch2{
+	display:none;
+	padding:10px;
+}
+img.prodImgPre{
+	width:150px;
+	height:150px;
+	float:left;
+}
+img.LogoImagePre{
+	height:100px;
+	float:left;
+}
+img.bGImagePre{
+	position:relative;
+	width:300px;
+	float:left;
+}
+.filler1{
+	width:100%;
+	height:30px;
+}
+#productImageUploader{
+	width:200px;
+	height:40px;
+}
+#productImageUploaders{
+	width:200px;
+	height:40px;
+	margin-top:5px;
+}
+#productImageDiv{
+	width:200px;
+	position:relative;
+}
+.productImageUploadedProductPreview{
+	width:200px;
+	height:200px;
+	margin:15px 0 0 0;
+}
+.productImageUploadedLogoPreview{
+	height:100px;
+	margin:15px 0 0 0;
+	text-align:center;
+}
+.productImageUploadedBackgroundPreview{
+	width:400px;
+	margin:15px 0 0 0;
+	text-align:center;
+}
+#profileImageUploaders{
+	width:200px;
+	height:40px;
+	margin-top:5px;
+}
+#profileImageUploader{
+	width:200px;
+	height:40px;
+}
+#logoImageDiv{
+	position:relative;
+	width:100%;
+	text-align:center;
+}
+#backgroundImageDiv{
+	position:relative;
+	width:100%;
+	text-align:center;
+}
+

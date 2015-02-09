@@ -1,0 +1,45 @@
+<?php
+/**
+ *  PHP Version 5
+ *
+ *  @category    Amazon
+ *  @package     Amazon_FPS
+ *  @copyright   Copyright 2008-2011 Amazon Technologies, Inc.
+ *  @link        http://aws.amazon.com
+ *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
+ *  @version     2010-08-28
+ */
+/*******************************************************************************
+ *    __  _    _  ___
+ *   (  )( \/\/ )/ __)
+ *   /__\ \    / \__ \
+ *  (_)(_) \/\/  (___/
+ *
+ *  Amazon FPS PHP5 Library
+ *
+ */
+
+require_once('config.inc.php');
+
+require_once('../CBUISingleUsePipeline.php');
+
+class CBUISingleUsePipelineSample {
+
+    function test() {
+        $pipeline = new Amazon_FPS_CBUISingleUsePipeline(AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY);
+
+        $pipeline->setMandatoryParameters("callerReferenceSingleUse",
+                "https://zillionears.com/jameslive/test.php", "5");
+
+        //optional parameters
+        $pipeline->addParameter("currencyCode", "USD");
+        $pipeline->addParameter("paymentReason", "HarryPotter234");
+        $pipeline->addParameter("cobrandingUrl", "https://www.zillionears.com/images/logoHomeAmazon.png");
+        $pipeline->addParameter("websiteDescription", "Zillionears.com is a Music website");
+
+        //SingleUse url
+        print "Sample CBUI url for SingleUse pipeline : <a href=\"" . $pipeline->getUrl() . "\">link</a>\n";
+    }
+}
+
+CBUISingleUsePipelineSample::test();

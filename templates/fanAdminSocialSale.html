@@ -1,0 +1,173 @@
+<div class="fadminSaleShell">
+  <div class="fadminSaleLeftShell">
+    <a href="https://www.<?php echo $fullURL; ?>"><h1><?php echo $productName; ?></h1></a>
+    <h2><?php echo $artistName ?></h2>
+    <a href="<?php if($saleCompleted==true && $paymentStatus=='CAPTURED') { echo $albumPath; } else if($saleCompleted==true && $paymentStatus!='CAPTURED') { echo "#userAdminFanBillingProblem$i\" id=\"openUserAdminFanBillingProblem$i";} else if($saleCompleted==false) { echo "#userAdminBandShareSale$i\" id=\"openUserAdminBandShareSale$i";} ?>" class="fadminShareAndSaveBtn fadminShareAndSaveBtn<?php echo $i;?>"><?php if($saleCompleted) { echo "Download"; } else { echo "Share & Save" ;} ?></a>
+  </div>
+  <!-- end fadminSaleLeftShell -->
+  <div class="fadminDividerLine"></div>
+  <div class="fadminSaleRightShell">
+  
+    <?php if($saleCompleted){} else { echo "
+    <div class='sosaTimeHow'>
+      <div class='sosaTimeHowTransBack'></div>
+      <div id='bandAdminSaleCountdown{$i}' class='timeCounter'></div>
+      <p class='sosaHow'>Fans in Sale: &nbsp;&nbsp;<span class='fansInSaleNum'>{$numbuyins}</span></p> </div>
+      ";}; ?>
+    
+    <div class="sosaPricingShell <?php if($saleCompleted){ echo "sosaPricingShellOver";} else { echo "sosaPricingShellActive" ;};?>">
+      <div class="sosaHighLowPriceBoxes sosaHighPriceBox">
+        <div class="sosaHighLowPriceBoxTransBacks"></div>
+        <p class="sosaHighLowPriceText">Start Price<br />
+          <span>$<?php echo $startPrice;?></span></p>
+      </div>
+      <!-- end sosaHighLowPriceBoxes -->
+      <div class="sosaHighLowPriceBoxes sosaLowPriceBox">
+        <div class="sosaHighLowPriceBoxTransBacks"></div>
+        <p class="sosaHighLowPriceText">Base Price<br />
+          <span>$<?php echo $lowestprice;?></span></p>
+      </div>
+      <!-- end sosaHighLowPriceBoxes -->
+      <div class="sosaCurrentPriceSliderShell">
+        <div class="sosaCurrentPriceBox sosaCurrentPriceBox<?php echo $i;?>">
+          <p class="sosaCurrentPriceText"><?php if($saleCompleted){ echo "Final Price";} else { echo "Current Price";} ;?><br />
+            <span>$<?php echo $currentPrice;?></span></p>
+        </div>
+        <!-- end sosaCurrentPriceBox -->
+        <div class="sosaSliderBar">
+          <div class="sosaSliderBarCompPart sosaSliderBarCompPart<?php echo $i;?>"></div>
+          <div class="sosaSliderBarNotCompPart"></div>
+        </div>
+        <!-- end sosaSliderBar --> 
+      </div>
+      <!-- end sosaCurrentPriceSliderShell --> 
+    </div>
+    <!-- end sosaPricingShell -->
+     
+     <?php if($saleCompleted){ echo "
+    <div class='fadminSaleOverBar'>
+    	<img src='images/saleDoneArrowLeft.png' />
+        <p class='fadminSaleOverDLText'>Get your download here<br /><span href='#contactUs' id='openDownloadProblem{$i}' class='downloadProblem{$i}'>Download problems?</span></p>
+        <p class='fadminSaleOverSaleOver'>Sale has ended</p>
+    </div>
+    ";};?>
+    
+  </div>
+  <!-- end fadminSaleRightShell --> 
+</div>
+<!-- end fadminSaleShell --> 
+<div class="hiddenElement">
+  <div class="userAdminBandShareSale" id="userAdminBandShareSale<?php echo $i; ?>">
+    <h2>Share Sale</h2>
+    <h3>Share this sale with your friends to save <span>$$$.</span> Seriously!</h3>
+    <div class="userAdminShareMediaBtnHolders"> <a onclick='postToFeed(
+    
+    "https://www.zillionears.com/autoClose.html",
+    "https://www.<?php echo $fullURL; ?>",
+    "https://zillionears.com/<?php echo $img;?>",
+    "I participated in <?php echo $artistName; ?>&#39;s Social Sale!",
+    "zillionears.com",
+    "Get your hands on <?php echo $artistName; ?>&#39;s release of <?php echo $productName; ?> for as low as &#36;<?php echo $lowestprice;?>! The more people that join in on the Social Sale, the lower the price becomes!"
+      
+    ); return false;'> <img src="images/shareFB.jpg" class="socialShareCounter<?php echo $i; ?>" /></a> <a href="https://twitter.com/share" class="twitter-share-button socialShareCounter<?php echo $i; ?>" 
+    data-lang="en" 
+    data-count="none" 
+    data-url="http://www.<?php echo $fullURL; ?>" 
+    data-size="large" 
+    data-text="I just got into <?php echo $artistName; ?>&#39;s Social Sale! Help me drive the price down! It can get to &#36;<?php echo $lowestprice;?>!"> </a> </div>
+    
+    <!-- end userAdminShareMediaBtnHolders -->
+    <p class="userAdminBandURL">Sale URL: &nbsp; <span class="userAdminBandGranURL"><?php echo $fullURL; ?></span> 
+  </div>
+  <!-- end userAdminBandShareSale -->
+  <div id="userAdminFanBillingProblem<?php echo $i;?>" class="userAdminFanBillingProblem">
+  	<h1>Payment Not Complete</h1>
+    <p>Download is only available once your payment has gone through. If you are seeing this message more than 15 minutes after the sale has completed, try refreshing the page. If it continues, please report problem below, as there was a problem with your payment. Sorry for the inconvenience.<br /><br /><a href="#contactUs" id="openContactUsBillinProblem<?php echo $i;?>" class="openContactUsBillinProblem<?php echo $i;?>">Report Problem Here</a></p> 
+    <img src="images/errorFace.png" />
+  </div><!-- end userAdminFanBillingProblem --> 
+</div>
+<!-- end hiddenElement --> 
+<script> 
+      FB.init({appId: "521484751209611", status: true, cookie: true});
+
+      function postToFeed(redirector,linkposter,pic,title,cap,desc) {
+        // calling the API ...
+        var obj = {
+          method: 'feed',
+          redirect_uri: redirector,
+          link: linkposter,
+          picture: pic,
+          name: title,
+          caption: cap,
+          description: desc
+        };
+
+        function callback(response) {
+          document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
+        }
+
+        FB.ui(obj, callback);
+      }
+    
+    </script> 
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#bandAdminSaleCountdown<?php echo $i; ?>').countdown({until:$.countdown.UTCDate(<?php echo $saleEnds; ?>), format: 'DHMS', layout: //(timeZone, year, month-1{ignore the 1}, date)
+  '<div id="SSPtimer"><p>Sale Ends: &nbsp;'+'{dnn} d '+'{hnn} h '+'{mnn} m '+'{snn} s '+'</p></div>'
+    });// end countdown
+	$('#openfInSDigShell<?php echo $i; ?>').fancybox(); 
+   	$('#openRefShell<?php echo $i; ?>').fancybox();
+	$('#openUserAdminBandShareSale<?php echo $i; ?>').fancybox();
+	$('#openUserAdminFanBillingProblem<?php echo $i;?>').fancybox();
+	$('#openContactUsBillinProblem<?php echo $i;?>').fancybox();
+	
+	function currentPriceSlider(startPice,basePrice,currentPrice,pixelRange){
+		var startMoola = startPice;
+		var baseMoola = basePrice;
+		var currentMoola = currentPrice;
+		var maxSavings = startMoola - baseMoola;
+		var currentSavings = startMoola - currentMoola;
+		var currentPercentSavings = (currentSavings / maxSavings);
+		var pixRange = pixelRange;
+		var pixelsMoved = pixRange*currentPercentSavings;
+		$('.sosaCurrentPriceBox<?php echo $i;?>').css('left',pixelsMoved);
+		$('.sosaSliderBarCompPart<?php echo $i;?>').css('width',pixelsMoved);		
+	};
+	function colorAccents(color){
+		$('.sosaCurrentPriceBox<?php echo $i;?>, .sosaSliderBarCompPart<?php echo $i;?>, .fadminShareAndSaveBtn<?php echo $i;?>').css('background-color',color);
+	};
+	
+	currentPriceSlider('<?php echo $startPrice;?>','<?php echo $lowestprice;?>','<?php echo $currentPrice;?>',268);
+	colorAccents('<?php echo $colorAccent;?>');
+	$('#openDownloadProblem<?php echo $i; ?>').fancybox();
+	$('.downloadProblem<?php echo $i; ?>').click(function(){
+		$('.contactUsEmail').val('<?php echo $this->userEmailAddress; ?>');
+		$('.contactUsSubject').val('Problems Downloading Music');
+		$('.contactUsMessage').val('I am having trouble downloading my music from sale ID <?php echo $saleId ?> (Order ID <?php echo $orderId;?>).');	
+	});
+	$('.openContactUsBillinProblem<?php echo $i;?>').click(function(){
+		$('.contactUsEmail').val('<?php echo $this->userEmailAddress; ?>');
+		$('.contactUsSubject').val('Problems Downloading Music');
+		$('.contactUsMessage').val('I am having trouble downloading my music from sale ID <?php echo $saleId ?> (Order ID <?php echo $orderId;?>). The status of my order is <?php echo $paymentStatus;?>.');	
+	});
+				
+	  $('.socialShareCounter<?php echo $i; ?>').click(function(){
+		 var form_data = {
+			  saleId: <?php echo $saleId ?>,
+			  requestType: 'shareCountHandler',
+			  is_ajax: 1
+		  }; // end form_data
+		  $.ajax({
+			  type: "POST",
+			  url: 'request.php',
+			  data: form_data,
+			  success: function(response) {
+				  alert(response);
+			  } // end success
+		  });
+  	  });
+	
+	
+	
+});
+</script>

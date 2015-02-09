@@ -1,0 +1,165 @@
+<div class="userAdminChunkShell"> 
+	<a href="<?php echo $saleURL; ?>" class="userAdminImageHoverShell userAdminImageHoverShell<?php echo $i;?>">
+    <img class="userAdminChunkImage userAdminChunkImage<?php echo $i ?>" src="<?php echo $img ?>" />
+    <p class="imageSaleRoloverViewSaleText imageSaleRoloverViewSaleText<?php echo $i;?>">View Sale</p>
+    </a>
+    <a href="<?php if(1==2) { echo "uploads/Domenic Bianco.zip"; } else { echo "#userAdminBandShareSale$i\" id=\"openUserAdminBandShareSale$i";} ?>" class="userAdminChunkBtns userAdminChunkPromoteBtn"><?php if(1==2) { echo "Download"; } else { echo "Share Sale" ;} ?></a> <!-- $saleCompleted -->
+  	<p class="userAdminWhyShareText">Share With Friends<br />And Save $$$!</p>
+    
+  <div class="userAdminChunkStatsBox">
+  <?php if($saleCompleted) { echo "
+  <div class=\"userAdminChunkStatsBoxExpiredShell\">
+  	<div class=\"userAdminChunkStatsBoxExpiredShellOverLay\"></div>
+    <div class=\"userAdminChunkTitleContainer\">
+        	<p class=\"userAdminChunkTitleFanExpired\">$productName</p>
+            <p class=\"userAdminChunkArtistNameFanExpired\">$artistName</p>
+        </div> <!-- end userAdminChunkTitleContainer -->
+    <p class=\"userAdminChunkStatsBoxExpiredShellYouPaid\">You Paid: <span id=\"expiredSaleYouPaid{$i}\">$$currentPrice</span><br />Savings of: <span id=\"expiredSaleYouSaved{$i}\"></span><br /><span class=\"expiredSaleThatsSmart\">That's just SMART!</span></p>
+  </div> <!-- end userAdminChunkStatsBoxExpiredShell -->
+  "; }?>
+  		<div class="userAdminChunkTitleContainer">
+        	<p class="userAdminChunkTitleFan"><?php echo $productName; ?></p>
+            <p class="userAdminChunkArtistNameFan"><?php echo $artistName ?></p>
+        </div> <!-- end userAdminChunkTitleContainer -->
+        <div class="fanCrowdGraphShell">
+        	<img class="fanCrowdGraphFanSil" src="images/crowdForFanDash.png" />
+            <div class="fanCrowdGraphRedBar"></div>
+            <img class="fanCrowdGrapgGreenBar" id="fanCrowdGrapgGreenBar<?php echo $i;?>" src="images/userAdminFanCrowdFllGreenBar.png" />
+            <p class="userAdminFanGraphCurrent userAdminFanGraphCurrent<?php echo $i;?>">Current Price<br /><span>$<?php echo $currentPrice ?></span></p>
+            <p class="userAdminFanGraphCanGetTo userAdminFanGraphCanGetTo<?php echo $i;?>">Can Get To<br /><span>$<?php echo $lowestprice;?></span></p>
+            <div class="userAdminFanGraphPercentShell">
+            	<p class="userAdminFanGraphPercent" id="bandAdminChartPercentage<?php echo $i; ?>"></p>
+         	</div> <!-- end userAdminFanGraphPercentShell -->
+        </div> <!-- end fanCrowdGraphShell -->
+  </div>
+  <!-- end userAdminChunkStatsBox -->
+  
+  <table class="userAdminChunkFactsTable">
+    <tr>
+      <td><?php if($saleCompleted) { echo 'Final Price'; } else { echo 'Current Price'; }?>: $<?php echo $currentPrice ?></td>
+      <td>Got in @: $<?php echo $buyinPrice;?></td>
+      <td rowspan="2"><p class="userAdminClock" id="bandAdminSaleCountdown<?php echo $i; ?>"></p></td>
+    </tr>
+    <tr>
+      <td>Fans in sale: <?php echo $numbuyins; ?></td>
+      <td>Can get to: $<?php echo $lowestprice;?></td>
+    </tr>
+  </table>
+</div>
+<!-- end userAdminChunkShell -->
+
+<div class="hiddenElement">
+  <div class="userAdminBandShareSale" id="userAdminBandShareSale<?php echo $i; ?>">
+    <h2>Share Sale</h2>
+    <h3>Share this sale with your friends to save <span>$$$.</span> Seriously!</h3>
+    <div class="userAdminShareMediaBtnHolders"> <a onclick='postToFeed(
+    
+    "https://www.zillionears.com/fanadminsocialsales",
+    "https://www.<?php echo $fullURL; ?>",
+    "https://zillionears.com/images/square-logo-7.jpg",
+    "I participated in <?php echo $artistName ?>&#39;s Social Sale!",
+    "zillionears.com",
+    "Get your hands on <?php echo $artistName ?>&#39;s release of <?php echo $productName; ?> for as low as &#36;<?php echo $lowestprice;?>! The more people that join in on the Social Sale, the lower the price becomes!"
+      
+    ); return false;'>
+    <img src="images/shareFB.jpg" class="" /></a> 
+    
+    <a href="https://twitter.com/share" class="twitter-share-button" 
+    data-lang="en" 
+    data-count="none" 
+    data-url="http://www.<?php echo $fullURL; ?>" 
+    data-size="large" 
+    data-text="I just got into <?php echo $artistName ?>&#39;s Social Sale! Help me drive the price down! It can get to &#36;<?php echo $lowestprice;?>!">
+    </a> 
+    </div>
+    
+    <!-- end userAdminShareMediaBtnHolders -->
+    <p class="userAdminBandURL">Sale URL: &nbsp; <span class="userAdminBandGranURL"><?php echo $fullURL; ?></span> 
+  </div>
+  <!-- end userAdminBandShareSale --> 
+</div>
+<!-- end hiddenElement --> 
+    <script> 
+      FB.init({appId: "521484751209611", status: true, cookie: true});
+
+      function postToFeed(redirector,linkposter,pic,title,cap,desc) {
+        // calling the API ...
+        var obj = {
+          method: 'feed',
+          redirect_uri: redirector,
+          link: linkposter,
+          picture: pic,
+          name: title,
+          caption: cap,
+          description: desc
+        };
+
+        function callback(response) {
+          document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
+        }
+
+        FB.ui(obj, callback);
+      }
+    
+    </script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#bandAdminSaleCountdown<?php echo $i; ?>').countdown({until:$.countdown.UTCDate(<?php echo $saleEnds; ?>), format: 'DHMS', layout: //(timeZone, year, month-1{ignore the 1}, date)
+  '<div id="SSPtimer">' +
+  '<div id="timer_days" class="SSPtimer_numbers">{dnn}</div>'+'<div class="SSPtimer_Label">d</div>'+
+  '<div id="timer_hours" class="SSPtimer_numbers">{hnn}</div>'+'<div class="SSPtimer_Label">h </div>'+
+  '<div id="timer_mins" class="SSPtimer_numbers">{mnn}</div>'+'<div class="SSPtimer_Label">m </div>'+
+  '<div id="timer_seconds" class="SSPtimer_numbers">{snn}</div>'+'<div class="SSPtimer_Label">s</div>'+'&nbsp;'+
+	'</div>'
+    });// end countdown
+	function fanAdminStatsBuilder3(){
+		var fanAdminStartP = <?php echo $startPrice?>;
+		var fanAdminEndP = <?php echo $lowestprice?>;
+		var fanAdminCurrentP = <?php echo $currentPrice?>;
+		var fanAdminBarLength = fanAdminStartP-fanAdminEndP;
+		var fanAdminDroppedAmount = fanAdminStartP-fanAdminCurrentP;
+		var preFanAdminDroppedPerc = (fanAdminDroppedAmount/fanAdminBarLength)*100;
+		fanAdminDroppedPerc = 100-preFanAdminDroppedPerc;
+		fanAdminDroppedPercSwitch= 100-fanAdminDroppedPerc;
+		//$('#bandAdminChartDroppedBar<?php echo $i; ?>').css('width',fanAdminDroppedPercSwitch+'%');
+		barShiftAmount = (-104) + fanAdminDroppedPercSwitch;
+		$('#fanCrowdGrapgGreenBar<?php echo $i;?>').css('left',barShiftAmount+'%');
+		$('#bandAdminChartPercentage<?php echo $i; ?>').html('<b>'+(parseInt(preFanAdminDroppedPerc)+'%</b> Potential Savings'));
+	};
+	fanAdminStatsBuilder3();
+	<?php if($saleCompleted) { echo "
+		$('.userAdminFanGraphCurrent{$i}, .userAdminFanGraphCanGetTo{$i}').css('display','none');
+		$('#bandAdminChartPercentage{$i}').css('display','none');
+		var fansTotalSavings = parseInt((1 - ({$currentPrice} / {$startPrice}))*100);
+		$('#expiredSaleYouSaved{$i}').text(fansTotalSavings+'%');
+		$('.userAdminChunkImage{$i}').css('opacity','0.2');
+		$('.imageSaleRoloverViewSaleText{$i}').show().text('Sale Ended').css('left','29px');
+		$('.userAdminImageHoverShell{$i}').hover(
+			function(){
+				$('.imageSaleRoloverViewSaleText{$i}').text('View Sale').css('left','33px');
+			},
+			function(){
+				$('.imageSaleRoloverViewSaleText{$i}').text('Sale Ended').css('left','29px');
+			}
+		);
+	"; } else{ echo "
+		$('.userAdminImageHoverShell{$i}').hover(
+			function(){
+				$('.userAdminChunkImage{$i}').css('opacity','0.2');
+				$('.imageSaleRoloverViewSaleText{$i}').show();
+			},
+			function(){
+				$('.userAdminChunkImage{$i}').css('opacity','1');
+				$('.imageSaleRoloverViewSaleText{$i}').hide();
+			}
+		);
+	";}?>
+	
+	$('#openfInSDigShell<?php echo $i; ?>').fancybox(); 
+   	$('#openRefShell<?php echo $i; ?>').fancybox();
+	$('#openUserAdminBandShareSale<?php echo $i; ?>').fancybox();
+
+	
+});
+</script>

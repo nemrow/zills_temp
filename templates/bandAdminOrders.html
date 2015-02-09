@@ -1,0 +1,31 @@
+<div class="contentContainer">
+<div class="wrapper1">
+<div class="contentArea">
+<div class="content">
+<div class="adminHeader">
+<p class="adminHeaderTitle">Physical Orders</p>
+<p class="adminHeaderUpdate">Update</p>
+</div> <!-- end adminHeader -->
+<div class="adminOrdersShell">
+<div class="adminOrderHead">
+<p class="adminOrderHeadTitle">Orders</p>
+<p class="adminOrderHeadCompOut"><a href="javascript;">Complete</a> | <a href="javascript;">Outstanding</a></p>
+</div> <!-- end adminOrderHead -->
+<div class="adminOrderTableShell">
+<table class="adminOrderTable">
+
+<?php echo $this->orderTableRows; ?>
+
+</table>
+</div> <!-- end adminOrderTableShell -->
+</div> <!-- end adminSaleShell -->
+
+</div> <!-- end content -->
+</div> <!-- end contentArea -->
+</div> <!-- end wrapper1 -->
+</div> <!-- end contentContainer -->
+
+<div class="hiddenElement">
+<?php echo $this->orderDetails; ?>
+</div> <!-- end hiddenElement -->
+

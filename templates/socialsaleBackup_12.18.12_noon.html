@@ -1,0 +1,238 @@
+<body>
+<div class="sosaFrame">
+  <div class="sosaFrameShell">
+    <div class="sosaFrameTransBack"></div>
+    <div class="sosaArtShell"> <img class="sosaArt" src="<?php echo $this->productImg; ?>" /> </div>
+    <!--end sosaArtShell -->
+    <div class="sosaInfoShell">
+      <h2 class="sosaTitle"><?php echo $this->productTitle; ?></h2>
+      <h1 class="sosaArtistName"><?php echo $this->artistName; ?></h1>
+      <div id="tinyScroller">
+        <div class="scrollbar">
+          <div class="track">
+            <div class="thumb"></div>
+          </div>
+        </div>
+        <div class="viewport">
+          <div class="overview">
+            <div class="sosaTrackList">
+
+
+
+             <?php echo $this->trackList; ?> 
+             <script>
+			 	<?php echo $this->musicPaths;?>
+			 </script>
+			 </div>
+            <!-- end sosaTracklist --> 
+          </div>
+        </div>
+      </div>
+      <!-- end all 3 tiny scrolls --> 
+      
+    </div>
+    <!-- end sosaInfoShell -->
+    <div class="sosaTimeHow">
+      <div class="sosaTimeHowTransBack"></div>
+      <div id="timeCounter" class="timeCounter"></div>
+      <a class="sosaHow" href="#howItWorks" id="openHowItWorks">How it Works?</a>
+    </div>
+    <!-- end sosaTimeHow -->
+    <div class="sosaPricingShell">
+      <div class="sosaHighLowPriceBoxes sosaHighPriceBox">
+        <div class="sosaHighLowPriceBoxTransBacks"></div>
+        <p class="sosaHighLowPriceText">Start Price<br />
+          <span>$<?php echo $this->startPrice; ?></span></p>
+      </div>
+      <!-- end sosaHighLowPriceBoxes -->
+      <div class="sosaHighLowPriceBoxes sosaLowPriceBox">
+        <div class="sosaHighLowPriceBoxTransBacks"></div>
+        <p class="sosaHighLowPriceText">Floor Price<br />
+          <span>$<?php echo $this->lowPrice; ?></span></p>
+      </div>
+      <!-- end sosaHighLowPriceBoxes -->
+      <div class="sosaCurrentPriceSliderShell">
+        <div class="sosaCurrentPriceBox">
+          <p class="sosaCurrentPriceText">Current Price<br />
+            <span>$<?php echo $this->currentPrice; ?></span></p>
+        </div>
+        <!-- end sosaCurrentPriceBox -->
+        <div class="sosaSliderBar">
+          <div class="sosaSliderBarCompPart"></div>
+          <div class="sosaSliderBarNotCompPart"></div>
+        </div>
+        <!-- end sosaSliderBar --> 
+      </div>
+      <!-- end sosaCurrentPriceSliderShell --> 
+    </div>
+    <!-- end sosaPricingShell -->
+    <div class="sosaFansInShell">
+      <div class="sosaFansInTransBack"></div>
+      <p class="sosaFansInText">Fans Already In:</p>
+      <p class="sosaFansInNum"><?php echo $this->numBuyins; ?></p>
+    </div>
+    <!-- end sosaFansInShell --> 
+    <!-- <a href="<?php if(parent::loggedIn()){ echo "checkout&id={$_GET['id']}"; }else{echo "login";}?>"> --> 
+    <a href="<?php if (parent::loggedIn()){echo "checkout&id={$_GET['id']}";}else{echo "#newLoginBox";}?>" <?php if (parent::loggedIn()){}else{echo "id='openNewLoginBox'";} ?>  class="openLoginBoxForCheckout">
+      <p class="sosaIWantInBtn">I Want In</p>
+    </a> </div>
+  <!-- end sosaFrameShell --> 
+</div>
+<!-- end sosaFrame -->
+<div class="hiddenShell">
+	<div id="howItWorks">
+    	<h1>Support. Share. Save.</h1>
+    	<p>Support your favorite artist by purchasing their latest record in this Social Sale. The price you pay will be reduced for each partipating fan. So share this sale with your friends to reduce the price of this record for everyone.  We authorize your credit card when you get into the sale, however we don’t charge you until the end of the 
+sale. At this time everyone pays the same price and receives this record. Are you in?!</p>
+    </div> <!-- end how it works -->
+</div><!--end hidden --> 
+
+<?php if((parent::loggedIn()) && (parent::userId()==$this->artistAccountId)){ 
+	
+    if ($this->recipientToken == ''){echo "
+    
+        <div class='zukaFullBack2'></div>
+        <div class='zukaShell'>
+            <img class='zukaImg' src='images/zuka.png' />
+            <div class='zukaTextShell'>
+                <p class='zukaHeader'>Get Paid & Activate Sale!</p>
+                <a href='$this->amazonLink' class='zukaRecipientRegBtn'>Register with Amazon</a>
+                <p class='zukaRecipientRegInfo'>We use Amazon for all payments. In order for us to pay you and to make this sale active, you must have an Amazon Business account linked registered with us.</p>
+            </div> <!-- end zukaTextShell -->
+        </div> <!-- end zukaShell -->
+
+	";} else if (false){ echo "
+    
+        <div class='zukaFullBack2'></div>
+        <div class='zukaShell'>
+            <img class='zukaImg' src='images/zuka.png' />
+            <div class='zukaTextShell'>
+                <p class='zukaHeader'>Your sale is pending</p>
+                <p class='zukaRecipientRegInfo'>You do have an amazon business account registered with us, but your sale is still pending awaiting approval!</p>
+            </div> <!-- end zukaTextShell -->
+        </div> <!-- end zukaShell -->
+    
+     ";} else { echo " 
+    
+        <a href='bandAdminSales' class='sSLogegedInMyAccountBtn sSLoggedInOpenBtns'>
+        <div class='newSocialSaleArrowBubble'>
+            <h2>Manage <span>&amp;</span> Promote</h2>
+            <p>this sale in your dashboard</p>
+        </div> <!-- end newSocialSaleArrowBubble -->
+        </a>
+    
+  	";};
+
+} else { 
+
+	if($this->recipientToken == ''){ echo "
+
+        <div class='zukaFullBack2'></div>
+        <div class='zukaShell'>
+            <img class='zukaImg' src='images/zuka.png' />
+            <div class='zukaTextShell'>
+                <p class='zukaHeader'>Ay Ay Ay, Sorry!</p>
+                <p class='zukaRecipientMiddleContent'><span>Sale is not active yet!</span></p>
+                <p class='zukaRecipientRegInfo'>Please check back again soon, as this Social Sale has not been completed yet, or has not yet been approved by me!</p>
+            </div> <!-- end zukaTextShell -->
+          </div> <!-- end zukaShell -->
+  
+	";} 
+
+};?>
+
+<script>
+$(document).ready(function() {
+	function sizeArtWork(frameWidth, frameHeight, artWidth, artHeight){
+		var origArtWidth = artWidth;
+		var origArtHeight = artHeight;
+		var newArtWidth = undefined;
+		var newArtHeight = undefined;
+		var newCssWidthAlign = undefined;
+		var newCssHeightAlign = undefined;
+		var origArtRatio =  origArtWidth / origArtHeight;
+		var frameRatio = frameWidth / frameHeight; <!-- width and height of viewable art frame --> 
+		if(frameRatio<origArtRatio){
+			newArtHeight = frameHeight;
+			newArtHeightRatio = frameHeight/origArtHeight;
+			newArtWidth = origArtWidth*newArtHeightRatio;
+			newCssWidthAlign = ((newArtWidth - frameWidth) / 2)*-1;
+		} else {
+			newArtWidth = frameWidth;
+			newArtWidthRatio = frameWidth/origArtWidth;
+			newArtHeight = origArtHeight*newArtWidthRatio;
+			newCssHeightAlign = ((newArtHeight - frameHeight)/2)*-1;
+		};
+		$('.sosaArt').css({
+			'width' : newArtWidth,
+			'height' : newArtHeight,
+			'left' : newCssWidthAlign,
+			'top' : newCssHeightAlign
+		});	
+	};
+	
+	function currentPriceSlider(startPice,basePrice,currentPrice,pixelRange){
+		var startMoola = startPice;
+		var baseMoola = basePrice;
+		var currentMoola = currentPrice;
+		var maxSavings = startMoola - baseMoola;
+		var currentSavings = startMoola - currentMoola;
+		var currentPercentSavings = (currentSavings / maxSavings);
+		var pixRange = pixelRange;
+		var pixelsMoved = pixRange*currentPercentSavings;
+		$('.sosaCurrentPriceBox').css('left',pixelsMoved);
+		$('.sosaSliderBarCompPart').css('width',pixelsMoved);		
+	};
+	
+	function colorAccents(color){
+		$('.sosaCurrentPriceBox, .sosaIWantInBtn, .sosaSliderBarCompPart').css('background-color',color);
+		$('.sosaHow').hover(function(){$(this).css('color',color);},
+		function(){$(this).css('color','#fff');});
+	};
+	
+	function placeSosaFrame(shellFrameHeight){
+		currentWindowHeight = $(window).height();
+		currentFrameMargin = ((currentWindowHeight - shellFrameHeight)/2);
+		if(currentFrameMargin<0){
+			currentFrameMargin = 0;
+		};
+		$('.sosaFrameShell').css('margin-top',currentFrameMargin);
+	}
+	
+	if($('.sosaFansInNum').text().length > 5){
+		$('.sosaFansInShell p').css('font-size',13);
+	};
+	
+	sizeArtWork(284,291,<?php echo $this->productImgWidth; ?>,<?php echo $this->productImgHeight; ?>); <!-- frameWidth, frameHeight, artWidth, artHeigh -->
+	currentPriceSlider(<?php echo $this->startPrice; ?>,<?php echo $this->lowPrice; ?>,<?php echo $this->currentPrice; ?>,268); <!-- startPice,basePrice,currentPrice,pixelRange -->
+	
+	var verifyColorThere = '<?php echo $this->accentColor; ?>';
+	if(verifyColorThere==''){
+		colorAccents('#018f46');
+	}else{
+		colorAccents(verifyColorThere);
+	}; <!-- accent color -->
+	
+	placeSosaFrame(428);
+	
+	$(window).resize(function(){
+		placeSosaFrame(428);
+	});
+	
+   $('#timeCounter').countdown({until:$.countdown.UTCDate(<?php echo $this->saleEndFormated;?>), format: 'DHMS', layout: //(timeZone, year, month-1{ignore the 1}, date)
+  '<div id="SSPtimer"><p>Sale Ends: &nbsp;'+'{dnn} d '+'{hnn} h '+'{mnn} m '+'{snn} s '+'</p></div>'
+    });// end countdown
+	$.backstretch("<?php echo $this->backgroundImg; ?>", {speed: 150, centeredY: false});
+	$('#openNewLoginBox').fancybox();
+	$('#openNewLoginBox2').fancybox();
+	$('#openHowItWorks').fancybox();
+	$('.sosaIWantInBtn').click(function(){
+		$('#signInForm').attr('action','login&action=checkout&id=<?php echo (int) $_GET["id"]; ?>');
+		$('#registerForm').attr('action','register&amp;action=checkout&amp;id=<?php echo (int) $_GET["id"]; ?>')
+	});
+	$('#openNewLoginBox2').click(function(){
+		$('#signInForm').attr('action','login&action=socialsale&id=<?php echo (int) $_GET["id"]; ?>');
+		$('#registerForm').attr('action','register&action=socialsale&id=<?php echo (int) $_GET["id"]; ?>');	
+	});
+});
+</script>

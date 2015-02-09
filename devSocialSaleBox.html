@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>The Band - 1 | Social Sale</title>
+<meta name="description" content="Get your hands on The Band's release of '1' for as low as $1.25! The more people that join in on the Social Sale, the lower the price becomes!" />
+<link rel="shortcut icon" href="http://www.zillionears.com/images/smallEar.png" />
+<meta property="og:description" content="Get your hands on The Band's release of '1' for as low as $1.25! The more people that join in on the Social Sale, the lower the price becomes!" />
+<meta property="og:title" content="The Band is having a Social Sale!"  />
+<meta property="og:url" content="http://www.zillionears.com/socialsale&id=73" />
+<meta property="og:image" content="http://www.zillionears.com/uploads/4b2ae330ef_dom1.jpg" />
+<link rel="image_src" href="http://www.zillionears.com/uploads/4b2ae330ef_dom1.jpg" />
+<meta name="keywords" content="The Band, 1, Zillionears, Social Sale">
+<link href="css/stylePopout.css" rel="stylesheet" />
+<link href="css/socialSaleStyle.css" rel="stylesheet" />
+<link href="css/jquery.fancybox-1.3.4.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/universalLoginSignUp.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox-1.3.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.countdown.pack.js"></script>
+<script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
+<script type="text/javascript" src="js/jquery.tinyscrollbar.min.js"></script>
+<script type="text/javascript" src="js/universalLogin_Script.js"></script>
+<script type="text/javascript" src="js/socialSalePopout_Script.js"></script>
+<script type="text/javascript" src="js/socialSale_Script.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20200573-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script>
+$(document).ready(function() {
+	
+   	function sizeArtWork(frameWidth, frameHeight, artWidth, artHeight){
+		var origArtWidth = artWidth;
+		var origArtHeight = artHeight;
+		var newArtWidth = undefined;
+		var newArtHeight = undefined;
+		var newCssWidthAlign = undefined;
+		var newCssHeightAlign = undefined;
+		var origArtRatio =  origArtWidth / origArtHeight;
+		var frameRatio = frameWidth / frameHeight; <!-- width and height of viewable art frame --> 
+		if(frameRatio<origArtRatio){
+			newArtHeight = frameHeight;
+			newArtHeightRatio = frameHeight/origArtHeight;
+			newArtWidth = origArtWidth*newArtHeightRatio;
+			newCssWidthAlign = ((newArtWidth - frameWidth) / 2)*-1;
+		} else {
+			newArtWidth = frameWidth;
+			newArtWidthRatio = frameWidth/origArtWidth;
+			newArtHeight = origArtHeight*newArtWidthRatio;
+			newCssHeightAlign = ((newArtHeight - frameHeight)/2)*-1;
+		};
+		$('.sosaArt').css({
+			'width' : newArtWidth,
+			'height' : newArtHeight,
+			'left' : newCssWidthAlign,
+			'top' : newCssHeightAlign
+		});	
+	};
+	
+	function currentPriceSlider(startPice,basePrice,currentPrice,pixelRange){
+		var startMoola = startPice;
+		var baseMoola = basePrice;
+		var currentMoola = currentPrice;
+		var maxSavings = startMoola - baseMoola;
+		var currentSavings = startMoola - currentMoola;
+		var currentPercentSavings = (currentSavings / maxSavings);
+		var pixRange = pixelRange;
+		var pixelsMoved = pixRange*currentPercentSavings;
+		$('.sosaCurrentPriceBox').css('left',pixelsMoved);
+		$('.sosaSliderBarCompPart').css('width',pixelsMoved);		
+	};
+	
+	function colorAccents(color){
+		$('.sosaCurrentPriceBox, .sosaIWantInBtn, .sosaSliderBarCompPart').css('background-color',color);
+		$('.sosaHow').hover(function(){$(this).css('color',color);},
+		function(){$(this).css('color','#fff');});
+	};
+	
+	if($('.sosaFansInNum').text().length > 5){
+		$('.sosaFansInShell p').css('font-size',13);
+	};
+	
+	sizeArtWork(284,291,<?php echo $this->productImgWidth; ?>,<?php echo $this->productImgHeight; ?>); <!-- frameWidth, frameHeight, artWidth, artHeigh -->
+	currentPriceSlider(<?php echo $this->startPrice; ?>,<?php echo $this->lowPrice; ?>,<?php echo $this->lowPrice; ?>,268); <!-- startPice,basePrice,currentPrice,pixelRange -->
+	colorAccents('#018f46'); <!-- accent color -->
+});
+</script>
+</head>
+<body>
+<div class="sosaFrame">
+  <div class="sosaFrameShell">
+    <div class="sosaFrameTransBack"></div>
+    <div class="sosaArtShell"> <img class="sosaArt" src="images/frontImg1.jpg" /> </div>
+    <!--end sosaArtShell -->
+    <div class="sosaInfoShell">
+      <h2 class="sosaTitle">One Night EP</h2>
+      <h1 class="sosaArtistName">Timeflies</h1>
+      <div id="tinyScroller">
+        <div class="scrollbar">
+          <div class="track">
+            <div class="thumb"></div>
+          </div>
+        </div>
+        <div class="viewport">
+          <div class="overview">
+            <div class="sosaTrackList">
+              <div class="sosaTrack">
+                <p>1. One Night</p>
+              </div>
+              <!-- end sosaTrack -->
+              <div class="sosaTrack">
+                <p>2. Swoon</p>
+              </div>
+              <!-- end sosaTrack -->
+              <div class="sosaTrack">
+                <p>2. Swoon</p>
+              </div>
+              <!-- end sosaTrack --> 
+              
+            </div>
+            <!-- end sosaTracklist --> 
+          </div>
+        </div>
+      </div>
+      <!-- end all 3 tiny scrolls --> 
+      
+    </div>
+    <!-- end sosaInfoShell -->
+    <div class="sosaTimeHow">
+    	<div class="sosaTimeHowTransBack"></div>
+        <div id="timeCounter" class="timeCounter"></div>
+        <p class="sosaHow">How it Works?</p>
+    </div> <!-- end sosaTimeHow -->
+    <div class="sosaPricingShell">
+    	<div class="sosaHighLowPriceBoxes sosaHighPriceBox">
+        	<div class="sosaHighLowPriceBoxTransBacks"></div>
+            <p class="sosaHighLowPriceText">Start Price<br /><span>$5.00</span></p>
+        </div> <!-- end sosaHighLowPriceBoxes -->
+        <div class="sosaHighLowPriceBoxes sosaLowPriceBox">
+        	<div class="sosaHighLowPriceBoxTransBacks"></div>
+            <p class="sosaHighLowPriceText">Base Price<br /><span>$1.00</span></p>
+        </div> <!-- end sosaHighLowPriceBoxes -->
+        <div class="sosaCurrentPriceSliderShell">
+        	<div class="sosaCurrentPriceBox">
+        		<p class="sosaCurrentPriceText">CurrentPrice<br /><span>$3.20</span></p>
+        	</div> <!-- end sosaCurrentPriceBox -->
+            <div class="sosaSliderBar">
+        		<div class="sosaSliderBarCompPart"></div>
+                <div class="sosaSliderBarNotCompPart"></div>
+        	</div><!-- end sosaSliderBar -->
+      	</div><!-- end sosaCurrentPriceSliderShell -->
+    </div> <!-- end sosaPricingShell -->
+    <div class="sosaFansInShell">
+    	<div class="sosaFansInTransBack"></div>
+        <p class="sosaFansInText">Fans Already In:</p>
+        <p class="sosaFansInNum">22</p>
+    </div> <!-- end sosaFansInShell -->
+    <div class="sosaIWantInBtn">
+    	<p>I Want In</p>
+    </div> <!-- end sosaIWantInBtn -->
+  </div>
+  <!-- end sosaFrameShell --> 
+</div>
+<!-- end sosaFrame --> 
+<script>
+$(document).ready(function() {
+   $('#timeCounter').countdown({until:$.countdown.UTCDate(-8, 2012, 12 - 1, 17), format: 'DHMS', layout: //(timeZone, year, month-1{ignore the 1}, date)
+  '<div id="SSPtimer"><p>Sale Ends: &nbsp;'+'{dnn} d '+'{hnn} h '+'{mnn} m '+'{snn} s '+'</p></div>'
+    });// end countdown
+	$.backstretch("uploads/c01dc948b7_domBG.jpg", {speed: 150, centeredY: false});
+});
+</script>
+</body>
+</html>

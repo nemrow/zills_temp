@@ -1,0 +1,92 @@
+<div class="contentContainer">
+  <div class="wrapper1">
+    <div class="contentArea">
+      <div class="content">
+        <p class="zillsAdminHeaders">-Social Sale-<br />
+          <?php echo $this->name;?></p>
+        <table class="zillsAdminSingleSoSaTable1">
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">Sale ID:</td>
+            <td class="zillsAdminSingleSoSaTableRight"><?php echo $this->id ?></td>
+          </tr>
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">Sale Name:</td>
+            <td class="zillsAdminSingleSoSaTableRight"><?php echo $this->name ?></td>
+          </tr>
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">Band Name:</td>
+            <td class="zillsAdminSingleSoSaTableRight"><?php echo $this->artistName ?></td>
+          </tr>
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">Manager:</td>
+            <td class="zillsAdminSingleSoSaTableRight"><?php echo $this->accountManagerFirstName ?> <?php echo $this->accountManagerLastName ?></td>
+          </tr>
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">Status:</td>
+            <td class="zillsAdminSingleSoSaTableRight"><?php if ($this->saleEndDate > time()){ ?> Active <?php }else{ ?> Expired <?php } ?></td>
+          </tr>
+        </table>
+        <table class="zillsAdminSingleSoSaTable2">
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft"># of Fans:</td>
+            <td class="zillsAdminSingleSoSaTableRight"><?php echo $this->numBuyIns;?></td>
+          </tr>
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">Start $:</td>
+            <td class="zillsAdminSingleSoSaTableRight"><?php echo $this->saleStartPrice ?></td>
+          </tr>
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">Lowest $:</td>
+            <td class="zillsAdminSingleSoSaTableRight"><?php echo $this->saleLowPrice ?></td>
+          </tr>
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">Current $:</td>
+            <td class="zillsAdminSingleSoSaTableRight"><?php echo $this->currentPrice;?></td>
+          </tr>
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">End Date:</td>
+            <td class="zillsAdminSingleSoSaTableRight"><?php echo $this->saleStartPriceVisual ?></td>
+          </tr>
+        </table>
+        <table class="zillsAdminSingleSoSaTable3">
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">Sale URL</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Gross Revenue</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Amzn Fee's</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Band's Cut</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Zills Cut</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Payment Type</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Payment Status</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Confirm</td>
+          </tr>
+          <tr>
+            <td class="zillsAdminSingleSoSaTableRight"><a href="socialsale&id=<?php echo $this->id ?>">Link</a></td>
+            <td class="zillsAdminSingleSoSaTableRight">$<?php echo $this->GrossRev;?></td>
+            <td class="zillsAdminSingleSoSaTableRight">$<?php echo $this->amazonFees;?></td>
+            <td class="zillsAdminSingleSoSaTableRight">$<?php echo $this->bandsCut;?></td>
+            <td class="zillsAdminSingleSoSaTableRight">$<?php echo $this->zillsCut;?></td>
+            <td class="zillsAdminSingleSoSaTableRight">Paypal</td>
+            <td class="zillsAdminSingleSoSaTableRight">Outstanding</td>
+            <td class="zillsAdminSingleSoSaTableRight">NA</td>
+          </tr>
+        </table>
+        <p class="zillsAdminSubHeader">Fans</p>
+        <table class="zillsAdminSingleSoSaTable4">
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">Fan ID</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Fan Name</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Time in Sale</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Join Price</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Status</td>
+          </tr>
+          <?php echo $this->getFansInSaleRows;?>
+        </table>
+        <div class="fakeClearer"></div>
+      </div>
+      <!-- end content --> 
+    </div>
+    <!-- end contentArea -->
+  </div>
+  <!-- end wrapper1 --> 
+</div>
+<!-- end contentContainer -->

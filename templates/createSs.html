@@ -1,0 +1,665 @@
+<input type="hidden" id="createSsAccountHolderTypeFondler" accountType="<?php if(parent::loggedIn()) { if(parent::userAccountType()=='manager') { echo 'band'; } else { echo 'fan';} } else { echo 'new'; } ?>" />
+<!-- choices: 'new','fan','band' -->
+
+<div class="subHeader">
+  <div class="wrapper1">
+    <table class="crSSIconTable">
+      <tr>
+        <td class="crSSTopFirstIconToRemoveForBandAcct"><img class="crSSTopIcon1 crSSIconClickable" src="images/crSSIcon1.png" alt="The Basics" /></td>
+        <td><img class="crSSTopIcon2 crSSIconNotActive" src="images/crSSIcon2.png" alt="Product Info"/></td>
+        <td><img class="crSSTopIcon3 crSSIconNotActive" src="images/crSSIcon3.png" alt="Sale Structure"/></td>
+        <td><img class="crSSTopIcon4 crSSIconNotActive" src="images/crSSIcon4.png" alt="Confirm Sale" /></td>
+      </tr>
+    </table>
+  </div>
+  <!-- end wrapper1 -->
+</div>
+<!-- end subHeader -->
+<div class="contentContainer">
+  <div class="wrapper1">
+    <div class="contentArea">
+      <div class="content">
+        <!--  Begin Content -->
+        <!-- Step 1 -->
+        <div class="crSSStep1">
+          <!-- Step 1 -->
+          <div class="titleShellForBtn">
+            <h1 class="createSsTitleWithBtn" id="createSsStepOneHead">The Basics</h1>
+          </div>
+          <form class="crSSForm1" method="post" action="javascript;">
+            <table class="createsSInputs1">
+              <tr class="createSsFanUpgradeRowRemove">
+                <td class="crSSLabels">First Name:</td>
+                <td class="crSSInputs required"><input type="text" class="crSSInput relationshipBase pageOneValiBlurs grabFirstName" name="firstName" /><br /><label class="rumpsError firstNameErrorLab">This field is required.</label></td>
+              </tr>
+              <tr class="createSsFanUpgradeRowRemove">
+                <td class="crSSLabels">Last Name:</td>
+                <td class="crSSInputs required"><input type="text" class="crSSInput pageOneValiBlurs relationshipBase grabLastName" name="lastName" /><br /><label class="rumpsError lastNameErrorLab">This field is required.</label></td>
+              </tr>
+              <tr>
+                <td class="crSSLabels">Artist / Band Name:</td>
+                <td class="crSSInputs required"><input type="text" class="crSSInput outBandName relationshipBase pageOneValiBlurs grabBandName" name="artistBandName" /><br /><label class="rumpsError bandErrorLab">This field is required.</label></td>
+              </tr>
+              <tr class="createSsFanUpgradeRowRemove">
+                <td class="crSSLabels">Email:</td>
+                <td class="crSSInputs"><input type="text" class="crSSInput relationshipBase outEmail pageOneValiBlurs grabEmail" name="email" />
+                  <br />
+                  <label class="crSSInputUnderMessage">Please provide the email of the contact who will be managing the sale.</label>
+                  <p class="bandAdminErrors" id="createSsEmailTakenError"></p></td>
+              </tr>
+              <tr class="createSsFanUpgradeRowRemove">
+                <td class="crSSLabels">Password:</td>
+                <td class="crSSInputs"><input type="password" class="crSSInput pageOneValiBlurs relationshipBase crSSConfPass" name="password" />
+                  <br />
+                  <label class="crSSInputUnderMessage">Use this password and email to check on the status of your social sale.</label></td>
+              </tr>
+              <tr class="createSsFanUpgradeRowRemove">
+                <td class="crSSLabels">Confirm Password:</td>
+                <td class="crSSInputs"><input type="password" class="crSSInput pageOneValiBlurs relationshipBase confirmPassword" /></td>
+              </tr>
+              <tr>
+                <td class="crSSLabels">Band Site URL:</td>
+                <td class="crSSInputs"><input type="text" class="crSSInput relationshipBase grabBandURL" name="bandURL" id="bandAdminWebsiteIn" value="http://www." />
+                  <p class="bandAdminErrors hiddenErrorLabels" id="bandAdminErrorLabelWebsite">Fix Address</p></td>
+              </tr>
+            </table>
+            <div class="crSSNextBackShell"> <img class="step1Done" src="images/chillNextButton.fw.png" alt="next step button" /> </div>
+            <!-- end crSSNextBackShell -->
+          </form>
+        </div>
+        <!-- end crSSStep1 -->
+        <!-- Step 2 -->
+        <div class="crSSStep2">
+          <!-- Step 2 -->
+          <h1 class="createSsTitle">Music Info</h1>
+          <form class="crSSForm2" method="post" action="javascript;">
+            <table class="createsSInputs1">
+              <tr>
+                <td class="crSSLabels"><span class="rightFloater">Album / EP Name:</span><!--<a href="#wtfFancyName" id="openWtfName"><div class="wtfButton"></div></a>--></td>
+                <td class="crSSInputs required"><input type="text" class="crSSInput outProd pageTwoValiBlurs relationshipBase grabProdName" name="productName" /></td>
+              </tr>
+              <tr>
+                <td class="crSSLabels"><span class="rightFloater">Artwork:</span><!--<a href="#wtfFancyArt" id="openWtfArt"><div class="wtfButton"></div></a>--></td>
+                <td class="crSSInputs"><div id="productImageUploaders">
+                    <input class="productImageUploader" value="Upload Image" type="button" />
+                  </div>
+                  <div class="uploadImageSizeInfo"><p>jpeg, png, gif. 260px X 260px is ideal.</p></div> 
+                  <noscript>
+                  <p>Please enable JavaScript to use file uploader.</p>
+                  <!-- or put a simple form for upload here -->
+                  </noscript>
+                  <p class="image1NotUploaded">Please Upload Image</p>
+                  <div id="productImageDiv"></div>
+                  <div id="productImageDivForEar"><img class="productImageDivHolder" src="images/earGif.gif" alt="Spinning Ear" /></div></td>
+              </tr>
+              <tr>
+                <td class="crSSLabels proTypeEyeCatcher">Your Music:</td>
+                <td class="crSSInputs crSSType">
+                  <div class="crSStypeDropShell">
+                    <div class="crSSStyleDropDigMus"> <a href="#trackListCreatePop" id="openTrackListCreatePop" class="crSSTrackListP">Create/Edit Tracklist</a>
+                      <p class="crSSTrackListHint">Create tracklist and upload digital music here</p>
+                      <div class="fakeClearer"></div>
+                    </div>
+                    <label class="specialDigUploadError">You have not added any tracks.</label>
+                    <!-- end crSStypeDropShell --->
+                    <!-- end crSSStyleDropDigMus -->
+                    <div class="crSSStyleDropPhysMus">
+                      <p class="crSSDigPurchLimP2 flatShipText">Flat Shipping Cost</p>
+                      <div class="crCustomInsSh chizz2">
+                        <input type="text" class="crCustomInput chizz1 takeFlatShip" />
+                        <p class="crCustomInpLab">$</p>
+                      </div>
+                      <a href="#trackListPhysicalCreatePop" id="openTrackListPhysPop">
+                      <p class="phyMusAddTrackList">Create/Edit Tracklist</p>
+                      </a>
+                      <div class="fakeClearer"></div>
+                      <p class="crSSDigPurchLimP purchLimitText">Purchase Limit</p>
+                      <input class="crSSInput4 crSSPhysMusPurchLimIn unlPurchSelector2 grabPhysPurchLim1" type="text" />
+                      <input class="crSSDigUnlimPurch unlPurch2" id="unlPhysPurch" type="checkbox" />
+                      <p class="crSSDigUnlimPurchP">
+                        <label for="unlPhysPurch"> Unlimited Purchases </label>
+                      </p>
+                      <div class="fakeClearer"></div>
+                    </div>
+                    <!-- end crSSStyleDropPhysMus -->
+                    </td>
+                    <input type="hidden" class="imageInput1Submitted" value="false" />
+                    <input type="hidden" class="imageInput1Completed" value="false" />
+                    <script type="text/javascript">
+                        var productImageId =0;
+                        function createProductImageUploader(){
+                            var ProductImageUploader = new qq.FileUploaderBasic({
+                                button: document.getElementById('productImageUploaders'),
+                                name: 'ProductImage',
+                                allowedExtensions: ['jpg', 'jpeg', 'gif', 'png'],
+                                action: 'request.php',
+                                params: {requestType: 'CreateAttachment', key:'qqfile'},
+                                debug: false,
+								sizeLimit: 2097152,
+								multiple: false,
+								onSubmit:function(){
+									$('.productImageDivHolder').slideDown();
+									$('.imageInput1Submitted').val('true');
+								},
+                                onComplete: function(id, fileName, response) {
+                                    if(typeof(response)=='number' || !isNaN(response)) {
+                                        productImageId = response;
+										$('.productImageDivHolder').slideUp(100);
+                                        $('#productImageDiv').html('<img class="productImageUploadedProductPreview" src="request.php?requestType=ServeAttachment&id='+response+'"/>');
+                                        $('.prodImgPre').attr('src', 'request.php?requestType=ServeAttachment&id='+response);
+										$('.imageInput1Completed').val('true');
+										$('.image1NotUploaded').hide();
+                                    } else {
+                                        alert("Could not upload image: "+response);
+                                    }
+
+                                }
+                            });
+                        }
+
+                        // in your app create uploader as soon as the DOM is ready
+                        // don't wait for the window to load
+                        addLoadEvent(createProductImageUploader);
+                    </script>
+                    <!-- end sizaQuantShell -->
+                    <div class="fakeClearer"></div>
+                  </div>
+
+
+              </tr>
+            </table>
+            <!-- end form table 2 step 2 -->
+            <div class="crSSNextBackShell">
+                <a class="step2Back noBorderPleaseStupidIE" href="javascript:;">
+                    <img class="noBorderPleaseStupidIE createSsBackButtons" src="images/backBtn.png"  alt="Back" />
+                </a> 
+                <div class="createSsCompactorShellFull">
+                	<img class="step2Done" src="images/chillNextButton.fw.png"  alt="Next" />
+                	<div class="createSsBtnLoadingShell">
+                    	<img class="spinningEarInCreateSsBtn" src="images/earGif.gif" />
+                	</div> 
+             	</div>
+          	</div>
+            <!-- end crSSNextBackShell -->
+            <!-- end crSSNextBackShell -->
+          </form>
+        </div>
+        <!-- end crSSStep2 -->
+        <!-- Step 3 -->
+        <div class="crSSStep3">
+          <!-- Step 3 -->
+          <h1 class="createSsTitle">Sale Structure</h1>
+          <form class="crSSForm3" method="post" action="javascript;">
+            <table class="createsSInputs1">
+              <tr>
+                <td class="crSSLabels">Sale Pricing:</td>
+                <td class="crSSInputs"><div class="salePricingShell">
+                    <div class="pricingTypeBtnsShell"> <a href="#crPrefSS" id="openCrPrefSS" class="prefBasedPricingBtn">Recommended<br />Sale Structure</a>
+                      <p class="pricingTypeBtnsOr">-Or-</p>
+                      <a href="#crCustomSS" id="openCrCustomSS" class="customPricingBtn">Custom<br />Sale Structure</a>
+                    </div>
+                    <!-- end pricingTypeBtnsShell -->
+                    <div class="salePriceStatement">
+                      <table class="rumpedSaleStructure">
+      	<tr>
+        	<td rowspan="2"><p class="rumpedSaleStructureStart">Starting Price<br /><span class="salePriceStPri"></span></p></td>
+            <td><p class="rumpedSaleStructureDecline1">Every participant reduces<br />the price by <span class="saleaPriceStDec"></span></p></td>
+            <td><p class="rumpedSaleStructureNeeded1"><span class="salePriceStToReach"></span> participants<br />needed to get to <span class="salePriceStLoPri"></span></p></td>
+            <td rowspan="2"><p class="rumpedSaleStructureLow">Lowest Price<br /><span class="salePriceStLoPri"></span></p></td>
+        </tr>
+        <tr class="rumpedSaleStructureBottomRow">
+        	<td><img class="rumpedSaleLittleMan" src="images/littleMan.png"  alt="Little Man"/><p class="rumpedSaleEqualsSign">=</p><img class="rumpedSaleLittleDownArrow" src="images/littleDownArrow.png" alt="Arrow Down" /><span class="saleaPriceStDec rumpedSaleStructureDec"></span></td>
+            <td><img class="rumpedSaleLittleMan" src="images/littleMan.png" alt="Little Man" /><p class="rumpedSaleXSymbol">x</p><span class="salePriceStToReach rumpedSaleStructureNumNeeded"></span></td>
+        </tr>
+      </table>
+                    </div>
+                    <!-- end salePriceStatement -->
+                    <label class="specialPriceError">Your pricing model does not work. Please fix it.</label>
+                  </div>
+
+                  <!-- end salePricingShell --></td>
+              </tr>
+              <tr>
+                <td class="crSSLabels saleEndsEyeCatcher"><span class="rightFloater">Sale End Date:</span><!--<a href="#wtfFancyDate" id="openWtfDate"><div class="wtfButton"/></div></a>--></td>
+                <td class="crSSInputs"><input type="text" class="crSSInput7 relationshipBase" id="datepicker" name="startDate" />
+                  <p class="salePerdidHint">Sale becomes active immediately.<br />
+                    Begin blasting your campaign whenever you want!<br />
+                    <span>We reccomend an active 10 day campaign period.</span></p></td>
+              </tr>
+            </table>
+            <h1 class="createSsTitle">Customize Sale Page</h1>
+            <table class="createsSInputs1">
+            <tr>
+              	
+              </tr>
+              <tr>
+               
+              </tr>
+              <tr>
+              	<td class="crSSLabels">Color Accent:</td><td><input type="text" value="#CCCC66" class="izzyColor izzyColorHider" id="accentColor" readonly="readonly" style="color:#fff;"><p class="colorChoiceSample">Example</p></td>
+              </tr>
+              <tr>
+                <td colspan="2"><!--<div id="logoImageDiv"></div>-->
+                <div class="logoImageDivHolderForEar"><span id="logoImageDiv"></span><img class="logoImageDivHolder" src="images/earGif.gif" alt="Spinning Ear" /></div><p class="image2NotUploaded">Please Upload Image</p></td>
+              </tr>
+              <tr>
+              	<td class="idealDimensionsLogoAndBG" colspan="2">Ideal dimensions are 1920px X 1080px</td>
+              </tr>
+              <tr>
+                <td class="crSSLabels"><span class="rightFloater">Background Image:</span><!--<a href="#wtfFancyBG" id="openWtfBG"><div class="wtfButton"></div></a>--></td>
+                <td class="crSSInputs"><div id="backgroundImageUploaders">
+                    <input class="productImageUploader" value="Upload Image" type="button" />
+                  </div></td>
+              </tr>
+              <tr>
+                <td colspan="2"><div class="backgroundImageDivHolderForEar"><span id="backgroundImageDiv"></span><img class="backgroundImageDivHolder" src="images/earGif.gif" alt="Spinning Ear" /></div><p class="image3NotUploaded">Please Upload Image</p></td>
+                </tr>
+               </table>
+               <input type="hidden" class="imageInput2Submitted" value="false" />
+               <input type="hidden" class="imageInput2Completed" value="false" />
+               <input type="hidden" class="imageInput3Submitted" value="false" />
+               <input type="hidden" class="imageInput3Completed" value="false" />
+                <!-- <tr>
+
+           <td class="crSSLabels"></td>
+              <td class="crSSInputs">
+
+            <input class="chooseStockBGDrop" id="stockImgChoose" type="checkbox" />
+              <label for="stockImgChoose">
+
+            Or select one of our backgrounds
+              </label>
+              </td>
+
+              </tr>
+
+            <tr>
+              <td colspan="2"><div class="chooseStockBGShell">
+                  <table class="chooseStockBGTable">
+                    <tr>
+                      <td><img class="chooseStockBGImg" src="images/backG1.jpg" /></td>
+                      <td><img class="chooseStockBGImg" src="images/backG1.jpg" /></td>
+                      <td><img class="chooseStockBGImg" src="images/backG1.jpg" /></td>
+                      <td><img class="chooseStockBGImg" src="images/backG1.jpg" /></td>
+                    </tr>
+                    <tr>
+                      <td><img class="chooseStockBGImg" src="images/backG1.jpg" /></td>
+                      <td><img class="chooseStockBGImg" src="images/backG1.jpg" /></td>
+                      <td><img class="chooseStockBGImg" src="images/backG1.jpg" /></td>
+                      <td><img class="chooseStockBGImg" src="images/backG1.jpg" /></td>
+                    </tr>
+                    <tr>
+                      <td><img class="chooseStockBGImg" src="images/backG1.jpg" /></td>
+                      <td><img class="chooseStockBGImg" src="images/backG1.jpg" /></td>
+                      <td><img class="chooseStockBGImg" src="images/backG1.jpg" /></td>
+                      <td><img class="chooseStockBGImg" src="images/backG1.jpg" /></td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+                <!-- end chooseStockBGShell -->
+
+                <!-- </tr> -->
+            <script type="text/javascript">
+            var BackgroundImageId =0;
+            function createBackgroundImageUploader(){
+                var BackgroundImageUploader = new qq.FileUploaderBasic({
+                    button: document.getElementById('backgroundImageUploaders'),
+                    name: 'ProductImage',
+                    allowedExtensions: ['jpg', 'jpeg', 'gif', 'png'],
+                    action: 'request.php',
+                    params: {requestType: 'CreateAttachment', key:'qqfile'},
+                    debug: false,
+					sizeLimit: 2097152,
+					multiple: false,
+					onSubmit:function(){
+									$('.backgroundImageDivHolder').slideDown();
+									$('.imageInput3Submitted').val('true');
+									$('.image3NotUploaded').hide();
+					},
+                    onComplete: function(id, fileName, response) {
+                        if(typeof(response)=='number' || !isNaN(response)) {
+                            BackgroundImageId = response;
+							$('.backgroundImageDivHolder').slideUp(100);
+                            $('.bGImagePre').attr('src', 'request.php?requestType=ServeAttachment&id='+response);
+                            $('#backgroundImageDiv').html('<img class="productImageUploadedBackgroundPreview" src="request.php?requestType=ServeAttachment&id='+response+'"/>');
+							$('.imageInput3Completed').val('true');
+                        } else {
+                            alert("Could not upload image: "+response);
+                        }
+
+                    }
+                });
+            }
+            // in your app create uploader as soon as the DOM is ready
+            // don't wait for the window to load
+            addLoadEvent(createBackgroundImageUploader);
+          </script>
+            <div class="crSSNextBackShell noBorderPleaseStupidIE"> <a class="step3Back noBorderPleaseStupidIE" href="javascript:;"><img src="images/backBtn.png" class="noBorderPleaseStupidIE createSsBackButtons" alt="Back" /></a> <img class="step3Done" src="images/chillNextButton.fw.png" alt="Next"/> </div>
+            <!-- end crSSNextBackShell -->
+            <!-- end crSSNextBackShell -->
+          </form>
+        </div>
+        <!-- end crSSStep3 -->
+        <!-- Step 4 -->
+        <div class="crSSStep4">
+          <!-- Step 4 -->
+          <h1 class="createSsTitle">Confirm / Edit Your Sale!</h1>
+          <form class="crSSForm4" method="post" action="javascript;" >
+            <table class="createsSInputs1">
+              <tr class="createSsFanUpgradeRowRemove createSsBandRowRemove">
+                <td class="crSSLabels">Email:</td>
+                <td class="crSSInputs"><input type="text" class="crSSInput pageFourValiBlurs takeEmail" name="email" />
+                  <br />
+                  <label class="crSSInputUnderMessage">Please provide the email of the contact who will be managing the sale.</label></td>
+              </tr>
+              <tr>
+                <td class="crSSLabels">Album / EP Name:</td>
+                <td class="crSSInputs required"><input type="text" class="crSSInput pageFourValiBlurs takeProdName" name="productName" /></td>
+              </tr>
+              <tr>
+                <td class="crSSLabels">Artwork:</td>
+                <td class="crSSInputs"><img class="prodImgPre" alt="Artwork Preview" src="" /><br /></td>
+
+                  <!--<input class="crSSFileUp putPlace1" type="file" /></td>-->
+              </tr>
+              <tr>
+                <td class="crSSLabels">Your Music:</td>
+                <td class="crSSInputs crSSType">
+                  <div class="crSStypeDropShell crSSTypeConfirmInputer">
+                  <div class="crSStypeDropShell">
+                    <div class="crSSStyleDropDigMus2"> <a href="#trackListCreatePop" id="openTrackListCreatePop2" class="crSSTrackListP">View/Edit Tracklist</a>
+                      <p class="crSSTrackListHint">Create tracklist and upload digital music here</p>
+                      <div class="fakeClearer"></div>
+                    </div>
+                    <!-- end crSSStyleDropDigMus -->
+                    <div class="crSSStyleDropPhysMus2">
+                      <p class="crSSDigPurchLimP2 flatShipText">Flat Shipping Cost</p>
+                      <div class="crCustomInsSh chizz2">
+                        <input type="text" class="crCustomInput chizz1 grabFlatShip" />
+                        <p class="crCustomInpLab">$</p>
+                      </div>
+                      <a href="#trackListPhysicalCreatePop" id="openTrackListPhysPop2" class="phyMusAddTrackList">View/Edit Tracklist</a>
+                      <div class="fakeClearer"></div>
+                      <p class="crSSDigPurchLimP purchLimitText">Purchase Limit</p>
+                      <input class="crSSInput4 crSSPhysMusPurchLimIn unlPurchSelector2 takePhysPurchLim1" type="text" />
+                      <input class="crSSDigUnlimPurch unlPurch2 takePhysPurchUnl" id="unlPhysPurchPage4" type="checkbox" />
+                      <p class="crSSDigUnlimPurchP">
+                        <label for="unlPhysPurchPage4">Unlimited Purchases</label>
+                      </p>
+                      <div class="fakeClearer"></div>
+                    </div>
+                    <!-- end crSSStyleDropPhysMus -->
+                  </div>
+
+                  <!-- end crSStypeDropShell -->
+                  </td>
+              </tr>
+              <tr>
+                <td class="crSSLabels">Sale Pricing:</td>
+                <td class="crSSInputs"><div class="salePricingShell">
+                    <div class="pricingTypeBtnsShell"> <a href="#crPrefSS" id="openCrPrefSS2" class="prefBasedPricingBtn">Recommended<br />Sale Structure</a>
+                      <p class="pricingTypeBtnsOr">-Or-</p>
+                      <a href="#crCustomSS" id="openCrCustomSS2" class="customPricingBtn">Create Custom<br />Sale Structure</a>
+                   </div>
+                    <!-- end pricingTypeBtnsShell -->
+                    <div class="salePriceStatement indiSalePriceStateErrorCheck">
+                      <table class="rumpedSaleStructure">
+      	<tr>
+        	<td rowspan="2"><p class="rumpedSaleStructureStart">Starting Price<br /><span class="salePriceStPri salePriceStPriGrab" id="salePriceStPriGrab"></span></p></td>
+            <td><p class="rumpedSaleStructureDecline1">Every participant reduces<br />the price by <span class="saleaPriceStDec saleaPriceStDecGrab" id="saleaPriceStDecGrab"></span></p></td>
+            <td><p class="rumpedSaleStructureNeeded1"><span class="salePriceStToReach"></span> participants<br />needed to get to <span class="salePriceStLoPri salePriceStLoPriGrab"></span></p></td>
+            <td rowspan="2"><p class="rumpedSaleStructureLow">Lowest Price<br /><span class="salePriceStLoPri" id="salePriceStLoPri"></span></p></td>
+        </tr>
+        <tr class="rumpedSaleStructureBottomRow">
+        	<td><img class="rumpedSaleLittleMan" src="images/littleMan.png" alt="Little Man" /><p class="rumpedSaleEqualsSign">=</p><img class="rumpedSaleLittleDownArrow" src="images/littleDownArrow.png" alt="Arrow Down" /><span class="saleaPriceStDec rumpedSaleStructureDec"></span></td>
+            <td><img class="rumpedSaleLittleMan" src="images/littleMan.png" alt="Little Man" /><p class="rumpedSaleXSymbol">x</p><span class="salePriceStToReach rumpedSaleStructureNumNeeded"></span></td>
+        </tr>
+      </table>
+
+                    </div>
+                    <!-- end salePriceStatement -->
+                  </div>
+
+                  <!-- end salePricingShell --></td>
+              </tr>
+              <tr>
+                <td class="crSSLabels saleEndsEyeCatcher">Sale End Date:</td>
+                <td class="crSSInputs"><input type="text" class="crSSInput7" id="datepicker3" name="startDate" />
+                <input type="hidden" id="datePickerFinal" />
+                  <p class="salePerdidHint chizz6">Sale becomes active immediately.<br />
+                    Begin blasting your campaign whenever you want!<br />
+                    <span>We recommend an active 10 day campaign period.</span></p></td>
+              </tr>
+              <tr>
+                <td class="crSSLabels">Background Image:</td>
+                <td class="crSSInputs"><img class="bGImagePre" src="" alt="Preview Background" /></td>
+                  <!--<input class="crSSFileUp chizz5" type="file" /></td>-->
+              </tr>
+              <tr>
+                <td></td>
+                <td class="crSSInputs"><input class="termsCheckBox termsOfServiceValid relationshipBase" type="checkbox" id="termsOfService" />
+                  <label class="termsCheckP termsOfServiceValText" for="termsOfService">I agree to the <a href="#generalTermsAndCond" id="openBandTermsOfService"><span>Social Sale Terms of Service</span></a></label>
+                  <br />
+                  <input class="termsCheckBox understandCantChangeValid" type="checkbox" id="termsCheckBox" />
+                  <label class="termsCheckP unsterstandCantChangeText" for="termsCheckBox">I understand once the social sale is created no changes can be made.</label></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><div id="newError"/></td>
+              </tr>
+            </table>
+            <div class="crSSNextBackShell">
+            	<a class="step4Back" href="javascript:;">
+                	<img src="images/backBtn.png" alt="Back" class="createSsBackButtons" />
+              	</a> 
+                
+                <div class="createSsCompactorShellFull">
+                	<img class="step4Done createSSFinalBtn" src="images/chillCreateSaleBtn.fw.png" alt="Next" />
+                	<div class="createSsBtnLoadingShell">
+                    	<img class="spinningEarInCreateSsBtn" src="images/earGif.gif" />
+                	</div> 
+             	</div>
+                
+                
+                
+          	</div>
+            <!-- end crSSNextBackShell -->
+            <!-- end crSSNextBackShell -->
+          </form>
+        </div>
+        <!-- end crSSStep4 -->
+        <!-- End Content -->
+      </div>
+      <!-- end content -->
+    </div>
+    <!-- end contentArea -->
+  </div>
+  <!-- end wrapper1 -->
+  <div class="rockstarShell">
+  	<div class="rockstarSil"></div>
+    <div class="rockstarFull"></div>
+  </div>
+  <div class="audioUploadStatusShell">
+  	<a href="#trackListCreatePop" id="openTrackListCreatePop3"><p><span class="audioUploadsNumberComplete">0</span> of <span class="audioUploadsNumberPending">0</span> tracks uploaded</p></a>
+  </div> <!-- end audioUploadStatusShell -->
+  <!-- end rockstarShell -->
+</div>
+<!-- end contentContainer -->
+<div class="hiddenShell">
+  <!-- Track List Input -->
+  <div id="trackListCreatePop">
+    <h1 class="enterTrackListTitle">Tracklist</h1>
+    <p class="enterTrackListSaveBtn">Save</p>
+    <div class="fakeClearer"></div>
+    <div class="enterTrackAddTrack2">
+    <div class="buttonProtectorsWudup"></div>
+      <div id="file-uploader-demo1">
+        <noscript>
+        <p>Please enable JavaScript to use file uploader.</p>
+        <!-- or put a simple form for upload here -->
+        </noscript>
+      </div>
+      <script type="text/javascript">
+        var digitalMusicTrackIds = {};
+        function createTrackListUploader(){
+            var TrackListUploader = new qq.FileUploader({
+            	element: document.getElementById('file-uploader-demo1'),
+		name: 'DigitalTrack',
+                allowedExtensions: ['mp3'],
+                action: 'request.php',
+                params: {requestType: 'CreateAttachment', key:'qqfile'},
+                debug: false,
+				sizeLimit: 10485760,
+				multiple: false,
+				onComplete: function(id, fileName, response){
+                                    digitalMusicTrackIds[id] = response;
+				//This is where you will set some hidden input value to the imageID based on responseJSON
+//				document.getElementById('imageid').value = 30;
+				//alert(response);
+
+				}
+
+            });
+
+        }
+
+        // in your app create uploader as soon as the DOM is ready
+        // don't wait for the window to load
+        addLoadEvent(createTrackListUploader);
+    </script>
+      <input type="hidden" id="digitalHiddenTrackCount" value="0" />
+      <p class="enterTracksFilesSupported">Only MP3 files are supported. Max size 10 mb<br /><span>File too large? <a href="#" target="_blank">Try this file compressor</a></p>
+    </div>
+    <!-- end enterTrackAddTrack -->
+  </div>
+  <!-- end trackListCreatePop -->
+
+
+
+  <div id="trackListPhysicalCreatePop">
+    <h1 class="enterTrackListTitle">Tracklist</h1>
+    <p class="enterTrackListSaveBtn">Save</p>
+    <div class="fakeClearer"></div>
+    <div class="enterTrackTableShell" >
+      <table class="enterTrackTable" id="enterPhysicalTrackTable">
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <!-- end enterTrackTableShell -->
+    <div class="enterTrackAddTrack2">
+      <input class="crSSInput5 physTrackTitleIn" type="text" id="newPhysicalTrackTitle" value="Track Title" />
+      <p class="enterTracksAddTrackBtn" id="enterTracksPhysicalAddTrackBtn">+ Add Track</p>
+    </div>
+    <!-- end enterTrackAddTrack -->
+  </div>
+  <!-- end trackListCreatePop -->
+  <input type="hidden" id="physicalTrackCount" value="0" />
+  <!-- Custom Sale -->
+  <div id="crCustomSS">
+    <h1>Custom Sale Structure</h1>
+    <table class="crCustomSaleTable">
+      <tr>
+        <td><div class="crCustomInsSh">
+            <input type="text" class="crCustomInput pageThreeValiBlurs crCDStart" />
+            <p class="crCustomInpLab">$</p>
+          </div></td>
+        <td>Start Price</td>
+        <td><div class="crCustomInsSh">
+            <input type="text" class="crCustomInput pageThreeValiBlurs crCDEnd" />
+            <p class="crCustomInpLab">$</p>
+          </div></td>
+        <td>Lowest Price</td>
+      </tr>
+      <tr>
+        <td><div class="crCustomInsSh">
+            <input type="text" class="crCustomInput pageThreeValiBlurs crCDDec" />
+            <p class="crCustomInpLab">$</p>
+          </div></td>
+        <td>Deducted Per Purchase</td>
+        <td><p class="crCustomInsP">0</p></td>
+        <td>Purcases To Reach Lowest Price</td>
+      </tr>
+    </table>
+    <p class="crCustomSave">Save</p>
+    <p class="crCustomCalc">Calculate</p>
+  </div>
+  <!-- end crCustomSS -->
+  <div id="crPrefSS">
+    <h1>Recommended Sale Structure</h1>
+    <p class="prefBSSTits">What is the average number of units you sell per release?</p>
+    <input type="text" class="pageThreeValiBlurs prefBSSPastSale" />
+    <p class="prefBSSTits">Select retail value (starting price) for this sale:</p>
+    <div class="prefBSSCielingShell">
+      <input type="text" class="pageThreeValiBlurs prefBSSCieling" />
+      <p class="prefBSSCielingMoney">$</p>
+    </div>
+    <!-- end prefBSSCielingShell -->
+    <p class="prefBSSCalcBtn">Calculate</p>
+    <div class="salePriceStatement">
+
+      <table class="rumpedSaleStructure">
+      	<tr>
+        	<td rowspan="2"><p class="rumpedSaleStructureStart">Starting Price<br /><span class="salePriceStPri"></span></p></td>
+            <td><p class="rumpedSaleStructureDecline1">Every participant reduces<br />the price by <span class="saleaPriceStDec"></span></p></td>
+            <td><p class="rumpedSaleStructureNeeded1"><span class="salePriceStToReach"></span> participants<br />needed to get to <span class="salePriceStLoPri"></span></p></td>
+            <td rowspan="2"><p class="rumpedSaleStructureLow">Lowest Price<br /><span class="salePriceStLoPri"></span></p></td>
+        </tr>
+        <tr class="rumpedSaleStructureBottomRow">
+        	<td><img class="rumpedSaleLittleMan" src="images/littleMan.png" alt="Little Man" /><p class="rumpedSaleEqualsSign">=</p><img class="rumpedSaleLittleDownArrow" src="images/littleDownArrow.png" alt="Arrow Down" /><span class="saleaPriceStDec rumpedSaleStructureDec"></span></td>
+            <td><img class="rumpedSaleLittleMan" src="images/littleMan.png" alt="Little Man" /><p class="rumpedSaleXSymbol">x</p><span class="salePriceStToReach rumpedSaleStructureNumNeeded"></span></td>
+        </tr>
+      </table>
+      
+      <div class="wtfBush" id="wtfBushRecomendedHelp"></div> 
+    </div>
+    <!-- end salePriceStatement -->
+    <div class="fakeClearer"></div>
+    <p class="prefBSSSuggestBtn">Use Structure</p>
+    <p class="prefBSSOr">Or</p>
+    <p class="prefBSSGoCustomBtn">Customize Structure</p>
+    <div class="crPreSSDescriptionShell" id="crPreSSDescriptionShell">
+      <p class="prefDescrHead">Your Social Sale Pricing Described</p>
+      <p class="prefDescribed">Your Social Sale will begin at <span class="salePriceStPri"></span>. Every time one of your fans participates in the sale the price will decrease <span class="saleaPriceStDec"></span> for everyone. If <span class="salePriceStToReach"></span> of your fans participate in the sale, the price everyone will pay becomes <span class="salePriceStLoPri"></span>. Once the sale has reached that lowest possible price, fans can still partipicate but will not lower the price of the sale any further.<br />
+        <br />
+        By using a Social Sale you are attracting your fans to this direct-to-fan world and gaining valuable emails and zip codes from your fanbase which powers the success of your music career. Friends don't let friends sell music on iTunes!</p>
+      <p id="crePreSSDescrCloseHelp" class="crePreSSDescrCloseHelp">Close Help</p>
+    </div>
+    <!-- end crPreSSDescriptionShell -->
+  </div>
+  <!-- end crPrefSS -->
+  <img src="images/socialSaleStaticNameEx.jpg" id="wtfFancyName" alt="WTF" /> <img src="images/socialSaleStaticLogoEx.jpg" id="wtfFancyLogo" alt="WTF" /> <img src="images/socialSaleStaticDescEx.jpg" id="wtfFancyDesc" alt="WTF" /> <img src="images/socialSaleStaticArtEx.jpg" id="wtfFancyArt" alt="WTF" /> <img src="images/socialSaleStaticBGEx.jpg" id="wtfFancyBG" alt="WTF" />
+  <div class="wtfDatDescriptionBox" id="wtfFancyDate">
+    <h1>Sale End Date</h1>
+    <p>At 12 AM on the date you choose, this Social Sale will end and the final price at that moment will be the price transacted from each participant. (We store each participants billing info until the end date)</p>
+  </div>
+  <!-- end wtfDatDescriptionBox -->
+  <div id="bandTermsOfService">
+  	<p>
+    	This is the terms of service for now. Gonna change!
+    </p>
+  </div>
+</div>
+<!-- end hiddenShell -->
+<script type="text/javascript">
+$(document).ready(function() {
+	/*var onloadReadyToLeave = 0;
+    $(window).bind('beforeunload', function(){
+		return 'If you leave this page before sale is finished being created you will lose all data for this sale. \nUse arrows at the bottom of pages to navigate sale creation.';
+	});*/
+	$('#openWtfName').fancybox();
+	$('#openWtfLogo').fancybox();
+	$('#openWtfDesc').fancybox();
+	$('#openWtfArt').fancybox();
+	$('#openWtfBG').fancybox();
+	$('#openWtfDate').fancybox();
+	$('#openWtfMedia').fancybox();
+	$('#openBandTermsOfService').fancybox();
+	
+	if (navigator.appName == 'Microsoft Internet Explorer'){
+		$('.crSSStep1, .crSSStep2, .crSSStep3, .crSSStep1').remove();
+		$('.content').append('<div class="cantUseIe4CreateSs"><h1>Software not supported by Internet Explorer</h1><br><h2>Please use another browser to create a sale. We are currently updating the software for Internet Explorer, sorry for the inconvenience.<br><br>Please use one of the preferred browsers below:<br><br><a href="http://www.google.com/chrome">Chrome</a><br><a href="http://www.mozilla.org">Firefox</a><br><a href="http://www.opera.com/download/">Opera</a></h2><img src="images/IESucks.png" /></div>');
+	}
+});
+</script>

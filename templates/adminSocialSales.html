@@ -1,0 +1,45 @@
+<div class="contentContainer">
+  <div class="wrapper1">
+    <div class="contentArea">
+      <div class="content">
+        <p class="zillsAdminHeaders">Social Sales</p>
+        <table class="zillsAdminSingleSoSaTable1">
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">Total All</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Total Active</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Total Expired</td>
+          </tr>
+          <tr>
+            <td class="zillsAdminSingleSoSaTableRight"><?php echo $this->totalSales; ?></td>
+            <td class="zillsAdminSingleSoSaTableRight"><?php echo $this->totalActiveSales; ?></td>
+            <td class="zillsAdminSingleSoSaTableRight"><?php echo $this->totalExpiredSales; ?></td>
+          </tr>
+        </table>
+        <table class="zillsAdminSingleSoSaTable4">
+          <tr class="zillsAdminTableRowCentered">
+              <td class="zillsAdminSingleSoSaTableLeft <?php if($this->show=='all') { ?> zillsAdminTableNavSelected <?php } ?>"><a href="adminSocialSales&show=all">All</a></td>
+            <td class="zillsAdminSingleSoSaTableLeft <?php if($this->show=='active') { ?> zillsAdminTableNavSelected <?php } ?>"><a href="adminSocialSales&show=active">Active</a></td>
+            <td class="zillsAdminSingleSoSaTableLeft <?php if($this->show=='expired') { ?> zillsAdminTableNavSelected <?php } ?>"><a href="adminSocialSales&show=expired">Expired</a></td>
+          </tr>
+        </table>
+        <table class="zillsAdminSingleSoSaTable4">
+          <tr>
+            <td class="zillsAdminSingleSoSaTableLeft">SoSa ID</td>
+            <td class="zillsAdminSingleSoSaTableLeft">SoSa Name</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Band Name</td>
+            <td class="zillsAdminSingleSoSaTableLeft"># Of Fans</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Start $</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Lowest $</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Current $</td>
+            <td class="zillsAdminSingleSoSaTableLeft">Status</td>
+          </tr>
+          <?php echo $this->salesRows; ?>
+        </table>
+      </div>
+      <!-- end content --> 
+    </div>
+    <!-- end contentArea --> 
+  </div>
+  <!-- end wrapper1 --> 
+</div>
+<!-- end contentContainer -->

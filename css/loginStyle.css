@@ -1,0 +1,396 @@
+@charset "utf-8";
+/* CSS Document */
+input{
+	font-size:20px;
+	color:#222;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.loggsShell{
+	position:relative;
+	width:545px;
+	height:283px;
+	overflow:hidden;
+}
+.loggsSlidingFrame{
+	position:absolute;
+	top:0px;
+	left:-545px;
+	width:1635px;
+}
+.loggsSignInShell{
+	width:545px;
+	height:283px;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.loggsSignInShell h1, .loggsRegisterShell h1, .loggsForgotShell h1{
+	position:relative;
+	margin:10px auto;
+	text-align:center;
+	font-size:30px;
+}
+.loggsSignInShell h2, .loggsRegisterShell h2, .loggsForgotShell h2{
+	position:absolute;
+	top:22px;
+	right:154px;
+	font-size:14px;
+	font-weight:normal;
+}
+.loggsForgotShell h2{
+	right:75px !important;
+}
+.loggsSignInShell h2 span:hover, .loggsRegisterShell h2 span:hover, .loggsForgotShell h2 span:hover{
+	color:#018f46;
+	cursor:pointer;
+}
+.loggsRegisterShell{
+	width:545px;
+	height:283px;
+	position:absolute;
+	top:0px;
+	left:545px;
+	overflow:hidden;
+}
+.signinEmailShell, .signinPassShell{
+	width:480px;
+	height:42px;
+	background-color:#fff;
+	border-radius:10px;
+	position:relative;
+	margin:20px auto;
+}
+input.signinEmailInput, input.signinPassInput, .registerRow input{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background-color:transparent;
+	border:none;
+	outline:none;
+	margin:0px 15px;
+	z-index:2;
+}
+p.loginPassBacks{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	margin:10px 15px;
+	text-align:left;
+	font-size:20px;
+	color:#222;
+	z-index:1;
+}
+.inputCapFirstLetter{
+	text-transform:capitalize;
+}
+.signinSubmit, .registerSubmit{
+	position:relative;
+	background-color:#018f46;
+	border-radius:10px;
+	color:#fff;
+	margin:0 0 0 33px;
+	padding:9px 60px;
+	font-size:20px;
+	border:none;
+	outline:none;
+	cursor:pointer;
+}
+p.forgotPassSubmitBtn{
+	position:relative;
+	background-color:#018f46;
+	border-radius:10px;
+	color:#fff;
+	margin:0 0 0 33px;
+	padding:9px 0;
+	font-size:20px;
+	border:none;
+	outline:none;
+	cursor:pointer;
+	width:230px;
+	text-align:center;
+}
+.signinSubmit:hover, .registerSubmit:hover{
+	color:#018f46;
+	background-color:#fff;
+}
+ul.loginErrorBox{
+	float:right;
+	width:270px;
+	height:50px;
+	margin:0px;
+	font-size:12px;
+	color:#F00;
+	text-shadow:1px 1px #000;
+}
+ul.loginErrorBox li{
+	float:left;
+	padding:0 10px 0 0;
+	margin:0 0 0 15px;
+}
+.poweredByZillsShell{
+	position:relative;
+	margin:20px auto;
+	width:185px;
+}
+.poweredByZillsShell p{
+	font-size:12px;
+	float:left;
+	margin:5px 0 0 0;
+}
+.poweredByZillsShell img{
+	float:right;
+}
+.registerRow{
+	width:480px;
+	height:42px;
+	position:relative;
+	margin:20px auto;
+}
+.registerRowLeft{
+	float:left;
+	width:232px;
+	height:100%;
+	background-color:#fff;
+	border-radius:10px;
+}
+.registerRowRight{
+	float:right;
+	width:232px;
+	height:100%;
+	background-color:#fff;
+	border-radius:10px;
+}
+p.forgotPassBtn{
+	position:absolute;
+	top:235px;
+	left:74px;
+	font-size:11px;
+	cursor:pointer;
+}
+p.forgotPassBtn:hover{
+	color:#018f46;
+}
+.loggsForgotShell{
+	width:545px;
+	height:283px;
+	position:absolute;
+	top:0px;
+	left:1090px;
+}
+/**************************************** static login page ***********************/
+#login{
+	width:434px;
+	height:273px;
+	background-color:#1E1E1;
+	padding-top:10px;
+	position:relative;
+}
+
+#register{
+	width:434px;
+	background-color:#1E1E1;
+	padding-top:10px;
+}
+.loginEmailShell{
+	width:338px;
+	height:50px;
+	margin:15px 0;
+	position:relative;
+}
+input.boringLoginEmail{
+	width:338px;
+	height:45px;
+	border:none;
+	border-radius:8px;
+	padding-left:15px;
+	color:#333;
+	font-size:16px;
+}
+input.boringLoginPass{
+	width:338px;
+	height:45px;
+	border:none;
+	border-radius:8px;
+	padding-left:15px;
+	color:#333;
+	font-size:16px;
+	background-color:transparent;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:2;
+}
+p.loginPassLab{
+	width:338px;
+	height:34px;
+	border:none;
+	border-radius:8px;
+	padding:13px 0 0 15px;
+	color:#333;
+	font-size:16px;
+	background-color:#FFF;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:1;
+}
+input.loginSub{
+	width:157px;
+	background-color:#018f46;
+	padding:4px 0;
+	border-radius:6px;
+	text-shadow:1px 1px 2px #000;
+	float:left;
+	font-size:14px;
+	text-align:center;
+	margin:10px 0 15px 0;
+	color:#FFF;
+	border:none;
+	position:relative;
+	float:left;
+	cursor:pointer;
+}
+input.loginSub:hover{
+	color:#000;
+	background-color:#fff;
+	text-shadow:none;
+}
+img.boringLoginErrorArrow{
+	position:absolute;
+	top:18px;
+	left:-24px;
+	display:none;
+}
+p.boringErrorMessage{
+	position:relative;
+	font-size:14px;
+	color:#F00;
+	height:0px;
+	top:-13px;
+}
+p.loginOr{
+	float:left;
+	margin:14px 10px 0 10px;
+	font-size:12px;
+	position:relative;
+}
+p.loginForgotPass{
+	float:left;
+	text-decoration:underline;
+	color:#00cc00;
+	margin:13px 10px 10px 2px;
+	font-size:12px;
+}
+p.boringLoginForgotPass{
+	float:right;
+	text-decoration:underline;
+	color:#00cc00;
+	bottom:-14px;
+	right:0px;
+	font-size:12px;
+	position:absolute;
+}
+.boringLoginKeepMeloggedInShell{
+	position:relative;
+	width:200px;
+}
+.loginForgotPass a:visited {
+    color:#018f46;
+}
+.loginForgotPass a:link {
+    color:#018f46;
+}
+input.boringLoginKeepLog{
+	position:relative;
+	float:left;
+}
+label.loginKeepLogP{
+	font-size:12px;
+	margin:0 0 15px 7px;
+	top:2px;
+	position:relative;
+	color:#fff;
+}
+.loginFBShell{
+	width:100%;
+	background-color:#000;
+	height:45px;
+	border-radius:8px;
+	position:relative;
+}
+.loginFBShell p{
+	position:absolute;
+	top:0px;
+	left:0px;
+	padding:13px;
+	font-size:16px;
+}
+.loginFBShell img{
+	position:absolute;
+	top:0px;
+	right:0px;
+	padding:12px;
+}
+.boringLoginErrorFace{
+	position:relative;
+}
+.boringLoginErrorFaceHolder{
+	min-height:95px;
+}
+img.boringLoginErrorFaceImg{
+	position:absolute;
+	top:10px;
+	left:28px;
+}
+p.boringLoginErrorTextBox{
+	background-color:#F00;
+	padding:6px;
+	border-radius:15px;
+	width:236px;
+	position:relative;
+	left:131px;
+	top:10px;
+}
+p.boringLoginMessage{
+	position:relative;
+	width:330px;
+	left:38px;
+}
+.boringLoginBottomShell{
+	position:relative;
+	height:52px;
+}
+.resetPasswordComleteBox{
+	width:400px;
+	height:200px;
+	text-align:center;
+}
+.resetPasswordComleteBox h1{
+	font-size:22px;
+	padding-top:20px
+}
+.resetPasswordComleteBox img{
+	margin:30px auto 0 auto;
+}
+/********************************* social media share ******************/
+.userAdminShareMediaBtnHolders img{
+	cursor:pointer;
+	padding-right:40px;
+	position:relative;
+	margin:0 22px;
+	display:inline;
+}
+.userAdminShareMediaBtnHolders{
+	position:relative;
+	margin:30px auto;
+	width:260px;
+}
+/***************************** Wavy ****************/
+img.adminOnlyWavyMan{
+	position:fixed;
+	top:5px;
+	left:5px;
+	z-index:99999;
+}

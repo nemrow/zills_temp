@@ -1,0 +1,161 @@
+<body>
+<div class="checkoutFrame">
+  <div class="checkoutFrameTransBack"></div>
+  <div class="checkoutShell">
+    <?php if($this->boughtSale) { echo "
+    <p class='checkoutAlreadyBoughtHeader'>You already bought this sale!</p>
+    <p class='checkoutAlreadyBoughtSubtext'>Share this sale with your friends and save <span>$$$.</span> Seriously!</p>
+
+	<div class='userAdminShareMediaBtnHolders'> <a onclick='postToFeed(
+    
+    \"https://www.zillionears.com/autoClose.html\",
+    \"https://www.{$this->fullURL}\",
+    \"{$this->productImg}\",
+    \"I participated in {$this->artistName}&#39;s Social Sale!\",
+    \"zillionears.com\",
+    \"Get your hands on {$this->artistName}&#39;s release of {$this->productTitle} for as low as &#36;{$this->lowPrice}! The more people that join in on the Social Sale, the lower the price becomes!\"
+      
+    ); return false;'> <img src=\"images/shareFB.jpg\" class=\"\" /></a> <a href=\"https://twitter.com/share\" class=\"twitter-share-button\" 
+    data-lang=\"en\" 
+    data-count=\"none\" 
+    data-url=\"http://www.{$this->fullURL}\" 
+    data-size=\"large\" 
+    data-text=\"I just got into {$this->artistName}&#39;s Social Sale! Help me drive the price down! It can get to &#36;{$this->lowPrice}!\"> </a> 
+    </div>
+    <!-- end userAdminShareMediaBtnHolders -->
+	<script> 
+      FB.init({appId: '521484751209611', status: true, cookie: true});
+
+      function postToFeed(redirector,linkposter,pic,title,cap,desc) {
+        // calling the API ...
+        var obj = {
+          method: 'feed',
+          redirect_uri: redirector,
+          link: linkposter,
+          picture: pic,
+          name: title,
+          caption: cap,
+          description: desc
+        };
+
+        function callback(response) {
+          document.getElementById('msg').innerHTML = 'Post ID: ' + response['post_id'];
+        }
+
+        FB.ui(obj, callback);
+      }
+    
+    </script>
+    <p class='checkoutAlreadyBoughtURL'>Share URL: <span class='checkoutAlreadyBoughtURLSpan1'>www.zillionears.com/socialsale&amp;id={$_GET['id']}</span>
+    <a class='checkoutAlreadyBoughtBackToSale' href='socialsale&amp;id={$_GET['id']}'>&lt;&lt; Back to the Sale</a>
+    
+    "; } else { echo "
+    
+    <h2>{$this->artistName}</h2>
+    <h1>{$this->productTitle}</h1>".
+    (($this->saleExpired) ? "
+    
+    <h2>This Sale Is Over!</h2><br>
+    <h1>You cannot join a Social Sale<br>after the sale is over</h1>
+    
+    " : "
+    
+    <a class='checkoutPageAmznBtn' href='".(($this->hasRecipientRegToken > 0)? "{$this->amazonLink}'>Checkout with Amazon" : "javascript:'>Sale is no active yet")."</a>
+    <div class='preAmznCheckoutFAQ1'>
+      <p><span class='inSaleFAQOpen inSaleFAQ1'>How much am I actually paying?</span><br />
+        <br />
+        <span class='inSaleFAQOpen inSaleFAQ2'>When do I get charged?</span><br />
+        <br />
+        <span class='inSaleFAQOpen inSaleFAQ3'>When do I receive my product?</span></p>
+    </div>
+    <!-- end preAmznCheckoutFAQ1 -->
+    <p class='preAmznCheckoutFAQ2'></p>
+    
+    ");
+    
+  	}; ?>
+  </div>
+  <!--end checkoutShell --> 
+</div>
+<!-- end checkoutFrame --> 
+
+<script>
+$(document).ready(function(){
+$('#preAmznCheckoutCountdown').countdown({until:$.countdown.UTCDate(<?php echo $this->saleEndFormated ?>), format: 'DHMS', layout: //(timeZone, year, month-1{ignore the 1}, date)
+  '<div id="timer">' +
+  '<div id="timer_days" class="timer_numbers">{dnn}</div>'+
+  '<div id="timer_hours" class="timer_numbers">{hnn}</div>'+
+  '<div id="timer_mins" class="timer_numbers">{mnn}</div>'+
+  '<div id="timer_seconds" class="timer_numbers">{snn}</div>'+
+	'<div id="timer_labels">'+
+	'<div id="timer_days_label" class="timer_labels">days</div>'+
+	'<div id="timer_hours_label" class="timer_labels">hours</div>'+
+	'<div id="timer_mins_label" class="timer_labels">mins</div>'+
+	'<div id="timer_seconds_label" class="timer_labels">secs</div>'+
+	'</div>'+
+	'</div>'
+});// end countdown
+$('#openFanTermsAndCond').fancybox();
+function fanAdminStatsBuilder2(){
+		var fanAdminStartP = <?php echo $this->startPrice?>;
+		var fanAdminEndP = <?php echo $this->lowPrice; ?>;
+		var fanAdminCurrentP = <?php echo $this->currentPrice;?>;
+		var fanAdminBarLength = fanAdminStartP-fanAdminEndP;
+		var fanAdminDroppedAmount = fanAdminStartP-fanAdminCurrentP;
+		var preFanAdminDroppedPerc = (fanAdminDroppedAmount/fanAdminBarLength)*100;
+		fanAdminDroppedPerc = 100-preFanAdminDroppedPerc;
+		fanAdminDroppedPercSwitch= 100-fanAdminDroppedPerc;
+		var barShiftAmount = (-105) + fanAdminDroppedPercSwitch;
+		$('#checkoutCrownGreenBar').css('left',barShiftAmount+'%');
+		$('.checkoutCrowdParticipantNum').html('<span>'+<?php echo $this->numBuyins?>+ '</span> Participants');
+		$('.checkoutCrowdParticipantPercentNum').html('<span>'+parseInt(preFanAdminDroppedPerc)+'%</span> Potential Savings');
+	};
+	fanAdminStatsBuilder2();
+	$('.checkoutCrownFullBar, .checkoutCrowdDropBar').fadeIn(2000);
+	$('.logoOnSSPage').load(function(){
+		var ogPicWidth = <?php echo $this->logoImgWidth; ?>;
+		var ogPicHeight = <?php echo $this->logoImgHeight; ?>;
+		var ogPicRatio = ogPicWidth / ogPicHeight;
+		logoTransW = (ogPicRatio*100)+8;
+		$('.logoTransBack').width(logoTransW);//logoTransW);
+		$('.logoTransBack').delay(100).fadeIn(300);
+	});
+	$('.inSaleFAQ1').click(function(){
+	$('.preAmznCheckoutFAQ2').html('<span>How much am I actually paying?</span><br />Every new participant lowers your final price so you will be charged between $<?php echo $this->maxCharge; ?> and $<?php echo $this->lowPrice; ?> depending on the total participation level.');
+});
+$('.inSaleFAQ2').click(function(){
+	$('.preAmznCheckoutFAQ2').html('<span>When do I get charged?</span><br />You will not be charged until <?php echo $this->saleEndVisual?>. We will authorize your credit card upon checkout, but not transact funds until sale is over.');
+});
+$('.inSaleFAQ3').click(function(){
+	$('.preAmznCheckoutFAQ2').html('<span>When do I receive my music?</span><br />Digital downloads will be available immediatly after sale has finished and the transaction of your pre-authorized billing completed.');
+});
+	<?php if($this->boughtSale){ echo '$(".checkoutContentTable, .checkoutCrowdChart").hide(); $(".preAmznCheckoutGoToAmznBtn").css("opacity","0.2"); $(".preAmznCheckoutTermsAndCond").hide();$(".preAmznCheckoutTermsAndCondCheck").attr("checked","checked").hide();$(".preAmznCheckoutGoToAmznBtn").css("cursor","default");$(".preAmznCheckoutGoToAmznBtn").click(function(){event.preventDefault();alert("You can only buy into each sale once. Booyah.");});'; } ?>
+	
+	function placeSosaFrame(shellFrameHeight){
+		currentWindowHeight = $(window).height();
+		currentFrameMargin = ((currentWindowHeight - shellFrameHeight)/2);
+		if(currentFrameMargin<0){
+			currentFrameMargin = 0;
+		};
+		$('.checkoutFrame').css('margin-top',currentFrameMargin);
+	};
+	placeSosaFrame(360);
+	$(window).resize(function(){
+		placeSosaFrame(360);
+	});
+	$('.checkoutPageAmznBtn').css('background-color','<?php echo $this->accentColor; ?>');
+
+	$('.checkoutPageAmznBtn').css('background-color','<?php echo $this->accentColor; ?>')
+	$.backstretch("<?php echo $this->backgroundImg; ?>", {speed: 150, centeredY: false});
+	
+	/* THIS IS THE MAKE THE CHECKOUT NOT ACTIVE WHEN YOU ARE ON MOBILE
+	
+	<?php if(preg_match('/(android)|(iphone)|(ipod)|(blackberry)/i',$_SERVER['HTTP_USER_AGENT'])){ echo "
+		$('.checkoutShell').html('<p>boo</p>');
+	";};?>
+	*/
+	
+});
+</script>
+</div>
+<!-- end socialSalePageShell --> 

@@ -1,0 +1,3385 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin:0px;
+	background-color:#333;
+}
+p, h1, h2, h3, h4, h5, h6, td{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#333;
+	margin:0px;
+}
+img.logoInHeader{
+	border:none;
+	border-width:0px;
+}
+a{
+	font-family:Arial, Helvetica, sans-serif;
+}
+a:link{
+	text-decoration:none;
+	border:none;
+	color:#FFF;
+}
+a:visted{
+	text-decoration:none;
+	border:none;
+	color:#FFF;
+}
+input{
+	color:#333;
+	font-size:18px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+textarea{
+	color:#333;
+	font-size:18px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.wrapper1{
+	position:relative;
+	width:800px;
+	margin:0 auto;
+}
+/****************************************************************************************    header ******************/
+#header{
+	position:relative;
+	width:100%;
+	background-color:#1E1E1E;
+	height:50px;
+	z-index:3;
+}
+.logoInHeader {
+	position: absolute;
+	left: 0px;
+	margin: 5px 0;
+}
+.subHeader{
+	position: relative;
+	width: 100%;
+	background-color: #515151;
+	height: 70px;
+	z-index:2;
+}
+.contentContainer{
+	position:relative;
+	width:100%;
+	background-color:#333;
+	height:auto;
+	padding:20px 0 10px 0;
+}
+.contentArea{
+	width:100%;
+	background-color:#2E2E2E;
+	height:auto;
+	position:relative;
+	border-radius:15px;
+	-moz-box-shadow: 0px 0px 5px 5px #2E2E2E;
+	-webkit-box-shadow: 0px 0px 5px 5px #2E2E2E;
+	box-shadow: 0px 0px 5px 5px #2E2E2E;
+}
+.content{
+	padding:20px;
+}
+.contentForShopSales{
+	padding:5px;
+}
+/****************************************************************************************   social sale create table  ******************/
+table.crSSIconTable{
+	margin:0 auto;
+	padding:6px 0 0 0;
+}
+img.crSSIconClickable{
+	
+}
+table.crSSIconTable td{
+	width:70px;
+	text-align:center;
+}
+.crSSIconNotActive{
+	opacity:0.2;
+}
+p.loginToSkipS1{
+	position:absolute;
+	top:17px;
+	right:0px;
+	font-size:12px;
+	color:#009900;
+}
+p.loginToSkipS1 span{
+	width:80px;
+	padding:7px;
+	margin:0 0 0 5px;
+	background-color:#252525;
+	border-radius:8px;
+	border:solid;
+	border-width:1px;
+	border-color:#333;
+	text-align:center;
+	color:#FFF;
+	-moz-box-shadow:    0px 0px 1px 1px #000;
+  	-webkit-box-shadow: 0px 0px 1px 1px #000;
+ 	box-shadow:         0px 0px 1px 1px #000;
+}
+h1.createSsTitle{
+	font-size:23px;
+	text-shadow:1px 1px 2px #000;
+	font-weight:normal;
+	background-color:#353535;
+	width:600px;
+	text-align:center;
+	padding:8px;
+	margin:0 auto 20px auto;
+	border-radius:8px;
+}
+h1.createSsTitleWithBtn{
+	font-size:23px;
+	text-shadow:1px 1px 2px #000;
+	font-weight:normal;
+	text-align:center;
+	padding:8px;
+}
+.titleShellForBtn{
+	background-color:#353535;
+	width:600px;
+	text-align:center;
+	margin:0 auto 20px auto;
+	border-radius:8px;
+	position:relative;
+	height:41px;
+}
+table.createsSInputs1{
+	margin:0 auto 35px auto;
+}
+table.createsSInputs2{
+	margin:30px auto 20px auto;
+	z-index:1;
+}
+td.crSSLabels{
+	vertical-align:text-top;
+	padding:25px 10px 0 0;
+	font-size:16px;
+	text-align:right;
+}
+td.crSSLabels2{
+	vertical-align:text-top;
+	padding:15px 10px 0 0;
+	font-size:16px;
+	text-align:right;
+}
+td.crSSInputs{
+	padding:10px 0;
+}
+input.crSSInput{
+	width:465px;
+	height:40px;
+	border-style:solid;
+	border-width:2px;
+	border-color:#999;
+	padding-left:15px;
+	outline:none;
+}
+input.crSSInput:focus{
+	border-color:#0C0;
+}
+input.crSSInput2{
+	width:85px;
+	height:40px;
+	border-style:solid;
+	border-width:2px;
+	border-color:#999;
+	padding-left:15px;
+	outline:none;
+}
+input.crSSInput2:focus{
+	border-color:#0c0;
+}
+input.crSSInput3{
+	width:285px;
+	height:40px;
+	border-style:solid;
+	border-width:2px;
+	border-color:#999;
+	padding-left:15px;
+	float:left;
+	margin:10px;
+	outline:none;
+}
+input.crSSInput3:focus{
+	border-color:#0C0;
+}
+input.crSSInput4{
+	width:72px;
+	height:40px;
+	border-style:solid;
+	border-width:2px;
+	border-color:#999;
+	padding-left:15px;
+	outline:none;
+}
+input.crSSInput4:focus{
+	border-color:#0C0;
+}
+input.crSSInput5{
+	width:286px;
+	height:40px;
+	border-style:solid;
+	border-width:2px;
+	border-color:#999;
+	padding-left:15px;
+	float:left;
+	margin:10px;
+	outline:none;
+}
+input.crSSInput5:focus{
+	border-color:#0C0;
+}
+input.crSSInput6{
+	width:73px;
+	height:40px;
+	border-style:solid;
+	border-width:2px;
+	border-color:#999;
+	padding-left:15px;
+	float:left;
+	margin:10px;
+	outline:none;
+}
+input.crSSInput6:focus{
+	border-color:#0C0;
+}
+input.crSSInput7{
+	width:111px;
+	height:40px;
+	border-style:solid;
+	border-width:2px;
+	border-color:#999;
+	padding-left:15px;
+	float:left;
+	outline:none;
+}
+input.crSSInput7:focus{
+	border-color:#0C0;
+}
+textarea.crSSInputTextArea{
+	width:450px;
+	height:80px;
+	border-style:solid;
+	border-width:2px;
+	border-color:#999;
+	padding:10px 15px;
+	outline:none;
+	outline:none;
+}
+textarea.crSSInputTextArea:focus{
+	border-color:#0c0;
+}
+input.crSSFileUp{
+	position:relative;
+	top:9px;
+	color:#FFF;
+}
+.chizz5{
+	padding-left:10px;
+}
+.putPlace1{
+	position:relative;
+	top:86px !important;
+	left:5px;
+}
+input.crSSFileUp2{
+	position:relative;
+	top:-7px;
+	color:#FFF;
+}
+td.crSSType{
+	padding:0px;
+}
+input.crSSTypeRadio{
+	margin:0 5px 0 15px;
+}
+label.crSSInputUnderMessage{
+	font-size:11px;
+}
+.crSSNextBackShell{
+	position:relative;
+	margin:0 auto;
+	text-align:center;
+}
+.crSSNextBackShell img{
+	cursor:pointer;
+}
+p.PrevSaleBtn{
+	font-size:20px;
+	text-shadow:1px 1px 2px #000;
+	text-align:center;
+	width:162px;
+	background-color:#018f46;
+	padding:8px;
+	border-radius:8px;
+	border-style:solid;
+	border-color:#4E4E4E;
+	border-width:3px;
+	position:relative;
+	float:left;
+}
+p.PrevSaleBtn:hover{
+	color:#000;
+	background-color:#fff;
+	text-shadow:none;
+}
+input.termsCheckBox{
+	float:left;
+}
+label.termsCheckP{
+	font-size:12px;
+	margin:2px 0 0 25px;
+}
+
+label.termsCheckP span{
+	color:#018f46;
+	text-decoration:underline;
+}
+.greenLight{
+	background-image:url(../images/greenLight.png);
+}
+.redLight{
+	background-image:url(../images/redLight.png);
+}
+.redOrGreenLight{
+	position:relative;
+	margin:14px 10px 0 15px;
+	float:left;
+	width:22px;
+	height:22px;
+}
+p.redGreenLightP{
+	position:relative;
+	padding:18px 0 0 0;
+	font-size:12px;
+	float:left;
+}
+.wtfButton{
+	position:relative;
+	margin-right:5px;
+	cursor:pointer;
+	top:-9px;
+	width:64px;
+	height:35px;
+	background-image:url(../images/wtfButtons_SPRITE.png);
+	float:right;
+}
+span.rightFloater{
+	float:right;
+}
+.wtfButton:hover{
+	background-position:0px 35px;
+}
+.noBorderPleaseStupidIE{
+	border-width:0px;
+	border:none;
+}
+.rockstarShell{
+	position:fixed;
+	top:160px;
+	right:10px;
+	width:209px;
+	height:356px;
+	display:none;
+}
+.rockstarFull{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-image:url(../images/rockstarFull.png);
+	z-index:1;
+}
+.rockstarSil{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-image:url(../images/rockstarSil.png);
+	z-index:2;
+}
+table.rumpedSaleStructure{
+	width:100%;
+	margin:0px;
+	border-spacing:0px;
+	padding:4px 4px 0 4px;
+}
+table.rumpedSaleStructure td{
+	text-align:center;
+}
+p.rumpedSaleStructureStart{
+	font-size:12px;
+	font-weight:bold;
+	text-align:center;
+	position:relative;
+	top:-4px;
+}
+p.rumpedSaleStructureStart span{
+	font-size:26px;
+	color:#018f46;
+}
+p.rumpedSaleStructureDecline1{
+	font-size:10px;
+	font-weight:bold;
+	text-align:center;
+}
+p.rumpedSaleStructureNeeded1{
+	font-size:10px;
+	font-weight:bold;
+	text-align:center;
+}
+p.rumpedSaleStructureLow{
+	font-size:12px;
+	font-weight:bold;
+	text-align:center;
+	position:relative;
+	top:-4px;
+}
+p.rumpedSaleStructureLow span{
+	font-size:26px;
+	color:#F00;
+}
+img.rumpedSaleLittleMan{
+	display:inline;
+	position:relative;
+	margin:0px 5px;
+}
+p.rumpedSaleEqualsSign{
+	position:relative;
+	display:inline;
+	font-size:20px;
+	font-weight:bold;
+	margin:0px 5px;
+	top:-5px;
+}
+img.rumpedSaleLittleDownArrow{
+	position:relative;
+	display:inline;
+	margin:0px 5px;
+}
+span.rumpedSaleStructureDec{
+	font-size:18px;
+	font-weight:normal;
+	position:relative;
+	margin:0px 5px 0px 0px;
+	top:-5px;
+	color:#900;
+}
+p.rumpedSaleXSymbol{
+	position:relative;
+	display:inline;
+	font-size:20px;
+	font-weight:bold;
+	margin:0px 5px;
+	top:-5px;
+}
+span.rumpedSaleStructureNumNeeded{
+	font-size:24px;
+	font-weight:normal;
+	position:relative;
+	margin:0px 5px 0px 0px;
+	top:-2px;
+	color:#018f46;
+}
+tr.rumpedSaleStructureBottomRow{
+	height:40px;
+}
+p.image1NotUploaded, p.image2NotUploaded, p.image3NotUploaded{
+	position:relative;
+	display:none;
+	color:#F00;
+}
+p.charecterCountDown{
+	font-size:12px;
+}
+.uploadImageSizeInfo{
+	font-size:12px;
+	position:relative;
+	width:0px;
+	height:0px;
+}
+.uploadImageSizeInfo p{
+	position:absolute;
+	top:-27px;
+	left:229px;
+	width:240px;
+}
+.createSsBackButtons:hover{
+	opacity:0.5;
+}
+.step1Done:hover{
+	opacity:0.2;
+}
+.step2Done:hover{
+	opacity:0.5;
+}
+.step3Done:hover{
+	opacity:0.5;
+}
+.step4Done:hover{
+	opacity:0.5;
+	z-index:2;
+}
+p.colorChoiceSample{
+	width:150px;
+	padding:5px 10px;
+	text-align:center;
+	position:relative;
+	background-color:#018f46;
+	display:inline;
+	border-radius:8px;
+	top:9px;
+	left:20px;
+	font-size:22px;
+}
+img.colorSelectorCirlce{
+	opacity:0.7;
+	margin:11px 0 0 5px !important;
+}
+img.colorSelectorCirlce:hover{
+	opacity:1;
+}
+.grabFirstName, .grabLastName{
+	text-transform:capitalize;
+}
+.izzyColorHider{
+	display:none;
+}
+img.spinningEarInCreateSsBtn{
+	position:absolute;
+	top:7px;
+	left:31px;
+	width:70px;
+	height:70px;
+}
+.createSsBtnLoadingShell{
+	width:158px;
+	height:82px;
+	background-image:url(../images/chillCreateSaleBtnBlank.png);
+	position:absolute;
+	top:0px;
+	left:0px;
+	cursor:default !important;
+	z-index:1;
+	visibility:hidden;
+}
+.createSsCompactorShellFull{
+	position:relative;
+	width:158px;
+	height:82px;
+	display:inline-block;
+}
+.createSSFinalBtn{
+	z-index:2;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+/********************************************************************************* Sale Type Drop **********************/
+.crSStypeDropShell{
+	width:480px;
+	height:auto;
+	background-color:#4E4E4E;
+	border-radius:10px;
+	margin:10px 0 0 0;
+}
+a.crSSTrackListP{
+	background-color:#018f46;
+	font-size:20px;
+	text-shadow:1px 1px 2px #000;
+	text-align:center;
+	width:240px;
+	padding:11px 0;
+	border-radius:8px;
+	float:left;
+	cursor:pointer;
+	color:#fff;
+}
+a.crSSTrackListP:hover{
+	color:#000;
+	background-color:#fff;
+	text-shadow:none;
+}
+p.crSSTrackListHint{
+	font-size:12px;
+	width:180px;
+	float:left;
+	padding:9px 0 0 35px;
+	left:200px;
+	top:30px;
+	text-align:center;
+}
+p.crSSDigPurchLimP{
+	float:left;
+	padding:25px 0 0 5px;
+}
+p.crSSDigPurchLimP2{
+	float:left;
+	padding:12px 0 0 5px;
+}
+input.crSSDigPurchLimIn{
+	margin:13px 13px 0 13px;
+	float:left;
+}
+input.crSSDigPurchLimIn2{
+	margin:0px 13px 0 13px;
+	float:left;
+}
+input.crSSDigPurchLimIn3{
+	margin:0px 13px 0 13px;
+}
+input.crSSDigUnlimPurch{
+	float:left;
+	margin:28px 5px 0 10px;
+}
+p.crSSDigUnlimPurchP{
+	font-size:11px;
+	margin:27px 0 0 0;
+}
+input.crSSPhysMusPurchLimIn{
+	margin:13px 13px 0 38px;
+	float:left;
+}
+p.sizeQuantP{
+	margin:10px 0 10px 8px;
+}
+table.sizaQuantShell{
+	width:100%;
+}
+table.sizaQuantShell td{
+	text-align:center;
+}
+p.sAndQBox{
+	position:relative;
+	width:46px;
+	padding:10px 0;
+	text-align:center;
+	font-size:20px;
+	border-radius:5px;
+	background-color:#FFF;
+	color:#000;
+	cursor:pointer;
+	margin:0 auto;
+}
+.sAndQBoxSelected{
+	background-color:#0C0 !important;
+	color:#FFF !important;
+}
+.sAndQBoxSelectedWhite{
+	background-color:#FFF !important;
+	color:#333 !important;
+}
+.sAndQBoxGrey{
+	background-color:#999 !important;
+}
+input.sAndQQuantBox{
+	width:46px;
+	height:30px;
+	background-color:#999;
+	border-radius:5px;
+	border:none;
+	font-size:14px;
+	text-align:center;
+}
+p.checkIfUnlP{
+	font-size:11px;
+	float:left;
+	text-align:left;
+	padding:3px 0 0 0;
+}
+p.crSSDigPurchLimInLab{
+	position:relative;
+	top:10px;
+	left:5px;
+	color:#333;
+}
+.chizz1{
+	width:67px !important;
+}
+.chizz2{
+	float: left;
+	margin:0 0 0 12px;
+}
+.chooseStockBGShell{
+	display:none;
+}
+table.chooseStockBGTable{
+	background-color:#4E4E4E;
+	width:480px;
+	position:relative;
+	border-radius:10px;
+	display:nonne;
+	padding:5px;
+}
+table.chooseStockBGShell td{
+	padding:4px;
+}
+img.chooseStockBGSelected{
+  border-color:#0C0;
+  border-width:3px;
+  border-spacing:0px;
+  z-index:2 !important;
+  border-style:solid;
+  margin:1px !important;
+}
+img.chooseStockBGImg{
+	cursor:pointer;
+	z-index:1;
+	margin:4px;
+}
+input.physUnlMerch{
+	float:left;
+	text-align:left;
+}
+input.physUnlMerch2{
+	float:left;
+	text-align:left;
+}
+.physMerchQuantRowGone{
+	display:none;
+}
+.chooseStockBGDrop{
+	margin:3px 10px 3px 4px !important;
+	width:11px;
+	height:11px;
+}
+.physMerchUnlPerchCheck{
+	position:relative;
+	left:6px;
+	font-size:12px;
+}
+/****************************************************************************************   sale structure  ******************/
+.salePricingShell{
+	width:480px;
+	background-color:#4E4E4E;
+	border-radius:10px;
+	padding:10px 0;
+}
+.pricingTypeBtnsShell{
+	height:60px;
+	width:457px;
+	position:relative;
+	margin:0 auto;
+}
+a.prefBasedPricingBtn{
+	width:210px;
+	text-align:center;
+	float:left;
+	background-color:#018f46;
+	padding:10px 0;
+	border-radius:10px;
+	cursor:pointer;
+}
+a.prefBasedPricingBtn:hover{
+	color:#000;
+	background-color:#fff;
+}
+p.pricingTypeBtnsOr{
+	float:left;
+	padding:21px 5px 0 5px;
+}
+a.customPricingBtn{
+	width:210px;
+	position:absolute;
+	right:1px;
+	top:0px;
+	text-align:center;
+	background-color:#018f46;
+	padding:10px 0;
+	border-radius:10px;
+	cursor:pointer;
+}
+a.customPricingBtn:hover{
+	color:#000;
+	background-color:#fff;
+}
+p.prefRecom{
+	font-size:11px;
+	font-style:italic;
+	color:#0C0;
+	margin:0 0 0 64px;
+}
+.salePriceStatement{
+	width:460px;
+	height:63px;
+	position:relative;
+	background-color:#121212;
+	margin:10px auto 0 auto;
+	border-radius:10px;
+	display:none;
+}
+table.salePriceStatementTable{
+	margin:0 auto;
+	width:100%;
+}
+table.salePriceStatementTable td{
+	font-size:14px;
+	padding:6px 15px;
+}
+table.salePriceStatementTable td span{
+	font-weight:bold;
+	color:#00cc00;
+}
+td.salePriceStateL{
+	width:175px;
+}
+p.salePeriodTO{
+	float:left;
+	position:relative;
+	padding:10px 10px 0 10px;
+}
+p.salePerdidHint{
+	font-size:11px;
+	margin:0px 0 0 0;
+	text-align:center;
+}
+.chizz6{
+	position:absolute;
+	right:45px;
+	margin:0px 113px 0 0 !important;
+}
+p.salePerdidHint span{
+	color:#018f46;
+}
+td.goingRight{
+	text-align:right;
+}
+.wtfDatDescriptionBox{
+	width:300px;
+}
+.wtfDatDescriptionBox h1{
+	font-size:20px;
+	font-weight:bold;
+	margin:10px;
+	text-align:center;
+}
+.wtfDatDescriptionBox p{
+	font-size:16px;
+	margin:20px;
+}
+label.mediaTypeWord{
+	font-size:20px;
+}
+label.mediaTypeWord span{
+	font-size:16px;
+}
+.wtfMediaMediaBox{
+	width:300px;
+}
+.wtfMediaMediaBox h1{
+	font-size:20px;
+	font-weight:bold;
+	margin:10px;
+	text-align:center;
+}
+.wtfMediaMediaBox p{
+	font-size:16px;
+	margin:10px 20px;
+}
+td.idealDimensionsLogoAndBG{
+	position:relative;
+	text-align:center;
+	font-size:12px;
+	color:#018f46;
+}
+/****************************************************************************************   track list input  ******************/
+#trackListCreatePop{
+	width:533px;
+	padding-bottom:10px;
+	background-color:#1E1E1E;
+	height:430px;
+}
+#trackListPhysicalCreatePop{
+	width:533px;
+	padding-bottom:10px;
+}
+h1.enterTrackListTitle{
+	font-size:23px;
+	text-shadow:1px 1px 2px #000;
+	padding:8px 0 8px 0;
+	float:left;
+	margin:0 0 0 21px;
+}
+p.enterTrackListSaveBtn{
+	font-size:18px;
+	background-color:#018f46;
+	width:126px;
+	text-shadow:1px 1px 2px #000;
+	padding:5px 0;
+	float:right;
+	border-radius:8px;
+	margin:8px 21px 20px 0;
+	text-align:center;
+	cursor:pointer;
+}
+p.enterTrackListSaveBtn:hover{
+	color:#000;
+	background-color:#fff;
+	text-shadow:none;
+}
+.enterTrackTableShell{
+	width:490px;
+	position:relative;
+	margin:0 auto;
+	height:280px;
+	background-color:#FFF;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+table.enterTrackTable{
+	position:relative;
+	width:100%;
+	border-spacing:0px;
+}
+table.enterTrackTable td{
+	color:#333;
+	font-size:14px;
+}
+.dashboardProductsProductEditUpDown{
+	width:20px;
+}
+
+.dashboardProductMoveDown, .dashboardProductMoveUp{
+	cursor:pointer;
+}
+.enterTrackRow{
+	padding:10px;
+}
+.enterTrackRow:nth-child(odd){
+	background-color:#E0E0E0;
+}
+.enterTrackRow:nth-child(even){
+	background-color:#FFF;
+}
+td.enterTrackX{
+	cursor:pointer;
+	width:20px;
+}
+.enterTrackAddTrack{
+	width:490px;
+	height:120px;
+	background-color:#000;
+	position:relative;
+	margin:0 auto;
+}
+.enterTrackAddTrack2{
+	width:490px;
+	height:70px;
+	background-color:#000;
+	position:relative;
+	margin:0 auto;
+}
+p.enterTracksAddTrackBtn{
+	width:150px;
+	background-color:#367436;
+	text-align:center;
+	padding:11px 0 10px 0;
+	border-radius:8px;
+	float:right;
+	margin:10px 10px 0 0;
+	font-size:20px;
+	text-shadow:1px 1px 2px #000;
+	cursor:pointer;
+}
+input.enterTrackFileSub{
+	color:#FFF;
+	float:left;
+	padding:0 8px;
+	width:300px;
+}
+p.enterTracksFilesSupported{
+	font-size:14px;
+	left:158px;
+	top:18px;
+	position:absolute;
+	width:307px;
+	text-align:center;
+}
+p.enterTracksFilesSupported span{
+	font-size:11px;
+	position:relative;
+	top:5px;
+}
+p.enterTracksFilesSupported span a{
+	font-size:11px;
+	color:#fff;
+}
+p.enterTracksFilesSupported span a:visited{
+	font-size:11px;
+	color:#fff;
+}
+p.enterTracksFilesSupported span a:hover{
+	font-size:11px;
+	color:#018f46
+}
+a.phyMusAddTrackList{
+	width:205px;
+	background-color:#018f46;
+	text-align:center;
+	padding:11px 0 10px 0;
+	border-radius:8px;
+	float:right;
+	margin:0 3px 0 0;
+	font-size:20px;
+	text-shadow:1px 1px 2px #000;
+	cursor:pointer;
+}
+img.uploadingGif{
+	position:relative;
+	top:3px;
+}
+
+td.enterTrackPhysNum{
+	width:15px;
+}
+span.digitalTrackFileName{
+	color:#999;
+	font-style:italic;
+	font-size:14px;
+	position:relative;
+	top:0px;
+}
+input.digitalTrackTitleIn{
+	background:none;
+	width:320px;
+	outline:none;
+	border:none;
+}
+input.digitalTrackTitleIn:focus{
+	border:none;
+}
+img.digitalDelete{
+	position:absolute;
+	cursor:pointer;
+	right:11px;
+	top:16px;
+}
+img.digitalChangeUp{
+	position:absolute;
+	cursor:pointer;
+	right:42px;
+	top:16px;
+}
+img.digitalChangeGoingUp{
+	position:absolute;
+	cursor:pointer;
+	right:71px;
+	top:16px;
+}
+.physEnterTrackContent1{
+	padding:10px !important;
+	font-size:22px !important;
+	font-weight:bold !important;
+	color:#333 !important;
+}
+.physEnterTrackContent2{
+	padding:10px;
+	font-size:18px;
+	color:#333;
+}
+.physEnterTrackContent3{
+	padding:10px;
+	width:20px;
+	cursor:pointer;
+}
+.wtfBush{
+	position:absolute;
+	top:-198px;
+	right:10px;
+	cursor:pointer;
+	width:192px;
+	height:198px;
+	background-image:url(../images/wtfBush_SPRITE.png);
+	background-position:0px 0px;
+}
+.wtfBush:hover{
+	background-position:0px 198px;
+}
+.crPreSSDescriptionShell{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:307px;
+	background-color:#1E1E1E;
+	display:none;
+}
+p.prefDescrHead{
+	position:relative;
+	margin:15px auto 0 auto;
+	text-align:center;
+	font-size:20px;
+	font-weight:bold;
+}
+p.prefDescribed{
+	font-size:16px;
+	text-align:left;
+	margin:10px;
+}
+p.prefDescribed span{
+	font-weight:bold;
+}
+p.crePreSSDescrCloseHelp{
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	font-size:20px;
+	color:#018f46;
+	cursor:pointer;
+	margin:0 10px 5px 0;
+	font-weight:bold;
+}
+p.crePreSSDescrCloseHelp:hover{
+	color:#fff;
+}
+img.rumpsDigDown{
+	position:relative;
+	float:right;
+	top:-17px;
+	margin:0 12px 0 0;
+	cursor:pointer;
+}
+img.rumpsDigUp{
+	position:relative;
+	float:right;
+	top:-17px;
+	padding:0 8px 0 0;
+	cursor:pointer;
+}
+img.rumpsDigX{
+	position:relative;
+	float:right;
+	top:-17px;
+	padding:0 8px 0 0;
+	cursor:pointer;
+	z-index:1;
+}
+.trashCover{
+	position:relative;
+	float:right;
+	top:-23px;
+	left:83px;
+	width:100px;
+	height:36px;
+	background-color:#09C;
+	padding:0 8px 0 0;
+	z-index:2;
+}
+.buttonProtectorsWudup{
+	position:absolute;
+	top:70px;
+	right:15px;
+	width:115px;
+	height:290px;
+	z-index:10;
+	display:none;
+}
+img.rumpsDigXCover{
+	position:relative;
+	z-index:2;
+}
+p.rumpsDigVisualNum{
+	color:#000;
+	display:inline;
+}
+.qq-upload-cancel{
+	color:#F00 !important;
+}
+.qq-upload-failed-text{
+	color:#018f46;
+}
+/****************************************************************************************   Custom Sale  ******************/
+#crCustomSS{
+	width:533px;
+	background-color:#1E1E1E;
+}
+#crPrefSS{
+	width:480px;
+	background-color:#1E1E1E;
+}
+#crCustomSS h1{
+	font-size:23px;
+	padding:10px;
+	text-shadow:1px 1px 1px #000;
+}
+#crPrefSS h1{
+	font-size:23px;
+	padding:10px;
+	text-shadow:1px 1px 1px #000;
+}
+table.crCustomSaleTable{
+	width:100%;
+}
+table.crCustomSaleTable td{
+	padding:10px;
+}
+input.crCustomInput{
+	width:80px;
+	height:40px;
+	border-style:solid;
+	border-color:#999;
+	border-width:2px;
+	padding-left:20px;
+	outline:none;
+}
+input.crCustomInput:focus{
+	border-color:#0C0;
+}
+.crCustomInpLab{
+	position:absolute;
+	font-size:18px;
+	color:#333;
+	top:12px;
+	left:10px;
+}
+.crCustomInsSh{
+	position:relative;
+	width:100px;
+	height:40px;
+}
+p.crCustomInsP{
+	width:100px;
+	height:30px;
+	font-size:18px;
+	color:#fff;
+	text-align:center;
+	padding-top:10px;
+}
+p.crCustomCalc{
+	width:100px;;
+	background-color:#030;
+	padding:7px 0;
+	border-radius:8px;
+	text-align:center;
+	font-size:14px;
+	text-shadow:1px 1px 2px #000;
+	margin:5px 0 10px 10px;
+	cursor:pointer;
+	position:relative;
+	float:left;
+}
+p.crCustomCalc:hover{
+	color:#000;
+	background-color:#fff;
+	text-shadow:none;
+}
+p.crCustomSave{
+	width:130px;;
+	background-color:#018f46;
+	padding:9px 0;
+	border-radius:8px;
+	text-align:center;
+	font-size:16px;
+	text-shadow:1px 1px 2px #000;
+	margin:0 0 0 10px;
+	cursor:pointer;
+	position:relative;
+	float:left;
+}
+p.crCustomSave:hover{
+	color:#000;
+	background-color:#fff;
+	text-shadow:none;
+}
+p.prefBSSTits{
+	padding:10px 0 10px 10px;
+}
+input.prefBSSPastSale{
+	width:70px;
+	height:41px;
+	border:solid;
+	border-color:#999;
+	border-width:2px;
+	margin:10px 0 10px 10px;
+	padding:0 0 0 15px;
+}
+input.prefBSSCieling{
+	width:65px;
+	height:41px;
+	border:solid;
+	border-color:#999;
+	border-width:2px;
+	padding:0 0 0 20px;
+}
+.prefBSSCielingShell{
+	width:65px;
+	height:41px;
+	margin:10px 0 24px 10px;
+	position:relative;
+}
+p.prefBSSCielingMoney{
+	position:absolute;
+	top:12px;
+	left:12px;
+	color:#333;
+	font-size:18px;
+}
+p.prefBSSCalcBtn{
+	position:relative;
+	background-color:#018f46;
+	padding:8px 10px;
+	text-shadow:1px 1px 2px #000;
+	margin:10px 0 20px 10px;
+	border-radius:8px;
+	cursor:pointer;
+	width:80px;
+	text-align:center;
+}
+p.prefBSSCalcBtn:hover{
+	color:#000;
+	background-color:#fff;
+}
+p.prefBSSSuggestBtn{
+	position:relative;
+	float:left;
+	background-color:#018F46;
+	padding:8px 10px;
+	text-shadow:1px 1px 2px #000;
+	margin:20px 10px 10px 10px;
+	border-radius:8px;
+	cursor:pointer;
+	display:none;
+}
+p.prefBSSSuggestBtn:hover{
+	color:#000;
+	background-color:#fff;
+	text-shadow:none;
+}
+p.prefBSSOr{
+	position:relative;
+	float:left;
+	margin:29px 10px 0 10px;
+	display:none;
+}
+p.prefBSSGoCustomBtn{
+	position:relative;
+	float:left;
+	background-color:#030;
+	padding:8px 10px;
+	text-shadow:1px 1px 2px #000;
+	margin:20px 10px 10px 10px;
+	border-radius:8px;
+	cursor:pointer;
+	display:none;
+}
+p.prefBSSGoCustomBtn:hover{
+	color:#000;
+	background-color:#fff;
+	text-shadow:none;
+}
+/**************************************************** file uploader ****************/
+#file-uploader-demo1{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+p.digUploadFrontNum{
+	float:left;
+	font-size:22px;
+	color:#333;
+	padding:0 8px 0 0;
+	font-weight:bold;
+}
+.upDownOrDelete{
+	float:right;
+	width:120px;
+}
+/****************************************************************************************   validation  ******************/
+.crSSForm1 .indent label.error {
+  margin-left: 0;
+}
+label.error {
+  font-size: 0.8em;
+  color: #F00;
+  font-weight: bold;
+  display: block;
+}
+.rumpsError{
+  font-size: 0.8em;
+  color: #F00;
+  font-weight: bold;
+  display: none;
+}
+.crSSForm1  input.error, #signup select.error  {
+  background: #FFA9B8;
+  border: 2px solid red;
+}
+.crSSForm2 .indent label.error {
+  margin-left: 0;
+}
+.crSSForm2 label.error {
+  font-size: 0.8em;
+  color: #F00;
+  font-weight: bold;
+  display: block;
+}
+.crSSForm2  input.error, #signup select.error, input.error  {
+  background: #FFA9B8;
+  border: 2px solid red;
+}
+.crSSForm3 .indent label.error {
+  margin-left: 0;
+}
+.crSSForm3 label.error {
+  font-size: 0.8em;
+  color: #F00;
+  font-weight: bold;
+  display: block;
+}
+.crSSForm3  input.error, #signup select.error  {
+  background: #FFA9B8;
+  border: 2px solid red;
+}
+#newError{
+	color:#F00;
+	font-size:16px;
+	font-weight:bold;
+	width:500px;
+}
+#newError p{
+	color:#F00;
+	font-size:16px;
+	font-weight:bold;
+	text-shadow:1px 1px 1px #000;
+}
+.specialPriceError{
+	position:relative;
+	margin:12px auto 0 auto !important;
+	font-size:16px !important;
+	text-align:center !important;
+	text-shadow:1px 1px 1px #000;
+}
+.specialDigUploadError{
+	position:relative;
+	width:100%;
+	padding:5px 0;
+	font-size:16px !important;
+	text-align:center !important;
+	text-shadow:1px 1px 1px #000;
+	display:none;
+  	color: #F00;
+  	font-weight: bold;
+}
+.specialPriceError{
+	position:relative;
+	width:100%;
+	padding:5px 0;
+	font-size:16px !important;
+	text-align:center !important;
+	text-shadow:1px 1px 1px #000;
+	display:none;
+  	color: #F00;
+  	font-weight: bold;
+}
+.errorWithShaddow{
+	text-shadow:1px 1px 1px #000;
+	color:#F00;
+}
+/****************************************************************************************   login box  ******************
+#loginBox{
+	width:435px;
+	height:250px;
+	background-color:#1E1E1E;
+}
+.loginBWrap{
+	width:355px;
+	position:relative;
+	margin:0 auto;
+}
+p.loginBTitle{
+	font-size:14px;
+	padding:15px 0;
+}
+input.loginBIns{
+	position:relative;
+	width:340px;
+	height:45px;
+	background-color:#FFF;
+	padding-left:15px;
+	border-radius:10px;
+	border:none;
+}
+.loginBPassShell{
+	width:355px;
+	height:45px;
+	position:relative;
+	margin:5px 0 20px 0;
+}
+label.loginBPassLab{
+	position:absolute;
+	top:0px;
+	left:0px;
+	color: #333;
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+	padding:13px 0 0 15px
+}
+p.loginBLoginBtn{
+	width:157px;
+	text-align:center;
+	background-color:#0C0;
+	border-radius:5px;
+	padding:3px 0;
+	float:left;
+	margin:0px;
+	text-shadow:1px 1px 2px #000;
+	cursor:pointer;
+}
+input.loginBKeepLoggedCheck{
+	float:left;
+	margin:15px 10px 0 0;
+}
+p.loginBForgotPass{
+	font-size:12px;
+	margin:5px 0 0 12px;
+	float:left;
+}
+p.loginBForgotPass span{
+	text-decoration:underline;
+}
+p.loginBKeepLoggedIn{
+	font-size:12px;
+	margin:13px 0 0 0;
+	float:left;
+}
+/**************************************************************************   send check / paypal  ******************/
+#sendCheckBox{
+	width:435px;
+	height:205px;
+	background-color:#1E1E1E;
+}
+.linkNoDecor{
+	text-decoration:none;
+	color:#FFF;
+}
+.linkNoDecor{
+	text-decoration:none;
+	color:#FFF;
+}
+span.ECheckGreen{
+	color:#0C0;
+}
+p.sendCheckText{
+	width:332px;
+	font-size:18px;
+	margin:0 auto;
+	padding:20px 0;
+	text-align:center;
+}
+p.sendCheckText span{
+	color:#0C0;
+}
+input.sendCheckSelected{
+	float:left;
+	margin:3px 10px 0 87px;
+}
+.sendCheckGrey{
+	background-color:#999 !important;
+}
+
+
+.howWePayYouShell{
+	position:relative;
+	margin-top:5px;
+	width:480px;
+}
+input.howWePayYouPaypal{
+	margin:15px 0 0 0;
+}
+.howWePayYouPaypalSlideDown, .howWePayYouCheckSlideDown{
+	display:none;
+}
+.howWePayYouCheckInputAddress1{
+	margin:15px 0 0 0;
+}
+input.howWePayYouCheckInputAddress3{
+	width:59px;
+	float:left;
+}
+input.howWePayYouCheckInputAddress4{
+	width:97px;
+}
+/****************************************************************************************   Band Admin  ******************/
+.hiddenElement{
+	display:none;
+}
+.adminNav{
+	position:absolute;
+	left:0px;
+	padding-top:25px;
+}
+.adminNav p{
+	font-size:14px;
+	color:#999;
+}
+.adminHeader{
+	width:683px;
+	height:42px;
+	border-radius:8px;
+	background-color:#353535;
+	margin:0 auto;
+	position:relative;
+}
+p.adminHeaderTitle{
+	font-size:22px;
+	text-shadow:1px 1px 2px #000;
+	padding:9px;
+}
+p.adminHeaderNewSale{
+	position:absolute;
+	right:104px;
+	top:0px;
+	text-align:center;
+	text-shadow:1px 1px 1px #000;
+	font-size:12px;
+	padding:7px 0;
+	width:95px;
+	background-color:#018f46;
+	border-radius:8px;
+	margin:6px;
+	cursor:pointer;
+}
+p.adminHeaderNewSale:hover{
+	color:#000;
+	background-color:#fff;
+	text-shadow:none;
+}
+p.adminHeaderUpdate{
+	position:absolute;
+	right:0px;
+	top:0px;
+	text-align:center;
+	text-shadow:1px 1px 1px #000;
+	font-size:12px;
+	padding:7px 0;
+	width:95px;
+	background-color:#018f46;
+	border-radius:8px;
+	margin:6px;
+	cursor:pointer;
+	border:none;
+	outline:none;
+	color:#fff;
+}
+p.adminHeaderUpdate:hover{
+	color:#000;
+	background-color:#fff;
+	text-shadow:none;
+}
+input.adminHeaderUpdateBandSettingsSaveBtn{
+	position:absolute;
+	right:0px;
+	top:0px;
+	text-align:center;
+	text-shadow:1px 1px 1px #000;
+	font-size:12px;
+	padding:7px 0;
+	width:95px;
+	background-color:#018f46;
+	border-radius:8px;
+	margin:6px;
+	cursor:pointer;
+	border:none;
+	outline:none;
+	color:#fff;
+}
+.adminSaleShell{
+	width:683px;
+	height:250px;
+	background-color:#fff;
+	margin:30px auto;
+	position:relative;
+}
+.adminSaleHead{
+	width:100%;
+	height:43px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#000;
+	z-index:2;
+}
+p.adminSaleHeadTitle{
+	position:absolute;
+	left:0px;
+	font-size:25px;
+	padding:7px;
+}
+.adminSaleHeadLinkShell{
+	width:333px;
+	height:28px;
+	background-color:#FFF;
+	border-radius:8px;
+	position:absolute;
+	right:0px;
+	margin:8px;
+	overflow:hidden;
+}
+p.adminSaleHeadLinkCopy{
+	width:78px;
+	height:24px;
+	position:absolute;
+	right:0px;
+	padding:4px 0px 0 14px;
+	background-color:#0C0;
+	border-radius:8px;
+	text-align:center;
+	cursor:pointer;
+	text-shadow:1px 1px 2px #000;
+}
+p.adminSaleHeadLinkCopyInactive{
+	width:78px;
+	height:24px;
+	position:absolute;
+	right:0px;
+	padding:4px 0px 0 14px;
+	background-color:#666;
+	border-radius:8px;
+	text-align:center;
+	cursor:pointer;
+	text-shadow:1px 1px 2px #000;
+}
+input.adminSaleHeadLinkP{
+	width:251px;
+	height:24px;
+	padding:2px 0 3px 0;
+	color:#333;
+	font-size:14px;
+	background-color:#FFF;
+	position:absolute;
+	left:10px;
+	overflow:hidden;
+	border:none;
+}
+.adminSaleImgShell{
+	width:250px;
+	height:250px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:1;
+	background-color:#000;
+}
+img.adminSaleImg{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:250px;
+	height:250px;
+}
+img.adminSaleImgOver{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:250px;
+	height:250px;
+	opacity:0.1;
+}
+.adminSaleImgBottomShell1{
+	width:100%;
+	height:101px;
+	background-color:#000;
+	opacity:0.8;
+	bottom:0px;
+	position:absolute;
+	left:0px;
+}
+.adminSaleImgBottomShell2{
+	width:100%;
+	height:101px;
+	bottom:0px;
+	position:absolute;
+	left:0px;
+}
+p.adminSaleEnds{
+	background-color:#666;
+	border-radius:8px;
+	font-size:14px;
+	color:#FFF;
+	margin:0px;
+	padding:9px 5px;
+	font-weight:normal;
+	text-align:center;
+	position:absolute;
+	top:25px;
+	left:110px
+}
+.SSPtimer_numbers{
+	float:left;
+	padding-left:5px;
+}
+.SSPtimer_Label{
+	float:left;
+}
+p.adminSaleImgInfo1{
+	position:absolute;
+	top:5px;
+	left:10px;
+	font-size:14px;
+	text-align:center;
+	width:88px;
+}
+p.adminSaleImgInfo2{
+	position:absolute;
+	top:25px;
+	left:10px;
+	background-color:#666;
+	border-radius:8px;
+	font-size:14px;
+	color:#FFF;
+	margin:0px;
+	padding:5px 0;
+	width:88px;
+	font-weight:normal;
+	text-align:center;
+	font-size:20px;
+}
+p.adminSaleImgInfo3{
+	position:absolute;
+	top:5px;
+	left:110px;
+	font-size:14px;
+	text-align:center;
+	width:132px;
+}
+p.adminSaleViewSaleBtn{
+	width:234px;
+	padding:5px 0;
+	border-radius:8px;
+	background-color:#018f46;
+	position:absolute;
+	bottom:6px;
+	left:8px;
+	text-align:center;
+	text-shadow:1px 1px 2px #000;
+	cursor:pointer;
+}
+p.adminSaleSaleOverBtn{
+	width:234px;
+	padding:5px 0;
+	border-radius:8px;
+	background-color:#990000;
+	position:absolute;
+	bottom:6px;
+	left:8px;
+	text-align:center;
+	text-shadow:1px 1px 2px #000;
+	cursor:pointer;
+}
+.bandAdminChartFullBar{
+	width:394px;
+	height:18px;
+	background-color:#f00;
+	position:relative;
+	margin:0 auto;
+	border-radius:8px;
+	z-index:1;
+}
+p.bandAdminChartStartPrice{
+	text-align:left;
+	color:#018f46;
+	font-size:14px;
+	font-weight:bold;
+	margin:0px;
+	height:10px;
+	top:2px;
+	position:relative;
+}
+p.bandAdminChartPercentage{
+	text-align:center;
+	font-size:12px;
+	font-weight:bold;
+	color:#666;
+	margin:0px;
+	height:10px;
+	top:2px;
+	position:relative;
+}
+p.bandAdminChartCurrentPrice{
+	text-align:center;
+	font-size:18px;
+	font-weight:bold;
+	color:#018f46;
+	margin:0px;
+	width:100px;
+	position:relative;
+	height:27px;
+	top:-6px;
+}
+p.bandAdminChartCurrentPrice span{
+	font-size:9px;
+	color:#333;
+	font-weight:bold;
+}
+p.bandAdminChartLowestPrice{
+	text-align:right;
+	font-size:14px;
+	color:#f00;
+	margin:0px;
+	font-weight:bold;
+	height:10px;
+	top:2px;
+	position:relative;
+}
+.wrapper1 a:link{
+	border:none;
+	border-width:0px;
+}
+.wrapper1 a:visited{
+	border:none;
+	border-width:0px;
+}
+td.bandAdminTableRowNoMargin{
+	margin:0 !important;
+	padding:0 !important;
+}
+.bandAdminChartDroppedBar{
+	height:18px;
+	background-color:#018f46;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border-radius:8px;
+	z-index:2;
+}
+table.bandAdminChartTable{
+	margin:0px;
+	border-spacing:0px;
+	padding:0px;
+}
+table.bandAdminChartTable td{
+	margin:0px;
+	padding:0px;
+	border:none !important;	
+}
+table.adminSaleTable{
+	width:433px;
+	height:207px;
+	position:absolute;
+	left:250px;
+	top:43px;
+	border-spacing:0px;
+}
+table.adminSaleTable td{
+	border-bottom:solid;
+	border-bottom-width:1px;
+	border-color:#ccc;
+	color:#333;
+	padding:0 20px;
+	width:50%;
+}
+span.adminSaleTableLeft{
+	position:relative;
+	float:left;
+	font-size:16px;
+	color:#333;
+}
+span.adminSaleTableRight{
+	position:relative;
+	float:right;
+	font-size:16px;
+	color:#333;
+	font-weight:bold;
+}
+p.adminEmailRefBtns{
+	background-color:#666;
+	text-align:center;
+	width:175px;
+	background-image:url(../images/grad1.jpg);
+	text-shadow:1px 1px 1px #000;
+	padding:7px 0;
+	border-radius:8px;
+	font-size:14px;
+	cursor:pointer;
+}
+td.adminEmailRefBtns{
+	text-align:center;
+}
+img.adminSaleShare{
+	margin:0px;
+	float:right;
+	margin:0 14px;
+}
+span.adminSaleShareP{
+	position:relative;
+	top:10px;
+}
+.adminFanStatContentShell{
+	width:433px;
+	height:207px;
+	position:absolute;
+	left:250px;
+	top:43px;
+}
+tr.adminFanStatTableHeads td{
+	color:#333;
+	font-size:11px;
+	text-align:center;
+	padding-top:8px;
+	width:33%;
+	font-weight:bold;
+}
+tr.adminFanStatTableNums td{
+	color:#018F46;
+	font-size:28px;
+	text-align:center;
+	margin:0px;
+	font-weight:bold;
+	position:relative;
+	top:-6px;
+	width:33%;
+}
+td.adminFanStatsRedNum{
+	color:#900 !important;
+}
+table.adminFanSaleTable{
+	width:100%;
+	position:relative;
+	z-index:2;
+}
+.adminFamStatsChartShell{
+	width:433px;
+	height:100px;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	z-index:1;
+}
+img.adaminFanStatsChartImgInvert{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:3;
+}
+.adminFanStatsChartFullBar{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background-color:#018F46;
+	z-index:1;
+	display:none;
+}
+.adminFanStatsChartDropBar{
+	position:absolute;
+	height:100%;
+	z-index:2;
+	background-color:#900;
+	right:0px;
+	top:0px;
+	display:none;
+}
+p.adminFanNumOfPartic{
+	position:absolute;
+	left:5px;
+	bottom:2px;
+	color:#fff;
+	font-size:10px;
+	font-weight:bold;
+	z-index:4;
+	text-shadow:1px 1px 0px #000;
+}
+p.adminFanTableTitle{
+	position:relative;
+	text-align:center;
+	font-size:28px;
+	color:#000;
+	font-weight:bold;
+	margin:1px 0 0 0;
+}
+p.adminFanTableTitleBand{
+	font-size:14px;
+	position:relative;
+	text-align:center;
+	color:#333;
+	font-weight:normal;
+	margin:-5px auto 2px auto;
+}
+p.adminFanPercentageComplete{
+	position:absolute;
+	right:5px;
+	bottom:2px;
+	color:#fff;
+	font-size:10px;
+	font-weight:bold;
+	z-index:4;
+	text-shadow:1px 1px 0px #000;
+}
+img.fanAdminSpreadTheWord{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+.fanAdminHeadSocialMediaBtns{
+	position:absolute;
+	top:2px;
+	right:2px;
+	z-index:2;
+}
+.fanAdminHeadSocialMediaBtns img{
+	float:right;
+	margin:3px;
+	cursor:pointer;
+}
+input.bandAdminBasicUpdateBtn1{
+	background-color:#0C0;
+	border:none;
+	width:95px;
+	font-size:12px;
+	text-shadow:1px 1px 1px #000;
+	color:#FFF;
+	padding:6px 0;
+	text-align:center;
+	border-radius:8px;
+	position:absolute;
+	right:0px;
+	top:0px;
+	margin:7px;
+	cursor:pointer;
+}
+input.bandAdminBasicUpdateBtn2{
+	background-color:#018f46;
+	border:none;
+	width:95px;
+	font-size:12px;
+	text-shadow:1px 1px 1px #000;
+	color:#FFF;
+	padding:6px 0;
+	text-align:center;
+	border-radius:8px;
+	position:relative;
+	left:0px;
+	top:0px;
+	cursor:pointer;
+}
+input.bandAdminBasicUpdateBtn2:hover{
+	color:#000;
+	background-color:#fff;
+	text-shadow:none;
+}
+.adminOrdersShell{
+	width:683px;
+	background-color:#fff;
+	margin:20px auto;
+	position:relative;
+}
+.adminOrderHead{
+	width:100%;
+	height:41px;
+	background-color:#000;
+	position:relative;
+}
+.adminNav a:link{
+	text-decoration:none;
+	color:#999;
+}
+.adminNav a:visited{
+	text-decoration:none;
+	color:#999;
+}
+.adminOrderHeadTitle{
+	float:left;
+	padding:12px;
+	font-size:14px;
+}
+.adminNav a:hover{
+	color:#fff;
+}
+.adminOrderHeadCompOut{
+	float:right;
+	padding:13px;
+	font-size:11px;
+}
+.adminOrderTableShell{
+	width:100%;
+	position:relative;
+	background-color:#fff;
+	overflow-y:auto;
+	overflow-x:hidden;
+	max-height:300px;
+}
+table.adminOrderTable{
+	width:100%;
+	border-spacing:0px;
+}
+table.adminOrderTable td{
+	padding:12px;
+	border-bottom:solid;
+	border-color:#ccc;
+	border-width:1px;
+}
+td.adminOrderNum{
+	font-weight:bold;
+	font-size:12px;
+	text-align:left;
+	color:#000;
+}
+td.adminOrderNum p{
+	color:#000 !important;
+}
+.adminOrderCheckBoxShell{
+	position:relative;
+	width:200px;
+	height:60px;
+	float:right;
+}
+.adminOrderIncompCheckShell{
+	position:relative;
+	float:left;
+	width:50%;
+	height:100%;
+}
+.adminOrderCompCheckShell{
+	position:relative;
+	float:right;
+	width:50%;
+	height:100%;
+}
+.adminOrderCheckBoxShell p{
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+	color:#000
+}
+.adminOrderIncompCheck{
+	width:37px;
+	height:40px;
+	position:relative;
+	margin:5px auto 0 auto;
+	background-image:url(../images/checkBox_SPRITE.png);
+	background-position:39px 0px;
+	left:2px;
+	cursor:pointer;
+}
+.adminOrderCompCheck{
+	width:37px;
+	height:40px;
+	position:relative;
+	margin:5px auto 0 auto;
+	background-image:url(../images/checkBox_SPRITE.png);
+	background-position:39px 0px;
+	left:4px;
+	cursor:pointer;
+}
+.adminOrderCheckboxChecked{
+	background-position:0px 0px;
+}
+td.adminOrderTitle{
+	color:#333;
+	font-weight:bold;
+	font-size:12px;
+	text-align:center;
+	width:360px;
+}
+td.adminOrderTitle span{
+	color:#999;
+}
+span.adminOrderX{
+	font-size:14px;
+	color:#999;
+}
+span.adminOrderSep{
+	font-size:16px;
+	color:#999;
+	position:relative;
+	top:-1px;
+	padding:0 10px;
+}
+span.adminOrderCom{
+	font-size:12px;
+	color:#999;
+	position:relative;
+	top:-1px;
+}
+span.adminOrderCom input{
+	position:relative;
+	top:2px;
+}
+td.adminOrderRight{
+	text-align:right;
+}
+p.chizz3{
+	float:left;
+	padding:13px 30px 0 30px;
+}
+h1.fanAdminSettingHead{
+	font-size:23px;
+	text-shadow:1px 1px 1px #000;
+	float:left;
+	margin:10px 0 30px 70px;
+}
+input.fanAdminSettingSave1{
+	background-color:#018f46;
+	border:none;
+	width:95px;
+	font-size:12px;
+	text-shadow:1px 1px 1px #000;
+	color:#FFF;
+	padding:6px 0;
+	text-align:center;
+	border-radius:8px;
+	position:absolute;
+	right:8px;
+	top:6px;
+	cursor:pointer;
+}
+input.fanAdminSettingSave1:hover{
+	color:#000;
+	background-color:#fff;
+	text-shadow:none;
+}
+p.bandAdminFulfilStatement{
+	position:absolute;
+	bottom:-20px;
+	right:16px;
+	font-size:12px;
+}
+.bandAdminOrdersCompOrNotEmph{
+	font-weight:bold;
+	color:#FFF !important;
+}
+table.createsSInputs2PaddingBottom{
+	padding-bottom:30px;
+}
+.messageToFansCharecterLeft{
+	position:relative;
+	font-size:14px;
+	margin:8px 0 0 0;
+	text-align:right;
+}
+/****************************************************************************************   Fans In Sale / refferals  ******************/
+#fInSDigShell{
+	width:534px;
+	height:auto;
+	background-color:#1E1E1E;
+}
+.finsDigListShell{
+	width:492px;
+	height:250px;
+	position:relative;
+	background-color:#FFF;
+	margin:0 auto 20px auto;
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+table.finsDigList{
+	width:100%;
+	border-spacing:0px;
+}
+
+table.finsDigList td{
+	border-bottom:solid;
+	border-bottom-color:#ccc;
+	border-bottom-width:1px;
+	padding:10px 15px;
+}
+td.finsDigListName{
+	color:#009900;
+	text-align:left;
+	font-size:12px;
+	font-weight:bold;
+}
+td.finsDigListEmail{
+	color:#333;
+	font-size:12px;
+	text-align:center;
+}
+td.finsDigListPrice{
+	color:#333;
+	font-size:12px;
+	text-align:right;
+	font-weight:
+	bold;
+}
+.finsDigBtnsShell{
+	width:492px;
+	height:35px;
+	margin:10px auto;
+	position:relative;
+}
+p.finsDigBtnLeft{
+	width:226px;
+	background-color:#367436;
+	border-radius:8px;
+	position:absolute;
+	text-align:center;
+	padding:7px 0 6px 0;
+	font-size:18px;
+	left:0px;
+	top:0px;
+	text-shadow:1px 1px 1px #000;
+	cursor:pointer;
+}
+p.finsDigBtnRight{
+	width:226px;
+	background-color:#367436;
+	border-radius:8px;
+	position:absolute;
+	text-align:center;
+	padding:10px 0 9px 0;
+	right:0px;
+	top:0px;
+	font-size:14px;
+	text-shadow:1px 1px 1px #000;
+	cursor:pointer;
+}
+.finsDigMessageShell{
+	width:492px;
+	height:103px;
+	background-color:#FFF;
+	position:relative;
+	margin:20px auto 0 auto;
+}
+.finsDigMessageHead{
+	width:100%;
+	height:26px;
+	background-color:#000;
+	top:0px;
+	left:0px;
+	position:relative;
+}
+p.finsDigMessageHeadp{
+	font-size:12px;
+	text-align:left;
+	padding:5px;
+}
+textarea.finsDigMessage{
+	width:472px;
+	height:58px;
+	position:relative;
+	border:none;
+	padding:10px;
+	font-size:14px;
+	color:#333;
+	background-color:#999;
+}
+
+.addWhiteBack{
+	background-color:#FFF !important;
+}
+#fInSPhysShell{
+	width:534px;
+	height:auto;
+	background-color:#1E1E1E;
+}
+#refShell{
+	width:534px;
+	height:auto;
+	background-color:#1E1E1E;
+}
+.refHeader{
+	width:492px;
+	height:42px;
+	background-color:#000;
+	position:relative;
+	margin:0px auto 0 auto;
+}
+.refHeader p{
+	font-size:16px;
+	padding:11px;
+}
+table.refTable{
+	width:100%;
+	border-spacing:0px;
+}
+.refListShell{
+	width:492px;
+	height:280px;
+	background-color:#FFF;
+	overflow-y:auto;
+	margin:0 auto 0px auto;
+}
+table.refTable td{
+	border-bottom:solid;
+	border-bottom-color:#ccc;
+	border-bottom-width:1px;
+	padding:10px 15px;
+}
+td.refL{
+	text-align:left;
+	font-size:12px;
+	color:#009900;
+	font-weight:bold;
+	text-decoration:underline;
+}
+td.refR{
+	text-align:right;
+	font-size:16px;
+	color:#333;
+	font-weight:bold;
+}
+/****************************************************************************************   fans admin social sale  ******************/
+p.fanAdminSaleBoxHeads{
+	font-size:15px;
+	width:429px;
+	position:absolute;
+	right:0px;
+	top:5px;
+	text-align:center;
+}
+p.fanAdminSaleBoxHeadsDone{
+	font-size:16px;
+	width:429px;
+	position:absolute;
+	right:0px;
+	top:10px;
+	text-align:left;
+}
+p.fanAdminSaleBoxHeadsDone span{
+	color:#009900;
+	font-style:italic;
+}
+p.fanAdminSaleBoxHeads span{
+	font-size:11px;
+	color:#009900;
+}
+.fanAdminSaleHeadLinkShell{
+	width:333px;
+	height:28px;
+	background-color:#EAEAEA;
+	border-radius:8px;
+	border:solid;
+	border-color:#CCC;
+	border-width:1px;
+	position:relative;
+	right:0px;
+	margin:8px;
+	overflow:hidden;
+}
+p.fanAdminSaleHeadLinkCopy{
+	width:78px;
+	height:24px;
+	position:absolute;
+	right:0px;
+	padding:4px 0px 0 14px;
+	background-color:#0C0;
+	border-radius:8px;
+	text-align:center;
+	cursor:pointer;
+	text-shadow:1px 1px 2px #000;
+}
+p.fanAdminSaleHeadLinkCopyInactive{
+	width:78px;
+	height:24px;
+	position:absolute;
+	right:0px;
+	padding:4px 0px 0 14px;
+	background-color:#666;
+	border-radius:8px;
+	text-align:center;
+	cursor:pointer;
+	text-shadow:1px 1px 2px #000;
+}
+input.fanAminSaleHeadLinkP{
+	width:100%;
+	text-align:center;
+	height:24px;
+	padding:2px 0 3px 0;
+	color:#333;
+	font-size:14px;
+	background-color:#EAEAEA;
+	position:absolute;
+	left:10px;
+	overflow:hidden;
+	border:none;
+}
+p.fanAdminLinkPlace{
+	float:left;
+	width:50px;
+	color:#333 !important;
+	padding:13px 0 0 0;
+}
+td.fanAdminTabCent{
+	text-align:center;
+}
+span.fanAdminChange1{
+	font-size:18px;
+	color:#333;
+}
+span.fanAdminChange2{
+	font-size:18px;
+	color:#006600;
+	font-weight:bold;
+}
+span.fanAdminChange3{
+	font-size:18px;
+	color:#990000;
+	font-weight:bold;
+}
+p.fanAdminNoOrderRec{
+	position:absolute;
+	bottom:-15px;
+	font-size:11px;
+	color:#009900;
+	right:0px;
+	text-decoration:underline;
+}
+/****************************************************************************************   order shell  ******************/
+#orderShell{
+	width:484px;
+	background-color:#1E1E1E;
+}
+
+.orderShellCursor{
+	cursor:pointer;
+}
+.orderBoxNum{
+	width:459px;
+	height:40px;
+	background-color:#252525;
+	margin:20px auto;
+	border-radius:8px;
+}
+p.orderBoxNumP{
+	font-size:18px;
+	text-shadow:1px 1px 1px #000;
+	padding:10px;
+}
+.orderBoxTitleOptShell{
+	width:430px
+	position:relative;
+	height:auto;
+}
+p.orderBoxTitleOpt{
+	position:relative;
+	font-size:20px;
+	max-width:300px;
+	margin:20px 0 20px 27px;
+}
+p.orderBoxTitleOptR{
+	position:absolute;
+	right:27px;
+	top:80px;
+	font-size:20px;
+}
+p.orderBoxCompBtn{
+	font-size:12px;
+	text-shadow:1px 1px 1px #000;
+	background-color:#0C0;
+	width:95px;
+	padding:6px 0 7px 0;
+	position:relative;
+	text-align:center;
+	border-radius:8px;
+	margin:0 5px 15px 10px;
+	float:left;
+	cursor:pointer;
+}
+p.orderBoxNotCompBtn{
+	font-size:12px;
+	text-shadow:1px 1px 1px #000;
+	background-color:#900;
+	width:95px;
+	padding:6px 0 7px 0;
+	position:relative;
+	text-align:center;
+	border-radius:8px;
+	margin:0 5px 15px 10px;
+	float:left;
+	cursor:pointer;
+}
+p.orderBoxShipP{
+	width:430px;
+	margin:20px auto;
+	position:relative;
+	font-size:20px;
+}
+
+p.orderBoxCancelP{
+	position:relative;
+	float:left;
+	font-size:11px;
+	padding:7px 0 0 3px;
+	cursor:pointer;
+}
+/****************************************************************************************   footer  ******************/
+#footer{
+	position:relative;
+	font-size:12px;
+	margin:12px 5px;
+}
+.footerL{
+	text-align:left;
+	float:left;
+}
+.footerR{
+	text-align:right;
+	float:right;
+}
+/**************************************************************************************** about us **********************/
+.wrapper743{
+	width:743px;
+	margin:0 auto;
+}
+.wrapper743ForShopSales{
+	width:100%;
+	margin:0 auto;
+}
+h1.aboutUsHead{
+	font-size:18px;
+	margin:0 0 20px 0;
+}
+p.aboutUsDesc{
+	font-size:12px;
+	margin:0 0 30px 0;
+	line-height:1.5;
+}
+p.twoTsL{
+	width:381px;
+	float:right;
+	border-radius:8px;
+	background-color:#242424;
+	text-align:center;
+	color:#018f46;
+	font-size:18px;
+	padding:5px 0;
+	margin:0;
+}
+p.twoTsL span{
+	font-size:12px;
+	color:#FFF;
+}
+.chizz4{
+	float:left;
+	position:relative;
+	top:11px;
+}
+.twoTsShell{
+	width:100%;
+	height:150px;
+	border-radius:8px;
+	background-color:#333;
+	margin:18px 0;
+}
+img.twoTsImg{
+	width:140px;
+	height:122px;
+	margin:15px;
+	position:relative;
+	float:left;
+	border-radius:8px;
+}
+p.aboutTitles{
+	font-size:14px;
+	text-align:right;
+	position:relative;
+	float:left;
+	margin:55px 0 0 7px;
+	line-height:20px;
+	width:180px;
+}
+.aboutLine{
+	width:1px;
+	height:111px;
+	background-color:#FFF;
+	position:relative;
+	float:left;
+	margin:25px 15px 0 15px;
+}
+table.aboutGameShell{
+	width:350px;
+	position:relative;
+	float:left;
+	margin:15px 0 0 0;
+}
+
+table.aboutGameShell td{
+	font-size:12px;
+}
+table.aboutGameShell td input{
+	margin:5px;
+}
+p.gameSubmitBrn{
+	width:125px;
+	border-radius:6px;
+	background-color:#018F46;
+	padding:4px;
+	text-align:center;
+	margin:5px 0 0 0;
+	cursor:pointer;
+	float:left;
+}
+p.gameSubmitBrn:hover{
+	background-color:#FFF;
+	color:#018F46;
+}
+p.winOrLose{
+	position:relative;
+	font-size:18px;
+	left:8px;
+	top:6px;
+}
+/**************************************************************************************** pricing **********************/
+p.secHeadTitle{
+	font-size:25px;
+	position:absolute;
+	left:0px;
+	top:20px;
+}
+.pricingBoldShell{
+	width:750px;
+	height:272px;
+	margin:0 auto 20px auto;
+}
+.pricingBoldLShellL{
+	width:291px;
+	height:272px;
+	background-color:#090909;
+	border-radius:10px;
+	float:left;
+	text-align:center;
+}
+.pricingBoldRShellR{
+	width:451px;
+	height:272px;
+	background-color:#090909;
+	border-radius:10px;
+	float:right;
+	text-align:center;
+}
+p.pricingP1{
+	font-size:30px;
+	margin:10px;
+}
+p.pricingP2{
+	font-size:50px;
+}
+p.pricingP3{
+	font-size:14px;
+	margin:10px;
+}
+p.pricingP4{
+	font-size:18px;
+	color:#009900;
+	margin:15px auto 0 auto;
+}
+p.pricingCreatBtn{
+	font-size:18px;
+	width:196px;
+	border-radius:8px;
+	text-shadow:1px 1px 3px #000;
+	text-align:center;
+	padding:12px 0;
+	background-color:#0C0;
+	margin:10px auto 0 auto;
+}
+hr.pricingHr1{
+	width:206px;
+	border:0px;
+	height:1px;
+	background-color:#252525;
+}
+hr.pricingHr2{
+	width:350px;
+	border:0px;
+	height:1px;
+	background-color:#252525;
+}
+p.pricingQ{
+	font-size:14px;
+	margin:30px 0 15px 15px;
+}
+p.pricingA{
+	color:#000;
+	font-size:12px;
+	background-image:url(../images/earSmall.png);
+	background-position:0 center;
+	padding:3px 0 3px 25px;
+	background-repeat:no-repeat;
+	margin:0 0 0 15px;
+}
+/****************************************************************************************   random  ******************/
+.crSSStep2{
+	display:none;
+}
+.crSSStep3{
+	display:none;
+}
+.crSSStep4{
+	display:none;
+}
+.fakeClearer{
+	position:relative;
+	width:100%;
+	height:0px;
+	clear:both;
+}
+.hiddenShell{
+	display:none;
+}
+.crSSStyleDropDigMus{
+	padding:10px;
+}
+.crSSStyleDropDigMus2{
+	padding:10px;
+	display:hidden;
+}
+.crSSStyleDropPhysMus{
+	display:none;
+	padding:10px;
+}
+.crSSStyleDropPhysMus2{
+	padding:10px;
+	display:none;
+}
+.crSSStyleDropPhysMerch{
+	display:none;
+	padding:10px;
+}
+.crSSStyleDropPhysMerch2{
+	display:none;
+	padding:10px;
+}
+img.prodImgPre{
+	width:150px;
+	height:auto;
+	float:left;
+	-moz-box-shadow: 0px 0px 5px 0px #000;
+	-webkit-box-shadow: 0px 0px 5px 0px #000;
+	box-shadow: 0px 0px 5px 0px #000;
+}
+img.profilePicAdminHolder{
+	display:none;
+	position:relative;
+}
+img.LogoImagePre{
+	height:100px;
+	float:left;
+}
+img.bGImagePre{
+	position:relative;
+	width:300px;
+	height:auto;
+	float:left;
+	-moz-box-shadow: 0px 0px 5px 0px #000;
+	-webkit-box-shadow: 0px 0px 5px 0px #000;
+	box-shadow: 0px 0px 5px 0px #000;
+}
+.filler1{
+	width:100%;
+	height:30px;
+}
+.productImageUploader{
+	width:200px;
+	height:40px;
+}
+#productImageUploaders{
+	width:200px;
+	height:40px;
+	margin-top:5px;
+}
+#productImageDiv{
+	width:200px;
+	position:relative;
+	display:inline;
+}
+#productImageDivForEar{
+	width:200px;
+	position:relative;
+	display:inline;
+}
+img.productImageDivHolder, img.logoImageDivHolder, img.backgroundImageDivHolder{
+	position:relative;
+	display:none;
+}
+.productImageUploadedProductPreview{
+	width:200px;
+	height:auto;
+	margin:15px 0 0 0;
+	-moz-box-shadow: 0px 0px 5px 0px #000;
+	-webkit-box-shadow: 0px 0px 5px 0px #000;
+	box-shadow: 0px 0px 5px 0px #000;
+}
+.productImageUploadedLogoPreview{
+	height:100px;
+	margin:15px 0 0 0;
+	text-align:center;
+}
+.productImageUploadedBackgroundPreview{
+	width:400px;
+	margin:15px 0 0 0;
+	text-align:center;
+	-moz-box-shadow: 0px 0px 5px 0px #000;
+	-webkit-box-shadow: 0px 0px 5px 0px #000;
+	box-shadow: 0px 0px 5px 0px #000;
+}
+#profileImageUploaders{
+	width:200px;
+	height:40px;
+	margin-top:5px;
+}
+#profileImageUploader{
+	width:200px;
+	height:40px;
+}
+#logoImageDiv{
+	position:relative;
+}
+.logoImageDivHolderForEar{
+	position:relative;
+	width:100%;
+	text-align:center
+}
+#backgroundImageDiv{
+	position:relative;
+}
+.backgroundImageDivHolderForEar{
+	width:100%;
+	position:relative;
+}
+img.logoImageDivHolder{
+	width:100px;
+	height:100px;
+}
+.audioUploadStatusShell{
+	position:fixed;
+	bottom:5px;
+	left:5px;
+	background-color:#000;
+	border-radius:10px;
+	display:none;
+	-moz-box-shadow: 0px 0px 5px 0px #666;
+	-webkit-box-shadow: 0px 0px 5px 0px #666;
+	box-shadow: 0px 0px 5px 0px #666;
+	z-index:10;
+	cursor:pointer;
+}
+.audioUploadStatusShell p{
+	padding:6px 16px;
+	font-size:16px;
+}
+.displayNone{
+	display:none;
+}
+/******************************************************************************** header ***************/
+.headerNav{
+	position:absolute;
+	right:0px;
+}
+p.inHeaderName{
+	position:relative;
+	float:left;
+	font-size:12px;
+	padding:17px 0 0 0;
+	margin:0 10px 0 0;
+	color:#999;
+}
+p.inHeaderName:hover, .loggedInHeaderSlider a:hover{
+	color:#FFF;
+}
+.inHeaderLoggedInShell{
+	position:relative;
+	float:right;
+	cursor:pointer;
+}
+img.inHeaderLoggedInPhoto{
+	position:relative;
+	width:34px;
+	height:34px;
+	float:right;
+	margin-top:8px;
+	z-index:2;
+}
+.loggedInHeaderSlider{
+	position:absolute;
+	width:127px;
+	right:0px;
+	background-color:#1E1E1E;
+	border-radius:10px;
+	top:40px;
+	padding-bottom:2px;
+	z-index:1;
+	display:none;
+}
+.loggedInHeaderSlider p{
+	position:relative;
+	text-align:center;
+	margin:8px;
+}
+.loggedInHeaderSlider a{
+	position:relative;
+	margin:8px;
+	right:0px;
+	font-size:14px;
+	text-align:center;
+	color:#999;
+}
+.loggedInHeaderSlider a:link{
+	color:#999;
+	text-decoration:none;
+}
+.loggedInHeaderSlider a:visited{
+	color:#999;
+	text-decoration:none;
+}
+.loggedInHeaderSlider a:hover{
+	color:#FFF;
+	text-decoration:none;
+}
+p.inHeaderNotLoggedIn{
+	position:relative;
+	font-size:12px;
+	padding:17px 0 0 0;
+	color:#999;
+	cursor:pointer;
+}
+p.inHeaderNotLoggedIn a:link, p.inHeaderNotLoggedIn a:visited{
+	color:#999;
+}
+p.inHeaderNotLoggedIn a:hover{
+	color:#FFF;
+}
+/************************************************************************************* fancybox **********************************************/
+
+.qq-upload-fail{
+	position:relative;
+}
+/****************************************************************** Zills Admin **********************/
+table.zillsAdminTable{
+	border-spacing:0px;
+	width:100%;
+}
+tr.zillsAdminTableHeads td{
+	font-weight:bold;
+	background-color:#000;
+}
+table.zillsAdminTable td{
+	color:#fff;
+	border:solid;
+	border-spacing:0px;
+	border-width:1px;
+	padding:3px;
+}
+tr.zillsAdminRowCurrent{
+	background-color:#390;
+}
+tr.zillsAdminRowExpired{
+	background-color:#900;
+}
+p.zillsAdminHeaders{
+	font-size:26px;
+	color:#fff;
+	margin:0 auto 10px auto;
+	padding:5px 10px;
+	background-color:#000;
+	border-radius:8px;
+	text-align:center;
+}
+table.zillsAdminSingleSoSaTable1{
+	position:relative;
+	width:497px;
+	border-spacing:0px;
+	float:left;
+	border-color:#000;
+	border:solid;
+	margin:10px 0;
+}
+table.zillsAdminSingleSoSaTable2{
+	position:relative;
+	width:250px;
+	border-spacing:0px;
+	float:right;
+	border-color:#000;
+	border:solid;
+	margin:10px 0 0 0;
+}
+table.zillsAdminSingleSoSaTable3{
+	position:relative;
+	width:100%;
+	border-spacing:0px;
+	margin:10px 0;
+	border-color:#000;
+	border:solid;
+}
+table.zillsAdminSingleSoSaTable4{
+	position:relative;
+	width:100%;
+	border-spacing:0px;
+	margin:10px 0;
+	border-color:#000;
+	border:solid;
+}
+tr.zillsAdminTableRowCentered td{
+	text-align:center;
+	width:33%;
+}
+td.zillsAdminTableNavSelected{
+	background-color:#030;
+}
+td.zillsAdminSingleSoSaTableLeft{
+	font-weight:bold;
+	color:#060;
+	border:solid;
+	border-color:#000;
+	border-width:1px;
+	padding:3px;
+}
+td.zillsAdminSingleSoSaTableRight{
+	color:#fff;
+	border:solid;
+	border-color:#000;
+	border-width:1px;
+	padding:3px;
+}
+p.zillsAdminSubHeader{
+	position:relative;
+	margin:10px auto;
+	color:#fff;
+	font-size:24px;
+	text-align:center;
+	padding:5px 10px;
+	background-color:#000;
+	border-radius:8px;
+}
+img.zillsAdminAcctPic{
+	float:right;
+	width:174px;
+	height:174px;
+	margin:33px 17px 0 0;
+}
+img.zillsAdminAcctPic2{
+	float:right;
+	width:174px;
+	height:174px;
+	margin:12px 17px 0 0;
+}
+td.zillsAdminSingleSoSaTableRight a:link{
+	color:#0F0;
+	text-decoration:underline;
+}
+td.zillsAdminSingleSoSaTableRight a:visited{
+	color:#0F0;
+	text-decoration:underline;
+}
+td.zillsAdminTableSmallText{
+	font-size:11px;
+}
+input.zillsAdminPaymentConfirmTextIn{
+	width:100px;
+	background-color:#000;
+	color:#fff;
+	border:none;
+	outline:none;
+}
+p.hiddenErrorLabels{
+	display:none;
+	position:relative;
+}
+p.bandAdminErrors{
+	font-size:14px;
+	color:#F00;
+	margin:2px;
+	font-weight:bold;
+}
+/**************************** shop sales ****************/
+.shopSalesSquareShell{
+	width:250px;
+	height:250px;
+	margin:6px;
+	float:left;
+	position:relative;
+}
+img.shopSalesSquareImg{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:1;
+	width:250px;
+	height:250px;
+}
+.shopSalesSquareBottomShell{
+	width:100%;
+	height:50px;
+	z-index:3;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+}
+p.shopSalesSquareBottomText1{
+	position:relative;
+	z-index:2;
+	font-size:16px;
+	color:#fff;
+	font-weight:bold;
+	margin:7px 7px 0px 7px;
+}
+p.shopSalesSquareBottomText2{
+	font-size:14px;
+	color:#018f46;
+	font-weight:normal;
+	position:relative;
+	z-index:2;
+	margin:0px 7px 2px 7px;
+}
+.shopSalesSquareBottomOpacity{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color:#000;
+	opacity:0.9;
+	z-index:1;
+}
+.shopSalesSquareWhiteHover{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color:#FFF;
+	opacity:0.2;
+	z-index:2;
+	display:none;
+}
+#bandTermsOfService{
+	width:600px;
+	height:500px;
+	overflow-y:scroll;
+	padding:15px;	
+}
+/*************************** beta stuff ******************/
+.betaHomeCreateBtn{
+	margin:0 0 20px 0;
+	position:relative;
+}
+.betaHomeCreateBtn a{
+	background-color:#018f46;
+	padding:5px 10px;
+	border-radius:10px;
+	color:#fff;
+	text-shadow:1px 1px 1px #000;
+	font-size:20px;
+}
+.betaHomeCreateBtn a:hover{
+	text-shadow:1px 1px 4px #000;
+}
+/** other **/
+.cantUseIe4CreateSs{
+	margin:15px auto 15px auto;
+	text-align:center;
+}
+.cantUseIe4CreateSs h1{
+	position:relative;
+	font-size:25px;
+}
+.cantUseIe4CreateSs h2{
+	position:relative;
+	font-size:16px;
+	width:400px;
+	margin:0 auto;
+}
+.cantUseIe4CreateSs h2 a:hover{
+	color:#018f46 !important;
+}
+.cantUseIe4CreateSs h2 a:visited{
+	color:#fff;
+}
+
+	
